@@ -212,7 +212,7 @@ try {
 ## `patchPhoneInboundRule()`
 
 ```php
-patchPhoneInboundRule($id, $phoneinboundrulesNotRequired): mixed
+patchPhoneInboundRule($id, $patchPhoneInboundRuleRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\PhoneInboundRulesApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$phoneinboundrulesNotRequired = new \OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired(); // \OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired | The request data.
+$patchPhoneInboundRuleRequest = new \OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest(); // \OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest | The request data.
 
 try {
-    $result = $apiInstance->patchPhoneInboundRule($id, $phoneinboundrulesNotRequired);
+    $result = $apiInstance->patchPhoneInboundRule($id, $patchPhoneInboundRuleRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PhoneInboundRulesApi->patchPhoneInboundRule: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **phoneinboundrulesNotRequired** | [**\OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired**](../Model/PhoneinboundrulesNotRequired.md)| The request data. | |
+| **patchPhoneInboundRuleRequest** | [**\OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest**](../Model/PatchPhoneInboundRuleRequest.md)| The request data. | |
 
 ### Return type
 

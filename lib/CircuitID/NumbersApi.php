@@ -12,7 +12,7 @@
 /**
  * Circuit ID REST API
  *
- * # Introduction                 Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go. Embrace the future of communication with Circuit ID, elevating your interactions to new heights.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
+ * # Introduction Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
  *
  * The version of the OpenAPI document: 0.47.8
  * Contact: support@circuitid.com
@@ -819,16 +819,16 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\NumbersNotRequired $numbersNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchNumberRequest $patchNumberRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchNumber($id, $numbersNotRequired, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumber($id, $patchNumberRequest, string $contentType = self::contentTypes['patchNumber'][0])
     {
-        list($response) = $this->patchNumberWithHttpInfo($id, $numbersNotRequired, $contentType);
+        list($response) = $this->patchNumberWithHttpInfo($id, $patchNumberRequest, $contentType);
         return $response;
     }
 
@@ -838,16 +838,16 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\NumbersNotRequired $numbersNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchNumberRequest $patchNumberRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchNumberWithHttpInfo($id, $numbersNotRequired, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberWithHttpInfo($id, $patchNumberRequest, string $contentType = self::contentTypes['patchNumber'][0])
     {
-        $request = $this->patchNumberRequest($id, $numbersNotRequired, $contentType);
+        $request = $this->patchNumberRequest($id, $patchNumberRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -939,15 +939,15 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\NumbersNotRequired $numbersNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchNumberRequest $patchNumberRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchNumberAsync($id, $numbersNotRequired, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberAsync($id, $patchNumberRequest, string $contentType = self::contentTypes['patchNumber'][0])
     {
-        return $this->patchNumberAsyncWithHttpInfo($id, $numbersNotRequired, $contentType)
+        return $this->patchNumberAsyncWithHttpInfo($id, $patchNumberRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -961,16 +961,16 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\NumbersNotRequired $numbersNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchNumberRequest $patchNumberRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchNumberAsyncWithHttpInfo($id, $numbersNotRequired, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberAsyncWithHttpInfo($id, $patchNumberRequest, string $contentType = self::contentTypes['patchNumber'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchNumberRequest($id, $numbersNotRequired, $contentType);
+        $request = $this->patchNumberRequest($id, $patchNumberRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1012,13 +1012,13 @@ class NumbersApi
      * Create request for operation 'patchNumber'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\NumbersNotRequired $numbersNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchNumberRequest $patchNumberRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchNumberRequest($id, $numbersNotRequired, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberRequest($id, $patchNumberRequest, string $contentType = self::contentTypes['patchNumber'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1028,10 +1028,10 @@ class NumbersApi
             );
         }
 
-        // verify the required parameter 'numbersNotRequired' is set
-        if ($numbersNotRequired === null || (is_array($numbersNotRequired) && count($numbersNotRequired) === 0)) {
+        // verify the required parameter 'patchNumberRequest' is set
+        if ($patchNumberRequest === null || (is_array($patchNumberRequest) && count($patchNumberRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $numbersNotRequired when calling patchNumber'
+                'Missing the required parameter $patchNumberRequest when calling patchNumber'
             );
         }
 
@@ -1062,12 +1062,12 @@ class NumbersApi
         );
 
         // for model (json/xml)
-        if (isset($numbersNotRequired)) {
+        if (isset($patchNumberRequest)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($numbersNotRequired));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchNumberRequest));
             } else {
-                $httpBody = $numbersNotRequired;
+                $httpBody = $patchNumberRequest;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

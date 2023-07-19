@@ -12,7 +12,7 @@
 /**
  * Circuit ID REST API
  *
- * # Introduction                 Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go. Embrace the future of communication with Circuit ID, elevating your interactions to new heights.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
+ * # Introduction Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
  *
  * The version of the OpenAPI document: 0.47.8
  * Contact: support@circuitid.com
@@ -1112,16 +1112,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DirectoriesNotRequired $directoriesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchDirectorie($id, $directoriesNotRequired, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorie($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
-        list($response) = $this->patchDirectorieWithHttpInfo($id, $directoriesNotRequired, $contentType);
+        list($response) = $this->patchDirectorieWithHttpInfo($id, $patchDirectorieRequest, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DirectoriesNotRequired $directoriesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchDirectorieWithHttpInfo($id, $directoriesNotRequired, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieWithHttpInfo($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
-        $request = $this->patchDirectorieRequest($id, $directoriesNotRequired, $contentType);
+        $request = $this->patchDirectorieRequest($id, $patchDirectorieRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DirectoriesNotRequired $directoriesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDirectorieAsync($id, $directoriesNotRequired, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieAsync($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
-        return $this->patchDirectorieAsyncWithHttpInfo($id, $directoriesNotRequired, $contentType)
+        return $this->patchDirectorieAsyncWithHttpInfo($id, $patchDirectorieRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DirectoriesNotRequired $directoriesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDirectorieAsyncWithHttpInfo($id, $directoriesNotRequired, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieAsyncWithHttpInfo($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchDirectorieRequest($id, $directoriesNotRequired, $contentType);
+        $request = $this->patchDirectorieRequest($id, $patchDirectorieRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class DirectoriesApi
      * Create request for operation 'patchDirectorie'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DirectoriesNotRequired $directoriesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchDirectorieRequest($id, $directoriesNotRequired, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieRequest($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class DirectoriesApi
             );
         }
 
-        // verify the required parameter 'directoriesNotRequired' is set
-        if ($directoriesNotRequired === null || (is_array($directoriesNotRequired) && count($directoriesNotRequired) === 0)) {
+        // verify the required parameter 'patchDirectorieRequest' is set
+        if ($patchDirectorieRequest === null || (is_array($patchDirectorieRequest) && count($patchDirectorieRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $directoriesNotRequired when calling patchDirectorie'
+                'Missing the required parameter $patchDirectorieRequest when calling patchDirectorie'
             );
         }
 
@@ -1355,12 +1355,12 @@ class DirectoriesApi
         );
 
         // for model (json/xml)
-        if (isset($directoriesNotRequired)) {
+        if (isset($patchDirectorieRequest)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($directoriesNotRequired));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchDirectorieRequest));
             } else {
-                $httpBody = $directoriesNotRequired;
+                $httpBody = $patchDirectorieRequest;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

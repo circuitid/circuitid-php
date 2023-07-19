@@ -212,7 +212,7 @@ try {
 ## `patchUserToken()`
 
 ```php
-patchUserToken($id, $usertokensNotRequired): mixed
+patchUserToken($id, $patchUserTokenRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\UserTokensApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$usertokensNotRequired = new \OpenAPI\Client\CircuitID\UsertokensNotRequired(); // \OpenAPI\Client\CircuitID\UsertokensNotRequired | The request data.
+$patchUserTokenRequest = new \OpenAPI\Client\CircuitID\PatchUserTokenRequest(); // \OpenAPI\Client\CircuitID\PatchUserTokenRequest | The request data.
 
 try {
-    $result = $apiInstance->patchUserToken($id, $usertokensNotRequired);
+    $result = $apiInstance->patchUserToken($id, $patchUserTokenRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserTokensApi->patchUserToken: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **usertokensNotRequired** | [**\OpenAPI\Client\CircuitID\UsertokensNotRequired**](../Model/UsertokensNotRequired.md)| The request data. | |
+| **patchUserTokenRequest** | [**\OpenAPI\Client\CircuitID\PatchUserTokenRequest**](../Model/PatchUserTokenRequest.md)| The request data. | |
 
 ### Return type
 

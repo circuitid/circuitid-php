@@ -212,7 +212,7 @@ try {
 ## `patchClient()`
 
 ```php
-patchClient($id, $clientsNotRequired): mixed
+patchClient($id, $patchClientRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$clientsNotRequired = new \OpenAPI\Client\CircuitID\ClientsNotRequired(); // \OpenAPI\Client\CircuitID\ClientsNotRequired | The request data.
+$patchClientRequest = new \OpenAPI\Client\CircuitID\PatchClientRequest(); // \OpenAPI\Client\CircuitID\PatchClientRequest | The request data.
 
 try {
-    $result = $apiInstance->patchClient($id, $clientsNotRequired);
+    $result = $apiInstance->patchClient($id, $patchClientRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientsApi->patchClient: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **clientsNotRequired** | [**\OpenAPI\Client\CircuitID\ClientsNotRequired**](../Model/ClientsNotRequired.md)| The request data. | |
+| **patchClientRequest** | [**\OpenAPI\Client\CircuitID\PatchClientRequest**](../Model/PatchClientRequest.md)| The request data. | |
 
 ### Return type
 

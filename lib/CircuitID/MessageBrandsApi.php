@@ -12,7 +12,7 @@
 /**
  * Circuit ID REST API
  *
- * # Introduction                 Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go. Embrace the future of communication with Circuit ID, elevating your interactions to new heights.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
+ * # Introduction Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
  *
  * The version of the OpenAPI document: 0.47.8
  * Contact: support@circuitid.com
@@ -1112,16 +1112,16 @@ class MessageBrandsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MessagebrandsNotRequired $messagebrandsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMessageBrandRequest $patchMessageBrandRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMessageBrand'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchMessageBrand($id, $messagebrandsNotRequired, string $contentType = self::contentTypes['patchMessageBrand'][0])
+    public function patchMessageBrand($id, $patchMessageBrandRequest, string $contentType = self::contentTypes['patchMessageBrand'][0])
     {
-        list($response) = $this->patchMessageBrandWithHttpInfo($id, $messagebrandsNotRequired, $contentType);
+        list($response) = $this->patchMessageBrandWithHttpInfo($id, $patchMessageBrandRequest, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class MessageBrandsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MessagebrandsNotRequired $messagebrandsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMessageBrandRequest $patchMessageBrandRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMessageBrand'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchMessageBrandWithHttpInfo($id, $messagebrandsNotRequired, string $contentType = self::contentTypes['patchMessageBrand'][0])
+    public function patchMessageBrandWithHttpInfo($id, $patchMessageBrandRequest, string $contentType = self::contentTypes['patchMessageBrand'][0])
     {
-        $request = $this->patchMessageBrandRequest($id, $messagebrandsNotRequired, $contentType);
+        $request = $this->patchMessageBrandRequest($id, $patchMessageBrandRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class MessageBrandsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MessagebrandsNotRequired $messagebrandsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMessageBrandRequest $patchMessageBrandRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMessageBrand'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchMessageBrandAsync($id, $messagebrandsNotRequired, string $contentType = self::contentTypes['patchMessageBrand'][0])
+    public function patchMessageBrandAsync($id, $patchMessageBrandRequest, string $contentType = self::contentTypes['patchMessageBrand'][0])
     {
-        return $this->patchMessageBrandAsyncWithHttpInfo($id, $messagebrandsNotRequired, $contentType)
+        return $this->patchMessageBrandAsyncWithHttpInfo($id, $patchMessageBrandRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class MessageBrandsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MessagebrandsNotRequired $messagebrandsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMessageBrandRequest $patchMessageBrandRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMessageBrand'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchMessageBrandAsyncWithHttpInfo($id, $messagebrandsNotRequired, string $contentType = self::contentTypes['patchMessageBrand'][0])
+    public function patchMessageBrandAsyncWithHttpInfo($id, $patchMessageBrandRequest, string $contentType = self::contentTypes['patchMessageBrand'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchMessageBrandRequest($id, $messagebrandsNotRequired, $contentType);
+        $request = $this->patchMessageBrandRequest($id, $patchMessageBrandRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class MessageBrandsApi
      * Create request for operation 'patchMessageBrand'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MessagebrandsNotRequired $messagebrandsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMessageBrandRequest $patchMessageBrandRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMessageBrand'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchMessageBrandRequest($id, $messagebrandsNotRequired, string $contentType = self::contentTypes['patchMessageBrand'][0])
+    public function patchMessageBrandRequest($id, $patchMessageBrandRequest, string $contentType = self::contentTypes['patchMessageBrand'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class MessageBrandsApi
             );
         }
 
-        // verify the required parameter 'messagebrandsNotRequired' is set
-        if ($messagebrandsNotRequired === null || (is_array($messagebrandsNotRequired) && count($messagebrandsNotRequired) === 0)) {
+        // verify the required parameter 'patchMessageBrandRequest' is set
+        if ($patchMessageBrandRequest === null || (is_array($patchMessageBrandRequest) && count($patchMessageBrandRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $messagebrandsNotRequired when calling patchMessageBrand'
+                'Missing the required parameter $patchMessageBrandRequest when calling patchMessageBrand'
             );
         }
 
@@ -1355,12 +1355,12 @@ class MessageBrandsApi
         );
 
         // for model (json/xml)
-        if (isset($messagebrandsNotRequired)) {
+        if (isset($patchMessageBrandRequest)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($messagebrandsNotRequired));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchMessageBrandRequest));
             } else {
-                $httpBody = $messagebrandsNotRequired;
+                $httpBody = $patchMessageBrandRequest;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

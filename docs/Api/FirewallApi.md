@@ -212,7 +212,7 @@ try {
 ## `patchFirewall()`
 
 ```php
-patchFirewall($id, $firewallNotRequired): mixed
+patchFirewall($id, $patchFirewallRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\FirewallApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$firewallNotRequired = new \OpenAPI\Client\CircuitID\FirewallNotRequired(); // \OpenAPI\Client\CircuitID\FirewallNotRequired | The request data.
+$patchFirewallRequest = new \OpenAPI\Client\CircuitID\PatchFirewallRequest(); // \OpenAPI\Client\CircuitID\PatchFirewallRequest | The request data.
 
 try {
-    $result = $apiInstance->patchFirewall($id, $firewallNotRequired);
+    $result = $apiInstance->patchFirewall($id, $patchFirewallRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FirewallApi->patchFirewall: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **firewallNotRequired** | [**\OpenAPI\Client\CircuitID\FirewallNotRequired**](../Model/FirewallNotRequired.md)| The request data. | |
+| **patchFirewallRequest** | [**\OpenAPI\Client\CircuitID\PatchFirewallRequest**](../Model/PatchFirewallRequest.md)| The request data. | |
 
 ### Return type
 

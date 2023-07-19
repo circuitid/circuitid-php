@@ -212,7 +212,7 @@ try {
 ## `patchMessageCampaign()`
 
 ```php
-patchMessageCampaign($id, $messagecampaignsNotRequired): mixed
+patchMessageCampaign($id, $patchMessageCampaignRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageCampaignsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$messagecampaignsNotRequired = new \OpenAPI\Client\CircuitID\MessagecampaignsNotRequired(); // \OpenAPI\Client\CircuitID\MessagecampaignsNotRequired | The request data.
+$patchMessageCampaignRequest = new \OpenAPI\Client\CircuitID\PatchMessageCampaignRequest(); // \OpenAPI\Client\CircuitID\PatchMessageCampaignRequest | The request data.
 
 try {
-    $result = $apiInstance->patchMessageCampaign($id, $messagecampaignsNotRequired);
+    $result = $apiInstance->patchMessageCampaign($id, $patchMessageCampaignRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageCampaignsApi->patchMessageCampaign: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **messagecampaignsNotRequired** | [**\OpenAPI\Client\CircuitID\MessagecampaignsNotRequired**](../Model/MessagecampaignsNotRequired.md)| The request data. | |
+| **patchMessageCampaignRequest** | [**\OpenAPI\Client\CircuitID\PatchMessageCampaignRequest**](../Model/PatchMessageCampaignRequest.md)| The request data. | |
 
 ### Return type
 

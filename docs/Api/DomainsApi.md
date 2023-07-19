@@ -212,7 +212,7 @@ try {
 ## `patchDomain()`
 
 ```php
-patchDomain($id, $domainsNotRequired): mixed
+patchDomain($id, $patchDomainRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DomainsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$domainsNotRequired = new \OpenAPI\Client\CircuitID\DomainsNotRequired(); // \OpenAPI\Client\CircuitID\DomainsNotRequired | The request data.
+$patchDomainRequest = new \OpenAPI\Client\CircuitID\PatchDomainRequest(); // \OpenAPI\Client\CircuitID\PatchDomainRequest | The request data.
 
 try {
-    $result = $apiInstance->patchDomain($id, $domainsNotRequired);
+    $result = $apiInstance->patchDomain($id, $patchDomainRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DomainsApi->patchDomain: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **domainsNotRequired** | [**\OpenAPI\Client\CircuitID\DomainsNotRequired**](../Model/DomainsNotRequired.md)| The request data. | |
+| **patchDomainRequest** | [**\OpenAPI\Client\CircuitID\PatchDomainRequest**](../Model/PatchDomainRequest.md)| The request data. | |
 
 ### Return type
 

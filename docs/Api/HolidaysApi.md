@@ -212,7 +212,7 @@ try {
 ## `patchHoliday()`
 
 ```php
-patchHoliday($id, $holidaysNotRequired): mixed
+patchHoliday($id, $patchHolidayRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\HolidaysApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$holidaysNotRequired = new \OpenAPI\Client\CircuitID\HolidaysNotRequired(); // \OpenAPI\Client\CircuitID\HolidaysNotRequired | The request data.
+$patchHolidayRequest = new \OpenAPI\Client\CircuitID\PatchHolidayRequest(); // \OpenAPI\Client\CircuitID\PatchHolidayRequest | The request data.
 
 try {
-    $result = $apiInstance->patchHoliday($id, $holidaysNotRequired);
+    $result = $apiInstance->patchHoliday($id, $patchHolidayRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HolidaysApi->patchHoliday: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **holidaysNotRequired** | [**\OpenAPI\Client\CircuitID\HolidaysNotRequired**](../Model/HolidaysNotRequired.md)| The request data. | |
+| **patchHolidayRequest** | [**\OpenAPI\Client\CircuitID\PatchHolidayRequest**](../Model/PatchHolidayRequest.md)| The request data. | |
 
 ### Return type
 

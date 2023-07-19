@@ -211,7 +211,7 @@ try {
 ## `patchNumberPort()`
 
 ```php
-patchNumberPort($id, $numberportsNotRequired): mixed
+patchNumberPort($id, $patchNumberPortRequest): mixed
 ```
 
 Patch object's data
@@ -238,10 +238,10 @@ $apiInstance = new OpenAPI\Client\Api\NumberPortsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$numberportsNotRequired = new \OpenAPI\Client\CircuitID\NumberportsNotRequired(); // \OpenAPI\Client\CircuitID\NumberportsNotRequired | The request data.
+$patchNumberPortRequest = new \OpenAPI\Client\CircuitID\PatchNumberPortRequest(); // \OpenAPI\Client\CircuitID\PatchNumberPortRequest | The request data.
 
 try {
-    $result = $apiInstance->patchNumberPort($id, $numberportsNotRequired);
+    $result = $apiInstance->patchNumberPort($id, $patchNumberPortRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NumberPortsApi->patchNumberPort: ', $e->getMessage(), PHP_EOL;
@@ -253,7 +253,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **numberportsNotRequired** | [**\OpenAPI\Client\CircuitID\NumberportsNotRequired**](../Model/NumberportsNotRequired.md)| The request data. | |
+| **patchNumberPortRequest** | [**\OpenAPI\Client\CircuitID\PatchNumberPortRequest**](../Model/PatchNumberPortRequest.md)| The request data. | |
 
 ### Return type
 

@@ -212,7 +212,7 @@ try {
 ## `patchAcceptedSender()`
 
 ```php
-patchAcceptedSender($id, $acceptedsendersNotRequired): mixed
+patchAcceptedSender($id, $patchAcceptedSenderRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\AcceptedSendersApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$acceptedsendersNotRequired = new \OpenAPI\Client\CircuitID\AcceptedsendersNotRequired(); // \OpenAPI\Client\CircuitID\AcceptedsendersNotRequired | The request data.
+$patchAcceptedSenderRequest = new \OpenAPI\Client\CircuitID\PatchAcceptedSenderRequest(); // \OpenAPI\Client\CircuitID\PatchAcceptedSenderRequest | The request data.
 
 try {
-    $result = $apiInstance->patchAcceptedSender($id, $acceptedsendersNotRequired);
+    $result = $apiInstance->patchAcceptedSender($id, $patchAcceptedSenderRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcceptedSendersApi->patchAcceptedSender: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **acceptedsendersNotRequired** | [**\OpenAPI\Client\CircuitID\AcceptedsendersNotRequired**](../Model/AcceptedsendersNotRequired.md)| The request data. | |
+| **patchAcceptedSenderRequest** | [**\OpenAPI\Client\CircuitID\PatchAcceptedSenderRequest**](../Model/PatchAcceptedSenderRequest.md)| The request data. | |
 
 ### Return type
 

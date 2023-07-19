@@ -12,7 +12,7 @@
 /**
  * Circuit ID REST API
  *
- * # Introduction                 Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go. Embrace the future of communication with Circuit ID, elevating your interactions to new heights.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
+ * # Introduction Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
  *
  * The version of the OpenAPI document: 0.47.8
  * Contact: support@circuitid.com
@@ -1112,16 +1112,16 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DomainsNotRequired $domainsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDomainRequest $patchDomainRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchDomain($id, $domainsNotRequired, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomain($id, $patchDomainRequest, string $contentType = self::contentTypes['patchDomain'][0])
     {
-        list($response) = $this->patchDomainWithHttpInfo($id, $domainsNotRequired, $contentType);
+        list($response) = $this->patchDomainWithHttpInfo($id, $patchDomainRequest, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DomainsNotRequired $domainsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDomainRequest $patchDomainRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchDomainWithHttpInfo($id, $domainsNotRequired, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainWithHttpInfo($id, $patchDomainRequest, string $contentType = self::contentTypes['patchDomain'][0])
     {
-        $request = $this->patchDomainRequest($id, $domainsNotRequired, $contentType);
+        $request = $this->patchDomainRequest($id, $patchDomainRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DomainsNotRequired $domainsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDomainRequest $patchDomainRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDomainAsync($id, $domainsNotRequired, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainAsync($id, $patchDomainRequest, string $contentType = self::contentTypes['patchDomain'][0])
     {
-        return $this->patchDomainAsyncWithHttpInfo($id, $domainsNotRequired, $contentType)
+        return $this->patchDomainAsyncWithHttpInfo($id, $patchDomainRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DomainsNotRequired $domainsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDomainRequest $patchDomainRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDomainAsyncWithHttpInfo($id, $domainsNotRequired, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainAsyncWithHttpInfo($id, $patchDomainRequest, string $contentType = self::contentTypes['patchDomain'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchDomainRequest($id, $domainsNotRequired, $contentType);
+        $request = $this->patchDomainRequest($id, $patchDomainRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class DomainsApi
      * Create request for operation 'patchDomain'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\DomainsNotRequired $domainsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchDomainRequest $patchDomainRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchDomainRequest($id, $domainsNotRequired, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainRequest($id, $patchDomainRequest, string $contentType = self::contentTypes['patchDomain'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class DomainsApi
             );
         }
 
-        // verify the required parameter 'domainsNotRequired' is set
-        if ($domainsNotRequired === null || (is_array($domainsNotRequired) && count($domainsNotRequired) === 0)) {
+        // verify the required parameter 'patchDomainRequest' is set
+        if ($patchDomainRequest === null || (is_array($patchDomainRequest) && count($patchDomainRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $domainsNotRequired when calling patchDomain'
+                'Missing the required parameter $patchDomainRequest when calling patchDomain'
             );
         }
 
@@ -1355,12 +1355,12 @@ class DomainsApi
         );
 
         // for model (json/xml)
-        if (isset($domainsNotRequired)) {
+        if (isset($patchDomainRequest)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($domainsNotRequired));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchDomainRequest));
             } else {
-                $httpBody = $domainsNotRequired;
+                $httpBody = $patchDomainRequest;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -212,7 +212,7 @@ try {
 ## `patchVirtualExtension()`
 
 ```php
-patchVirtualExtension($id, $virtualextensionsNotRequired): mixed
+patchVirtualExtension($id, $patchVirtualExtensionRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\VirtualExtensionsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$virtualextensionsNotRequired = new \OpenAPI\Client\CircuitID\VirtualextensionsNotRequired(); // \OpenAPI\Client\CircuitID\VirtualextensionsNotRequired | The request data.
+$patchVirtualExtensionRequest = new \OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest(); // \OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest | The request data.
 
 try {
-    $result = $apiInstance->patchVirtualExtension($id, $virtualextensionsNotRequired);
+    $result = $apiInstance->patchVirtualExtension($id, $patchVirtualExtensionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VirtualExtensionsApi->patchVirtualExtension: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **virtualextensionsNotRequired** | [**\OpenAPI\Client\CircuitID\VirtualextensionsNotRequired**](../Model/VirtualextensionsNotRequired.md)| The request data. | |
+| **patchVirtualExtensionRequest** | [**\OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest**](../Model/PatchVirtualExtensionRequest.md)| The request data. | |
 
 ### Return type
 

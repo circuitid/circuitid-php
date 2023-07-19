@@ -212,7 +212,7 @@ try {
 ## `patchConversation()`
 
 ```php
-patchConversation($id, $conversationsNotRequired): mixed
+patchConversation($id, $patchConversationRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ConversationsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$conversationsNotRequired = new \OpenAPI\Client\CircuitID\ConversationsNotRequired(); // \OpenAPI\Client\CircuitID\ConversationsNotRequired | The request data.
+$patchConversationRequest = new \OpenAPI\Client\CircuitID\PatchConversationRequest(); // \OpenAPI\Client\CircuitID\PatchConversationRequest | The request data.
 
 try {
-    $result = $apiInstance->patchConversation($id, $conversationsNotRequired);
+    $result = $apiInstance->patchConversation($id, $patchConversationRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->patchConversation: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **conversationsNotRequired** | [**\OpenAPI\Client\CircuitID\ConversationsNotRequired**](../Model/ConversationsNotRequired.md)| The request data. | |
+| **patchConversationRequest** | [**\OpenAPI\Client\CircuitID\PatchConversationRequest**](../Model/PatchConversationRequest.md)| The request data. | |
 
 ### Return type
 

@@ -212,7 +212,7 @@ try {
 ## `patchAnnouncement()`
 
 ```php
-patchAnnouncement($id, $announcementsNotRequired): mixed
+patchAnnouncement($id, $patchAnnouncementRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\AnnouncementsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$announcementsNotRequired = new \OpenAPI\Client\CircuitID\AnnouncementsNotRequired(); // \OpenAPI\Client\CircuitID\AnnouncementsNotRequired | The request data.
+$patchAnnouncementRequest = new \OpenAPI\Client\CircuitID\PatchAnnouncementRequest(); // \OpenAPI\Client\CircuitID\PatchAnnouncementRequest | The request data.
 
 try {
-    $result = $apiInstance->patchAnnouncement($id, $announcementsNotRequired);
+    $result = $apiInstance->patchAnnouncement($id, $patchAnnouncementRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnouncementsApi->patchAnnouncement: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **announcementsNotRequired** | [**\OpenAPI\Client\CircuitID\AnnouncementsNotRequired**](../Model/AnnouncementsNotRequired.md)| The request data. | |
+| **patchAnnouncementRequest** | [**\OpenAPI\Client\CircuitID\PatchAnnouncementRequest**](../Model/PatchAnnouncementRequest.md)| The request data. | |
 
 ### Return type
 

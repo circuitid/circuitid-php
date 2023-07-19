@@ -212,7 +212,7 @@ try {
 ## `patchServer()`
 
 ```php
-patchServer($id, $serversNotRequired): mixed
+patchServer($id, $patchServerRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ServersApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$serversNotRequired = new \OpenAPI\Client\CircuitID\ServersNotRequired(); // \OpenAPI\Client\CircuitID\ServersNotRequired | The request data.
+$patchServerRequest = new \OpenAPI\Client\CircuitID\PatchServerRequest(); // \OpenAPI\Client\CircuitID\PatchServerRequest | The request data.
 
 try {
-    $result = $apiInstance->patchServer($id, $serversNotRequired);
+    $result = $apiInstance->patchServer($id, $patchServerRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ServersApi->patchServer: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **serversNotRequired** | [**\OpenAPI\Client\CircuitID\ServersNotRequired**](../Model/ServersNotRequired.md)| The request data. | |
+| **patchServerRequest** | [**\OpenAPI\Client\CircuitID\PatchServerRequest**](../Model/PatchServerRequest.md)| The request data. | |
 
 ### Return type
 

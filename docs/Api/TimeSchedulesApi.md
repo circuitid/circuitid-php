@@ -212,7 +212,7 @@ try {
 ## `patchTimeSchedule()`
 
 ```php
-patchTimeSchedule($id, $timeschedulesNotRequired): mixed
+patchTimeSchedule($id, $patchTimeScheduleRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\TimeSchedulesApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$timeschedulesNotRequired = new \OpenAPI\Client\CircuitID\TimeschedulesNotRequired(); // \OpenAPI\Client\CircuitID\TimeschedulesNotRequired | The request data.
+$patchTimeScheduleRequest = new \OpenAPI\Client\CircuitID\PatchTimeScheduleRequest(); // \OpenAPI\Client\CircuitID\PatchTimeScheduleRequest | The request data.
 
 try {
-    $result = $apiInstance->patchTimeSchedule($id, $timeschedulesNotRequired);
+    $result = $apiInstance->patchTimeSchedule($id, $patchTimeScheduleRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TimeSchedulesApi->patchTimeSchedule: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **timeschedulesNotRequired** | [**\OpenAPI\Client\CircuitID\TimeschedulesNotRequired**](../Model/TimeschedulesNotRequired.md)| The request data. | |
+| **patchTimeScheduleRequest** | [**\OpenAPI\Client\CircuitID\PatchTimeScheduleRequest**](../Model/PatchTimeScheduleRequest.md)| The request data. | |
 
 ### Return type
 

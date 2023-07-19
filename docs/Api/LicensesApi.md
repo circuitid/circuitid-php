@@ -212,7 +212,7 @@ try {
 ## `patchLicense()`
 
 ```php
-patchLicense($id, $licensesNotRequired): mixed
+patchLicense($id, $patchLicenseRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\LicensesApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$licensesNotRequired = new \OpenAPI\Client\CircuitID\LicensesNotRequired(); // \OpenAPI\Client\CircuitID\LicensesNotRequired | The request data.
+$patchLicenseRequest = new \OpenAPI\Client\CircuitID\PatchLicenseRequest(); // \OpenAPI\Client\CircuitID\PatchLicenseRequest | The request data.
 
 try {
-    $result = $apiInstance->patchLicense($id, $licensesNotRequired);
+    $result = $apiInstance->patchLicense($id, $patchLicenseRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LicensesApi->patchLicense: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **licensesNotRequired** | [**\OpenAPI\Client\CircuitID\LicensesNotRequired**](../Model/LicensesNotRequired.md)| The request data. | |
+| **patchLicenseRequest** | [**\OpenAPI\Client\CircuitID\PatchLicenseRequest**](../Model/PatchLicenseRequest.md)| The request data. | |
 
 ### Return type
 

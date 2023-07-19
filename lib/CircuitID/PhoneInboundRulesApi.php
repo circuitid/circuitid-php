@@ -12,7 +12,7 @@
 /**
  * Circuit ID REST API
  *
- * # Introduction                 Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go. Embrace the future of communication with Circuit ID, elevating your interactions to new heights.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
+ * # Introduction Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
  *
  * The version of the OpenAPI document: 0.47.8
  * Contact: support@circuitid.com
@@ -1112,16 +1112,16 @@ class PhoneInboundRulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired $phoneinboundrulesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest $patchPhoneInboundRuleRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchPhoneInboundRule($id, $phoneinboundrulesNotRequired, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
+    public function patchPhoneInboundRule($id, $patchPhoneInboundRuleRequest, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
     {
-        list($response) = $this->patchPhoneInboundRuleWithHttpInfo($id, $phoneinboundrulesNotRequired, $contentType);
+        list($response) = $this->patchPhoneInboundRuleWithHttpInfo($id, $patchPhoneInboundRuleRequest, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class PhoneInboundRulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired $phoneinboundrulesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest $patchPhoneInboundRuleRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchPhoneInboundRuleWithHttpInfo($id, $phoneinboundrulesNotRequired, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
+    public function patchPhoneInboundRuleWithHttpInfo($id, $patchPhoneInboundRuleRequest, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
     {
-        $request = $this->patchPhoneInboundRuleRequest($id, $phoneinboundrulesNotRequired, $contentType);
+        $request = $this->patchPhoneInboundRuleRequest($id, $patchPhoneInboundRuleRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class PhoneInboundRulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired $phoneinboundrulesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest $patchPhoneInboundRuleRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchPhoneInboundRuleAsync($id, $phoneinboundrulesNotRequired, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
+    public function patchPhoneInboundRuleAsync($id, $patchPhoneInboundRuleRequest, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
     {
-        return $this->patchPhoneInboundRuleAsyncWithHttpInfo($id, $phoneinboundrulesNotRequired, $contentType)
+        return $this->patchPhoneInboundRuleAsyncWithHttpInfo($id, $patchPhoneInboundRuleRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class PhoneInboundRulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired $phoneinboundrulesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest $patchPhoneInboundRuleRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchPhoneInboundRuleAsyncWithHttpInfo($id, $phoneinboundrulesNotRequired, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
+    public function patchPhoneInboundRuleAsyncWithHttpInfo($id, $patchPhoneInboundRuleRequest, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchPhoneInboundRuleRequest($id, $phoneinboundrulesNotRequired, $contentType);
+        $request = $this->patchPhoneInboundRuleRequest($id, $patchPhoneInboundRuleRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class PhoneInboundRulesApi
      * Create request for operation 'patchPhoneInboundRule'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PhoneinboundrulesNotRequired $phoneinboundrulesNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchPhoneInboundRuleRequest $patchPhoneInboundRuleRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchPhoneInboundRuleRequest($id, $phoneinboundrulesNotRequired, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
+    public function patchPhoneInboundRuleRequest($id, $patchPhoneInboundRuleRequest, string $contentType = self::contentTypes['patchPhoneInboundRule'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class PhoneInboundRulesApi
             );
         }
 
-        // verify the required parameter 'phoneinboundrulesNotRequired' is set
-        if ($phoneinboundrulesNotRequired === null || (is_array($phoneinboundrulesNotRequired) && count($phoneinboundrulesNotRequired) === 0)) {
+        // verify the required parameter 'patchPhoneInboundRuleRequest' is set
+        if ($patchPhoneInboundRuleRequest === null || (is_array($patchPhoneInboundRuleRequest) && count($patchPhoneInboundRuleRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phoneinboundrulesNotRequired when calling patchPhoneInboundRule'
+                'Missing the required parameter $patchPhoneInboundRuleRequest when calling patchPhoneInboundRule'
             );
         }
 
@@ -1355,12 +1355,12 @@ class PhoneInboundRulesApi
         );
 
         // for model (json/xml)
-        if (isset($phoneinboundrulesNotRequired)) {
+        if (isset($patchPhoneInboundRuleRequest)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneinboundrulesNotRequired));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchPhoneInboundRuleRequest));
             } else {
-                $httpBody = $phoneinboundrulesNotRequired;
+                $httpBody = $patchPhoneInboundRuleRequest;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

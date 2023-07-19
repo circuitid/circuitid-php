@@ -212,7 +212,7 @@ try {
 ## `patchFaxAccount()`
 
 ```php
-patchFaxAccount($id, $faxaccountsNotRequired): mixed
+patchFaxAccount($id, $patchFaxAccountRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\FaxAccountApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$faxaccountsNotRequired = new \OpenAPI\Client\CircuitID\FaxaccountsNotRequired(); // \OpenAPI\Client\CircuitID\FaxaccountsNotRequired | The request data.
+$patchFaxAccountRequest = new \OpenAPI\Client\CircuitID\PatchFaxAccountRequest(); // \OpenAPI\Client\CircuitID\PatchFaxAccountRequest | The request data.
 
 try {
-    $result = $apiInstance->patchFaxAccount($id, $faxaccountsNotRequired);
+    $result = $apiInstance->patchFaxAccount($id, $patchFaxAccountRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FaxAccountApi->patchFaxAccount: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **faxaccountsNotRequired** | [**\OpenAPI\Client\CircuitID\FaxaccountsNotRequired**](../Model/FaxaccountsNotRequired.md)| The request data. | |
+| **patchFaxAccountRequest** | [**\OpenAPI\Client\CircuitID\PatchFaxAccountRequest**](../Model/PatchFaxAccountRequest.md)| The request data. | |
 
 ### Return type
 

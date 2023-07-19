@@ -212,7 +212,7 @@ try {
 ## `patchMenu()`
 
 ```php
-patchMenu($id, $menusNotRequired): mixed
+patchMenu($id, $patchMenuRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\MenusApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$menusNotRequired = new \OpenAPI\Client\CircuitID\MenusNotRequired(); // \OpenAPI\Client\CircuitID\MenusNotRequired | The request data.
+$patchMenuRequest = new \OpenAPI\Client\CircuitID\PatchMenuRequest(); // \OpenAPI\Client\CircuitID\PatchMenuRequest | The request data.
 
 try {
-    $result = $apiInstance->patchMenu($id, $menusNotRequired);
+    $result = $apiInstance->patchMenu($id, $patchMenuRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MenusApi->patchMenu: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **menusNotRequired** | [**\OpenAPI\Client\CircuitID\MenusNotRequired**](../Model/MenusNotRequired.md)| The request data. | |
+| **patchMenuRequest** | [**\OpenAPI\Client\CircuitID\PatchMenuRequest**](../Model/PatchMenuRequest.md)| The request data. | |
 
 ### Return type
 

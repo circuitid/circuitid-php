@@ -12,7 +12,7 @@
 /**
  * Circuit ID REST API
  *
- * # Introduction                 Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go. Embrace the future of communication with Circuit ID, elevating your interactions to new heights.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
+ * # Introduction Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
  *
  * The version of the OpenAPI document: 0.47.8
  * Contact: support@circuitid.com
@@ -1112,16 +1112,16 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsNotRequired $conferenceroomsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchConferenceRoomRequest $patchConferenceRoomRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchConferenceRoom($id, $conferenceroomsNotRequired, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoom($id, $patchConferenceRoomRequest, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
-        list($response) = $this->patchConferenceRoomWithHttpInfo($id, $conferenceroomsNotRequired, $contentType);
+        list($response) = $this->patchConferenceRoomWithHttpInfo($id, $patchConferenceRoomRequest, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsNotRequired $conferenceroomsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchConferenceRoomRequest $patchConferenceRoomRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchConferenceRoomWithHttpInfo($id, $conferenceroomsNotRequired, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomWithHttpInfo($id, $patchConferenceRoomRequest, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
-        $request = $this->patchConferenceRoomRequest($id, $conferenceroomsNotRequired, $contentType);
+        $request = $this->patchConferenceRoomRequest($id, $patchConferenceRoomRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsNotRequired $conferenceroomsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchConferenceRoomRequest $patchConferenceRoomRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConferenceRoomAsync($id, $conferenceroomsNotRequired, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomAsync($id, $patchConferenceRoomRequest, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
-        return $this->patchConferenceRoomAsyncWithHttpInfo($id, $conferenceroomsNotRequired, $contentType)
+        return $this->patchConferenceRoomAsyncWithHttpInfo($id, $patchConferenceRoomRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsNotRequired $conferenceroomsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchConferenceRoomRequest $patchConferenceRoomRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConferenceRoomAsyncWithHttpInfo($id, $conferenceroomsNotRequired, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomAsyncWithHttpInfo($id, $patchConferenceRoomRequest, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchConferenceRoomRequest($id, $conferenceroomsNotRequired, $contentType);
+        $request = $this->patchConferenceRoomRequest($id, $patchConferenceRoomRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class ConferenceRoomsApi
      * Create request for operation 'patchConferenceRoom'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsNotRequired $conferenceroomsNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchConferenceRoomRequest $patchConferenceRoomRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchConferenceRoomRequest($id, $conferenceroomsNotRequired, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomRequest($id, $patchConferenceRoomRequest, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class ConferenceRoomsApi
             );
         }
 
-        // verify the required parameter 'conferenceroomsNotRequired' is set
-        if ($conferenceroomsNotRequired === null || (is_array($conferenceroomsNotRequired) && count($conferenceroomsNotRequired) === 0)) {
+        // verify the required parameter 'patchConferenceRoomRequest' is set
+        if ($patchConferenceRoomRequest === null || (is_array($patchConferenceRoomRequest) && count($patchConferenceRoomRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $conferenceroomsNotRequired when calling patchConferenceRoom'
+                'Missing the required parameter $patchConferenceRoomRequest when calling patchConferenceRoom'
             );
         }
 
@@ -1355,12 +1355,12 @@ class ConferenceRoomsApi
         );
 
         // for model (json/xml)
-        if (isset($conferenceroomsNotRequired)) {
+        if (isset($patchConferenceRoomRequest)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conferenceroomsNotRequired));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchConferenceRoomRequest));
             } else {
-                $httpBody = $conferenceroomsNotRequired;
+                $httpBody = $patchConferenceRoomRequest;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

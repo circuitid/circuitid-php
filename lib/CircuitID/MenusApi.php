@@ -12,7 +12,7 @@
 /**
  * Circuit ID REST API
  *
- * # Introduction                 Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go. Embrace the future of communication with Circuit ID, elevating your interactions to new heights.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
+ * # Introduction Welcome to the Circuit ID REST API!                  Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.                  Whether you are a beginner getting started with our API or an experienced developer looking for advanced features, this documentation site will serve as your comprehensive guide.   We are excited to have you on board and are confident that this documentation site will empower you to leverage the full potential of our REST API.  If you have any questions or require further assistance, please don't hesitate to reach out to our support team.                  Happy coding!
  *
  * The version of the OpenAPI document: 0.47.8
  * Contact: support@circuitid.com
@@ -1112,16 +1112,16 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MenusNotRequired $menusNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMenuRequest $patchMenuRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchMenu($id, $menusNotRequired, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenu($id, $patchMenuRequest, string $contentType = self::contentTypes['patchMenu'][0])
     {
-        list($response) = $this->patchMenuWithHttpInfo($id, $menusNotRequired, $contentType);
+        list($response) = $this->patchMenuWithHttpInfo($id, $patchMenuRequest, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MenusNotRequired $menusNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMenuRequest $patchMenuRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchMenuWithHttpInfo($id, $menusNotRequired, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuWithHttpInfo($id, $patchMenuRequest, string $contentType = self::contentTypes['patchMenu'][0])
     {
-        $request = $this->patchMenuRequest($id, $menusNotRequired, $contentType);
+        $request = $this->patchMenuRequest($id, $patchMenuRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MenusNotRequired $menusNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMenuRequest $patchMenuRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchMenuAsync($id, $menusNotRequired, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuAsync($id, $patchMenuRequest, string $contentType = self::contentTypes['patchMenu'][0])
     {
-        return $this->patchMenuAsyncWithHttpInfo($id, $menusNotRequired, $contentType)
+        return $this->patchMenuAsyncWithHttpInfo($id, $patchMenuRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MenusNotRequired $menusNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMenuRequest $patchMenuRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchMenuAsyncWithHttpInfo($id, $menusNotRequired, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuAsyncWithHttpInfo($id, $patchMenuRequest, string $contentType = self::contentTypes['patchMenu'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchMenuRequest($id, $menusNotRequired, $contentType);
+        $request = $this->patchMenuRequest($id, $patchMenuRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class MenusApi
      * Create request for operation 'patchMenu'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\MenusNotRequired $menusNotRequired The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PatchMenuRequest $patchMenuRequest The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchMenuRequest($id, $menusNotRequired, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuRequest($id, $patchMenuRequest, string $contentType = self::contentTypes['patchMenu'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class MenusApi
             );
         }
 
-        // verify the required parameter 'menusNotRequired' is set
-        if ($menusNotRequired === null || (is_array($menusNotRequired) && count($menusNotRequired) === 0)) {
+        // verify the required parameter 'patchMenuRequest' is set
+        if ($patchMenuRequest === null || (is_array($patchMenuRequest) && count($patchMenuRequest) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $menusNotRequired when calling patchMenu'
+                'Missing the required parameter $patchMenuRequest when calling patchMenu'
             );
         }
 
@@ -1355,12 +1355,12 @@ class MenusApi
         );
 
         // for model (json/xml)
-        if (isset($menusNotRequired)) {
+        if (isset($patchMenuRequest)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($menusNotRequired));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchMenuRequest));
             } else {
-                $httpBody = $menusNotRequired;
+                $httpBody = $patchMenuRequest;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

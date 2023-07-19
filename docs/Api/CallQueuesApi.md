@@ -212,7 +212,7 @@ try {
 ## `patchCallQueue()`
 
 ```php
-patchCallQueue($id, $callqueuesNotRequired): mixed
+patchCallQueue($id, $patchCallQueueRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\CallQueuesApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$callqueuesNotRequired = new \OpenAPI\Client\CircuitID\CallqueuesNotRequired(); // \OpenAPI\Client\CircuitID\CallqueuesNotRequired | The request data.
+$patchCallQueueRequest = new \OpenAPI\Client\CircuitID\PatchCallQueueRequest(); // \OpenAPI\Client\CircuitID\PatchCallQueueRequest | The request data.
 
 try {
-    $result = $apiInstance->patchCallQueue($id, $callqueuesNotRequired);
+    $result = $apiInstance->patchCallQueue($id, $patchCallQueueRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CallQueuesApi->patchCallQueue: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **callqueuesNotRequired** | [**\OpenAPI\Client\CircuitID\CallqueuesNotRequired**](../Model/CallqueuesNotRequired.md)| The request data. | |
+| **patchCallQueueRequest** | [**\OpenAPI\Client\CircuitID\PatchCallQueueRequest**](../Model/PatchCallQueueRequest.md)| The request data. | |
 
 ### Return type
 

@@ -212,7 +212,7 @@ try {
 ## `patchDeveloperApp()`
 
 ```php
-patchDeveloperApp($id, $developerappsNotRequired): mixed
+patchDeveloperApp($id, $patchDeveloperAppRequest): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$developerappsNotRequired = new \OpenAPI\Client\CircuitID\DeveloperappsNotRequired(); // \OpenAPI\Client\CircuitID\DeveloperappsNotRequired | The request data.
+$patchDeveloperAppRequest = new \OpenAPI\Client\CircuitID\PatchDeveloperAppRequest(); // \OpenAPI\Client\CircuitID\PatchDeveloperAppRequest | The request data.
 
 try {
-    $result = $apiInstance->patchDeveloperApp($id, $developerappsNotRequired);
+    $result = $apiInstance->patchDeveloperApp($id, $patchDeveloperAppRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppsApi->patchDeveloperApp: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **developerappsNotRequired** | [**\OpenAPI\Client\CircuitID\DeveloperappsNotRequired**](../Model/DeveloperappsNotRequired.md)| The request data. | |
+| **patchDeveloperAppRequest** | [**\OpenAPI\Client\CircuitID\PatchDeveloperAppRequest**](../Model/PatchDeveloperAppRequest.md)| The request data. | |
 
 ### Return type
 
