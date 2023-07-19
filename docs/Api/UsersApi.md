@@ -212,7 +212,7 @@ try {
 ## `patchUser()`
 
 ```php
-patchUser($id, $patchUserRequest): mixed
+patchUser($id, $users): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\UsersApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchUserRequest = new \OpenAPI\Client\CircuitID\PatchUserRequest(); // \OpenAPI\Client\CircuitID\PatchUserRequest | The request data.
+$users = new \OpenAPI\Client\CircuitID\Users(); // \OpenAPI\Client\CircuitID\Users | The request data.
 
 try {
-    $result = $apiInstance->patchUser($id, $patchUserRequest);
+    $result = $apiInstance->patchUser($id, $users);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->patchUser: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchUserRequest** | [**\OpenAPI\Client\CircuitID\PatchUserRequest**](../Model/PatchUserRequest.md)| The request data. | |
+| **users** | [**\OpenAPI\Client\CircuitID\Users**](../Model/Users.md)| The request data. | |
 
 ### Return type
 

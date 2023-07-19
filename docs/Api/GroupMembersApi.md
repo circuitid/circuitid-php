@@ -212,7 +212,7 @@ try {
 ## `patchGroupMember()`
 
 ```php
-patchGroupMember($id, $patchGroupMemberRequest): mixed
+patchGroupMember($id, $groupmembers): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\GroupMembersApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchGroupMemberRequest = new \OpenAPI\Client\CircuitID\PatchGroupMemberRequest(); // \OpenAPI\Client\CircuitID\PatchGroupMemberRequest | The request data.
+$groupmembers = new \OpenAPI\Client\CircuitID\Groupmembers(); // \OpenAPI\Client\CircuitID\Groupmembers | The request data.
 
 try {
-    $result = $apiInstance->patchGroupMember($id, $patchGroupMemberRequest);
+    $result = $apiInstance->patchGroupMember($id, $groupmembers);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupMembersApi->patchGroupMember: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchGroupMemberRequest** | [**\OpenAPI\Client\CircuitID\PatchGroupMemberRequest**](../Model/PatchGroupMemberRequest.md)| The request data. | |
+| **groupmembers** | [**\OpenAPI\Client\CircuitID\Groupmembers**](../Model/Groupmembers.md)| The request data. | |
 
 ### Return type
 

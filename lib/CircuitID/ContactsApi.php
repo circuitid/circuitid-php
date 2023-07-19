@@ -1112,16 +1112,16 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchContactRequest $patchContactRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchContact($id, $patchContactRequest, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContact($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
     {
-        list($response) = $this->patchContactWithHttpInfo($id, $patchContactRequest, $contentType);
+        list($response) = $this->patchContactWithHttpInfo($id, $contacts, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchContactRequest $patchContactRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchContactWithHttpInfo($id, $patchContactRequest, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactWithHttpInfo($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
     {
-        $request = $this->patchContactRequest($id, $patchContactRequest, $contentType);
+        $request = $this->patchContactRequest($id, $contacts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchContactRequest $patchContactRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchContactAsync($id, $patchContactRequest, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactAsync($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
     {
-        return $this->patchContactAsyncWithHttpInfo($id, $patchContactRequest, $contentType)
+        return $this->patchContactAsyncWithHttpInfo($id, $contacts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchContactRequest $patchContactRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchContactAsyncWithHttpInfo($id, $patchContactRequest, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactAsyncWithHttpInfo($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchContactRequest($id, $patchContactRequest, $contentType);
+        $request = $this->patchContactRequest($id, $contacts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class ContactsApi
      * Create request for operation 'patchContact'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchContactRequest $patchContactRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchContactRequest($id, $patchContactRequest, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactRequest($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class ContactsApi
             );
         }
 
-        // verify the required parameter 'patchContactRequest' is set
-        if ($patchContactRequest === null || (is_array($patchContactRequest) && count($patchContactRequest) === 0)) {
+        // verify the required parameter 'contacts' is set
+        if ($contacts === null || (is_array($contacts) && count($contacts) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchContactRequest when calling patchContact'
+                'Missing the required parameter $contacts when calling patchContact'
             );
         }
 
@@ -1355,12 +1355,12 @@ class ContactsApi
         );
 
         // for model (json/xml)
-        if (isset($patchContactRequest)) {
+        if (isset($contacts)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchContactRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contacts));
             } else {
-                $httpBody = $patchContactRequest;
+                $httpBody = $contacts;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

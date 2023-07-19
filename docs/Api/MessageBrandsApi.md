@@ -212,7 +212,7 @@ try {
 ## `patchMessageBrand()`
 
 ```php
-patchMessageBrand($id, $patchMessageBrandRequest): mixed
+patchMessageBrand($id, $messagebrands): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageBrandsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchMessageBrandRequest = new \OpenAPI\Client\CircuitID\PatchMessageBrandRequest(); // \OpenAPI\Client\CircuitID\PatchMessageBrandRequest | The request data.
+$messagebrands = new \OpenAPI\Client\CircuitID\Messagebrands(); // \OpenAPI\Client\CircuitID\Messagebrands | The request data.
 
 try {
-    $result = $apiInstance->patchMessageBrand($id, $patchMessageBrandRequest);
+    $result = $apiInstance->patchMessageBrand($id, $messagebrands);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageBrandsApi->patchMessageBrand: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchMessageBrandRequest** | [**\OpenAPI\Client\CircuitID\PatchMessageBrandRequest**](../Model/PatchMessageBrandRequest.md)| The request data. | |
+| **messagebrands** | [**\OpenAPI\Client\CircuitID\Messagebrands**](../Model/Messagebrands.md)| The request data. | |
 
 ### Return type
 

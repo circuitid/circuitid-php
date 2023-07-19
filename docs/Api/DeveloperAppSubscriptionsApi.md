@@ -212,7 +212,7 @@ try {
 ## `patchDeveloperAppSubscription()`
 
 ```php
-patchDeveloperAppSubscription($id, $patchDeveloperAppSubscriptionRequest): mixed
+patchDeveloperAppSubscription($id, $developerappsubscriptions): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppSubscriptionsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchDeveloperAppSubscriptionRequest = new \OpenAPI\Client\CircuitID\PatchDeveloperAppSubscriptionRequest(); // \OpenAPI\Client\CircuitID\PatchDeveloperAppSubscriptionRequest | The request data.
+$developerappsubscriptions = new \OpenAPI\Client\CircuitID\Developerappsubscriptions(); // \OpenAPI\Client\CircuitID\Developerappsubscriptions | The request data.
 
 try {
-    $result = $apiInstance->patchDeveloperAppSubscription($id, $patchDeveloperAppSubscriptionRequest);
+    $result = $apiInstance->patchDeveloperAppSubscription($id, $developerappsubscriptions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppSubscriptionsApi->patchDeveloperAppSubscription: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchDeveloperAppSubscriptionRequest** | [**\OpenAPI\Client\CircuitID\PatchDeveloperAppSubscriptionRequest**](../Model/PatchDeveloperAppSubscriptionRequest.md)| The request data. | |
+| **developerappsubscriptions** | [**\OpenAPI\Client\CircuitID\Developerappsubscriptions**](../Model/Developerappsubscriptions.md)| The request data. | |
 
 ### Return type
 

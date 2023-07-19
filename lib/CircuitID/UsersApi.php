@@ -1112,16 +1112,16 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchUserRequest $patchUserRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchUser($id, $patchUserRequest, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUser($id, $users, string $contentType = self::contentTypes['patchUser'][0])
     {
-        list($response) = $this->patchUserWithHttpInfo($id, $patchUserRequest, $contentType);
+        list($response) = $this->patchUserWithHttpInfo($id, $users, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchUserRequest $patchUserRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchUserWithHttpInfo($id, $patchUserRequest, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserWithHttpInfo($id, $users, string $contentType = self::contentTypes['patchUser'][0])
     {
-        $request = $this->patchUserRequest($id, $patchUserRequest, $contentType);
+        $request = $this->patchUserRequest($id, $users, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchUserRequest $patchUserRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserAsync($id, $patchUserRequest, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserAsync($id, $users, string $contentType = self::contentTypes['patchUser'][0])
     {
-        return $this->patchUserAsyncWithHttpInfo($id, $patchUserRequest, $contentType)
+        return $this->patchUserAsyncWithHttpInfo($id, $users, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchUserRequest $patchUserRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserAsyncWithHttpInfo($id, $patchUserRequest, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserAsyncWithHttpInfo($id, $users, string $contentType = self::contentTypes['patchUser'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchUserRequest($id, $patchUserRequest, $contentType);
+        $request = $this->patchUserRequest($id, $users, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class UsersApi
      * Create request for operation 'patchUser'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchUserRequest $patchUserRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchUserRequest($id, $patchUserRequest, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserRequest($id, $users, string $contentType = self::contentTypes['patchUser'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class UsersApi
             );
         }
 
-        // verify the required parameter 'patchUserRequest' is set
-        if ($patchUserRequest === null || (is_array($patchUserRequest) && count($patchUserRequest) === 0)) {
+        // verify the required parameter 'users' is set
+        if ($users === null || (is_array($users) && count($users) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchUserRequest when calling patchUser'
+                'Missing the required parameter $users when calling patchUser'
             );
         }
 
@@ -1355,12 +1355,12 @@ class UsersApi
         );
 
         // for model (json/xml)
-        if (isset($patchUserRequest)) {
+        if (isset($users)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchUserRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($users));
             } else {
-                $httpBody = $patchUserRequest;
+                $httpBody = $users;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

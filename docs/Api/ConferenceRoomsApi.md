@@ -212,7 +212,7 @@ try {
 ## `patchConferenceRoom()`
 
 ```php
-patchConferenceRoom($id, $patchConferenceRoomRequest): mixed
+patchConferenceRoom($id, $conferencerooms): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ConferenceRoomsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchConferenceRoomRequest = new \OpenAPI\Client\CircuitID\PatchConferenceRoomRequest(); // \OpenAPI\Client\CircuitID\PatchConferenceRoomRequest | The request data.
+$conferencerooms = new \OpenAPI\Client\CircuitID\Conferencerooms(); // \OpenAPI\Client\CircuitID\Conferencerooms | The request data.
 
 try {
-    $result = $apiInstance->patchConferenceRoom($id, $patchConferenceRoomRequest);
+    $result = $apiInstance->patchConferenceRoom($id, $conferencerooms);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConferenceRoomsApi->patchConferenceRoom: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchConferenceRoomRequest** | [**\OpenAPI\Client\CircuitID\PatchConferenceRoomRequest**](../Model/PatchConferenceRoomRequest.md)| The request data. | |
+| **conferencerooms** | [**\OpenAPI\Client\CircuitID\Conferencerooms**](../Model/Conferencerooms.md)| The request data. | |
 
 ### Return type
 

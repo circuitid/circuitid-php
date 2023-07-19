@@ -1112,16 +1112,16 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchChatRoomRequest $patchChatRoomRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchChatRoom($id, $patchChatRoomRequest, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoom($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
-        list($response) = $this->patchChatRoomWithHttpInfo($id, $patchChatRoomRequest, $contentType);
+        list($response) = $this->patchChatRoomWithHttpInfo($id, $chatrooms, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchChatRoomRequest $patchChatRoomRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchChatRoomWithHttpInfo($id, $patchChatRoomRequest, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomWithHttpInfo($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
-        $request = $this->patchChatRoomRequest($id, $patchChatRoomRequest, $contentType);
+        $request = $this->patchChatRoomRequest($id, $chatrooms, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchChatRoomRequest $patchChatRoomRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchChatRoomAsync($id, $patchChatRoomRequest, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomAsync($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
-        return $this->patchChatRoomAsyncWithHttpInfo($id, $patchChatRoomRequest, $contentType)
+        return $this->patchChatRoomAsyncWithHttpInfo($id, $chatrooms, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchChatRoomRequest $patchChatRoomRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchChatRoomAsyncWithHttpInfo($id, $patchChatRoomRequest, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomAsyncWithHttpInfo($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchChatRoomRequest($id, $patchChatRoomRequest, $contentType);
+        $request = $this->patchChatRoomRequest($id, $chatrooms, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class ChatRoomsApi
      * Create request for operation 'patchChatRoom'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchChatRoomRequest $patchChatRoomRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchChatRoomRequest($id, $patchChatRoomRequest, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomRequest($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class ChatRoomsApi
             );
         }
 
-        // verify the required parameter 'patchChatRoomRequest' is set
-        if ($patchChatRoomRequest === null || (is_array($patchChatRoomRequest) && count($patchChatRoomRequest) === 0)) {
+        // verify the required parameter 'chatrooms' is set
+        if ($chatrooms === null || (is_array($chatrooms) && count($chatrooms) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchChatRoomRequest when calling patchChatRoom'
+                'Missing the required parameter $chatrooms when calling patchChatRoom'
             );
         }
 
@@ -1355,12 +1355,12 @@ class ChatRoomsApi
         );
 
         // for model (json/xml)
-        if (isset($patchChatRoomRequest)) {
+        if (isset($chatrooms)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchChatRoomRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($chatrooms));
             } else {
-                $httpBody = $patchChatRoomRequest;
+                $httpBody = $chatrooms;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

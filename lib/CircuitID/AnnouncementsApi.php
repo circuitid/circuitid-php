@@ -1112,16 +1112,16 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchAnnouncementRequest $patchAnnouncementRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchAnnouncement($id, $patchAnnouncementRequest, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncement($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
-        list($response) = $this->patchAnnouncementWithHttpInfo($id, $patchAnnouncementRequest, $contentType);
+        list($response) = $this->patchAnnouncementWithHttpInfo($id, $announcements, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchAnnouncementRequest $patchAnnouncementRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchAnnouncementWithHttpInfo($id, $patchAnnouncementRequest, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementWithHttpInfo($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
-        $request = $this->patchAnnouncementRequest($id, $patchAnnouncementRequest, $contentType);
+        $request = $this->patchAnnouncementRequest($id, $announcements, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchAnnouncementRequest $patchAnnouncementRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchAnnouncementAsync($id, $patchAnnouncementRequest, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementAsync($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
-        return $this->patchAnnouncementAsyncWithHttpInfo($id, $patchAnnouncementRequest, $contentType)
+        return $this->patchAnnouncementAsyncWithHttpInfo($id, $announcements, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchAnnouncementRequest $patchAnnouncementRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchAnnouncementAsyncWithHttpInfo($id, $patchAnnouncementRequest, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementAsyncWithHttpInfo($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchAnnouncementRequest($id, $patchAnnouncementRequest, $contentType);
+        $request = $this->patchAnnouncementRequest($id, $announcements, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class AnnouncementsApi
      * Create request for operation 'patchAnnouncement'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchAnnouncementRequest $patchAnnouncementRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchAnnouncementRequest($id, $patchAnnouncementRequest, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementRequest($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class AnnouncementsApi
             );
         }
 
-        // verify the required parameter 'patchAnnouncementRequest' is set
-        if ($patchAnnouncementRequest === null || (is_array($patchAnnouncementRequest) && count($patchAnnouncementRequest) === 0)) {
+        // verify the required parameter 'announcements' is set
+        if ($announcements === null || (is_array($announcements) && count($announcements) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchAnnouncementRequest when calling patchAnnouncement'
+                'Missing the required parameter $announcements when calling patchAnnouncement'
             );
         }
 
@@ -1355,12 +1355,12 @@ class AnnouncementsApi
         );
 
         // for model (json/xml)
-        if (isset($patchAnnouncementRequest)) {
+        if (isset($announcements)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchAnnouncementRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($announcements));
             } else {
-                $httpBody = $patchAnnouncementRequest;
+                $httpBody = $announcements;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

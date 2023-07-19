@@ -1112,16 +1112,16 @@ class DeveloperAppsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDeveloperAppRequest $patchDeveloperAppRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperApp'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchDeveloperApp($id, $patchDeveloperAppRequest, string $contentType = self::contentTypes['patchDeveloperApp'][0])
+    public function patchDeveloperApp($id, $developerapps, string $contentType = self::contentTypes['patchDeveloperApp'][0])
     {
-        list($response) = $this->patchDeveloperAppWithHttpInfo($id, $patchDeveloperAppRequest, $contentType);
+        list($response) = $this->patchDeveloperAppWithHttpInfo($id, $developerapps, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class DeveloperAppsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDeveloperAppRequest $patchDeveloperAppRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperApp'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchDeveloperAppWithHttpInfo($id, $patchDeveloperAppRequest, string $contentType = self::contentTypes['patchDeveloperApp'][0])
+    public function patchDeveloperAppWithHttpInfo($id, $developerapps, string $contentType = self::contentTypes['patchDeveloperApp'][0])
     {
-        $request = $this->patchDeveloperAppRequest($id, $patchDeveloperAppRequest, $contentType);
+        $request = $this->patchDeveloperAppRequest($id, $developerapps, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class DeveloperAppsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDeveloperAppRequest $patchDeveloperAppRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDeveloperAppAsync($id, $patchDeveloperAppRequest, string $contentType = self::contentTypes['patchDeveloperApp'][0])
+    public function patchDeveloperAppAsync($id, $developerapps, string $contentType = self::contentTypes['patchDeveloperApp'][0])
     {
-        return $this->patchDeveloperAppAsyncWithHttpInfo($id, $patchDeveloperAppRequest, $contentType)
+        return $this->patchDeveloperAppAsyncWithHttpInfo($id, $developerapps, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class DeveloperAppsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDeveloperAppRequest $patchDeveloperAppRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDeveloperAppAsyncWithHttpInfo($id, $patchDeveloperAppRequest, string $contentType = self::contentTypes['patchDeveloperApp'][0])
+    public function patchDeveloperAppAsyncWithHttpInfo($id, $developerapps, string $contentType = self::contentTypes['patchDeveloperApp'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchDeveloperAppRequest($id, $patchDeveloperAppRequest, $contentType);
+        $request = $this->patchDeveloperAppRequest($id, $developerapps, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class DeveloperAppsApi
      * Create request for operation 'patchDeveloperApp'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDeveloperAppRequest $patchDeveloperAppRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchDeveloperAppRequest($id, $patchDeveloperAppRequest, string $contentType = self::contentTypes['patchDeveloperApp'][0])
+    public function patchDeveloperAppRequest($id, $developerapps, string $contentType = self::contentTypes['patchDeveloperApp'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class DeveloperAppsApi
             );
         }
 
-        // verify the required parameter 'patchDeveloperAppRequest' is set
-        if ($patchDeveloperAppRequest === null || (is_array($patchDeveloperAppRequest) && count($patchDeveloperAppRequest) === 0)) {
+        // verify the required parameter 'developerapps' is set
+        if ($developerapps === null || (is_array($developerapps) && count($developerapps) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchDeveloperAppRequest when calling patchDeveloperApp'
+                'Missing the required parameter $developerapps when calling patchDeveloperApp'
             );
         }
 
@@ -1355,12 +1355,12 @@ class DeveloperAppsApi
         );
 
         // for model (json/xml)
-        if (isset($patchDeveloperAppRequest)) {
+        if (isset($developerapps)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchDeveloperAppRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($developerapps));
             } else {
-                $httpBody = $patchDeveloperAppRequest;
+                $httpBody = $developerapps;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

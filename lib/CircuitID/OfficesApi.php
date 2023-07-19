@@ -1112,16 +1112,16 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchOfficeRequest $patchOfficeRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchOffice($id, $patchOfficeRequest, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOffice($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
     {
-        list($response) = $this->patchOfficeWithHttpInfo($id, $patchOfficeRequest, $contentType);
+        list($response) = $this->patchOfficeWithHttpInfo($id, $offices, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchOfficeRequest $patchOfficeRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchOfficeWithHttpInfo($id, $patchOfficeRequest, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeWithHttpInfo($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
     {
-        $request = $this->patchOfficeRequest($id, $patchOfficeRequest, $contentType);
+        $request = $this->patchOfficeRequest($id, $offices, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchOfficeRequest $patchOfficeRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOfficeAsync($id, $patchOfficeRequest, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeAsync($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
     {
-        return $this->patchOfficeAsyncWithHttpInfo($id, $patchOfficeRequest, $contentType)
+        return $this->patchOfficeAsyncWithHttpInfo($id, $offices, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchOfficeRequest $patchOfficeRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOfficeAsyncWithHttpInfo($id, $patchOfficeRequest, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeAsyncWithHttpInfo($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchOfficeRequest($id, $patchOfficeRequest, $contentType);
+        $request = $this->patchOfficeRequest($id, $offices, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class OfficesApi
      * Create request for operation 'patchOffice'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchOfficeRequest $patchOfficeRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchOfficeRequest($id, $patchOfficeRequest, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeRequest($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class OfficesApi
             );
         }
 
-        // verify the required parameter 'patchOfficeRequest' is set
-        if ($patchOfficeRequest === null || (is_array($patchOfficeRequest) && count($patchOfficeRequest) === 0)) {
+        // verify the required parameter 'offices' is set
+        if ($offices === null || (is_array($offices) && count($offices) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchOfficeRequest when calling patchOffice'
+                'Missing the required parameter $offices when calling patchOffice'
             );
         }
 
@@ -1355,12 +1355,12 @@ class OfficesApi
         );
 
         // for model (json/xml)
-        if (isset($patchOfficeRequest)) {
+        if (isset($offices)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchOfficeRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($offices));
             } else {
-                $httpBody = $patchOfficeRequest;
+                $httpBody = $offices;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -1112,16 +1112,16 @@ class ConversationsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchConversationRequest $patchConversationRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Conversations $conversations The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversation'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchConversation($id, $patchConversationRequest, string $contentType = self::contentTypes['patchConversation'][0])
+    public function patchConversation($id, $conversations, string $contentType = self::contentTypes['patchConversation'][0])
     {
-        list($response) = $this->patchConversationWithHttpInfo($id, $patchConversationRequest, $contentType);
+        list($response) = $this->patchConversationWithHttpInfo($id, $conversations, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class ConversationsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchConversationRequest $patchConversationRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Conversations $conversations The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversation'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchConversationWithHttpInfo($id, $patchConversationRequest, string $contentType = self::contentTypes['patchConversation'][0])
+    public function patchConversationWithHttpInfo($id, $conversations, string $contentType = self::contentTypes['patchConversation'][0])
     {
-        $request = $this->patchConversationRequest($id, $patchConversationRequest, $contentType);
+        $request = $this->patchConversationRequest($id, $conversations, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class ConversationsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchConversationRequest $patchConversationRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Conversations $conversations The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConversationAsync($id, $patchConversationRequest, string $contentType = self::contentTypes['patchConversation'][0])
+    public function patchConversationAsync($id, $conversations, string $contentType = self::contentTypes['patchConversation'][0])
     {
-        return $this->patchConversationAsyncWithHttpInfo($id, $patchConversationRequest, $contentType)
+        return $this->patchConversationAsyncWithHttpInfo($id, $conversations, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class ConversationsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchConversationRequest $patchConversationRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Conversations $conversations The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConversationAsyncWithHttpInfo($id, $patchConversationRequest, string $contentType = self::contentTypes['patchConversation'][0])
+    public function patchConversationAsyncWithHttpInfo($id, $conversations, string $contentType = self::contentTypes['patchConversation'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchConversationRequest($id, $patchConversationRequest, $contentType);
+        $request = $this->patchConversationRequest($id, $conversations, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class ConversationsApi
      * Create request for operation 'patchConversation'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchConversationRequest $patchConversationRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Conversations $conversations The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchConversationRequest($id, $patchConversationRequest, string $contentType = self::contentTypes['patchConversation'][0])
+    public function patchConversationRequest($id, $conversations, string $contentType = self::contentTypes['patchConversation'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class ConversationsApi
             );
         }
 
-        // verify the required parameter 'patchConversationRequest' is set
-        if ($patchConversationRequest === null || (is_array($patchConversationRequest) && count($patchConversationRequest) === 0)) {
+        // verify the required parameter 'conversations' is set
+        if ($conversations === null || (is_array($conversations) && count($conversations) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchConversationRequest when calling patchConversation'
+                'Missing the required parameter $conversations when calling patchConversation'
             );
         }
 
@@ -1355,12 +1355,12 @@ class ConversationsApi
         );
 
         // for model (json/xml)
-        if (isset($patchConversationRequest)) {
+        if (isset($conversations)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchConversationRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conversations));
             } else {
-                $httpBody = $patchConversationRequest;
+                $httpBody = $conversations;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

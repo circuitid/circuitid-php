@@ -212,7 +212,7 @@ try {
 ## `patchDirectorie()`
 
 ```php
-patchDirectorie($id, $patchDirectorieRequest): mixed
+patchDirectorie($id, $directories): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DirectoriesApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchDirectorieRequest = new \OpenAPI\Client\CircuitID\PatchDirectorieRequest(); // \OpenAPI\Client\CircuitID\PatchDirectorieRequest | The request data.
+$directories = new \OpenAPI\Client\CircuitID\Directories(); // \OpenAPI\Client\CircuitID\Directories | The request data.
 
 try {
-    $result = $apiInstance->patchDirectorie($id, $patchDirectorieRequest);
+    $result = $apiInstance->patchDirectorie($id, $directories);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectoriesApi->patchDirectorie: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchDirectorieRequest** | [**\OpenAPI\Client\CircuitID\PatchDirectorieRequest**](../Model/PatchDirectorieRequest.md)| The request data. | |
+| **directories** | [**\OpenAPI\Client\CircuitID\Directories**](../Model/Directories.md)| The request data. | |
 
 ### Return type
 

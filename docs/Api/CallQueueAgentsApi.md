@@ -212,7 +212,7 @@ try {
 ## `patchCallQueueAgent()`
 
 ```php
-patchCallQueueAgent($id, $patchCallQueueAgentRequest): mixed
+patchCallQueueAgent($id, $callqueueagents): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\CallQueueAgentsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchCallQueueAgentRequest = new \OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest(); // \OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest | The request data.
+$callqueueagents = new \OpenAPI\Client\CircuitID\Callqueueagents(); // \OpenAPI\Client\CircuitID\Callqueueagents | The request data.
 
 try {
-    $result = $apiInstance->patchCallQueueAgent($id, $patchCallQueueAgentRequest);
+    $result = $apiInstance->patchCallQueueAgent($id, $callqueueagents);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CallQueueAgentsApi->patchCallQueueAgent: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchCallQueueAgentRequest** | [**\OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest**](../Model/PatchCallQueueAgentRequest.md)| The request data. | |
+| **callqueueagents** | [**\OpenAPI\Client\CircuitID\Callqueueagents**](../Model/Callqueueagents.md)| The request data. | |
 
 ### Return type
 

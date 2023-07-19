@@ -212,7 +212,7 @@ try {
 ## `patchOffice()`
 
 ```php
-patchOffice($id, $patchOfficeRequest): mixed
+patchOffice($id, $offices): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\OfficesApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchOfficeRequest = new \OpenAPI\Client\CircuitID\PatchOfficeRequest(); // \OpenAPI\Client\CircuitID\PatchOfficeRequest | The request data.
+$offices = new \OpenAPI\Client\CircuitID\Offices(); // \OpenAPI\Client\CircuitID\Offices | The request data.
 
 try {
-    $result = $apiInstance->patchOffice($id, $patchOfficeRequest);
+    $result = $apiInstance->patchOffice($id, $offices);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OfficesApi->patchOffice: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchOfficeRequest** | [**\OpenAPI\Client\CircuitID\PatchOfficeRequest**](../Model/PatchOfficeRequest.md)| The request data. | |
+| **offices** | [**\OpenAPI\Client\CircuitID\Offices**](../Model/Offices.md)| The request data. | |
 
 ### Return type
 

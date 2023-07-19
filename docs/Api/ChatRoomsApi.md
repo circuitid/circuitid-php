@@ -212,7 +212,7 @@ try {
 ## `patchChatRoom()`
 
 ```php
-patchChatRoom($id, $patchChatRoomRequest): mixed
+patchChatRoom($id, $chatrooms): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ChatRoomsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchChatRoomRequest = new \OpenAPI\Client\CircuitID\PatchChatRoomRequest(); // \OpenAPI\Client\CircuitID\PatchChatRoomRequest | The request data.
+$chatrooms = new \OpenAPI\Client\CircuitID\Chatrooms(); // \OpenAPI\Client\CircuitID\Chatrooms | The request data.
 
 try {
-    $result = $apiInstance->patchChatRoom($id, $patchChatRoomRequest);
+    $result = $apiInstance->patchChatRoom($id, $chatrooms);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChatRoomsApi->patchChatRoom: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchChatRoomRequest** | [**\OpenAPI\Client\CircuitID\PatchChatRoomRequest**](../Model/PatchChatRoomRequest.md)| The request data. | |
+| **chatrooms** | [**\OpenAPI\Client\CircuitID\Chatrooms**](../Model/Chatrooms.md)| The request data. | |
 
 ### Return type
 

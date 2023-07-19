@@ -1109,16 +1109,16 @@ class NumberPortsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchNumberPortRequest $patchNumberPortRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumberPort'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchNumberPort($id, $patchNumberPortRequest, string $contentType = self::contentTypes['patchNumberPort'][0])
+    public function patchNumberPort($id, $numberports, string $contentType = self::contentTypes['patchNumberPort'][0])
     {
-        list($response) = $this->patchNumberPortWithHttpInfo($id, $patchNumberPortRequest, $contentType);
+        list($response) = $this->patchNumberPortWithHttpInfo($id, $numberports, $contentType);
         return $response;
     }
 
@@ -1128,16 +1128,16 @@ class NumberPortsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchNumberPortRequest $patchNumberPortRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumberPort'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchNumberPortWithHttpInfo($id, $patchNumberPortRequest, string $contentType = self::contentTypes['patchNumberPort'][0])
+    public function patchNumberPortWithHttpInfo($id, $numberports, string $contentType = self::contentTypes['patchNumberPort'][0])
     {
-        $request = $this->patchNumberPortRequest($id, $patchNumberPortRequest, $contentType);
+        $request = $this->patchNumberPortRequest($id, $numberports, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1229,15 +1229,15 @@ class NumberPortsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchNumberPortRequest $patchNumberPortRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumberPort'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchNumberPortAsync($id, $patchNumberPortRequest, string $contentType = self::contentTypes['patchNumberPort'][0])
+    public function patchNumberPortAsync($id, $numberports, string $contentType = self::contentTypes['patchNumberPort'][0])
     {
-        return $this->patchNumberPortAsyncWithHttpInfo($id, $patchNumberPortRequest, $contentType)
+        return $this->patchNumberPortAsyncWithHttpInfo($id, $numberports, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1251,16 +1251,16 @@ class NumberPortsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchNumberPortRequest $patchNumberPortRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumberPort'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchNumberPortAsyncWithHttpInfo($id, $patchNumberPortRequest, string $contentType = self::contentTypes['patchNumberPort'][0])
+    public function patchNumberPortAsyncWithHttpInfo($id, $numberports, string $contentType = self::contentTypes['patchNumberPort'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchNumberPortRequest($id, $patchNumberPortRequest, $contentType);
+        $request = $this->patchNumberPortRequest($id, $numberports, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1302,13 +1302,13 @@ class NumberPortsApi
      * Create request for operation 'patchNumberPort'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchNumberPortRequest $patchNumberPortRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumberPort'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchNumberPortRequest($id, $patchNumberPortRequest, string $contentType = self::contentTypes['patchNumberPort'][0])
+    public function patchNumberPortRequest($id, $numberports, string $contentType = self::contentTypes['patchNumberPort'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1318,10 +1318,10 @@ class NumberPortsApi
             );
         }
 
-        // verify the required parameter 'patchNumberPortRequest' is set
-        if ($patchNumberPortRequest === null || (is_array($patchNumberPortRequest) && count($patchNumberPortRequest) === 0)) {
+        // verify the required parameter 'numberports' is set
+        if ($numberports === null || (is_array($numberports) && count($numberports) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchNumberPortRequest when calling patchNumberPort'
+                'Missing the required parameter $numberports when calling patchNumberPort'
             );
         }
 
@@ -1352,12 +1352,12 @@ class NumberPortsApi
         );
 
         // for model (json/xml)
-        if (isset($patchNumberPortRequest)) {
+        if (isset($numberports)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchNumberPortRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($numberports));
             } else {
-                $httpBody = $patchNumberPortRequest;
+                $httpBody = $numberports;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

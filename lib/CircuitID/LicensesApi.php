@@ -1112,16 +1112,16 @@ class LicensesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchLicenseRequest $patchLicenseRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Licenses $licenses The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchLicense'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchLicense($id, $patchLicenseRequest, string $contentType = self::contentTypes['patchLicense'][0])
+    public function patchLicense($id, $licenses, string $contentType = self::contentTypes['patchLicense'][0])
     {
-        list($response) = $this->patchLicenseWithHttpInfo($id, $patchLicenseRequest, $contentType);
+        list($response) = $this->patchLicenseWithHttpInfo($id, $licenses, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class LicensesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchLicenseRequest $patchLicenseRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Licenses $licenses The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchLicense'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchLicenseWithHttpInfo($id, $patchLicenseRequest, string $contentType = self::contentTypes['patchLicense'][0])
+    public function patchLicenseWithHttpInfo($id, $licenses, string $contentType = self::contentTypes['patchLicense'][0])
     {
-        $request = $this->patchLicenseRequest($id, $patchLicenseRequest, $contentType);
+        $request = $this->patchLicenseRequest($id, $licenses, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class LicensesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchLicenseRequest $patchLicenseRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Licenses $licenses The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchLicenseAsync($id, $patchLicenseRequest, string $contentType = self::contentTypes['patchLicense'][0])
+    public function patchLicenseAsync($id, $licenses, string $contentType = self::contentTypes['patchLicense'][0])
     {
-        return $this->patchLicenseAsyncWithHttpInfo($id, $patchLicenseRequest, $contentType)
+        return $this->patchLicenseAsyncWithHttpInfo($id, $licenses, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class LicensesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchLicenseRequest $patchLicenseRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Licenses $licenses The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchLicenseAsyncWithHttpInfo($id, $patchLicenseRequest, string $contentType = self::contentTypes['patchLicense'][0])
+    public function patchLicenseAsyncWithHttpInfo($id, $licenses, string $contentType = self::contentTypes['patchLicense'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchLicenseRequest($id, $patchLicenseRequest, $contentType);
+        $request = $this->patchLicenseRequest($id, $licenses, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class LicensesApi
      * Create request for operation 'patchLicense'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchLicenseRequest $patchLicenseRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Licenses $licenses The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchLicenseRequest($id, $patchLicenseRequest, string $contentType = self::contentTypes['patchLicense'][0])
+    public function patchLicenseRequest($id, $licenses, string $contentType = self::contentTypes['patchLicense'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class LicensesApi
             );
         }
 
-        // verify the required parameter 'patchLicenseRequest' is set
-        if ($patchLicenseRequest === null || (is_array($patchLicenseRequest) && count($patchLicenseRequest) === 0)) {
+        // verify the required parameter 'licenses' is set
+        if ($licenses === null || (is_array($licenses) && count($licenses) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchLicenseRequest when calling patchLicense'
+                'Missing the required parameter $licenses when calling patchLicense'
             );
         }
 
@@ -1355,12 +1355,12 @@ class LicensesApi
         );
 
         // for model (json/xml)
-        if (isset($patchLicenseRequest)) {
+        if (isset($licenses)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchLicenseRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($licenses));
             } else {
-                $httpBody = $patchLicenseRequest;
+                $httpBody = $licenses;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

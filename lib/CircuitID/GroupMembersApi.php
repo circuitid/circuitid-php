@@ -1112,16 +1112,16 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchGroupMemberRequest $patchGroupMemberRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchGroupMember($id, $patchGroupMemberRequest, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMember($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
-        list($response) = $this->patchGroupMemberWithHttpInfo($id, $patchGroupMemberRequest, $contentType);
+        list($response) = $this->patchGroupMemberWithHttpInfo($id, $groupmembers, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchGroupMemberRequest $patchGroupMemberRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchGroupMemberWithHttpInfo($id, $patchGroupMemberRequest, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberWithHttpInfo($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
-        $request = $this->patchGroupMemberRequest($id, $patchGroupMemberRequest, $contentType);
+        $request = $this->patchGroupMemberRequest($id, $groupmembers, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchGroupMemberRequest $patchGroupMemberRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchGroupMemberAsync($id, $patchGroupMemberRequest, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberAsync($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
-        return $this->patchGroupMemberAsyncWithHttpInfo($id, $patchGroupMemberRequest, $contentType)
+        return $this->patchGroupMemberAsyncWithHttpInfo($id, $groupmembers, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchGroupMemberRequest $patchGroupMemberRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchGroupMemberAsyncWithHttpInfo($id, $patchGroupMemberRequest, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberAsyncWithHttpInfo($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchGroupMemberRequest($id, $patchGroupMemberRequest, $contentType);
+        $request = $this->patchGroupMemberRequest($id, $groupmembers, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class GroupMembersApi
      * Create request for operation 'patchGroupMember'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchGroupMemberRequest $patchGroupMemberRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchGroupMemberRequest($id, $patchGroupMemberRequest, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberRequest($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class GroupMembersApi
             );
         }
 
-        // verify the required parameter 'patchGroupMemberRequest' is set
-        if ($patchGroupMemberRequest === null || (is_array($patchGroupMemberRequest) && count($patchGroupMemberRequest) === 0)) {
+        // verify the required parameter 'groupmembers' is set
+        if ($groupmembers === null || (is_array($groupmembers) && count($groupmembers) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchGroupMemberRequest when calling patchGroupMember'
+                'Missing the required parameter $groupmembers when calling patchGroupMember'
             );
         }
 
@@ -1355,12 +1355,12 @@ class GroupMembersApi
         );
 
         // for model (json/xml)
-        if (isset($patchGroupMemberRequest)) {
+        if (isset($groupmembers)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchGroupMemberRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($groupmembers));
             } else {
-                $httpBody = $patchGroupMemberRequest;
+                $httpBody = $groupmembers;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

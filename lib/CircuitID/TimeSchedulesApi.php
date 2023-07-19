@@ -1112,16 +1112,16 @@ class TimeSchedulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchTimeScheduleRequest $patchTimeScheduleRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTimeSchedule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchTimeSchedule($id, $patchTimeScheduleRequest, string $contentType = self::contentTypes['patchTimeSchedule'][0])
+    public function patchTimeSchedule($id, $timeschedules, string $contentType = self::contentTypes['patchTimeSchedule'][0])
     {
-        list($response) = $this->patchTimeScheduleWithHttpInfo($id, $patchTimeScheduleRequest, $contentType);
+        list($response) = $this->patchTimeScheduleWithHttpInfo($id, $timeschedules, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class TimeSchedulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchTimeScheduleRequest $patchTimeScheduleRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTimeSchedule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchTimeScheduleWithHttpInfo($id, $patchTimeScheduleRequest, string $contentType = self::contentTypes['patchTimeSchedule'][0])
+    public function patchTimeScheduleWithHttpInfo($id, $timeschedules, string $contentType = self::contentTypes['patchTimeSchedule'][0])
     {
-        $request = $this->patchTimeScheduleRequest($id, $patchTimeScheduleRequest, $contentType);
+        $request = $this->patchTimeScheduleRequest($id, $timeschedules, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class TimeSchedulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchTimeScheduleRequest $patchTimeScheduleRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTimeSchedule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTimeScheduleAsync($id, $patchTimeScheduleRequest, string $contentType = self::contentTypes['patchTimeSchedule'][0])
+    public function patchTimeScheduleAsync($id, $timeschedules, string $contentType = self::contentTypes['patchTimeSchedule'][0])
     {
-        return $this->patchTimeScheduleAsyncWithHttpInfo($id, $patchTimeScheduleRequest, $contentType)
+        return $this->patchTimeScheduleAsyncWithHttpInfo($id, $timeschedules, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class TimeSchedulesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchTimeScheduleRequest $patchTimeScheduleRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTimeSchedule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchTimeScheduleAsyncWithHttpInfo($id, $patchTimeScheduleRequest, string $contentType = self::contentTypes['patchTimeSchedule'][0])
+    public function patchTimeScheduleAsyncWithHttpInfo($id, $timeschedules, string $contentType = self::contentTypes['patchTimeSchedule'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchTimeScheduleRequest($id, $patchTimeScheduleRequest, $contentType);
+        $request = $this->patchTimeScheduleRequest($id, $timeschedules, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class TimeSchedulesApi
      * Create request for operation 'patchTimeSchedule'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchTimeScheduleRequest $patchTimeScheduleRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchTimeSchedule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchTimeScheduleRequest($id, $patchTimeScheduleRequest, string $contentType = self::contentTypes['patchTimeSchedule'][0])
+    public function patchTimeScheduleRequest($id, $timeschedules, string $contentType = self::contentTypes['patchTimeSchedule'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class TimeSchedulesApi
             );
         }
 
-        // verify the required parameter 'patchTimeScheduleRequest' is set
-        if ($patchTimeScheduleRequest === null || (is_array($patchTimeScheduleRequest) && count($patchTimeScheduleRequest) === 0)) {
+        // verify the required parameter 'timeschedules' is set
+        if ($timeschedules === null || (is_array($timeschedules) && count($timeschedules) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchTimeScheduleRequest when calling patchTimeSchedule'
+                'Missing the required parameter $timeschedules when calling patchTimeSchedule'
             );
         }
 
@@ -1355,12 +1355,12 @@ class TimeSchedulesApi
         );
 
         // for model (json/xml)
-        if (isset($patchTimeScheduleRequest)) {
+        if (isset($timeschedules)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchTimeScheduleRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($timeschedules));
             } else {
-                $httpBody = $patchTimeScheduleRequest;
+                $httpBody = $timeschedules;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -212,7 +212,7 @@ try {
 ## `patchPhoneOutboundRuleAction()`
 
 ```php
-patchPhoneOutboundRuleAction($id, $patchPhoneOutboundRuleActionRequest): mixed
+patchPhoneOutboundRuleAction($id, $phoneoutboundruleactions): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\PhoneOutboundRuleActionsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchPhoneOutboundRuleActionRequest = new \OpenAPI\Client\CircuitID\PatchPhoneOutboundRuleActionRequest(); // \OpenAPI\Client\CircuitID\PatchPhoneOutboundRuleActionRequest | The request data.
+$phoneoutboundruleactions = new \OpenAPI\Client\CircuitID\Phoneoutboundruleactions(); // \OpenAPI\Client\CircuitID\Phoneoutboundruleactions | The request data.
 
 try {
-    $result = $apiInstance->patchPhoneOutboundRuleAction($id, $patchPhoneOutboundRuleActionRequest);
+    $result = $apiInstance->patchPhoneOutboundRuleAction($id, $phoneoutboundruleactions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PhoneOutboundRuleActionsApi->patchPhoneOutboundRuleAction: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchPhoneOutboundRuleActionRequest** | [**\OpenAPI\Client\CircuitID\PatchPhoneOutboundRuleActionRequest**](../Model/PatchPhoneOutboundRuleActionRequest.md)| The request data. | |
+| **phoneoutboundruleactions** | [**\OpenAPI\Client\CircuitID\Phoneoutboundruleactions**](../Model/Phoneoutboundruleactions.md)| The request data. | |
 
 ### Return type
 

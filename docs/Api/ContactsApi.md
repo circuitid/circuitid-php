@@ -212,7 +212,7 @@ try {
 ## `patchContact()`
 
 ```php
-patchContact($id, $patchContactRequest): mixed
+patchContact($id, $contacts): mixed
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ContactsApi(
     $config
 );
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$patchContactRequest = new \OpenAPI\Client\CircuitID\PatchContactRequest(); // \OpenAPI\Client\CircuitID\PatchContactRequest | The request data.
+$contacts = new \OpenAPI\Client\CircuitID\Contacts(); // \OpenAPI\Client\CircuitID\Contacts | The request data.
 
 try {
-    $result = $apiInstance->patchContact($id, $patchContactRequest);
+    $result = $apiInstance->patchContact($id, $contacts);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->patchContact: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **patchContactRequest** | [**\OpenAPI\Client\CircuitID\PatchContactRequest**](../Model/PatchContactRequest.md)| The request data. | |
+| **contacts** | [**\OpenAPI\Client\CircuitID\Contacts**](../Model/Contacts.md)| The request data. | |
 
 ### Return type
 

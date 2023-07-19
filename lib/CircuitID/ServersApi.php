@@ -1112,16 +1112,16 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchServerRequest $patchServerRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchServer($id, $patchServerRequest, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServer($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
     {
-        list($response) = $this->patchServerWithHttpInfo($id, $patchServerRequest, $contentType);
+        list($response) = $this->patchServerWithHttpInfo($id, $servers, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchServerRequest $patchServerRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchServerWithHttpInfo($id, $patchServerRequest, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerWithHttpInfo($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
     {
-        $request = $this->patchServerRequest($id, $patchServerRequest, $contentType);
+        $request = $this->patchServerRequest($id, $servers, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchServerRequest $patchServerRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchServerAsync($id, $patchServerRequest, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerAsync($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
     {
-        return $this->patchServerAsyncWithHttpInfo($id, $patchServerRequest, $contentType)
+        return $this->patchServerAsyncWithHttpInfo($id, $servers, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchServerRequest $patchServerRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchServerAsyncWithHttpInfo($id, $patchServerRequest, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerAsyncWithHttpInfo($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchServerRequest($id, $patchServerRequest, $contentType);
+        $request = $this->patchServerRequest($id, $servers, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class ServersApi
      * Create request for operation 'patchServer'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchServerRequest $patchServerRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchServerRequest($id, $patchServerRequest, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerRequest($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class ServersApi
             );
         }
 
-        // verify the required parameter 'patchServerRequest' is set
-        if ($patchServerRequest === null || (is_array($patchServerRequest) && count($patchServerRequest) === 0)) {
+        // verify the required parameter 'servers' is set
+        if ($servers === null || (is_array($servers) && count($servers) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchServerRequest when calling patchServer'
+                'Missing the required parameter $servers when calling patchServer'
             );
         }
 
@@ -1355,12 +1355,12 @@ class ServersApi
         );
 
         // for model (json/xml)
-        if (isset($patchServerRequest)) {
+        if (isset($servers)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchServerRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($servers));
             } else {
-                $httpBody = $patchServerRequest;
+                $httpBody = $servers;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

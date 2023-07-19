@@ -1112,16 +1112,16 @@ class VirtualExtensionsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest $patchVirtualExtensionRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchVirtualExtension'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchVirtualExtension($id, $patchVirtualExtensionRequest, string $contentType = self::contentTypes['patchVirtualExtension'][0])
+    public function patchVirtualExtension($id, $virtualextensions, string $contentType = self::contentTypes['patchVirtualExtension'][0])
     {
-        list($response) = $this->patchVirtualExtensionWithHttpInfo($id, $patchVirtualExtensionRequest, $contentType);
+        list($response) = $this->patchVirtualExtensionWithHttpInfo($id, $virtualextensions, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class VirtualExtensionsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest $patchVirtualExtensionRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchVirtualExtension'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchVirtualExtensionWithHttpInfo($id, $patchVirtualExtensionRequest, string $contentType = self::contentTypes['patchVirtualExtension'][0])
+    public function patchVirtualExtensionWithHttpInfo($id, $virtualextensions, string $contentType = self::contentTypes['patchVirtualExtension'][0])
     {
-        $request = $this->patchVirtualExtensionRequest($id, $patchVirtualExtensionRequest, $contentType);
+        $request = $this->patchVirtualExtensionRequest($id, $virtualextensions, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class VirtualExtensionsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest $patchVirtualExtensionRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchVirtualExtension'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchVirtualExtensionAsync($id, $patchVirtualExtensionRequest, string $contentType = self::contentTypes['patchVirtualExtension'][0])
+    public function patchVirtualExtensionAsync($id, $virtualextensions, string $contentType = self::contentTypes['patchVirtualExtension'][0])
     {
-        return $this->patchVirtualExtensionAsyncWithHttpInfo($id, $patchVirtualExtensionRequest, $contentType)
+        return $this->patchVirtualExtensionAsyncWithHttpInfo($id, $virtualextensions, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class VirtualExtensionsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest $patchVirtualExtensionRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchVirtualExtension'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchVirtualExtensionAsyncWithHttpInfo($id, $patchVirtualExtensionRequest, string $contentType = self::contentTypes['patchVirtualExtension'][0])
+    public function patchVirtualExtensionAsyncWithHttpInfo($id, $virtualextensions, string $contentType = self::contentTypes['patchVirtualExtension'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchVirtualExtensionRequest($id, $patchVirtualExtensionRequest, $contentType);
+        $request = $this->patchVirtualExtensionRequest($id, $virtualextensions, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class VirtualExtensionsApi
      * Create request for operation 'patchVirtualExtension'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchVirtualExtensionRequest $patchVirtualExtensionRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchVirtualExtension'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchVirtualExtensionRequest($id, $patchVirtualExtensionRequest, string $contentType = self::contentTypes['patchVirtualExtension'][0])
+    public function patchVirtualExtensionRequest($id, $virtualextensions, string $contentType = self::contentTypes['patchVirtualExtension'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class VirtualExtensionsApi
             );
         }
 
-        // verify the required parameter 'patchVirtualExtensionRequest' is set
-        if ($patchVirtualExtensionRequest === null || (is_array($patchVirtualExtensionRequest) && count($patchVirtualExtensionRequest) === 0)) {
+        // verify the required parameter 'virtualextensions' is set
+        if ($virtualextensions === null || (is_array($virtualextensions) && count($virtualextensions) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchVirtualExtensionRequest when calling patchVirtualExtension'
+                'Missing the required parameter $virtualextensions when calling patchVirtualExtension'
             );
         }
 
@@ -1355,12 +1355,12 @@ class VirtualExtensionsApi
         );
 
         // for model (json/xml)
-        if (isset($patchVirtualExtensionRequest)) {
+        if (isset($virtualextensions)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchVirtualExtensionRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($virtualextensions));
             } else {
-                $httpBody = $patchVirtualExtensionRequest;
+                $httpBody = $virtualextensions;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

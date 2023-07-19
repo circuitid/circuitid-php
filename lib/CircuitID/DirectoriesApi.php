@@ -1112,16 +1112,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchDirectorie($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorie($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
-        list($response) = $this->patchDirectorieWithHttpInfo($id, $patchDirectorieRequest, $contentType);
+        list($response) = $this->patchDirectorieWithHttpInfo($id, $directories, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchDirectorieWithHttpInfo($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
-        $request = $this->patchDirectorieRequest($id, $patchDirectorieRequest, $contentType);
+        $request = $this->patchDirectorieRequest($id, $directories, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDirectorieAsync($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieAsync($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
-        return $this->patchDirectorieAsyncWithHttpInfo($id, $patchDirectorieRequest, $contentType)
+        return $this->patchDirectorieAsyncWithHttpInfo($id, $directories, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDirectorieAsyncWithHttpInfo($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieAsyncWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchDirectorieRequest($id, $patchDirectorieRequest, $contentType);
+        $request = $this->patchDirectorieRequest($id, $directories, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class DirectoriesApi
      * Create request for operation 'patchDirectorie'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchDirectorieRequest $patchDirectorieRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchDirectorieRequest($id, $patchDirectorieRequest, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchDirectorieRequest($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class DirectoriesApi
             );
         }
 
-        // verify the required parameter 'patchDirectorieRequest' is set
-        if ($patchDirectorieRequest === null || (is_array($patchDirectorieRequest) && count($patchDirectorieRequest) === 0)) {
+        // verify the required parameter 'directories' is set
+        if ($directories === null || (is_array($directories) && count($directories) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchDirectorieRequest when calling patchDirectorie'
+                'Missing the required parameter $directories when calling patchDirectorie'
             );
         }
 
@@ -1355,12 +1355,12 @@ class DirectoriesApi
         );
 
         // for model (json/xml)
-        if (isset($patchDirectorieRequest)) {
+        if (isset($directories)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchDirectorieRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($directories));
             } else {
-                $httpBody = $patchDirectorieRequest;
+                $httpBody = $directories;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

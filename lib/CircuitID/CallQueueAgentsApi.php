@@ -1112,16 +1112,16 @@ class CallQueueAgentsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest $patchCallQueueAgentRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchCallQueueAgent($id, $patchCallQueueAgentRequest, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
+    public function patchCallQueueAgent($id, $callqueueagents, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
     {
-        list($response) = $this->patchCallQueueAgentWithHttpInfo($id, $patchCallQueueAgentRequest, $contentType);
+        list($response) = $this->patchCallQueueAgentWithHttpInfo($id, $callqueueagents, $contentType);
         return $response;
     }
 
@@ -1131,16 +1131,16 @@ class CallQueueAgentsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest $patchCallQueueAgentRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchCallQueueAgentWithHttpInfo($id, $patchCallQueueAgentRequest, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
+    public function patchCallQueueAgentWithHttpInfo($id, $callqueueagents, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
     {
-        $request = $this->patchCallQueueAgentRequest($id, $patchCallQueueAgentRequest, $contentType);
+        $request = $this->patchCallQueueAgentRequest($id, $callqueueagents, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1232,15 +1232,15 @@ class CallQueueAgentsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest $patchCallQueueAgentRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchCallQueueAgentAsync($id, $patchCallQueueAgentRequest, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
+    public function patchCallQueueAgentAsync($id, $callqueueagents, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
     {
-        return $this->patchCallQueueAgentAsyncWithHttpInfo($id, $patchCallQueueAgentRequest, $contentType)
+        return $this->patchCallQueueAgentAsyncWithHttpInfo($id, $callqueueagents, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1254,16 +1254,16 @@ class CallQueueAgentsApi
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest $patchCallQueueAgentRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchCallQueueAgentAsyncWithHttpInfo($id, $patchCallQueueAgentRequest, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
+    public function patchCallQueueAgentAsyncWithHttpInfo($id, $callqueueagents, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchCallQueueAgentRequest($id, $patchCallQueueAgentRequest, $contentType);
+        $request = $this->patchCallQueueAgentRequest($id, $callqueueagents, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1305,13 +1305,13 @@ class CallQueueAgentsApi
      * Create request for operation 'patchCallQueueAgent'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\PatchCallQueueAgentRequest $patchCallQueueAgentRequest The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchCallQueueAgentRequest($id, $patchCallQueueAgentRequest, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
+    public function patchCallQueueAgentRequest($id, $callqueueagents, string $contentType = self::contentTypes['patchCallQueueAgent'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1321,10 +1321,10 @@ class CallQueueAgentsApi
             );
         }
 
-        // verify the required parameter 'patchCallQueueAgentRequest' is set
-        if ($patchCallQueueAgentRequest === null || (is_array($patchCallQueueAgentRequest) && count($patchCallQueueAgentRequest) === 0)) {
+        // verify the required parameter 'callqueueagents' is set
+        if ($callqueueagents === null || (is_array($callqueueagents) && count($callqueueagents) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $patchCallQueueAgentRequest when calling patchCallQueueAgent'
+                'Missing the required parameter $callqueueagents when calling patchCallQueueAgent'
             );
         }
 
@@ -1355,12 +1355,12 @@ class CallQueueAgentsApi
         );
 
         // for model (json/xml)
-        if (isset($patchCallQueueAgentRequest)) {
+        if (isset($callqueueagents)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($patchCallQueueAgentRequest));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($callqueueagents));
             } else {
-                $httpBody = $patchCallQueueAgentRequest;
+                $httpBody = $callqueueagents;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
