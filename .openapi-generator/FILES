@@ -70,6 +70,7 @@ docs/Model/Directories.md
 docs/Model/Domains.md
 docs/Model/Faxaccounts.md
 docs/Model/Faxes.md
+docs/Model/FindAcceptedSenders200Response.md
 docs/Model/Firewall.md
 docs/Model/Groupmembers.md
 docs/Model/Groups.md
@@ -139,6 +140,7 @@ lib/CircuitID/FaxAccountApi.php
 lib/CircuitID/Faxaccounts.php
 lib/CircuitID/Faxes.php
 lib/CircuitID/FaxesApi.php
+lib/CircuitID/FindAcceptedSenders200Response.php
 lib/CircuitID/FindNumbersApi.php
 lib/CircuitID/Firewall.php
 lib/CircuitID/FirewallApi.php
@@ -265,6 +267,7 @@ test/Model/DirectoriesTest.php
 test/Model/DomainsTest.php
 test/Model/FaxaccountsTest.php
 test/Model/FaxesTest.php
+test/Model/FindAcceptedSenders200ResponseTest.php
 test/Model/FirewallTest.php
 test/Model/GroupmembersTest.php
 test/Model/GroupsTest.php
