@@ -76,7 +76,7 @@ try {
 ## `findConversations()`
 
 ```php
-findConversations($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindConversations200Response
+findConversations($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindConversations200Response**](../Model/FindConversations200Response.md)
+**mixed**
 
 ### Authorization
 

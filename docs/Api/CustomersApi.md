@@ -76,7 +76,7 @@ try {
 ## `findCustomers()`
 
 ```php
-findCustomers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCustomers200Response
+findCustomers($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindCustomers200Response**](../Model/FindCustomers200Response.md)
+**mixed**
 
 ### Authorization
 

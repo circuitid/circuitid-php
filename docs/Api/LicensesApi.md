@@ -76,7 +76,7 @@ try {
 ## `findLicenses()`
 
 ```php
-findLicenses($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindLicenses200Response
+findLicenses($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindLicenses200Response**](../Model/FindLicenses200Response.md)
+**mixed**
 
 ### Authorization
 

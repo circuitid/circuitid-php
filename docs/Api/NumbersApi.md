@@ -12,7 +12,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `findNumbers()`
 
 ```php
-findNumbers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindNumbers200Response
+findNumbers($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -68,7 +68,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindNumbers200Response**](../Model/FindNumbers200Response.md)
+**mixed**
 
 ### Authorization
 

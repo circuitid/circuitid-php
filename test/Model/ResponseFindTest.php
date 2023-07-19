@@ -1,6 +1,6 @@
 <?php
 /**
- * FindTimeSchedules200ResponseTest
+ * ResponseFindTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FindTimeSchedules200ResponseTest Class Doc Comment
+ * ResponseFindTest Class Doc Comment
  *
  * @category    Class
- * @description FindTimeSchedules200Response
+ * @description ResponseFind
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FindTimeSchedules200ResponseTest extends TestCase
+class ResponseFindTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class FindTimeSchedules200ResponseTest extends TestCase
     }
 
     /**
-     * Test "FindTimeSchedules200Response"
+     * Test "ResponseFind"
      */
-    public function testFindTimeSchedules200Response()
+    public function testResponseFind()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -102,15 +102,6 @@ class FindTimeSchedules200ResponseTest extends TestCase
      * Test attribute "skip"
      */
     public function testPropertySkip()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

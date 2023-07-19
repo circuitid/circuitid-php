@@ -76,7 +76,7 @@ try {
 ## `findAcceptedSenders()`
 
 ```php
-findAcceptedSenders($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findAcceptedSenders($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+**mixed**
 
 ### Authorization
 

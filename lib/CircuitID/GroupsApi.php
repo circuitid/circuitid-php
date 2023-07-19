@@ -438,7 +438,7 @@ class GroupsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindGroups200Response
+     * @return mixed
      */
     public function findGroups($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findGroups'][0])
     {
@@ -462,7 +462,7 @@ class GroupsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindGroups200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function findGroupsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findGroups'][0])
     {
@@ -505,23 +505,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindGroups200Response' === '\SplFileObject') {
+                    if ('mixed' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindGroups200Response' !== 'string') {
+                        if ('mixed' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindGroups200Response', []),
+                        ObjectSerializer::deserialize($content, 'mixed', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindGroups200Response';
+            $returnType = 'mixed';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindGroups200Response',
+                        'mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class GroupsApi
      */
     public function findGroupsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findGroups'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindGroups200Response';
+        $returnType = 'mixed';
         $request = $this->findGroupsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

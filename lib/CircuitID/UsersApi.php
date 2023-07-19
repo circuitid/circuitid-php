@@ -438,7 +438,7 @@ class UsersApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindUsers200Response
+     * @return mixed
      */
     public function findUsers($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findUsers'][0])
     {
@@ -462,7 +462,7 @@ class UsersApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindUsers200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function findUsersWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findUsers'][0])
     {
@@ -505,23 +505,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindUsers200Response' === '\SplFileObject') {
+                    if ('mixed' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindUsers200Response' !== 'string') {
+                        if ('mixed' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindUsers200Response', []),
+                        ObjectSerializer::deserialize($content, 'mixed', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindUsers200Response';
+            $returnType = 'mixed';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindUsers200Response',
+                        'mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class UsersApi
      */
     public function findUsersAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findUsers'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindUsers200Response';
+        $returnType = 'mixed';
         $request = $this->findUsersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

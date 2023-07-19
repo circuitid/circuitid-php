@@ -76,7 +76,7 @@ try {
 ## `findHolidays()`
 
 ```php
-findHolidays($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindHolidays200Response
+findHolidays($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindHolidays200Response**](../Model/FindHolidays200Response.md)
+**mixed**
 
 ### Authorization
 

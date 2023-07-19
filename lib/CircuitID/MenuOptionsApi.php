@@ -438,7 +438,7 @@ class MenuOptionsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindMenuOptions200Response
+     * @return mixed
      */
     public function findMenuOptions($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMenuOptions'][0])
     {
@@ -462,7 +462,7 @@ class MenuOptionsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindMenuOptions200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function findMenuOptionsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMenuOptions'][0])
     {
@@ -505,23 +505,23 @@ class MenuOptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindMenuOptions200Response' === '\SplFileObject') {
+                    if ('mixed' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindMenuOptions200Response' !== 'string') {
+                        if ('mixed' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindMenuOptions200Response', []),
+                        ObjectSerializer::deserialize($content, 'mixed', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindMenuOptions200Response';
+            $returnType = 'mixed';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class MenuOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindMenuOptions200Response',
+                        'mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class MenuOptionsApi
      */
     public function findMenuOptionsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMenuOptions'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindMenuOptions200Response';
+        $returnType = 'mixed';
         $request = $this->findMenuOptionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

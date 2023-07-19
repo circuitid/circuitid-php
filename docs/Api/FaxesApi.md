@@ -75,7 +75,7 @@ try {
 ## `findFaxes()`
 
 ```php
-findFaxes($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFaxes200Response
+findFaxes($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -131,7 +131,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindFaxes200Response**](../Model/FindFaxes200Response.md)
+**mixed**
 
 ### Authorization
 

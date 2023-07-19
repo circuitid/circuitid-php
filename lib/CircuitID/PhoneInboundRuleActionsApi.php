@@ -438,7 +438,7 @@ class PhoneInboundRuleActionsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response
+     * @return mixed
      */
     public function findPhoneInboundRuleActions($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
@@ -462,7 +462,7 @@ class PhoneInboundRuleActionsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
     public function findPhoneInboundRuleActionsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
@@ -505,23 +505,23 @@ class PhoneInboundRuleActionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response' === '\SplFileObject') {
+                    if ('mixed' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response' !== 'string') {
+                        if ('mixed' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response', []),
+                        ObjectSerializer::deserialize($content, 'mixed', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response';
+            $returnType = 'mixed';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class PhoneInboundRuleActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response',
+                        'mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class PhoneInboundRuleActionsApi
      */
     public function findPhoneInboundRuleActionsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response';
+        $returnType = 'mixed';
         $request = $this->findPhoneInboundRuleActionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

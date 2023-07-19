@@ -76,7 +76,7 @@ try {
 ## `findCallQueueAgents()`
 
 ```php
-findCallQueueAgents($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCallQueueAgents200Response
+findCallQueueAgents($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response**](../Model/FindCallQueueAgents200Response.md)
+**mixed**
 
 ### Authorization
 

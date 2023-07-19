@@ -76,7 +76,7 @@ try {
 ## `findDeveloperAppSubscriptions()`
 
 ```php
-findDeveloperAppSubscriptions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response
+findDeveloperAppSubscriptions($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response**](../Model/FindDeveloperAppSubscriptions200Response.md)
+**mixed**
 
 ### Authorization
 

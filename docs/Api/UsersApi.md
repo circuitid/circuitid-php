@@ -76,7 +76,7 @@ try {
 ## `findUsers()`
 
 ```php
-findUsers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindUsers200Response
+findUsers($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindUsers200Response**](../Model/FindUsers200Response.md)
+**mixed**
 
 ### Authorization
 

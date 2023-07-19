@@ -76,7 +76,7 @@ try {
 ## `findAnnouncements()`
 
 ```php
-findAnnouncements($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAnnouncements200Response
+findAnnouncements($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAnnouncements200Response**](../Model/FindAnnouncements200Response.md)
+**mixed**
 
 ### Authorization
 

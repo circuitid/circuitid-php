@@ -76,7 +76,7 @@ try {
 ## `findPhoneOutboundRuleActions()`
 
 ```php
-findPhoneOutboundRuleActions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindPhoneOutboundRuleActions200Response
+findPhoneOutboundRuleActions($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindPhoneOutboundRuleActions200Response**](../Model/FindPhoneOutboundRuleActions200Response.md)
+**mixed**
 
 ### Authorization
 

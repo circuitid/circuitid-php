@@ -1,6 +1,6 @@
 <?php
 /**
- * FindPhoneInboundRuleActions200Response
+ * ResponseFind
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * FindPhoneInboundRuleActions200Response Class Doc Comment
+ * ResponseFind Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAccess, \JsonSerializable
+class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'findPhoneInbound_Rule_Actions_200_response';
+    protected static $openAPIModelName = 'responseFind';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,8 +60,7 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
     protected static $openAPITypes = [
         'total' => 'mixed',
         'limit' => 'mixed',
-        'skip' => 'mixed',
-        'data' => 'mixed'
+        'skip' => 'mixed'
     ];
 
     /**
@@ -74,8 +73,7 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
     protected static $openAPIFormats = [
         'total' => 'int32',
         'limit' => 'int32',
-        'skip' => 'int32',
-        'data' => null
+        'skip' => 'int32'
     ];
 
     /**
@@ -86,8 +84,7 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
     protected static array $openAPINullables = [
         'total' => true,
 		'limit' => true,
-		'skip' => true,
-		'data' => true
+		'skip' => true
     ];
 
     /**
@@ -178,8 +175,7 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
     protected static $attributeMap = [
         'total' => 'total',
         'limit' => 'limit',
-        'skip' => 'skip',
-        'data' => 'data'
+        'skip' => 'skip'
     ];
 
     /**
@@ -190,8 +186,7 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
     protected static $setters = [
         'total' => 'setTotal',
         'limit' => 'setLimit',
-        'skip' => 'setSkip',
-        'data' => 'setData'
+        'skip' => 'setSkip'
     ];
 
     /**
@@ -202,8 +197,7 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
     protected static $getters = [
         'total' => 'getTotal',
         'limit' => 'getLimit',
-        'skip' => 'getSkip',
-        'data' => 'getData'
+        'skip' => 'getSkip'
     ];
 
     /**
@@ -266,7 +260,6 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
         $this->setIfExists('total', $data ?? [], null);
         $this->setIfExists('limit', $data ?? [], null);
         $this->setIfExists('skip', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -409,40 +402,6 @@ class FindPhoneInboundRuleActions200Response implements ModelInterface, ArrayAcc
             }
         }
         $this->container['skip'] = $skip;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return mixed|null
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param mixed|null $data data
-     *
-     * @return self
-     */
-    public function setData($data)
-    {
-        if (is_null($data)) {
-            array_push($this->openAPINullablesSetToNull, 'data');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('data', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['data'] = $data;
 
         return $this;
     }

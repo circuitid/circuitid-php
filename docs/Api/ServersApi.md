@@ -76,7 +76,7 @@ try {
 ## `findServers()`
 
 ```php
-findServers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindServers200Response
+findServers($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindServers200Response**](../Model/FindServers200Response.md)
+**mixed**
 
 ### Authorization
 

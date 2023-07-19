@@ -76,7 +76,7 @@ try {
 ## `findTimeSchedules()`
 
 ```php
-findTimeSchedules($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindTimeSchedules200Response
+findTimeSchedules($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindTimeSchedules200Response**](../Model/FindTimeSchedules200Response.md)
+**mixed**
 
 ### Authorization
 

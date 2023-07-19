@@ -75,7 +75,7 @@ try {
 ## `findNumberPorts()`
 
 ```php
-findNumberPorts($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindNumberPorts200Response
+findNumberPorts($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -131,7 +131,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindNumberPorts200Response**](../Model/FindNumberPorts200Response.md)
+**mixed**
 
 ### Authorization
 

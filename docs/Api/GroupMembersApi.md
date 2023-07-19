@@ -76,7 +76,7 @@ try {
 ## `findGroupMembers()`
 
 ```php
-findGroupMembers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindGroupMembers200Response
+findGroupMembers($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindGroupMembers200Response**](../Model/FindGroupMembers200Response.md)
+**mixed**
 
 ### Authorization
 

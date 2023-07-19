@@ -76,7 +76,7 @@ try {
 ## `findDeveloperApps()`
 
 ```php
-findDeveloperApps($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDeveloperApps200Response
+findDeveloperApps($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindDeveloperApps200Response**](../Model/FindDeveloperApps200Response.md)
+**mixed**
 
 ### Authorization
 

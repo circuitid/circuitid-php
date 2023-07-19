@@ -76,7 +76,7 @@ try {
 ## `findMessageCampaigns()`
 
 ```php
-findMessageCampaigns($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMessageCampaigns200Response
+findMessageCampaigns($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response**](../Model/FindMessageCampaigns200Response.md)
+**mixed**
 
 ### Authorization
 
