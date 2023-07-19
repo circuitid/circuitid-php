@@ -289,6 +289,12 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['total'] === null) {
+            $invalidProperties[] = "'total' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -307,7 +313,7 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets total
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getTotal()
     {
@@ -317,7 +323,7 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets total
      *
-     * @param mixed|null $total total
+     * @param mixed $total total
      *
      * @return self
      */
@@ -341,7 +347,7 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets limit
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getLimit()
     {
@@ -351,7 +357,7 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets limit
      *
-     * @param mixed|null $limit limit
+     * @param mixed $limit limit
      *
      * @return self
      */
