@@ -308,6 +308,7 @@ Class | Method | HTTP request | Description
 - [Faxaccounts](docs/Model/Faxaccounts.md)
 - [Faxes](docs/Model/Faxes.md)
 - [Find](docs/Model/Find.md)
+- [FindAcceptedSenders200Response](docs/Model/FindAcceptedSenders200Response.md)
 - [Firewall](docs/Model/Firewall.md)
 - [Groupmembers](docs/Model/Groupmembers.md)
 - [Groups](docs/Model/Groups.md)
