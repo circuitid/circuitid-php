@@ -60,7 +60,8 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'total' => 'mixed',
         'limit' => 'mixed',
-        'skip' => 'mixed'
+        'skip' => 'mixed',
+        'data' => 'mixed'
     ];
 
     /**
@@ -73,7 +74,8 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'total' => 'int32',
         'limit' => 'int32',
-        'skip' => 'int32'
+        'skip' => 'int32',
+        'data' => null
     ];
 
     /**
@@ -84,7 +86,8 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'total' => true,
 		'limit' => true,
-		'skip' => true
+		'skip' => true,
+		'data' => true
     ];
 
     /**
@@ -175,7 +178,8 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'total' => 'total',
         'limit' => 'limit',
-        'skip' => 'skip'
+        'skip' => 'skip',
+        'data' => 'data'
     ];
 
     /**
@@ -186,7 +190,8 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'total' => 'setTotal',
         'limit' => 'setLimit',
-        'skip' => 'setSkip'
+        'skip' => 'setSkip',
+        'data' => 'setData'
     ];
 
     /**
@@ -197,7 +202,8 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'total' => 'getTotal',
         'limit' => 'getLimit',
-        'skip' => 'getSkip'
+        'skip' => 'getSkip',
+        'data' => 'getData'
     ];
 
     /**
@@ -260,6 +266,7 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('total', $data ?? [], null);
         $this->setIfExists('limit', $data ?? [], null);
         $this->setIfExists('skip', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -294,6 +301,9 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['limit'] === null) {
             $invalidProperties[] = "'limit' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
         return $invalidProperties;
     }
@@ -408,6 +418,40 @@ class ResponseFind implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
         $this->container['skip'] = $skip;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return mixed
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param mixed $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        if (is_null($data)) {
+            array_push($this->openAPINullablesSetToNull, 'data');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('data', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['data'] = $data;
 
         return $this;
     }

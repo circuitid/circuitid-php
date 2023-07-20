@@ -106,4 +106,13 @@ class ResponseFindTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
