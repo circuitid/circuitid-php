@@ -142,7 +142,7 @@ class RateCentersApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+     * @return \OpenAPI\Client\CircuitID\FindRateCenters200Response
      */
     public function findRateCenters($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
@@ -166,7 +166,7 @@ class RateCentersApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindRateCenters200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function findRateCentersWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
@@ -209,23 +209,23 @@ class RateCentersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindRateCenters200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindRateCenters200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindRateCenters200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindRateCenters200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -246,7 +246,7 @@ class RateCentersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response',
+                        '\OpenAPI\Client\CircuitID\FindRateCenters200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -302,7 +302,7 @@ class RateCentersApi
      */
     public function findRateCentersAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+        $returnType = '\OpenAPI\Client\CircuitID\FindRateCenters200Response';
         $request = $this->findRateCentersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

@@ -76,7 +76,7 @@ try {
 ## `findDirectories()`
 
 ```php
-findDirectories($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findDirectories($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDirectories200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindDirectories200Response**](../Model/FindDirectories200Response.md)
 
 ### Authorization
 

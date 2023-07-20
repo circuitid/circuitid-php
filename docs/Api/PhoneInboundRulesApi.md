@@ -76,7 +76,7 @@ try {
 ## `findPhoneInboundRules()`
 
 ```php
-findPhoneInboundRules($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findPhoneInboundRules($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindPhoneInboundRules200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindPhoneInboundRules200Response**](../Model/FindPhoneInboundRules200Response.md)
 
 ### Authorization
 

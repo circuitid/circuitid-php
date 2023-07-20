@@ -76,7 +76,7 @@ try {
 ## `findChatRooms()`
 
 ```php
-findChatRooms($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findChatRooms($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindChatRooms200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindChatRooms200Response**](../Model/FindChatRooms200Response.md)
 
 ### Authorization
 

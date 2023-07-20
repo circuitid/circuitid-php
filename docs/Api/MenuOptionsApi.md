@@ -76,7 +76,7 @@ try {
 ## `findMenuOptions()`
 
 ```php
-findMenuOptions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findMenuOptions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMenuOptions200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindMenuOptions200Response**](../Model/FindMenuOptions200Response.md)
 
 ### Authorization
 
