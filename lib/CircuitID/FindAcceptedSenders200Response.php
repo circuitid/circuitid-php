@@ -58,7 +58,10 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'total' => 'mixed',
+        'limit' => 'mixed',
+        'skip' => 'mixed',
+        'data' => 'mixed'
     ];
 
     /**
@@ -69,7 +72,10 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        
+        'total' => 'int32',
+        'limit' => 'int32',
+        'skip' => 'int32',
+        'data' => null
     ];
 
     /**
@@ -78,7 +84,10 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        
+        'total' => true,
+		'limit' => true,
+		'skip' => true,
+		'data' => true
     ];
 
     /**
@@ -167,7 +176,10 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'total' => 'total',
+        'limit' => 'limit',
+        'skip' => 'skip',
+        'data' => 'data'
     ];
 
     /**
@@ -176,7 +188,10 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        
+        'total' => 'setTotal',
+        'limit' => 'setLimit',
+        'skip' => 'setSkip',
+        'data' => 'setData'
     ];
 
     /**
@@ -185,7 +200,10 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        
+        'total' => 'getTotal',
+        'limit' => 'getLimit',
+        'skip' => 'getSkip',
+        'data' => 'getData'
     ];
 
     /**
@@ -245,6 +263,10 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('limit', $data ?? [], null);
+        $this->setIfExists('skip', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -288,6 +310,142 @@ class FindAcceptedSenders200Response implements ModelInterface, ArrayAccess, \Js
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets total
+     *
+     * @return mixed|null
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     *
+     * @param mixed|null $total total
+     *
+     * @return self
+     */
+    public function setTotal($total)
+    {
+        if (is_null($total)) {
+            array_push($this->openAPINullablesSetToNull, 'total');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('total', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets limit
+     *
+     * @return mixed|null
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     *
+     * @param mixed|null $limit limit
+     *
+     * @return self
+     */
+    public function setLimit($limit)
+    {
+        if (is_null($limit)) {
+            array_push($this->openAPINullablesSetToNull, 'limit');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('limit', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets skip
+     *
+     * @return mixed|null
+     */
+    public function getSkip()
+    {
+        return $this->container['skip'];
+    }
+
+    /**
+     * Sets skip
+     *
+     * @param mixed|null $skip skip
+     *
+     * @return self
+     */
+    public function setSkip($skip)
+    {
+        if (is_null($skip)) {
+            array_push($this->openAPINullablesSetToNull, 'skip');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('skip', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['skip'] = $skip;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return mixed|null
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param mixed|null $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        if (is_null($data)) {
+            array_push($this->openAPINullablesSetToNull, 'data');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('data', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['data'] = $data;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

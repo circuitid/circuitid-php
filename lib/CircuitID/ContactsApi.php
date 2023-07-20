@@ -438,7 +438,7 @@ class ContactsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+     * @return \OpenAPI\Client\CircuitID\FindContacts200Response
      */
     public function findContacts($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findContacts'][0])
     {
@@ -462,7 +462,7 @@ class ContactsApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindContacts200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function findContactsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findContacts'][0])
     {
@@ -505,23 +505,23 @@ class ContactsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindContacts200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindContacts200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindContacts200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindContacts200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response',
+                        '\OpenAPI\Client\CircuitID\FindContacts200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class ContactsApi
      */
     public function findContactsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findContacts'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+        $returnType = '\OpenAPI\Client\CircuitID\FindContacts200Response';
         $request = $this->findContactsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

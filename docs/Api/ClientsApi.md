@@ -76,7 +76,7 @@ try {
 ## `findClients()`
 
 ```php
-findClients($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findClients($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindClients200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindClients200Response**](../Model/FindClients200Response.md)
 
 ### Authorization
 

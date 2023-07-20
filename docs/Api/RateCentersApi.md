@@ -11,7 +11,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `findRateCenters()`
 
 ```php
-findRateCenters($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findRateCenters($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindRateCenters200Response
 ```
 
 Find multiple objects
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindRateCenters200Response**](../Model/FindRateCenters200Response.md)
 
 ### Authorization
 

@@ -76,7 +76,7 @@ try {
 ## `findOffices()`
 
 ```php
-findOffices($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findOffices($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindOffices200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindOffices200Response**](../Model/FindOffices200Response.md)
 
 ### Authorization
 

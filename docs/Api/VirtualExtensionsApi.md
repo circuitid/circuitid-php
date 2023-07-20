@@ -76,7 +76,7 @@ try {
 ## `findVirtualExtensions()`
 
 ```php
-findVirtualExtensions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findVirtualExtensions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindVirtualExtensions200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response**](../Model/FindVirtualExtensions200Response.md)
 
 ### Authorization
 

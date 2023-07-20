@@ -11,7 +11,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `findInvoiceItems()`
 
 ```php
-findInvoiceItems($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findInvoiceItems($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindInvoiceItems200Response
 ```
 
 Find multiple objects
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindInvoiceItems200Response**](../Model/FindInvoiceItems200Response.md)
 
 ### Authorization
 

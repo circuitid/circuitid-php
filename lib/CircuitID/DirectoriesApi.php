@@ -438,7 +438,7 @@ class DirectoriesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+     * @return \OpenAPI\Client\CircuitID\FindDirectories200Response
      */
     public function findDirectories($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDirectories'][0])
     {
@@ -462,7 +462,7 @@ class DirectoriesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindDirectories200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function findDirectoriesWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDirectories'][0])
     {
@@ -505,23 +505,23 @@ class DirectoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindDirectories200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindDirectories200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindDirectories200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindDirectories200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class DirectoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response',
+                        '\OpenAPI\Client\CircuitID\FindDirectories200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class DirectoriesApi
      */
     public function findDirectoriesAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDirectories'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+        $returnType = '\OpenAPI\Client\CircuitID\FindDirectories200Response';
         $request = $this->findDirectoriesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

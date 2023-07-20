@@ -438,7 +438,7 @@ class TimeSchedulesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+     * @return \OpenAPI\Client\CircuitID\FindTimeSchedules200Response
      */
     public function findTimeSchedules($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
@@ -462,7 +462,7 @@ class TimeSchedulesApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindTimeSchedules200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function findTimeSchedulesWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
@@ -505,23 +505,23 @@ class TimeSchedulesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindTimeSchedules200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindTimeSchedules200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class TimeSchedulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response',
+                        '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -598,7 +598,7 @@ class TimeSchedulesApi
      */
     public function findTimeSchedulesAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+        $returnType = '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response';
         $request = $this->findTimeSchedulesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client

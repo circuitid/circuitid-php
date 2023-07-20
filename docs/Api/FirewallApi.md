@@ -76,7 +76,7 @@ try {
 ## `findFirewall()`
 
 ```php
-findFirewall($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findFirewall($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFirewall200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindFirewall200Response**](../Model/FindFirewall200Response.md)
 
 ### Authorization
 

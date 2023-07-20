@@ -76,7 +76,7 @@ try {
 ## `findUserTokens()`
 
 ```php
-findUserTokens($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findUserTokens($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindUserTokens200Response
 ```
 
 Find multiple objects
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindUserTokens200Response**](../Model/FindUserTokens200Response.md)
 
 ### Authorization
 
