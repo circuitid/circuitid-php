@@ -296,6 +296,18 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
+        if ($this->container['total'] === null) {
+            $invalidProperties[] = "'total' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
+        if ($this->container['skip'] === null) {
+            $invalidProperties[] = "'skip' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +326,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets total
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getTotal()
     {
@@ -324,7 +336,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets total
      *
-     * @param mixed|null $total total
+     * @param mixed $total total
      *
      * @return self
      */
@@ -348,7 +360,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets limit
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getLimit()
     {
@@ -358,7 +370,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets limit
      *
-     * @param mixed|null $limit limit
+     * @param mixed $limit limit
      *
      * @return self
      */
@@ -382,7 +394,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets skip
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getSkip()
     {
@@ -392,7 +404,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets skip
      *
-     * @param mixed|null $skip skip
+     * @param mixed $skip skip
      *
      * @return self
      */
@@ -416,7 +428,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets data
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getData()
     {
@@ -426,7 +438,7 @@ class FindDirectories200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets data
      *
-     * @param mixed|null $data data
+     * @param mixed $data data
      *
      * @return self
      */

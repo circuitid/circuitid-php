@@ -296,6 +296,18 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
+        if ($this->container['total'] === null) {
+            $invalidProperties[] = "'total' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
+        if ($this->container['skip'] === null) {
+            $invalidProperties[] = "'skip' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -314,7 +326,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets total
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getTotal()
     {
@@ -324,7 +336,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets total
      *
-     * @param mixed|null $total total
+     * @param mixed $total total
      *
      * @return self
      */
@@ -348,7 +360,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets limit
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getLimit()
     {
@@ -358,7 +370,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets limit
      *
-     * @param mixed|null $limit limit
+     * @param mixed $limit limit
      *
      * @return self
      */
@@ -382,7 +394,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets skip
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getSkip()
     {
@@ -392,7 +404,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets skip
      *
-     * @param mixed|null $skip skip
+     * @param mixed $skip skip
      *
      * @return self
      */
@@ -416,7 +428,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets data
      *
-     * @return mixed|null
+     * @return mixed
      */
     public function getData()
     {
@@ -426,7 +438,7 @@ class FindAnnouncements200Response implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets data
      *
-     * @param mixed|null $data data
+     * @param mixed $data data
      *
      * @return self
      */
