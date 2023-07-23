@@ -13,12 +13,12 @@ Happy coding!
 
 Discover the convenience of Circuit ID's readily available Client API libraries, enabling you to initiate seamless integration without delay. These pre-built libraries are designed for immediate use, empowering you to leverage the API's functionalities effortlessly. Get started with a Circuit ID&reg; Client library and streamline your development process today.
 
-- <a href=\"https://github.com/circuitid/circuitid-node\" target=\"_blank\">Node</a>
-- <a href=\"https://github.com/circuitid/circuitid-python\" target=\"_blank\">Python</a>
-- <a href=\"https://github.com/circuitid/circuitid-java\" target=\"_blank\">Java</a>
-- <a href=\"https://github.com/circuitid/circuitid-csharp\" target=\"_blank\">C Sharp</a>
-- <a href=\"https://github.com/circuitid/circuitid-ruby\" target=\"_blank\">Ruby</a>
-- <a href=\"https://github.com/circuitid/circuitid-go\" target=\"_blank\">Go</a>
+- <a href='https://github.com/circuitid/circuitid-node' target='_blank'>Node</a>
+- <a href='https://github.com/circuitid/circuitid-python' target='_blank'>Python</a>
+- <a href='https://github.com/circuitid/circuitid-java' target='_blank'>Java</a>
+- <a href='https://github.com/circuitid/circuitid-csharp' target='_blank'>C Sharp</a>
+- <a href='https://github.com/circuitid/circuitid-ruby' target='_blank'>Ruby</a>
+- <a href='https://github.com/circuitid/circuitid-go' target='_blank'>Go</a>
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/).
 
@@ -93,7 +93,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://rest.circuitid.com*
+All URIs are relative to *https://cloud9.circuitid.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -414,5 +414,5 @@ support@circuitid.com
 
 
 
-- API version: `0.47.13`
+- API version: `0.47.14`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
