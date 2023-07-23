@@ -388,4 +388,31 @@ Class | Method | HTTP request | Description
 - [Usertokens](docs/Model/Usertokens.md)
 - [Virtualextensions](docs/Model/Virtualextensions.md)
 
-ization
+## Authorization
+
+Authentication schemes defined for the API:
+### jwt
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
+
+
+## Tests
+
+To run the tests, use:
+
+```bash
+composer install
+vendor/bin/phpunit
+```
+
+## Author
+
+support@circuitid.com
+
+
+
+
+- API version: `0.47.14`
+- Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
