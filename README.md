@@ -407,12 +407,4 @@ composer install
 vendor/bin/phpunit
 ```
 
-## Author
 
-support@circuitid.com
-
-
-
-
-- API version: `0.47.14`
-- Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
