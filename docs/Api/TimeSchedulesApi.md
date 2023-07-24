@@ -1,11 +1,11 @@
 # OpenAPI\Client\TimeSchedulesApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createTimeSchedule()**](TimeSchedulesApi.md#createTimeSchedule) | **POST** /timeschedules | Create a new object |
-| [**findTimeSchedules()**](TimeSchedulesApi.md#findTimeSchedules) | **GET** /timeschedules | Find multiple objects |
+| [**findTimeSchedule()**](TimeSchedulesApi.md#findTimeSchedule) | **GET** /timeschedules | Find multiple objects |
 | [**getTimeSchedule()**](TimeSchedulesApi.md#getTimeSchedule) | **GET** /timeschedules/{id} | Get object by id |
 | [**patchTimeSchedule()**](TimeSchedulesApi.md#patchTimeSchedule) | **PATCH** /timeschedules/{id} | Patch object&#39;s data |
 | [**removeTimeSchedule()**](TimeSchedulesApi.md#removeTimeSchedule) | **DELETE** /timeschedules/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findTimeSchedules()`
+## `findTimeSchedule()`
 
 ```php
-findTimeSchedules($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindTimeSchedules200Response
+findTimeSchedule($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindTimeSchedule200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findTimeSchedules($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findTimeSchedule($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TimeSchedulesApi->findTimeSchedules: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TimeSchedulesApi->findTimeSchedule: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindTimeSchedules200Response**](../Model/FindTimeSchedules200Response.md)
+[**\OpenAPI\Client\CircuitID\FindTimeSchedule200Response**](../Model/FindTimeSchedule200Response.md)
 
 ### Authorization
 

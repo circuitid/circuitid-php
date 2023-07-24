@@ -1,11 +1,11 @@
 # OpenAPI\Client\MessageCampaignsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createMessageCampaign()**](MessageCampaignsApi.md#createMessageCampaign) | **POST** /messagecampaigns | Create a new object |
-| [**findMessageCampaigns()**](MessageCampaignsApi.md#findMessageCampaigns) | **GET** /messagecampaigns | Find multiple objects |
+| [**findMessageCampaign()**](MessageCampaignsApi.md#findMessageCampaign) | **GET** /messagecampaigns | Find multiple objects |
 | [**getMessageCampaign()**](MessageCampaignsApi.md#getMessageCampaign) | **GET** /messagecampaigns/{id} | Get object by id |
 | [**patchMessageCampaign()**](MessageCampaignsApi.md#patchMessageCampaign) | **PATCH** /messagecampaigns/{id} | Patch object&#39;s data |
 | [**removeMessageCampaign()**](MessageCampaignsApi.md#removeMessageCampaign) | **DELETE** /messagecampaigns/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findMessageCampaigns()`
+## `findMessageCampaign()`
 
 ```php
-findMessageCampaigns($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMessageCampaigns200Response
+findMessageCampaign($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMessageCampaign200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findMessageCampaigns($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findMessageCampaign($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MessageCampaignsApi->findMessageCampaigns: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MessageCampaignsApi->findMessageCampaign: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response**](../Model/FindMessageCampaigns200Response.md)
+[**\OpenAPI\Client\CircuitID\FindMessageCampaign200Response**](../Model/FindMessageCampaign200Response.md)
 
 ### Authorization
 

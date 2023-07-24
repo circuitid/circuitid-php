@@ -1,16 +1,16 @@
 # OpenAPI\Client\InfoApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findInfo()**](InfoApi.md#findInfo) | **GET** /info | Get object |
+| [**getInfo()**](InfoApi.md#getInfo) | **GET** /info | Get object |
 
 
-## `findInfo()`
+## `getInfo()`
 
 ```php
-findInfo(): mixed
+getInfo(): mixed
 ```
 
 Get object
@@ -38,10 +38,10 @@ $apiInstance = new OpenAPI\Client\Api\InfoApi(
 );
 
 try {
-    $result = $apiInstance->findInfo();
+    $result = $apiInstance->getInfo();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InfoApi->findInfo: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InfoApi->getInfo: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

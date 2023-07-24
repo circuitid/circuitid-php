@@ -1,11 +1,11 @@
 # OpenAPI\Client\ConversationsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createConversation()**](ConversationsApi.md#createConversation) | **POST** /conversations | Create a new object |
-| [**findConversations()**](ConversationsApi.md#findConversations) | **GET** /conversations | Find multiple objects |
+| [**findConversation()**](ConversationsApi.md#findConversation) | **GET** /conversations | Find multiple objects |
 | [**getConversation()**](ConversationsApi.md#getConversation) | **GET** /conversations/{id} | Get object by id |
 | [**patchConversation()**](ConversationsApi.md#patchConversation) | **PATCH** /conversations/{id} | Patch object&#39;s data |
 | [**removeConversation()**](ConversationsApi.md#removeConversation) | **DELETE** /conversations/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findConversations()`
+## `findConversation()`
 
 ```php
-findConversations($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindConversations200Response
+findConversation($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindConversation200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findConversations($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findConversation($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationsApi->findConversations: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationsApi->findConversation: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindConversations200Response**](../Model/FindConversations200Response.md)
+[**\OpenAPI\Client\CircuitID\FindConversation200Response**](../Model/FindConversation200Response.md)
 
 ### Authorization
 

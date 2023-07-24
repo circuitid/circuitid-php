@@ -1,11 +1,11 @@
 # OpenAPI\Client\DirectoriesApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createDirectorie()**](DirectoriesApi.md#createDirectorie) | **POST** /directories | Create a new object |
-| [**findDirectories()**](DirectoriesApi.md#findDirectories) | **GET** /directories | Find multiple objects |
+| [**findDirectorie()**](DirectoriesApi.md#findDirectorie) | **GET** /directories | Find multiple objects |
 | [**getDirectorie()**](DirectoriesApi.md#getDirectorie) | **GET** /directories/{id} | Get object by id |
 | [**patchDirectorie()**](DirectoriesApi.md#patchDirectorie) | **PATCH** /directories/{id} | Patch object&#39;s data |
 | [**removeDirectorie()**](DirectoriesApi.md#removeDirectorie) | **DELETE** /directories/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findDirectories()`
+## `findDirectorie()`
 
 ```php
-findDirectories($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDirectories200Response
+findDirectorie($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDirectorie200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findDirectories($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findDirectorie($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DirectoriesApi->findDirectories: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DirectoriesApi->findDirectorie: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindDirectories200Response**](../Model/FindDirectories200Response.md)
+[**\OpenAPI\Client\CircuitID\FindDirectorie200Response**](../Model/FindDirectorie200Response.md)
 
 ### Authorization
 

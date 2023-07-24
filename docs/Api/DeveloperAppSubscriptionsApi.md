@@ -1,11 +1,11 @@
 # OpenAPI\Client\DeveloperAppSubscriptionsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createDeveloperAppSubscription()**](DeveloperAppSubscriptionsApi.md#createDeveloperAppSubscription) | **POST** /developerappsubscriptions | Create a new object |
-| [**findDeveloperAppSubscriptions()**](DeveloperAppSubscriptionsApi.md#findDeveloperAppSubscriptions) | **GET** /developerappsubscriptions | Find multiple objects |
+| [**findDeveloperAppSubscription()**](DeveloperAppSubscriptionsApi.md#findDeveloperAppSubscription) | **GET** /developerappsubscriptions | Find multiple objects |
 | [**getDeveloperAppSubscription()**](DeveloperAppSubscriptionsApi.md#getDeveloperAppSubscription) | **GET** /developerappsubscriptions/{id} | Get object by id |
 | [**patchDeveloperAppSubscription()**](DeveloperAppSubscriptionsApi.md#patchDeveloperAppSubscription) | **PATCH** /developerappsubscriptions/{id} | Patch object&#39;s data |
 | [**removeDeveloperAppSubscription()**](DeveloperAppSubscriptionsApi.md#removeDeveloperAppSubscription) | **DELETE** /developerappsubscriptions/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findDeveloperAppSubscriptions()`
+## `findDeveloperAppSubscription()`
 
 ```php
-findDeveloperAppSubscriptions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response
+findDeveloperAppSubscription($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findDeveloperAppSubscriptions($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findDeveloperAppSubscription($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DeveloperAppSubscriptionsApi->findDeveloperAppSubscriptions: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DeveloperAppSubscriptionsApi->findDeveloperAppSubscription: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response**](../Model/FindDeveloperAppSubscriptions200Response.md)
+[**\OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response**](../Model/FindDeveloperAppSubscription200Response.md)
 
 ### Authorization
 

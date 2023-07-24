@@ -1,11 +1,11 @@
 # OpenAPI\Client\CustomersApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createCustomer()**](CustomersApi.md#createCustomer) | **POST** /customers | Create a new object |
-| [**findCustomers()**](CustomersApi.md#findCustomers) | **GET** /customers | Find multiple objects |
+| [**findCustomer()**](CustomersApi.md#findCustomer) | **GET** /customers | Find multiple objects |
 | [**getCustomer()**](CustomersApi.md#getCustomer) | **GET** /customers/{id} | Get object by id |
 | [**patchCustomer()**](CustomersApi.md#patchCustomer) | **PATCH** /customers/{id} | Patch object&#39;s data |
 | [**removeCustomer()**](CustomersApi.md#removeCustomer) | **DELETE** /customers/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findCustomers()`
+## `findCustomer()`
 
 ```php
-findCustomers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCustomers200Response
+findCustomer($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCustomer200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findCustomers($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findCustomer($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->findCustomers: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomersApi->findCustomer: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindCustomers200Response**](../Model/FindCustomers200Response.md)
+[**\OpenAPI\Client\CircuitID\FindCustomer200Response**](../Model/FindCustomer200Response.md)
 
 ### Authorization
 

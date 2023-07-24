@@ -1,11 +1,11 @@
 # OpenAPI\Client\ContactsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createContact()**](ContactsApi.md#createContact) | **POST** /contacts | Create a new object |
-| [**findContacts()**](ContactsApi.md#findContacts) | **GET** /contacts | Find multiple objects |
+| [**findContact()**](ContactsApi.md#findContact) | **GET** /contacts | Find multiple objects |
 | [**getContact()**](ContactsApi.md#getContact) | **GET** /contacts/{id} | Get object by id |
 | [**patchContact()**](ContactsApi.md#patchContact) | **PATCH** /contacts/{id} | Patch object&#39;s data |
 | [**removeContact()**](ContactsApi.md#removeContact) | **DELETE** /contacts/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findContacts()`
+## `findContact()`
 
 ```php
-findContacts($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindContacts200Response
+findContact($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindContact200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findContacts($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findContact($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContactsApi->findContacts: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContactsApi->findContact: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindContacts200Response**](../Model/FindContacts200Response.md)
+[**\OpenAPI\Client\CircuitID\FindContact200Response**](../Model/FindContact200Response.md)
 
 ### Authorization
 

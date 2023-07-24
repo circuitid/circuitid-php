@@ -1,17 +1,17 @@
 # OpenAPI\Client\InvoicesApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findInvoices()**](InvoicesApi.md#findInvoices) | **GET** /invoices | Find multiple objects |
+| [**findInvoice()**](InvoicesApi.md#findInvoice) | **GET** /invoices | Find multiple objects |
 | [**getInvoice()**](InvoicesApi.md#getInvoice) | **GET** /invoices/{id} | Get object by id |
 
 
-## `findInvoices()`
+## `findInvoice()`
 
 ```php
-findInvoices($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindInvoices200Response
+findInvoice($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindInvoice200Response
 ```
 
 Find multiple objects
@@ -46,10 +46,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findInvoices($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findInvoice($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InvoicesApi->findInvoices: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InvoicesApi->findInvoice: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindInvoices200Response**](../Model/FindInvoices200Response.md)
+[**\OpenAPI\Client\CircuitID\FindInvoice200Response**](../Model/FindInvoice200Response.md)
 
 ### Authorization
 

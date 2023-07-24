@@ -1,11 +1,11 @@
 # OpenAPI\Client\MenuOptionsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createMenuOption()**](MenuOptionsApi.md#createMenuOption) | **POST** /menuoptions | Create a new object |
-| [**findMenuOptions()**](MenuOptionsApi.md#findMenuOptions) | **GET** /menuoptions | Find multiple objects |
+| [**findMenuOption()**](MenuOptionsApi.md#findMenuOption) | **GET** /menuoptions | Find multiple objects |
 | [**getMenuOption()**](MenuOptionsApi.md#getMenuOption) | **GET** /menuoptions/{id} | Get object by id |
 | [**patchMenuOption()**](MenuOptionsApi.md#patchMenuOption) | **PATCH** /menuoptions/{id} | Patch object&#39;s data |
 | [**removeMenuOption()**](MenuOptionsApi.md#removeMenuOption) | **DELETE** /menuoptions/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findMenuOptions()`
+## `findMenuOption()`
 
 ```php
-findMenuOptions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMenuOptions200Response
+findMenuOption($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMenuOption200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findMenuOptions($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findMenuOption($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MenuOptionsApi->findMenuOptions: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MenuOptionsApi->findMenuOption: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindMenuOptions200Response**](../Model/FindMenuOptions200Response.md)
+[**\OpenAPI\Client\CircuitID\FindMenuOption200Response**](../Model/FindMenuOption200Response.md)
 
 ### Authorization
 

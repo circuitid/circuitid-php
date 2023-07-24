@@ -1,11 +1,11 @@
 # OpenAPI\Client\ConversationMessagesApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createConversationMessage()**](ConversationMessagesApi.md#createConversationMessage) | **POST** /conversationmessages | Create a new object |
-| [**findConversationMessages()**](ConversationMessagesApi.md#findConversationMessages) | **GET** /conversationmessages | Find multiple objects |
+| [**findConversationMessage()**](ConversationMessagesApi.md#findConversationMessage) | **GET** /conversationmessages | Find multiple objects |
 | [**getConversationMessage()**](ConversationMessagesApi.md#getConversationMessage) | **GET** /conversationmessages/{id} | Get object by id |
 | [**patchConversationMessage()**](ConversationMessagesApi.md#patchConversationMessage) | **PATCH** /conversationmessages/{id} | Patch object&#39;s data |
 | [**removeConversationMessage()**](ConversationMessagesApi.md#removeConversationMessage) | **DELETE** /conversationmessages/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findConversationMessages()`
+## `findConversationMessage()`
 
 ```php
-findConversationMessages($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindConversationMessages200Response
+findConversationMessage($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindConversationMessage200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findConversationMessages($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findConversationMessage($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConversationMessagesApi->findConversationMessages: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConversationMessagesApi->findConversationMessage: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindConversationMessages200Response**](../Model/FindConversationMessages200Response.md)
+[**\OpenAPI\Client\CircuitID\FindConversationMessage200Response**](../Model/FindConversationMessage200Response.md)
 
 ### Authorization
 

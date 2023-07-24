@@ -1,11 +1,11 @@
 # OpenAPI\Client\ClientsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createClient()**](ClientsApi.md#createClient) | **POST** /clients | Create a new object |
-| [**findClients()**](ClientsApi.md#findClients) | **GET** /clients | Find multiple objects |
+| [**findClient()**](ClientsApi.md#findClient) | **GET** /clients | Find multiple objects |
 | [**getClient()**](ClientsApi.md#getClient) | **GET** /clients/{id} | Get object by id |
 | [**patchClient()**](ClientsApi.md#patchClient) | **PATCH** /clients/{id} | Patch object&#39;s data |
 | [**removeClient()**](ClientsApi.md#removeClient) | **DELETE** /clients/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findClients()`
+## `findClient()`
 
 ```php
-findClients($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindClients200Response
+findClient($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindClient200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findClients($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findClient($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ClientsApi->findClients: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ClientsApi->findClient: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindClients200Response**](../Model/FindClients200Response.md)
+[**\OpenAPI\Client\CircuitID\FindClient200Response**](../Model/FindClient200Response.md)
 
 ### Authorization
 

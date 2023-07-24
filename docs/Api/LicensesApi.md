@@ -1,11 +1,11 @@
 # OpenAPI\Client\LicensesApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createLicense()**](LicensesApi.md#createLicense) | **POST** /licenses | Create a new object |
-| [**findLicenses()**](LicensesApi.md#findLicenses) | **GET** /licenses | Find multiple objects |
+| [**findLicense()**](LicensesApi.md#findLicense) | **GET** /licenses | Find multiple objects |
 | [**getLicense()**](LicensesApi.md#getLicense) | **GET** /licenses/{id} | Get object by id |
 | [**patchLicense()**](LicensesApi.md#patchLicense) | **PATCH** /licenses/{id} | Patch object&#39;s data |
 | [**removeLicense()**](LicensesApi.md#removeLicense) | **DELETE** /licenses/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findLicenses()`
+## `findLicense()`
 
 ```php
-findLicenses($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindLicenses200Response
+findLicense($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindLicense200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findLicenses($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findLicense($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LicensesApi->findLicenses: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LicensesApi->findLicense: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindLicenses200Response**](../Model/FindLicenses200Response.md)
+[**\OpenAPI\Client\CircuitID\FindLicense200Response**](../Model/FindLicense200Response.md)
 
 ### Authorization
 

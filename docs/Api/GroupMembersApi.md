@@ -1,11 +1,11 @@
 # OpenAPI\Client\GroupMembersApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createGroupMember()**](GroupMembersApi.md#createGroupMember) | **POST** /groupmembers | Create a new object |
-| [**findGroupMembers()**](GroupMembersApi.md#findGroupMembers) | **GET** /groupmembers | Find multiple objects |
+| [**findGroupMember()**](GroupMembersApi.md#findGroupMember) | **GET** /groupmembers | Find multiple objects |
 | [**getGroupMember()**](GroupMembersApi.md#getGroupMember) | **GET** /groupmembers/{id} | Get object by id |
 | [**patchGroupMember()**](GroupMembersApi.md#patchGroupMember) | **PATCH** /groupmembers/{id} | Patch object&#39;s data |
 | [**removeGroupMember()**](GroupMembersApi.md#removeGroupMember) | **DELETE** /groupmembers/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findGroupMembers()`
+## `findGroupMember()`
 
 ```php
-findGroupMembers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindGroupMembers200Response
+findGroupMember($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindGroupMember200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findGroupMembers($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findGroupMember($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupMembersApi->findGroupMembers: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupMembersApi->findGroupMember: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindGroupMembers200Response**](../Model/FindGroupMembers200Response.md)
+[**\OpenAPI\Client\CircuitID\FindGroupMember200Response**](../Model/FindGroupMember200Response.md)
 
 ### Authorization
 

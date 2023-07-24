@@ -1,11 +1,11 @@
 # OpenAPI\Client\PhoneInboundRuleActionsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createPhoneInboundRuleAction()**](PhoneInboundRuleActionsApi.md#createPhoneInboundRuleAction) | **POST** /phoneinboundruleactions | Create a new object |
-| [**findPhoneInboundRuleActions()**](PhoneInboundRuleActionsApi.md#findPhoneInboundRuleActions) | **GET** /phoneinboundruleactions | Find multiple objects |
+| [**findPhoneInboundRuleAction()**](PhoneInboundRuleActionsApi.md#findPhoneInboundRuleAction) | **GET** /phoneinboundruleactions | Find multiple objects |
 | [**getPhoneInboundRuleAction()**](PhoneInboundRuleActionsApi.md#getPhoneInboundRuleAction) | **GET** /phoneinboundruleactions/{id} | Get object by id |
 | [**patchPhoneInboundRuleAction()**](PhoneInboundRuleActionsApi.md#patchPhoneInboundRuleAction) | **PATCH** /phoneinboundruleactions/{id} | Patch object&#39;s data |
 | [**removePhoneInboundRuleAction()**](PhoneInboundRuleActionsApi.md#removePhoneInboundRuleAction) | **DELETE** /phoneinboundruleactions/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findPhoneInboundRuleActions()`
+## `findPhoneInboundRuleAction()`
 
 ```php
-findPhoneInboundRuleActions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response
+findPhoneInboundRuleAction($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findPhoneInboundRuleActions($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findPhoneInboundRuleAction($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PhoneInboundRuleActionsApi->findPhoneInboundRuleActions: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PhoneInboundRuleActionsApi->findPhoneInboundRuleAction: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response**](../Model/FindPhoneInboundRuleActions200Response.md)
+[**\OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response**](../Model/FindPhoneInboundRuleAction200Response.md)
 
 ### Authorization
 

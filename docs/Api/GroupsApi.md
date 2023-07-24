@@ -1,11 +1,11 @@
 # OpenAPI\Client\GroupsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createGroup()**](GroupsApi.md#createGroup) | **POST** /groups | Create a new object |
-| [**findGroups()**](GroupsApi.md#findGroups) | **GET** /groups | Find multiple objects |
+| [**findGroup()**](GroupsApi.md#findGroup) | **GET** /groups | Find multiple objects |
 | [**getGroup()**](GroupsApi.md#getGroup) | **GET** /groups/{id} | Get object by id |
 | [**patchGroup()**](GroupsApi.md#patchGroup) | **PATCH** /groups/{id} | Patch object&#39;s data |
 | [**removeGroup()**](GroupsApi.md#removeGroup) | **DELETE** /groups/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findGroups()`
+## `findGroup()`
 
 ```php
-findGroups($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindGroups200Response
+findGroup($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindGroup200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findGroups($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findGroup($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GroupsApi->findGroups: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GroupsApi->findGroup: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindGroups200Response**](../Model/FindGroups200Response.md)
+[**\OpenAPI\Client\CircuitID\FindGroup200Response**](../Model/FindGroup200Response.md)
 
 ### Authorization
 

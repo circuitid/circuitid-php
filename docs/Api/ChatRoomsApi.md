@@ -1,11 +1,11 @@
 # OpenAPI\Client\ChatRoomsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createChatRoom()**](ChatRoomsApi.md#createChatRoom) | **POST** /chatrooms | Create a new object |
-| [**findChatRooms()**](ChatRoomsApi.md#findChatRooms) | **GET** /chatrooms | Find multiple objects |
+| [**findChatRoom()**](ChatRoomsApi.md#findChatRoom) | **GET** /chatrooms | Find multiple objects |
 | [**getChatRoom()**](ChatRoomsApi.md#getChatRoom) | **GET** /chatrooms/{id} | Get object by id |
 | [**patchChatRoom()**](ChatRoomsApi.md#patchChatRoom) | **PATCH** /chatrooms/{id} | Patch object&#39;s data |
 | [**removeChatRoom()**](ChatRoomsApi.md#removeChatRoom) | **DELETE** /chatrooms/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findChatRooms()`
+## `findChatRoom()`
 
 ```php
-findChatRooms($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindChatRooms200Response
+findChatRoom($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindChatRoom200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findChatRooms($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findChatRoom($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ChatRoomsApi->findChatRooms: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ChatRoomsApi->findChatRoom: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindChatRooms200Response**](../Model/FindChatRooms200Response.md)
+[**\OpenAPI\Client\CircuitID\FindChatRoom200Response**](../Model/FindChatRoom200Response.md)
 
 ### Authorization
 

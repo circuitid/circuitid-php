@@ -1,11 +1,11 @@
 # OpenAPI\Client\PhoneInboundRulesApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createPhoneInboundRule()**](PhoneInboundRulesApi.md#createPhoneInboundRule) | **POST** /phoneinboundrules | Create a new object |
-| [**findPhoneInboundRules()**](PhoneInboundRulesApi.md#findPhoneInboundRules) | **GET** /phoneinboundrules | Find multiple objects |
+| [**findPhoneInboundRule()**](PhoneInboundRulesApi.md#findPhoneInboundRule) | **GET** /phoneinboundrules | Find multiple objects |
 | [**getPhoneInboundRule()**](PhoneInboundRulesApi.md#getPhoneInboundRule) | **GET** /phoneinboundrules/{id} | Get object by id |
 | [**patchPhoneInboundRule()**](PhoneInboundRulesApi.md#patchPhoneInboundRule) | **PATCH** /phoneinboundrules/{id} | Patch object&#39;s data |
 | [**removePhoneInboundRule()**](PhoneInboundRulesApi.md#removePhoneInboundRule) | **DELETE** /phoneinboundrules/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findPhoneInboundRules()`
+## `findPhoneInboundRule()`
 
 ```php
-findPhoneInboundRules($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindPhoneInboundRules200Response
+findPhoneInboundRule($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindPhoneInboundRule200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findPhoneInboundRules($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findPhoneInboundRule($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PhoneInboundRulesApi->findPhoneInboundRules: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PhoneInboundRulesApi->findPhoneInboundRule: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindPhoneInboundRules200Response**](../Model/FindPhoneInboundRules200Response.md)
+[**\OpenAPI\Client\CircuitID\FindPhoneInboundRule200Response**](../Model/FindPhoneInboundRule200Response.md)
 
 ### Authorization
 

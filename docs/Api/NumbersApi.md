@@ -1,18 +1,18 @@
 # OpenAPI\Client\NumbersApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findNumbers()**](NumbersApi.md#findNumbers) | **GET** /numbers | Find multiple objects |
+| [**findNumber()**](NumbersApi.md#findNumber) | **GET** /numbers | Find multiple objects |
 | [**getNumber()**](NumbersApi.md#getNumber) | **GET** /numbers/{id} | Get object by id |
 | [**patchNumber()**](NumbersApi.md#patchNumber) | **PATCH** /numbers/{id} | Patch object&#39;s data |
 
 
-## `findNumbers()`
+## `findNumber()`
 
 ```php
-findNumbers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindNumbers200Response
+findNumber($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindNumber200Response
 ```
 
 Find multiple objects
@@ -47,10 +47,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findNumbers($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findNumber($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NumbersApi->findNumbers: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NumbersApi->findNumber: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -68,7 +68,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindNumbers200Response**](../Model/FindNumbers200Response.md)
+[**\OpenAPI\Client\CircuitID\FindNumber200Response**](../Model/FindNumber200Response.md)
 
 ### Authorization
 

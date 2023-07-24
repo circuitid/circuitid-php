@@ -1,16 +1,16 @@
 # OpenAPI\Client\FindNumbersApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findFindNumbers()**](FindNumbersApi.md#findFindNumbers) | **GET** /findnumbers | Find multiple objects |
+| [**findFindNumber()**](FindNumbersApi.md#findFindNumber) | **GET** /findnumbers | Find multiple objects |
 
 
-## `findFindNumbers()`
+## `findFindNumber()`
 
 ```php
-findFindNumbers($search, $limit, $skip, $sort, $select, $or, $and): mixed
+findFindNumber($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -45,10 +45,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findFindNumbers($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findFindNumber($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FindNumbersApi->findFindNumbers: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FindNumbersApi->findFindNumber: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

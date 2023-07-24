@@ -1,11 +1,11 @@
 # OpenAPI\Client\DeveloperAppsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createDeveloperApp()**](DeveloperAppsApi.md#createDeveloperApp) | **POST** /developerapps | Create a new object |
-| [**findDeveloperApps()**](DeveloperAppsApi.md#findDeveloperApps) | **GET** /developerapps | Find multiple objects |
+| [**findDeveloperApp()**](DeveloperAppsApi.md#findDeveloperApp) | **GET** /developerapps | Find multiple objects |
 | [**getDeveloperApp()**](DeveloperAppsApi.md#getDeveloperApp) | **GET** /developerapps/{id} | Get object by id |
 | [**patchDeveloperApp()**](DeveloperAppsApi.md#patchDeveloperApp) | **PATCH** /developerapps/{id} | Patch object&#39;s data |
 | [**removeDeveloperApp()**](DeveloperAppsApi.md#removeDeveloperApp) | **DELETE** /developerapps/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findDeveloperApps()`
+## `findDeveloperApp()`
 
 ```php
-findDeveloperApps($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDeveloperApps200Response
+findDeveloperApp($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDeveloperApp200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findDeveloperApps($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findDeveloperApp($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DeveloperAppsApi->findDeveloperApps: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DeveloperAppsApi->findDeveloperApp: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindDeveloperApps200Response**](../Model/FindDeveloperApps200Response.md)
+[**\OpenAPI\Client\CircuitID\FindDeveloperApp200Response**](../Model/FindDeveloperApp200Response.md)
 
 ### Authorization
 

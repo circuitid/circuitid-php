@@ -1,16 +1,16 @@
 # OpenAPI\Client\DNSRecordsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findDNSRecords()**](DNSRecordsApi.md#findDNSRecords) | **GET** /dnsrecords | Find multiple objects |
+| [**findDNSRecord()**](DNSRecordsApi.md#findDNSRecord) | **GET** /dnsrecords | Find multiple objects |
 
 
-## `findDNSRecords()`
+## `findDNSRecord()`
 
 ```php
-findDNSRecords($search, $limit, $skip, $sort, $select, $or, $and): mixed
+findDNSRecord($search, $limit, $skip, $sort, $select, $or, $and): mixed
 ```
 
 Find multiple objects
@@ -45,10 +45,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findDNSRecords($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findDNSRecord($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DNSRecordsApi->findDNSRecords: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DNSRecordsApi->findDNSRecord: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

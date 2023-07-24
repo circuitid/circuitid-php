@@ -1,11 +1,11 @@
 # OpenAPI\Client\FaxesApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createFaxe()**](FaxesApi.md#createFaxe) | **POST** /faxes | Create a new object |
-| [**findFaxes()**](FaxesApi.md#findFaxes) | **GET** /faxes | Find multiple objects |
+| [**findFaxe()**](FaxesApi.md#findFaxe) | **GET** /faxes | Find multiple objects |
 | [**getFaxe()**](FaxesApi.md#getFaxe) | **GET** /faxes/{id} | Get object by id |
 | [**removeFaxe()**](FaxesApi.md#removeFaxe) | **DELETE** /faxes/{id} | Delete object by id |
 
@@ -72,10 +72,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findFaxes()`
+## `findFaxe()`
 
 ```php
-findFaxes($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFaxes200Response
+findFaxe($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFaxe200Response
 ```
 
 Find multiple objects
@@ -110,10 +110,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findFaxes($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findFaxe($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaxesApi->findFaxes: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FaxesApi->findFaxe: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -131,7 +131,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindFaxes200Response**](../Model/FindFaxes200Response.md)
+[**\OpenAPI\Client\CircuitID\FindFaxe200Response**](../Model/FindFaxe200Response.md)
 
 ### Authorization
 

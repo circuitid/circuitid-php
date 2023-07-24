@@ -1,11 +1,11 @@
 # OpenAPI\Client\AcceptedSendersApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createAcceptedSender()**](AcceptedSendersApi.md#createAcceptedSender) | **POST** /acceptedsenders | Create a new object |
-| [**findAcceptedSenders()**](AcceptedSendersApi.md#findAcceptedSenders) | **GET** /acceptedsenders | Find multiple objects |
+| [**findAcceptedSender()**](AcceptedSendersApi.md#findAcceptedSender) | **GET** /acceptedsenders | Find multiple objects |
 | [**getAcceptedSender()**](AcceptedSendersApi.md#getAcceptedSender) | **GET** /acceptedsenders/{id} | Get object by id |
 | [**patchAcceptedSender()**](AcceptedSendersApi.md#patchAcceptedSender) | **PATCH** /acceptedsenders/{id} | Patch object&#39;s data |
 | [**removeAcceptedSender()**](AcceptedSendersApi.md#removeAcceptedSender) | **DELETE** /acceptedsenders/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findAcceptedSenders()`
+## `findAcceptedSender()`
 
 ```php
-findAcceptedSenders($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
+findAcceptedSender($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAcceptedSender200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findAcceptedSenders($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findAcceptedSender($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AcceptedSendersApi->findAcceptedSenders: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AcceptedSendersApi->findAcceptedSender: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response**](../Model/FindAcceptedSenders200Response.md)
+[**\OpenAPI\Client\CircuitID\FindAcceptedSender200Response**](../Model/FindAcceptedSender200Response.md)
 
 ### Authorization
 
