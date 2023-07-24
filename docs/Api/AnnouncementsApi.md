@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createAnnouncement()**](AnnouncementsApi.md#createAnnouncement) | **POST** /announcements | Create a new object |
-| [**findAnnouncement()**](AnnouncementsApi.md#findAnnouncement) | **GET** /announcements | Find multiple objects |
+| [**findAnnouncements()**](AnnouncementsApi.md#findAnnouncements) | **GET** /announcements | Find multiple objects |
 | [**getAnnouncement()**](AnnouncementsApi.md#getAnnouncement) | **GET** /announcements/{id} | Get object by id |
 | [**patchAnnouncement()**](AnnouncementsApi.md#patchAnnouncement) | **PATCH** /announcements/{id} | Patch object&#39;s data |
 | [**removeAnnouncement()**](AnnouncementsApi.md#removeAnnouncement) | **DELETE** /announcements/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findAnnouncement()`
+## `findAnnouncements()`
 
 ```php
-findAnnouncement($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAnnouncement200Response
+findAnnouncements($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindAnnouncements200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findAnnouncement($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findAnnouncements($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AnnouncementsApi->findAnnouncement: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AnnouncementsApi->findAnnouncements: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindAnnouncement200Response**](../Model/FindAnnouncement200Response.md)
+[**\OpenAPI\Client\CircuitID\FindAnnouncements200Response**](../Model/FindAnnouncements200Response.md)
 
 ### Authorization
 

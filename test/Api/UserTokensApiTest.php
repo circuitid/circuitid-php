@@ -85,12 +85,12 @@ class UserTokensApiTest extends TestCase
     }
 
     /**
-     * Test case for findUserToken
+     * Test case for findUserTokens
      *
      * Find multiple objects.
      *
      */
-    public function testFindUserToken()
+    public function testFindUserTokens()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

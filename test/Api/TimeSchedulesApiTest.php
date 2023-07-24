@@ -85,12 +85,12 @@ class TimeSchedulesApiTest extends TestCase
     }
 
     /**
-     * Test case for findTimeSchedule
+     * Test case for findTimeSchedules
      *
      * Find multiple objects.
      *
      */
-    public function testFindTimeSchedule()
+    public function testFindTimeSchedules()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

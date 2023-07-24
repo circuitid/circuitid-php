@@ -72,7 +72,7 @@ class FindNumbersApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'findFindNumber' => [
+        'findFindNumbers' => [
             'application/json',
         ],
     ];
@@ -124,7 +124,7 @@ class FindNumbersApi
     }
 
     /**
-     * Operation findFindNumber
+     * Operation findFindNumbers
      *
      * Find multiple objects
      *
@@ -135,20 +135,20 @@ class FindNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumbers'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function findFindNumber($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumber'][0])
+    public function findFindNumbers($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumbers'][0])
     {
-        list($response) = $this->findFindNumberWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findFindNumbersWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findFindNumberWithHttpInfo
+     * Operation findFindNumbersWithHttpInfo
      *
      * Find multiple objects
      *
@@ -159,15 +159,15 @@ class FindNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumbers'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findFindNumberWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumber'][0])
+    public function findFindNumbersWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumbers'][0])
     {
-        $request = $this->findFindNumberRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findFindNumbersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -254,7 +254,7 @@ class FindNumbersApi
     }
 
     /**
-     * Operation findFindNumberAsync
+     * Operation findFindNumbersAsync
      *
      * Find multiple objects
      *
@@ -265,14 +265,14 @@ class FindNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumbers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findFindNumberAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumber'][0])
+    public function findFindNumbersAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumbers'][0])
     {
-        return $this->findFindNumberAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findFindNumbersAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -281,7 +281,7 @@ class FindNumbersApi
     }
 
     /**
-     * Operation findFindNumberAsyncWithHttpInfo
+     * Operation findFindNumbersAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -292,15 +292,15 @@ class FindNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumbers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findFindNumberAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumber'][0])
+    public function findFindNumbersAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumbers'][0])
     {
         $returnType = 'mixed';
-        $request = $this->findFindNumberRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findFindNumbersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,7 +339,7 @@ class FindNumbersApi
     }
 
     /**
-     * Create request for operation 'findFindNumber'
+     * Create request for operation 'findFindNumbers'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -348,12 +348,12 @@ class FindNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFindNumbers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findFindNumberRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumber'][0])
+    public function findFindNumbersRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFindNumbers'][0])
     {
 
 

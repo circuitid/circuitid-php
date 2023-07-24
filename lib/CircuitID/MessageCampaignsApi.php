@@ -75,7 +75,7 @@ class MessageCampaignsApi
         'createMessageCampaign' => [
             'application/json',
         ],
-        'findMessageCampaign' => [
+        'findMessageCampaigns' => [
             'application/json',
         ],
         'getMessageCampaign' => [
@@ -423,7 +423,7 @@ class MessageCampaignsApi
     }
 
     /**
-     * Operation findMessageCampaign
+     * Operation findMessageCampaigns
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class MessageCampaignsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaign'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaigns'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindMessageCampaign200Response
+     * @return \OpenAPI\Client\CircuitID\FindMessageCampaigns200Response
      */
-    public function findMessageCampaign($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaign'][0])
+    public function findMessageCampaigns($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaigns'][0])
     {
-        list($response) = $this->findMessageCampaignWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findMessageCampaignsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findMessageCampaignWithHttpInfo
+     * Operation findMessageCampaignsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class MessageCampaignsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaign'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaigns'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindMessageCampaign200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindMessageCampaigns200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findMessageCampaignWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaign'][0])
+    public function findMessageCampaignsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaigns'][0])
     {
-        $request = $this->findMessageCampaignRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findMessageCampaignsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class MessageCampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindMessageCampaign200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindMessageCampaign200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindMessageCampaign200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindMessageCampaign200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class MessageCampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindMessageCampaign200Response',
+                        '\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class MessageCampaignsApi
     }
 
     /**
-     * Operation findMessageCampaignAsync
+     * Operation findMessageCampaignsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class MessageCampaignsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaign'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaigns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findMessageCampaignAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaign'][0])
+    public function findMessageCampaignsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaigns'][0])
     {
-        return $this->findMessageCampaignAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findMessageCampaignsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class MessageCampaignsApi
     }
 
     /**
-     * Operation findMessageCampaignAsyncWithHttpInfo
+     * Operation findMessageCampaignsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class MessageCampaignsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaign'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaigns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findMessageCampaignAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaign'][0])
+    public function findMessageCampaignsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaigns'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindMessageCampaign200Response';
-        $request = $this->findMessageCampaignRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindMessageCampaigns200Response';
+        $request = $this->findMessageCampaignsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class MessageCampaignsApi
     }
 
     /**
-     * Create request for operation 'findMessageCampaign'
+     * Create request for operation 'findMessageCampaigns'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class MessageCampaignsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaign'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findMessageCampaigns'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findMessageCampaignRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaign'][0])
+    public function findMessageCampaignsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findMessageCampaigns'][0])
     {
 
 

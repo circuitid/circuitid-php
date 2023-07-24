@@ -75,7 +75,7 @@ class DeveloperAppSubscriptionsApi
         'createDeveloperAppSubscription' => [
             'application/json',
         ],
-        'findDeveloperAppSubscription' => [
+        'findDeveloperAppSubscriptions' => [
             'application/json',
         ],
         'getDeveloperAppSubscription' => [
@@ -423,7 +423,7 @@ class DeveloperAppSubscriptionsApi
     }
 
     /**
-     * Operation findDeveloperAppSubscription
+     * Operation findDeveloperAppSubscriptions
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class DeveloperAppSubscriptionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscription'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscriptions'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response
+     * @return \OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response
      */
-    public function findDeveloperAppSubscription($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscription'][0])
+    public function findDeveloperAppSubscriptions($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscriptions'][0])
     {
-        list($response) = $this->findDeveloperAppSubscriptionWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findDeveloperAppSubscriptionsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findDeveloperAppSubscriptionWithHttpInfo
+     * Operation findDeveloperAppSubscriptionsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class DeveloperAppSubscriptionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscription'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscriptions'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findDeveloperAppSubscriptionWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscription'][0])
+    public function findDeveloperAppSubscriptionsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscriptions'][0])
     {
-        $request = $this->findDeveloperAppSubscriptionRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findDeveloperAppSubscriptionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class DeveloperAppSubscriptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class DeveloperAppSubscriptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response',
+                        '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class DeveloperAppSubscriptionsApi
     }
 
     /**
-     * Operation findDeveloperAppSubscriptionAsync
+     * Operation findDeveloperAppSubscriptionsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class DeveloperAppSubscriptionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscription'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscriptions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findDeveloperAppSubscriptionAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscription'][0])
+    public function findDeveloperAppSubscriptionsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscriptions'][0])
     {
-        return $this->findDeveloperAppSubscriptionAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findDeveloperAppSubscriptionsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class DeveloperAppSubscriptionsApi
     }
 
     /**
-     * Operation findDeveloperAppSubscriptionAsyncWithHttpInfo
+     * Operation findDeveloperAppSubscriptionsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class DeveloperAppSubscriptionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscription'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscriptions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findDeveloperAppSubscriptionAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscription'][0])
+    public function findDeveloperAppSubscriptionsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscriptions'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscription200Response';
-        $request = $this->findDeveloperAppSubscriptionRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperAppSubscriptions200Response';
+        $request = $this->findDeveloperAppSubscriptionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class DeveloperAppSubscriptionsApi
     }
 
     /**
-     * Create request for operation 'findDeveloperAppSubscription'
+     * Create request for operation 'findDeveloperAppSubscriptions'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class DeveloperAppSubscriptionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscription'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperAppSubscriptions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findDeveloperAppSubscriptionRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscription'][0])
+    public function findDeveloperAppSubscriptionsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperAppSubscriptions'][0])
     {
 
 

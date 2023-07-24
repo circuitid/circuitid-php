@@ -75,7 +75,7 @@ class HolidaysApi
         'createHoliday' => [
             'application/json',
         ],
-        'findHoliday' => [
+        'findHolidays' => [
             'application/json',
         ],
         'getHoliday' => [
@@ -423,7 +423,7 @@ class HolidaysApi
     }
 
     /**
-     * Operation findHoliday
+     * Operation findHolidays
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class HolidaysApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHoliday'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHolidays'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindHoliday200Response
+     * @return \OpenAPI\Client\CircuitID\FindHolidays200Response
      */
-    public function findHoliday($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHoliday'][0])
+    public function findHolidays($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHolidays'][0])
     {
-        list($response) = $this->findHolidayWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findHolidaysWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findHolidayWithHttpInfo
+     * Operation findHolidaysWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class HolidaysApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHoliday'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHolidays'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindHoliday200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindHolidays200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findHolidayWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHoliday'][0])
+    public function findHolidaysWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHolidays'][0])
     {
-        $request = $this->findHolidayRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findHolidaysRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class HolidaysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindHoliday200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindHolidays200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindHoliday200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindHolidays200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindHoliday200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindHolidays200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindHoliday200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindHolidays200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class HolidaysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindHoliday200Response',
+                        '\OpenAPI\Client\CircuitID\FindHolidays200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class HolidaysApi
     }
 
     /**
-     * Operation findHolidayAsync
+     * Operation findHolidaysAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class HolidaysApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHoliday'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHolidays'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findHolidayAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHoliday'][0])
+    public function findHolidaysAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHolidays'][0])
     {
-        return $this->findHolidayAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findHolidaysAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class HolidaysApi
     }
 
     /**
-     * Operation findHolidayAsyncWithHttpInfo
+     * Operation findHolidaysAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class HolidaysApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHoliday'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHolidays'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findHolidayAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHoliday'][0])
+    public function findHolidaysAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHolidays'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindHoliday200Response';
-        $request = $this->findHolidayRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindHolidays200Response';
+        $request = $this->findHolidaysRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class HolidaysApi
     }
 
     /**
-     * Create request for operation 'findHoliday'
+     * Create request for operation 'findHolidays'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class HolidaysApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHoliday'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findHolidays'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findHolidayRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHoliday'][0])
+    public function findHolidaysRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findHolidays'][0])
     {
 
 

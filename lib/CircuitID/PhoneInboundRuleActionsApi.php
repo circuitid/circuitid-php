@@ -75,7 +75,7 @@ class PhoneInboundRuleActionsApi
         'createPhoneInboundRuleAction' => [
             'application/json',
         ],
-        'findPhoneInboundRuleAction' => [
+        'findPhoneInboundRuleActions' => [
             'application/json',
         ],
         'getPhoneInboundRuleAction' => [
@@ -423,7 +423,7 @@ class PhoneInboundRuleActionsApi
     }
 
     /**
-     * Operation findPhoneInboundRuleAction
+     * Operation findPhoneInboundRuleActions
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class PhoneInboundRuleActionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleAction'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleActions'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response
+     * @return \OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response
      */
-    public function findPhoneInboundRuleAction($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleAction'][0])
+    public function findPhoneInboundRuleActions($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
-        list($response) = $this->findPhoneInboundRuleActionWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findPhoneInboundRuleActionsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findPhoneInboundRuleActionWithHttpInfo
+     * Operation findPhoneInboundRuleActionsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class PhoneInboundRuleActionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleAction'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleActions'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findPhoneInboundRuleActionWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleAction'][0])
+    public function findPhoneInboundRuleActionsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
-        $request = $this->findPhoneInboundRuleActionRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findPhoneInboundRuleActionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class PhoneInboundRuleActionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class PhoneInboundRuleActionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response',
+                        '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class PhoneInboundRuleActionsApi
     }
 
     /**
-     * Operation findPhoneInboundRuleActionAsync
+     * Operation findPhoneInboundRuleActionsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class PhoneInboundRuleActionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleAction'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleActions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findPhoneInboundRuleActionAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleAction'][0])
+    public function findPhoneInboundRuleActionsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
-        return $this->findPhoneInboundRuleActionAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findPhoneInboundRuleActionsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class PhoneInboundRuleActionsApi
     }
 
     /**
-     * Operation findPhoneInboundRuleActionAsyncWithHttpInfo
+     * Operation findPhoneInboundRuleActionsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class PhoneInboundRuleActionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleAction'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleActions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findPhoneInboundRuleActionAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleAction'][0])
+    public function findPhoneInboundRuleActionsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleAction200Response';
-        $request = $this->findPhoneInboundRuleActionRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindPhoneInboundRuleActions200Response';
+        $request = $this->findPhoneInboundRuleActionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class PhoneInboundRuleActionsApi
     }
 
     /**
-     * Create request for operation 'findPhoneInboundRuleAction'
+     * Create request for operation 'findPhoneInboundRuleActions'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class PhoneInboundRuleActionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleAction'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPhoneInboundRuleActions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findPhoneInboundRuleActionRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleAction'][0])
+    public function findPhoneInboundRuleActionsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findPhoneInboundRuleActions'][0])
     {
 
 

@@ -85,12 +85,12 @@ class PhoneOutboundRuleActionsApiTest extends TestCase
     }
 
     /**
-     * Test case for findPhoneOutboundRuleAction
+     * Test case for findPhoneOutboundRuleActions
      *
      * Find multiple objects.
      *
      */
-    public function testFindPhoneOutboundRuleAction()
+    public function testFindPhoneOutboundRuleActions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

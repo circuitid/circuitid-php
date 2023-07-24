@@ -73,12 +73,12 @@ class DNSRecordsApiTest extends TestCase
     }
 
     /**
-     * Test case for findDNSRecord
+     * Test case for findDNSRecords
      *
      * Find multiple objects.
      *
      */
-    public function testFindDNSRecord()
+    public function testFindDNSRecords()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

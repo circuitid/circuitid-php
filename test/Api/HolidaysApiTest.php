@@ -85,12 +85,12 @@ class HolidaysApiTest extends TestCase
     }
 
     /**
-     * Test case for findHoliday
+     * Test case for findHolidays
      *
      * Find multiple objects.
      *
      */
-    public function testFindHoliday()
+    public function testFindHolidays()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

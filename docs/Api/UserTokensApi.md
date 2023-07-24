@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createUserToken()**](UserTokensApi.md#createUserToken) | **POST** /usertokens | Create a new object |
-| [**findUserToken()**](UserTokensApi.md#findUserToken) | **GET** /usertokens | Find multiple objects |
+| [**findUserTokens()**](UserTokensApi.md#findUserTokens) | **GET** /usertokens | Find multiple objects |
 | [**getUserToken()**](UserTokensApi.md#getUserToken) | **GET** /usertokens/{id} | Get object by id |
 | [**patchUserToken()**](UserTokensApi.md#patchUserToken) | **PATCH** /usertokens/{id} | Patch object&#39;s data |
 | [**removeUserToken()**](UserTokensApi.md#removeUserToken) | **DELETE** /usertokens/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findUserToken()`
+## `findUserTokens()`
 
 ```php
-findUserToken($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindUserToken200Response
+findUserTokens($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindUserTokens200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findUserToken($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findUserTokens($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserTokensApi->findUserToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserTokensApi->findUserTokens: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindUserToken200Response**](../Model/FindUserToken200Response.md)
+[**\OpenAPI\Client\CircuitID\FindUserTokens200Response**](../Model/FindUserTokens200Response.md)
 
 ### Authorization
 

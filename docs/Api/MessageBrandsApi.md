@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createMessageBrand()**](MessageBrandsApi.md#createMessageBrand) | **POST** /messagebrands | Create a new object |
-| [**findMessageBrand()**](MessageBrandsApi.md#findMessageBrand) | **GET** /messagebrands | Find multiple objects |
+| [**findMessageBrands()**](MessageBrandsApi.md#findMessageBrands) | **GET** /messagebrands | Find multiple objects |
 | [**getMessageBrand()**](MessageBrandsApi.md#getMessageBrand) | **GET** /messagebrands/{id} | Get object by id |
 | [**patchMessageBrand()**](MessageBrandsApi.md#patchMessageBrand) | **PATCH** /messagebrands/{id} | Patch object&#39;s data |
 | [**removeMessageBrand()**](MessageBrandsApi.md#removeMessageBrand) | **DELETE** /messagebrands/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findMessageBrand()`
+## `findMessageBrands()`
 
 ```php
-findMessageBrand($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMessageBrand200Response
+findMessageBrands($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMessageBrands200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findMessageBrand($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findMessageBrands($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MessageBrandsApi->findMessageBrand: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MessageBrandsApi->findMessageBrands: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindMessageBrand200Response**](../Model/FindMessageBrand200Response.md)
+[**\OpenAPI\Client\CircuitID\FindMessageBrands200Response**](../Model/FindMessageBrands200Response.md)
 
 ### Authorization
 

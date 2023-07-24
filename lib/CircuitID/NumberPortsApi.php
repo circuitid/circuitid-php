@@ -75,7 +75,7 @@ class NumberPortsApi
         'createNumberPort' => [
             'application/json',
         ],
-        'findNumberPort' => [
+        'findNumberPorts' => [
             'application/json',
         ],
         'getNumberPort' => [
@@ -420,7 +420,7 @@ class NumberPortsApi
     }
 
     /**
-     * Operation findNumberPort
+     * Operation findNumberPorts
      *
      * Find multiple objects
      *
@@ -431,20 +431,20 @@ class NumberPortsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPort'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPorts'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindNumberPort200Response
+     * @return \OpenAPI\Client\CircuitID\FindNumberPorts200Response
      */
-    public function findNumberPort($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPort'][0])
+    public function findNumberPorts($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPorts'][0])
     {
-        list($response) = $this->findNumberPortWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findNumberPortsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findNumberPortWithHttpInfo
+     * Operation findNumberPortsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -455,15 +455,15 @@ class NumberPortsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPort'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPorts'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindNumberPort200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindNumberPorts200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findNumberPortWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPort'][0])
+    public function findNumberPortsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPorts'][0])
     {
-        $request = $this->findNumberPortRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findNumberPortsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -502,23 +502,23 @@ class NumberPortsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindNumberPort200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindNumberPorts200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindNumberPort200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindNumberPorts200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindNumberPort200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindNumberPorts200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindNumberPort200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindNumberPorts200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -539,7 +539,7 @@ class NumberPortsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindNumberPort200Response',
+                        '\OpenAPI\Client\CircuitID\FindNumberPorts200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class NumberPortsApi
     }
 
     /**
-     * Operation findNumberPortAsync
+     * Operation findNumberPortsAsync
      *
      * Find multiple objects
      *
@@ -561,14 +561,14 @@ class NumberPortsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPort'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPorts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findNumberPortAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPort'][0])
+    public function findNumberPortsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPorts'][0])
     {
-        return $this->findNumberPortAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findNumberPortsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -577,7 +577,7 @@ class NumberPortsApi
     }
 
     /**
-     * Operation findNumberPortAsyncWithHttpInfo
+     * Operation findNumberPortsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -588,15 +588,15 @@ class NumberPortsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPort'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPorts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findNumberPortAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPort'][0])
+    public function findNumberPortsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPorts'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindNumberPort200Response';
-        $request = $this->findNumberPortRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindNumberPorts200Response';
+        $request = $this->findNumberPortsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -635,7 +635,7 @@ class NumberPortsApi
     }
 
     /**
-     * Create request for operation 'findNumberPort'
+     * Create request for operation 'findNumberPorts'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -644,12 +644,12 @@ class NumberPortsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPort'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNumberPorts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findNumberPortRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPort'][0])
+    public function findNumberPortsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findNumberPorts'][0])
     {
 
 

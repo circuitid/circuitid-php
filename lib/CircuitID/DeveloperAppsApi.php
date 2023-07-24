@@ -75,7 +75,7 @@ class DeveloperAppsApi
         'createDeveloperApp' => [
             'application/json',
         ],
-        'findDeveloperApp' => [
+        'findDeveloperApps' => [
             'application/json',
         ],
         'getDeveloperApp' => [
@@ -423,7 +423,7 @@ class DeveloperAppsApi
     }
 
     /**
-     * Operation findDeveloperApp
+     * Operation findDeveloperApps
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class DeveloperAppsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApp'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApps'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindDeveloperApp200Response
+     * @return \OpenAPI\Client\CircuitID\FindDeveloperApps200Response
      */
-    public function findDeveloperApp($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApp'][0])
+    public function findDeveloperApps($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApps'][0])
     {
-        list($response) = $this->findDeveloperAppWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findDeveloperAppsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findDeveloperAppWithHttpInfo
+     * Operation findDeveloperAppsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class DeveloperAppsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApp'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApps'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindDeveloperApp200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindDeveloperApps200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findDeveloperAppWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApp'][0])
+    public function findDeveloperAppsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApps'][0])
     {
-        $request = $this->findDeveloperAppRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findDeveloperAppsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class DeveloperAppsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindDeveloperApp200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindDeveloperApps200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindDeveloperApp200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindDeveloperApps200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindDeveloperApp200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindDeveloperApps200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperApp200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperApps200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class DeveloperAppsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindDeveloperApp200Response',
+                        '\OpenAPI\Client\CircuitID\FindDeveloperApps200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class DeveloperAppsApi
     }
 
     /**
-     * Operation findDeveloperAppAsync
+     * Operation findDeveloperAppsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class DeveloperAppsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApp'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApps'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findDeveloperAppAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApp'][0])
+    public function findDeveloperAppsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApps'][0])
     {
-        return $this->findDeveloperAppAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findDeveloperAppsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class DeveloperAppsApi
     }
 
     /**
-     * Operation findDeveloperAppAsyncWithHttpInfo
+     * Operation findDeveloperAppsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class DeveloperAppsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApp'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApps'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findDeveloperAppAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApp'][0])
+    public function findDeveloperAppsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApps'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperApp200Response';
-        $request = $this->findDeveloperAppRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindDeveloperApps200Response';
+        $request = $this->findDeveloperAppsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class DeveloperAppsApi
     }
 
     /**
-     * Create request for operation 'findDeveloperApp'
+     * Create request for operation 'findDeveloperApps'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class DeveloperAppsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApp'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDeveloperApps'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findDeveloperAppRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApp'][0])
+    public function findDeveloperAppsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDeveloperApps'][0])
     {
 
 

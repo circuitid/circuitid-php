@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createNumberPort()**](NumberPortsApi.md#createNumberPort) | **POST** /numberports | Create a new object |
-| [**findNumberPort()**](NumberPortsApi.md#findNumberPort) | **GET** /numberports | Find multiple objects |
+| [**findNumberPorts()**](NumberPortsApi.md#findNumberPorts) | **GET** /numberports | Find multiple objects |
 | [**getNumberPort()**](NumberPortsApi.md#getNumberPort) | **GET** /numberports/{id} | Get object by id |
 | [**patchNumberPort()**](NumberPortsApi.md#patchNumberPort) | **PATCH** /numberports/{id} | Patch object&#39;s data |
 
@@ -72,10 +72,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findNumberPort()`
+## `findNumberPorts()`
 
 ```php
-findNumberPort($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindNumberPort200Response
+findNumberPorts($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindNumberPorts200Response
 ```
 
 Find multiple objects
@@ -110,10 +110,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findNumberPort($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findNumberPorts($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NumberPortsApi->findNumberPort: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NumberPortsApi->findNumberPorts: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -131,7 +131,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindNumberPort200Response**](../Model/FindNumberPort200Response.md)
+[**\OpenAPI\Client\CircuitID\FindNumberPorts200Response**](../Model/FindNumberPorts200Response.md)
 
 ### Authorization
 

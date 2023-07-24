@@ -75,7 +75,7 @@ class TimeSchedulesApi
         'createTimeSchedule' => [
             'application/json',
         ],
-        'findTimeSchedule' => [
+        'findTimeSchedules' => [
             'application/json',
         ],
         'getTimeSchedule' => [
@@ -423,7 +423,7 @@ class TimeSchedulesApi
     }
 
     /**
-     * Operation findTimeSchedule
+     * Operation findTimeSchedules
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class TimeSchedulesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedule'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedules'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindTimeSchedule200Response
+     * @return \OpenAPI\Client\CircuitID\FindTimeSchedules200Response
      */
-    public function findTimeSchedule($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedule'][0])
+    public function findTimeSchedules($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
-        list($response) = $this->findTimeScheduleWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findTimeSchedulesWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findTimeScheduleWithHttpInfo
+     * Operation findTimeSchedulesWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class TimeSchedulesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedule'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedules'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindTimeSchedule200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindTimeSchedules200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findTimeScheduleWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedule'][0])
+    public function findTimeSchedulesWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
-        $request = $this->findTimeScheduleRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findTimeSchedulesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class TimeSchedulesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindTimeSchedule200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindTimeSchedules200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindTimeSchedule200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindTimeSchedules200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindTimeSchedule200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindTimeSchedule200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class TimeSchedulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindTimeSchedule200Response',
+                        '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class TimeSchedulesApi
     }
 
     /**
-     * Operation findTimeScheduleAsync
+     * Operation findTimeSchedulesAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class TimeSchedulesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedule'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedules'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findTimeScheduleAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedule'][0])
+    public function findTimeSchedulesAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
-        return $this->findTimeScheduleAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findTimeSchedulesAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class TimeSchedulesApi
     }
 
     /**
-     * Operation findTimeScheduleAsyncWithHttpInfo
+     * Operation findTimeSchedulesAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class TimeSchedulesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedule'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedules'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findTimeScheduleAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedule'][0])
+    public function findTimeSchedulesAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindTimeSchedule200Response';
-        $request = $this->findTimeScheduleRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindTimeSchedules200Response';
+        $request = $this->findTimeSchedulesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class TimeSchedulesApi
     }
 
     /**
-     * Create request for operation 'findTimeSchedule'
+     * Create request for operation 'findTimeSchedules'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class TimeSchedulesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedule'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findTimeSchedules'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findTimeScheduleRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedule'][0])
+    public function findTimeSchedulesRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findTimeSchedules'][0])
     {
 
 

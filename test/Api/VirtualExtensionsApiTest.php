@@ -85,12 +85,12 @@ class VirtualExtensionsApiTest extends TestCase
     }
 
     /**
-     * Test case for findVirtualExtension
+     * Test case for findVirtualExtensions
      *
      * Find multiple objects.
      *
      */
-    public function testFindVirtualExtension()
+    public function testFindVirtualExtensions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

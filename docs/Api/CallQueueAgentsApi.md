@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createCallQueueAgent()**](CallQueueAgentsApi.md#createCallQueueAgent) | **POST** /callqueueagents | Create a new object |
-| [**findCallQueueAgent()**](CallQueueAgentsApi.md#findCallQueueAgent) | **GET** /callqueueagents | Find multiple objects |
+| [**findCallQueueAgents()**](CallQueueAgentsApi.md#findCallQueueAgents) | **GET** /callqueueagents | Find multiple objects |
 | [**getCallQueueAgent()**](CallQueueAgentsApi.md#getCallQueueAgent) | **GET** /callqueueagents/{id} | Get object by id |
 | [**patchCallQueueAgent()**](CallQueueAgentsApi.md#patchCallQueueAgent) | **PATCH** /callqueueagents/{id} | Patch object&#39;s data |
 | [**removeCallQueueAgent()**](CallQueueAgentsApi.md#removeCallQueueAgent) | **DELETE** /callqueueagents/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findCallQueueAgent()`
+## `findCallQueueAgents()`
 
 ```php
-findCallQueueAgent($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCallQueueAgent200Response
+findCallQueueAgents($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCallQueueAgents200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findCallQueueAgent($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findCallQueueAgents($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CallQueueAgentsApi->findCallQueueAgent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CallQueueAgentsApi->findCallQueueAgents: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindCallQueueAgent200Response**](../Model/FindCallQueueAgent200Response.md)
+[**\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response**](../Model/FindCallQueueAgents200Response.md)
 
 ### Authorization
 

@@ -85,12 +85,12 @@ class AnnouncementsApiTest extends TestCase
     }
 
     /**
-     * Test case for findAnnouncement
+     * Test case for findAnnouncements
      *
      * Find multiple objects.
      *
      */
-    public function testFindAnnouncement()
+    public function testFindAnnouncements()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

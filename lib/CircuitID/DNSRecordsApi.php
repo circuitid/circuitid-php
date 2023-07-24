@@ -72,7 +72,7 @@ class DNSRecordsApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'findDNSRecord' => [
+        'findDNSRecords' => [
             'application/json',
         ],
     ];
@@ -124,7 +124,7 @@ class DNSRecordsApi
     }
 
     /**
-     * Operation findDNSRecord
+     * Operation findDNSRecords
      *
      * Find multiple objects
      *
@@ -135,20 +135,20 @@ class DNSRecordsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecord'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecords'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function findDNSRecord($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecord'][0])
+    public function findDNSRecords($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecords'][0])
     {
-        list($response) = $this->findDNSRecordWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findDNSRecordsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findDNSRecordWithHttpInfo
+     * Operation findDNSRecordsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -159,15 +159,15 @@ class DNSRecordsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecord'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecords'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findDNSRecordWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecord'][0])
+    public function findDNSRecordsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecords'][0])
     {
-        $request = $this->findDNSRecordRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findDNSRecordsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -254,7 +254,7 @@ class DNSRecordsApi
     }
 
     /**
-     * Operation findDNSRecordAsync
+     * Operation findDNSRecordsAsync
      *
      * Find multiple objects
      *
@@ -265,14 +265,14 @@ class DNSRecordsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecord'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findDNSRecordAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecord'][0])
+    public function findDNSRecordsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecords'][0])
     {
-        return $this->findDNSRecordAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findDNSRecordsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -281,7 +281,7 @@ class DNSRecordsApi
     }
 
     /**
-     * Operation findDNSRecordAsyncWithHttpInfo
+     * Operation findDNSRecordsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -292,15 +292,15 @@ class DNSRecordsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecord'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findDNSRecordAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecord'][0])
+    public function findDNSRecordsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecords'][0])
     {
         $returnType = 'mixed';
-        $request = $this->findDNSRecordRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findDNSRecordsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,7 +339,7 @@ class DNSRecordsApi
     }
 
     /**
-     * Create request for operation 'findDNSRecord'
+     * Create request for operation 'findDNSRecords'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -348,12 +348,12 @@ class DNSRecordsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecord'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDNSRecords'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findDNSRecordRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecord'][0])
+    public function findDNSRecordsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findDNSRecords'][0])
     {
 
 

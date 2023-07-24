@@ -73,12 +73,12 @@ class RateCentersApiTest extends TestCase
     }
 
     /**
-     * Test case for findRateCenter
+     * Test case for findRateCenters
      *
      * Find multiple objects.
      *
      */
-    public function testFindRateCenter()
+    public function testFindRateCenters()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

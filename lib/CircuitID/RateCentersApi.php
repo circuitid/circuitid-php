@@ -72,7 +72,7 @@ class RateCentersApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'findRateCenter' => [
+        'findRateCenters' => [
             'application/json',
         ],
         'getRateCenter' => [
@@ -127,7 +127,7 @@ class RateCentersApi
     }
 
     /**
-     * Operation findRateCenter
+     * Operation findRateCenters
      *
      * Find multiple objects
      *
@@ -138,20 +138,20 @@ class RateCentersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenter'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenters'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindRateCenter200Response
+     * @return \OpenAPI\Client\CircuitID\FindRateCenters200Response
      */
-    public function findRateCenter($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenter'][0])
+    public function findRateCenters($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
-        list($response) = $this->findRateCenterWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findRateCentersWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findRateCenterWithHttpInfo
+     * Operation findRateCentersWithHttpInfo
      *
      * Find multiple objects
      *
@@ -162,15 +162,15 @@ class RateCentersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenter'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenters'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindRateCenter200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindRateCenters200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findRateCenterWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenter'][0])
+    public function findRateCentersWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
-        $request = $this->findRateCenterRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findRateCentersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -209,23 +209,23 @@ class RateCentersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindRateCenter200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindRateCenters200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindRateCenter200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindRateCenters200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindRateCenter200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindRateCenters200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindRateCenter200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindRateCenters200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -246,7 +246,7 @@ class RateCentersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindRateCenter200Response',
+                        '\OpenAPI\Client\CircuitID\FindRateCenters200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -257,7 +257,7 @@ class RateCentersApi
     }
 
     /**
-     * Operation findRateCenterAsync
+     * Operation findRateCentersAsync
      *
      * Find multiple objects
      *
@@ -268,14 +268,14 @@ class RateCentersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenter'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenters'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findRateCenterAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenter'][0])
+    public function findRateCentersAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
-        return $this->findRateCenterAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findRateCentersAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -284,7 +284,7 @@ class RateCentersApi
     }
 
     /**
-     * Operation findRateCenterAsyncWithHttpInfo
+     * Operation findRateCentersAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -295,15 +295,15 @@ class RateCentersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenter'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenters'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findRateCenterAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenter'][0])
+    public function findRateCentersAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindRateCenter200Response';
-        $request = $this->findRateCenterRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindRateCenters200Response';
+        $request = $this->findRateCentersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -342,7 +342,7 @@ class RateCentersApi
     }
 
     /**
-     * Create request for operation 'findRateCenter'
+     * Create request for operation 'findRateCenters'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -351,12 +351,12 @@ class RateCentersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenter'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRateCenters'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findRateCenterRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenter'][0])
+    public function findRateCentersRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findRateCenters'][0])
     {
 
 

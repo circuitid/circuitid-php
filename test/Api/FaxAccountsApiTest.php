@@ -85,12 +85,12 @@ class FaxAccountsApiTest extends TestCase
     }
 
     /**
-     * Test case for findFaxAccount
+     * Test case for findFaxAccounts
      *
      * Find multiple objects.
      *
      */
-    public function testFindFaxAccount()
+    public function testFindFaxAccounts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createVirtualExtension()**](VirtualExtensionsApi.md#createVirtualExtension) | **POST** /virtualextensions | Create a new object |
-| [**findVirtualExtension()**](VirtualExtensionsApi.md#findVirtualExtension) | **GET** /virtualextensions | Find multiple objects |
+| [**findVirtualExtensions()**](VirtualExtensionsApi.md#findVirtualExtensions) | **GET** /virtualextensions | Find multiple objects |
 | [**getVirtualExtension()**](VirtualExtensionsApi.md#getVirtualExtension) | **GET** /virtualextensions/{id} | Get object by id |
 | [**patchVirtualExtension()**](VirtualExtensionsApi.md#patchVirtualExtension) | **PATCH** /virtualextensions/{id} | Patch object&#39;s data |
 | [**removeVirtualExtension()**](VirtualExtensionsApi.md#removeVirtualExtension) | **DELETE** /virtualextensions/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findVirtualExtension()`
+## `findVirtualExtensions()`
 
 ```php
-findVirtualExtension($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindVirtualExtension200Response
+findVirtualExtensions($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindVirtualExtensions200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findVirtualExtension($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findVirtualExtensions($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling VirtualExtensionsApi->findVirtualExtension: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling VirtualExtensionsApi->findVirtualExtensions: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindVirtualExtension200Response**](../Model/FindVirtualExtension200Response.md)
+[**\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response**](../Model/FindVirtualExtensions200Response.md)
 
 ### Authorization
 

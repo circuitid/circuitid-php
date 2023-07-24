@@ -85,12 +85,12 @@ class DomainsApiTest extends TestCase
     }
 
     /**
-     * Test case for findDomain
+     * Test case for findDomains
      *
      * Find multiple objects.
      *
      */
-    public function testFindDomain()
+    public function testFindDomains()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

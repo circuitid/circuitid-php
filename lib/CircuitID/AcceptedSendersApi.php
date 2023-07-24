@@ -75,7 +75,7 @@ class AcceptedSendersApi
         'createAcceptedSender' => [
             'application/json',
         ],
-        'findAcceptedSender' => [
+        'findAcceptedSenders' => [
             'application/json',
         ],
         'getAcceptedSender' => [
@@ -423,7 +423,7 @@ class AcceptedSendersApi
     }
 
     /**
-     * Operation findAcceptedSender
+     * Operation findAcceptedSenders
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class AcceptedSendersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSender'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSenders'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindAcceptedSender200Response
+     * @return \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response
      */
-    public function findAcceptedSender($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSender'][0])
+    public function findAcceptedSenders($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSenders'][0])
     {
-        list($response) = $this->findAcceptedSenderWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findAcceptedSendersWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findAcceptedSenderWithHttpInfo
+     * Operation findAcceptedSendersWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class AcceptedSendersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSender'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSenders'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindAcceptedSender200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindAcceptedSenders200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findAcceptedSenderWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSender'][0])
+    public function findAcceptedSendersWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSenders'][0])
     {
-        $request = $this->findAcceptedSenderRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findAcceptedSendersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class AcceptedSendersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindAcceptedSender200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindAcceptedSender200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindAcceptedSender200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSender200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class AcceptedSendersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindAcceptedSender200Response',
+                        '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class AcceptedSendersApi
     }
 
     /**
-     * Operation findAcceptedSenderAsync
+     * Operation findAcceptedSendersAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class AcceptedSendersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSender'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSenders'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findAcceptedSenderAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSender'][0])
+    public function findAcceptedSendersAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSenders'][0])
     {
-        return $this->findAcceptedSenderAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findAcceptedSendersAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class AcceptedSendersApi
     }
 
     /**
-     * Operation findAcceptedSenderAsyncWithHttpInfo
+     * Operation findAcceptedSendersAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class AcceptedSendersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSender'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSenders'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findAcceptedSenderAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSender'][0])
+    public function findAcceptedSendersAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSenders'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSender200Response';
-        $request = $this->findAcceptedSenderRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindAcceptedSenders200Response';
+        $request = $this->findAcceptedSendersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class AcceptedSendersApi
     }
 
     /**
-     * Create request for operation 'findAcceptedSender'
+     * Create request for operation 'findAcceptedSenders'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class AcceptedSendersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSender'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAcceptedSenders'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findAcceptedSenderRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSender'][0])
+    public function findAcceptedSendersRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findAcceptedSenders'][0])
     {
 
 

@@ -85,12 +85,12 @@ class ServersApiTest extends TestCase
     }
 
     /**
-     * Test case for findServer
+     * Test case for findServers
      *
      * Find multiple objects.
      *
      */
-    public function testFindServer()
+    public function testFindServers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

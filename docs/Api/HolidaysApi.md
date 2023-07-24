@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createHoliday()**](HolidaysApi.md#createHoliday) | **POST** /holidays | Create a new object |
-| [**findHoliday()**](HolidaysApi.md#findHoliday) | **GET** /holidays | Find multiple objects |
+| [**findHolidays()**](HolidaysApi.md#findHolidays) | **GET** /holidays | Find multiple objects |
 | [**getHoliday()**](HolidaysApi.md#getHoliday) | **GET** /holidays/{id} | Get object by id |
 | [**patchHoliday()**](HolidaysApi.md#patchHoliday) | **PATCH** /holidays/{id} | Patch object&#39;s data |
 | [**removeHoliday()**](HolidaysApi.md#removeHoliday) | **DELETE** /holidays/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findHoliday()`
+## `findHolidays()`
 
 ```php
-findHoliday($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindHoliday200Response
+findHolidays($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindHolidays200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findHoliday($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findHolidays($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling HolidaysApi->findHoliday: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling HolidaysApi->findHolidays: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindHoliday200Response**](../Model/FindHoliday200Response.md)
+[**\OpenAPI\Client\CircuitID\FindHolidays200Response**](../Model/FindHolidays200Response.md)
 
 ### Authorization
 

@@ -73,12 +73,12 @@ class FindNumbersApiTest extends TestCase
     }
 
     /**
-     * Test case for findFindNumber
+     * Test case for findFindNumbers
      *
      * Find multiple objects.
      *
      */
-    public function testFindFindNumber()
+    public function testFindFindNumbers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

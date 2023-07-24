@@ -85,12 +85,12 @@ class MenuOptionsApiTest extends TestCase
     }
 
     /**
-     * Test case for findMenuOption
+     * Test case for findMenuOptions
      *
      * Find multiple objects.
      *
      */
-    public function testFindMenuOption()
+    public function testFindMenuOptions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

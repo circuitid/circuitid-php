@@ -4,14 +4,14 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findInvoiceItem()**](InvoiceItemsApi.md#findInvoiceItem) | **GET** /invoiceitems | Find multiple objects |
+| [**findInvoiceItems()**](InvoiceItemsApi.md#findInvoiceItems) | **GET** /invoiceitems | Find multiple objects |
 | [**getInvoiceItem()**](InvoiceItemsApi.md#getInvoiceItem) | **GET** /invoiceitems/{id} | Get object by id |
 
 
-## `findInvoiceItem()`
+## `findInvoiceItems()`
 
 ```php
-findInvoiceItem($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindInvoiceItem200Response
+findInvoiceItems($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindInvoiceItems200Response
 ```
 
 Find multiple objects
@@ -46,10 +46,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findInvoiceItem($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findInvoiceItems($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling InvoiceItemsApi->findInvoiceItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling InvoiceItemsApi->findInvoiceItems: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindInvoiceItem200Response**](../Model/FindInvoiceItem200Response.md)
+[**\OpenAPI\Client\CircuitID\FindInvoiceItems200Response**](../Model/FindInvoiceItems200Response.md)
 
 ### Authorization
 

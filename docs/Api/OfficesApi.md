@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createOffice()**](OfficesApi.md#createOffice) | **POST** /offices | Create a new object |
-| [**findOffice()**](OfficesApi.md#findOffice) | **GET** /offices | Find multiple objects |
+| [**findOffices()**](OfficesApi.md#findOffices) | **GET** /offices | Find multiple objects |
 | [**getOffice()**](OfficesApi.md#getOffice) | **GET** /offices/{id} | Get object by id |
 | [**patchOffice()**](OfficesApi.md#patchOffice) | **PATCH** /offices/{id} | Patch object&#39;s data |
 | [**removeOffice()**](OfficesApi.md#removeOffice) | **DELETE** /offices/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findOffice()`
+## `findOffices()`
 
 ```php
-findOffice($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindOffice200Response
+findOffices($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindOffices200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findOffice($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findOffices($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OfficesApi->findOffice: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OfficesApi->findOffices: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindOffice200Response**](../Model/FindOffice200Response.md)
+[**\OpenAPI\Client\CircuitID\FindOffices200Response**](../Model/FindOffices200Response.md)
 
 ### Authorization
 

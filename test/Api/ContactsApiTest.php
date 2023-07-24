@@ -85,12 +85,12 @@ class ContactsApiTest extends TestCase
     }
 
     /**
-     * Test case for findContact
+     * Test case for findContacts
      *
      * Find multiple objects.
      *
      */
-    public function testFindContact()
+    public function testFindContacts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

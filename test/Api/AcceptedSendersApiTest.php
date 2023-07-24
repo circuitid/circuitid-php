@@ -85,12 +85,12 @@ class AcceptedSendersApiTest extends TestCase
     }
 
     /**
-     * Test case for findAcceptedSender
+     * Test case for findAcceptedSenders
      *
      * Find multiple objects.
      *
      */
-    public function testFindAcceptedSender()
+    public function testFindAcceptedSenders()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createConferenceRoom()**](ConferenceRoomsApi.md#createConferenceRoom) | **POST** /conferencerooms | Create a new object |
-| [**findConferenceRoom()**](ConferenceRoomsApi.md#findConferenceRoom) | **GET** /conferencerooms | Find multiple objects |
+| [**findConferenceRooms()**](ConferenceRoomsApi.md#findConferenceRooms) | **GET** /conferencerooms | Find multiple objects |
 | [**getConferenceRoom()**](ConferenceRoomsApi.md#getConferenceRoom) | **GET** /conferencerooms/{id} | Get object by id |
 | [**patchConferenceRoom()**](ConferenceRoomsApi.md#patchConferenceRoom) | **PATCH** /conferencerooms/{id} | Patch object&#39;s data |
 | [**removeConferenceRoom()**](ConferenceRoomsApi.md#removeConferenceRoom) | **DELETE** /conferencerooms/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findConferenceRoom()`
+## `findConferenceRooms()`
 
 ```php
-findConferenceRoom($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindConferenceRoom200Response
+findConferenceRooms($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindConferenceRooms200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findConferenceRoom($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findConferenceRooms($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConferenceRoomsApi->findConferenceRoom: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConferenceRoomsApi->findConferenceRooms: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindConferenceRoom200Response**](../Model/FindConferenceRoom200Response.md)
+[**\OpenAPI\Client\CircuitID\FindConferenceRooms200Response**](../Model/FindConferenceRooms200Response.md)
 
 ### Authorization
 

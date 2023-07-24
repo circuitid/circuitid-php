@@ -85,12 +85,12 @@ class MessageCampaignsApiTest extends TestCase
     }
 
     /**
-     * Test case for findMessageCampaign
+     * Test case for findMessageCampaigns
      *
      * Find multiple objects.
      *
      */
-    public function testFindMessageCampaign()
+    public function testFindMessageCampaigns()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

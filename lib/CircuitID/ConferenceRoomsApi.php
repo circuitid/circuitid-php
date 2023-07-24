@@ -75,7 +75,7 @@ class ConferenceRoomsApi
         'createConferenceRoom' => [
             'application/json',
         ],
-        'findConferenceRoom' => [
+        'findConferenceRooms' => [
             'application/json',
         ],
         'getConferenceRoom' => [
@@ -423,7 +423,7 @@ class ConferenceRoomsApi
     }
 
     /**
-     * Operation findConferenceRoom
+     * Operation findConferenceRooms
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class ConferenceRoomsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRoom'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRooms'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindConferenceRoom200Response
+     * @return \OpenAPI\Client\CircuitID\FindConferenceRooms200Response
      */
-    public function findConferenceRoom($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRoom'][0])
+    public function findConferenceRooms($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRooms'][0])
     {
-        list($response) = $this->findConferenceRoomWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findConferenceRoomsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findConferenceRoomWithHttpInfo
+     * Operation findConferenceRoomsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class ConferenceRoomsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRoom'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRooms'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindConferenceRoom200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindConferenceRooms200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findConferenceRoomWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRoom'][0])
+    public function findConferenceRoomsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRooms'][0])
     {
-        $request = $this->findConferenceRoomRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findConferenceRoomsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class ConferenceRoomsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindConferenceRoom200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindConferenceRooms200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindConferenceRoom200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindConferenceRooms200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindConferenceRoom200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindConferenceRooms200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindConferenceRoom200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindConferenceRooms200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class ConferenceRoomsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindConferenceRoom200Response',
+                        '\OpenAPI\Client\CircuitID\FindConferenceRooms200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class ConferenceRoomsApi
     }
 
     /**
-     * Operation findConferenceRoomAsync
+     * Operation findConferenceRoomsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class ConferenceRoomsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRoom'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRooms'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findConferenceRoomAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRoom'][0])
+    public function findConferenceRoomsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRooms'][0])
     {
-        return $this->findConferenceRoomAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findConferenceRoomsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class ConferenceRoomsApi
     }
 
     /**
-     * Operation findConferenceRoomAsyncWithHttpInfo
+     * Operation findConferenceRoomsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class ConferenceRoomsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRoom'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRooms'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findConferenceRoomAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRoom'][0])
+    public function findConferenceRoomsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRooms'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindConferenceRoom200Response';
-        $request = $this->findConferenceRoomRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindConferenceRooms200Response';
+        $request = $this->findConferenceRoomsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class ConferenceRoomsApi
     }
 
     /**
-     * Create request for operation 'findConferenceRoom'
+     * Create request for operation 'findConferenceRooms'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class ConferenceRoomsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRoom'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceRooms'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findConferenceRoomRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRoom'][0])
+    public function findConferenceRoomsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceRooms'][0])
     {
 
 

@@ -85,12 +85,12 @@ class ConversationMessagesApiTest extends TestCase
     }
 
     /**
-     * Test case for findConversationMessage
+     * Test case for findConversationMessages
      *
      * Find multiple objects.
      *
      */
-    public function testFindConversationMessage()
+    public function testFindConversationMessages()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

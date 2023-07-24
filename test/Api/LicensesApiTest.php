@@ -85,12 +85,12 @@ class LicensesApiTest extends TestCase
     }
 
     /**
-     * Test case for findLicense
+     * Test case for findLicenses
      *
      * Find multiple objects.
      *
      */
-    public function testFindLicense()
+    public function testFindLicenses()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createFaxAccount()**](FaxAccountsApi.md#createFaxAccount) | **POST** /faxaccounts | Create a new object |
-| [**findFaxAccount()**](FaxAccountsApi.md#findFaxAccount) | **GET** /faxaccounts | Find multiple objects |
+| [**findFaxAccounts()**](FaxAccountsApi.md#findFaxAccounts) | **GET** /faxaccounts | Find multiple objects |
 | [**getFaxAccount()**](FaxAccountsApi.md#getFaxAccount) | **GET** /faxaccounts/{id} | Get object by id |
 | [**patchFaxAccount()**](FaxAccountsApi.md#patchFaxAccount) | **PATCH** /faxaccounts/{id} | Patch object&#39;s data |
 | [**removeFaxAccount()**](FaxAccountsApi.md#removeFaxAccount) | **DELETE** /faxaccounts/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findFaxAccount()`
+## `findFaxAccounts()`
 
 ```php
-findFaxAccount($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFaxAccount200Response
+findFaxAccounts($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFaxAccounts200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findFaxAccount($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findFaxAccounts($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaxAccountsApi->findFaxAccount: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FaxAccountsApi->findFaxAccounts: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindFaxAccount200Response**](../Model/FindFaxAccount200Response.md)
+[**\OpenAPI\Client\CircuitID\FindFaxAccounts200Response**](../Model/FindFaxAccounts200Response.md)
 
 ### Authorization
 

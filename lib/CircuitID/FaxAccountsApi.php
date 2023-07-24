@@ -75,7 +75,7 @@ class FaxAccountsApi
         'createFaxAccount' => [
             'application/json',
         ],
-        'findFaxAccount' => [
+        'findFaxAccounts' => [
             'application/json',
         ],
         'getFaxAccount' => [
@@ -423,7 +423,7 @@ class FaxAccountsApi
     }
 
     /**
-     * Operation findFaxAccount
+     * Operation findFaxAccounts
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class FaxAccountsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccount'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccounts'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindFaxAccount200Response
+     * @return \OpenAPI\Client\CircuitID\FindFaxAccounts200Response
      */
-    public function findFaxAccount($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccount'][0])
+    public function findFaxAccounts($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccounts'][0])
     {
-        list($response) = $this->findFaxAccountWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findFaxAccountsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findFaxAccountWithHttpInfo
+     * Operation findFaxAccountsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class FaxAccountsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccount'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccounts'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindFaxAccount200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindFaxAccounts200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findFaxAccountWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccount'][0])
+    public function findFaxAccountsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccounts'][0])
     {
-        $request = $this->findFaxAccountRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findFaxAccountsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class FaxAccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindFaxAccount200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindFaxAccounts200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindFaxAccount200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindFaxAccounts200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindFaxAccount200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindFaxAccounts200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindFaxAccount200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindFaxAccounts200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class FaxAccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindFaxAccount200Response',
+                        '\OpenAPI\Client\CircuitID\FindFaxAccounts200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class FaxAccountsApi
     }
 
     /**
-     * Operation findFaxAccountAsync
+     * Operation findFaxAccountsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class FaxAccountsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccount'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccounts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findFaxAccountAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccount'][0])
+    public function findFaxAccountsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccounts'][0])
     {
-        return $this->findFaxAccountAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findFaxAccountsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class FaxAccountsApi
     }
 
     /**
-     * Operation findFaxAccountAsyncWithHttpInfo
+     * Operation findFaxAccountsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class FaxAccountsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccount'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccounts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findFaxAccountAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccount'][0])
+    public function findFaxAccountsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccounts'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindFaxAccount200Response';
-        $request = $this->findFaxAccountRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindFaxAccounts200Response';
+        $request = $this->findFaxAccountsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class FaxAccountsApi
     }
 
     /**
-     * Create request for operation 'findFaxAccount'
+     * Create request for operation 'findFaxAccounts'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class FaxAccountsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccount'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxAccounts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findFaxAccountRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccount'][0])
+    public function findFaxAccountsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxAccounts'][0])
     {
 
 

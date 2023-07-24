@@ -72,7 +72,7 @@ class InvoicesApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'findInvoice' => [
+        'findInvoices' => [
             'application/json',
         ],
         'getInvoice' => [
@@ -127,7 +127,7 @@ class InvoicesApi
     }
 
     /**
-     * Operation findInvoice
+     * Operation findInvoices
      *
      * Find multiple objects
      *
@@ -138,20 +138,20 @@ class InvoicesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoice'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoices'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindInvoice200Response
+     * @return \OpenAPI\Client\CircuitID\FindInvoices200Response
      */
-    public function findInvoice($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoice'][0])
+    public function findInvoices($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoices'][0])
     {
-        list($response) = $this->findInvoiceWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findInvoicesWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findInvoiceWithHttpInfo
+     * Operation findInvoicesWithHttpInfo
      *
      * Find multiple objects
      *
@@ -162,15 +162,15 @@ class InvoicesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoice'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoices'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindInvoice200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindInvoices200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findInvoiceWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoice'][0])
+    public function findInvoicesWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoices'][0])
     {
-        $request = $this->findInvoiceRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findInvoicesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -209,23 +209,23 @@ class InvoicesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindInvoice200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindInvoices200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindInvoice200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindInvoices200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindInvoice200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindInvoices200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindInvoice200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindInvoices200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -246,7 +246,7 @@ class InvoicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindInvoice200Response',
+                        '\OpenAPI\Client\CircuitID\FindInvoices200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -257,7 +257,7 @@ class InvoicesApi
     }
 
     /**
-     * Operation findInvoiceAsync
+     * Operation findInvoicesAsync
      *
      * Find multiple objects
      *
@@ -268,14 +268,14 @@ class InvoicesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoice'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findInvoiceAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoice'][0])
+    public function findInvoicesAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoices'][0])
     {
-        return $this->findInvoiceAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findInvoicesAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -284,7 +284,7 @@ class InvoicesApi
     }
 
     /**
-     * Operation findInvoiceAsyncWithHttpInfo
+     * Operation findInvoicesAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -295,15 +295,15 @@ class InvoicesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoice'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findInvoiceAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoice'][0])
+    public function findInvoicesAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoices'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindInvoice200Response';
-        $request = $this->findInvoiceRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindInvoices200Response';
+        $request = $this->findInvoicesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -342,7 +342,7 @@ class InvoicesApi
     }
 
     /**
-     * Create request for operation 'findInvoice'
+     * Create request for operation 'findInvoices'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -351,12 +351,12 @@ class InvoicesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoice'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findInvoices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findInvoiceRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoice'][0])
+    public function findInvoicesRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findInvoices'][0])
     {
 
 

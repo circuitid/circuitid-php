@@ -73,12 +73,12 @@ class InvoicesApiTest extends TestCase
     }
 
     /**
-     * Test case for findInvoice
+     * Test case for findInvoices
      *
      * Find multiple objects.
      *
      */
-    public function testFindInvoice()
+    public function testFindInvoices()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

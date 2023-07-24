@@ -85,12 +85,12 @@ class CustomersApiTest extends TestCase
     }
 
     /**
-     * Test case for findCustomer
+     * Test case for findCustomers
      *
      * Find multiple objects.
      *
      */
-    public function testFindCustomer()
+    public function testFindCustomers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

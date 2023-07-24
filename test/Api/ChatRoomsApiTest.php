@@ -85,12 +85,12 @@ class ChatRoomsApiTest extends TestCase
     }
 
     /**
-     * Test case for findChatRoom
+     * Test case for findChatRooms
      *
      * Find multiple objects.
      *
      */
-    public function testFindChatRoom()
+    public function testFindChatRooms()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createCallQueue()**](CallQueuesApi.md#createCallQueue) | **POST** /callqueues | Create a new object |
-| [**findCallQueue()**](CallQueuesApi.md#findCallQueue) | **GET** /callqueues | Find multiple objects |
+| [**findCallQueues()**](CallQueuesApi.md#findCallQueues) | **GET** /callqueues | Find multiple objects |
 | [**getCallQueue()**](CallQueuesApi.md#getCallQueue) | **GET** /callqueues/{id} | Get object by id |
 | [**patchCallQueue()**](CallQueuesApi.md#patchCallQueue) | **PATCH** /callqueues/{id} | Patch object&#39;s data |
 | [**removeCallQueue()**](CallQueuesApi.md#removeCallQueue) | **DELETE** /callqueues/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findCallQueue()`
+## `findCallQueues()`
 
 ```php
-findCallQueue($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCallQueue200Response
+findCallQueues($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindCallQueues200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findCallQueue($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findCallQueues($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CallQueuesApi->findCallQueue: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CallQueuesApi->findCallQueues: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindCallQueue200Response**](../Model/FindCallQueue200Response.md)
+[**\OpenAPI\Client\CircuitID\FindCallQueues200Response**](../Model/FindCallQueues200Response.md)
 
 ### Authorization
 

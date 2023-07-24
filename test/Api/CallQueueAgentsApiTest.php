@@ -85,12 +85,12 @@ class CallQueueAgentsApiTest extends TestCase
     }
 
     /**
-     * Test case for findCallQueueAgent
+     * Test case for findCallQueueAgents
      *
      * Find multiple objects.
      *
      */
-    public function testFindCallQueueAgent()
+    public function testFindCallQueueAgents()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

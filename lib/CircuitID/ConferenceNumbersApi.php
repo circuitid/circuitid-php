@@ -72,7 +72,7 @@ class ConferenceNumbersApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'findConferenceNumber' => [
+        'findConferenceNumbers' => [
             'application/json',
         ],
     ];
@@ -124,7 +124,7 @@ class ConferenceNumbersApi
     }
 
     /**
-     * Operation findConferenceNumber
+     * Operation findConferenceNumbers
      *
      * Find multiple objects
      *
@@ -135,20 +135,20 @@ class ConferenceNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumbers'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function findConferenceNumber($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumber'][0])
+    public function findConferenceNumbers($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumbers'][0])
     {
-        list($response) = $this->findConferenceNumberWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findConferenceNumbersWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findConferenceNumberWithHttpInfo
+     * Operation findConferenceNumbersWithHttpInfo
      *
      * Find multiple objects
      *
@@ -159,15 +159,15 @@ class ConferenceNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumbers'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findConferenceNumberWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumber'][0])
+    public function findConferenceNumbersWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumbers'][0])
     {
-        $request = $this->findConferenceNumberRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findConferenceNumbersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -254,7 +254,7 @@ class ConferenceNumbersApi
     }
 
     /**
-     * Operation findConferenceNumberAsync
+     * Operation findConferenceNumbersAsync
      *
      * Find multiple objects
      *
@@ -265,14 +265,14 @@ class ConferenceNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumbers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findConferenceNumberAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumber'][0])
+    public function findConferenceNumbersAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumbers'][0])
     {
-        return $this->findConferenceNumberAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findConferenceNumbersAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -281,7 +281,7 @@ class ConferenceNumbersApi
     }
 
     /**
-     * Operation findConferenceNumberAsyncWithHttpInfo
+     * Operation findConferenceNumbersAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -292,15 +292,15 @@ class ConferenceNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumbers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findConferenceNumberAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumber'][0])
+    public function findConferenceNumbersAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumbers'][0])
     {
         $returnType = 'mixed';
-        $request = $this->findConferenceNumberRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findConferenceNumbersRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,7 +339,7 @@ class ConferenceNumbersApi
     }
 
     /**
-     * Create request for operation 'findConferenceNumber'
+     * Create request for operation 'findConferenceNumbers'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -348,12 +348,12 @@ class ConferenceNumbersApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumber'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConferenceNumbers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findConferenceNumberRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumber'][0])
+    public function findConferenceNumbersRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConferenceNumbers'][0])
     {
 
 

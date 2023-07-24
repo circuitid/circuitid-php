@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createUser()**](UsersApi.md#createUser) | **POST** /users | Create a new object |
-| [**findUser()**](UsersApi.md#findUser) | **GET** /users | Find multiple objects |
+| [**findUsers()**](UsersApi.md#findUsers) | **GET** /users | Find multiple objects |
 | [**getUser()**](UsersApi.md#getUser) | **GET** /users/{id} | Get object by id |
 | [**patchUser()**](UsersApi.md#patchUser) | **PATCH** /users/{id} | Patch object&#39;s data |
 | [**removeUser()**](UsersApi.md#removeUser) | **DELETE** /users/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findUser()`
+## `findUsers()`
 
 ```php
-findUser($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindUser200Response
+findUsers($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindUsers200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findUser($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findUsers($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UsersApi->findUser: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->findUsers: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindUser200Response**](../Model/FindUser200Response.md)
+[**\OpenAPI\Client\CircuitID\FindUsers200Response**](../Model/FindUsers200Response.md)
 
 ### Authorization
 

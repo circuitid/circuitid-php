@@ -75,7 +75,7 @@ class VirtualExtensionsApi
         'createVirtualExtension' => [
             'application/json',
         ],
-        'findVirtualExtension' => [
+        'findVirtualExtensions' => [
             'application/json',
         ],
         'getVirtualExtension' => [
@@ -423,7 +423,7 @@ class VirtualExtensionsApi
     }
 
     /**
-     * Operation findVirtualExtension
+     * Operation findVirtualExtensions
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class VirtualExtensionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtension'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtensions'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindVirtualExtension200Response
+     * @return \OpenAPI\Client\CircuitID\FindVirtualExtensions200Response
      */
-    public function findVirtualExtension($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtension'][0])
+    public function findVirtualExtensions($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtensions'][0])
     {
-        list($response) = $this->findVirtualExtensionWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findVirtualExtensionsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findVirtualExtensionWithHttpInfo
+     * Operation findVirtualExtensionsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class VirtualExtensionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtension'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtensions'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindVirtualExtension200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindVirtualExtensions200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findVirtualExtensionWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtension'][0])
+    public function findVirtualExtensionsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtensions'][0])
     {
-        $request = $this->findVirtualExtensionRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findVirtualExtensionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class VirtualExtensionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindVirtualExtension200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindVirtualExtension200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindVirtualExtension200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindVirtualExtension200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class VirtualExtensionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindVirtualExtension200Response',
+                        '\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class VirtualExtensionsApi
     }
 
     /**
-     * Operation findVirtualExtensionAsync
+     * Operation findVirtualExtensionsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class VirtualExtensionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtension'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtensions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findVirtualExtensionAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtension'][0])
+    public function findVirtualExtensionsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtensions'][0])
     {
-        return $this->findVirtualExtensionAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findVirtualExtensionsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class VirtualExtensionsApi
     }
 
     /**
-     * Operation findVirtualExtensionAsyncWithHttpInfo
+     * Operation findVirtualExtensionsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class VirtualExtensionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtension'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtensions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findVirtualExtensionAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtension'][0])
+    public function findVirtualExtensionsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtensions'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindVirtualExtension200Response';
-        $request = $this->findVirtualExtensionRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindVirtualExtensions200Response';
+        $request = $this->findVirtualExtensionsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class VirtualExtensionsApi
     }
 
     /**
-     * Create request for operation 'findVirtualExtension'
+     * Create request for operation 'findVirtualExtensions'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class VirtualExtensionsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtension'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findVirtualExtensions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findVirtualExtensionRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtension'][0])
+    public function findVirtualExtensionsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findVirtualExtensions'][0])
     {
 
 

@@ -85,12 +85,12 @@ class GroupMembersApiTest extends TestCase
     }
 
     /**
-     * Test case for findGroupMember
+     * Test case for findGroupMembers
      *
      * Find multiple objects.
      *
      */
-    public function testFindGroupMember()
+    public function testFindGroupMembers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

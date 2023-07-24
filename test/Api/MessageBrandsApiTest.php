@@ -85,12 +85,12 @@ class MessageBrandsApiTest extends TestCase
     }
 
     /**
-     * Test case for findMessageBrand
+     * Test case for findMessageBrands
      *
      * Find multiple objects.
      *
      */
-    public function testFindMessageBrand()
+    public function testFindMessageBrands()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

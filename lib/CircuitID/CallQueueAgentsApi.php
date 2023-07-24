@@ -75,7 +75,7 @@ class CallQueueAgentsApi
         'createCallQueueAgent' => [
             'application/json',
         ],
-        'findCallQueueAgent' => [
+        'findCallQueueAgents' => [
             'application/json',
         ],
         'getCallQueueAgent' => [
@@ -423,7 +423,7 @@ class CallQueueAgentsApi
     }
 
     /**
-     * Operation findCallQueueAgent
+     * Operation findCallQueueAgents
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class CallQueueAgentsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgents'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindCallQueueAgent200Response
+     * @return \OpenAPI\Client\CircuitID\FindCallQueueAgents200Response
      */
-    public function findCallQueueAgent($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgent'][0])
+    public function findCallQueueAgents($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgents'][0])
     {
-        list($response) = $this->findCallQueueAgentWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findCallQueueAgentsWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findCallQueueAgentWithHttpInfo
+     * Operation findCallQueueAgentsWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class CallQueueAgentsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgents'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindCallQueueAgent200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindCallQueueAgents200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findCallQueueAgentWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgent'][0])
+    public function findCallQueueAgentsWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgents'][0])
     {
-        $request = $this->findCallQueueAgentRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findCallQueueAgentsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class CallQueueAgentsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindCallQueueAgent200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindCallQueueAgent200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindCallQueueAgent200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindCallQueueAgent200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class CallQueueAgentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindCallQueueAgent200Response',
+                        '\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class CallQueueAgentsApi
     }
 
     /**
-     * Operation findCallQueueAgentAsync
+     * Operation findCallQueueAgentsAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class CallQueueAgentsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgents'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findCallQueueAgentAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgent'][0])
+    public function findCallQueueAgentsAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgents'][0])
     {
-        return $this->findCallQueueAgentAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findCallQueueAgentsAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class CallQueueAgentsApi
     }
 
     /**
-     * Operation findCallQueueAgentAsyncWithHttpInfo
+     * Operation findCallQueueAgentsAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class CallQueueAgentsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgents'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findCallQueueAgentAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgent'][0])
+    public function findCallQueueAgentsAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgents'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindCallQueueAgent200Response';
-        $request = $this->findCallQueueAgentRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindCallQueueAgents200Response';
+        $request = $this->findCallQueueAgentsRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class CallQueueAgentsApi
     }
 
     /**
-     * Create request for operation 'findCallQueueAgent'
+     * Create request for operation 'findCallQueueAgents'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class CallQueueAgentsApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findCallQueueAgents'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findCallQueueAgentRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgent'][0])
+    public function findCallQueueAgentsRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findCallQueueAgents'][0])
     {
 
 

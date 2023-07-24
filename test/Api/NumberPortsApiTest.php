@@ -85,12 +85,12 @@ class NumberPortsApiTest extends TestCase
     }
 
     /**
-     * Test case for findNumberPort
+     * Test case for findNumberPorts
      *
      * Find multiple objects.
      *
      */
-    public function testFindNumberPort()
+    public function testFindNumberPorts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

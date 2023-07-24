@@ -85,12 +85,12 @@ class ConferenceRoomsApiTest extends TestCase
     }
 
     /**
-     * Test case for findConferenceRoom
+     * Test case for findConferenceRooms
      *
      * Find multiple objects.
      *
      */
-    public function testFindConferenceRoom()
+    public function testFindConferenceRooms()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

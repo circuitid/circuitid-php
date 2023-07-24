@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createMenu()**](MenusApi.md#createMenu) | **POST** /menus | Create a new object |
-| [**findMenu()**](MenusApi.md#findMenu) | **GET** /menus | Find multiple objects |
+| [**findMenus()**](MenusApi.md#findMenus) | **GET** /menus | Find multiple objects |
 | [**getMenu()**](MenusApi.md#getMenu) | **GET** /menus/{id} | Get object by id |
 | [**patchMenu()**](MenusApi.md#patchMenu) | **PATCH** /menus/{id} | Patch object&#39;s data |
 | [**removeMenu()**](MenusApi.md#removeMenu) | **DELETE** /menus/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findMenu()`
+## `findMenus()`
 
 ```php
-findMenu($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMenu200Response
+findMenus($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindMenus200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findMenu($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findMenus($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MenusApi->findMenu: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MenusApi->findMenus: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindMenu200Response**](../Model/FindMenu200Response.md)
+[**\OpenAPI\Client\CircuitID\FindMenus200Response**](../Model/FindMenus200Response.md)
 
 ### Authorization
 

@@ -85,12 +85,12 @@ class DeveloperAppSubscriptionsApiTest extends TestCase
     }
 
     /**
-     * Test case for findDeveloperAppSubscription
+     * Test case for findDeveloperAppSubscriptions
      *
      * Find multiple objects.
      *
      */
-    public function testFindDeveloperAppSubscription()
+    public function testFindDeveloperAppSubscriptions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

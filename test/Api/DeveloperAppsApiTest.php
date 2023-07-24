@@ -85,12 +85,12 @@ class DeveloperAppsApiTest extends TestCase
     }
 
     /**
-     * Test case for findDeveloperApp
+     * Test case for findDeveloperApps
      *
      * Find multiple objects.
      *
      */
-    public function testFindDeveloperApp()
+    public function testFindDeveloperApps()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

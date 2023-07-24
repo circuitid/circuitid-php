@@ -73,12 +73,12 @@ class ConferenceNumbersApiTest extends TestCase
     }
 
     /**
-     * Test case for findConferenceNumber
+     * Test case for findConferenceNumbers
      *
      * Find multiple objects.
      *
      */
-    public function testFindConferenceNumber()
+    public function testFindConferenceNumbers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -85,12 +85,12 @@ class OfficesApiTest extends TestCase
     }
 
     /**
-     * Test case for findOffice
+     * Test case for findOffices
      *
      * Find multiple objects.
      *
      */
-    public function testFindOffice()
+    public function testFindOffices()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

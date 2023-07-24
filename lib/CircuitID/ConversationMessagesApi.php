@@ -75,7 +75,7 @@ class ConversationMessagesApi
         'createConversationMessage' => [
             'application/json',
         ],
-        'findConversationMessage' => [
+        'findConversationMessages' => [
             'application/json',
         ],
         'getConversationMessage' => [
@@ -423,7 +423,7 @@ class ConversationMessagesApi
     }
 
     /**
-     * Operation findConversationMessage
+     * Operation findConversationMessages
      *
      * Find multiple objects
      *
@@ -434,20 +434,20 @@ class ConversationMessagesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessage'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessages'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindConversationMessage200Response
+     * @return \OpenAPI\Client\CircuitID\FindConversationMessages200Response
      */
-    public function findConversationMessage($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessage'][0])
+    public function findConversationMessages($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessages'][0])
     {
-        list($response) = $this->findConversationMessageWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findConversationMessagesWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findConversationMessageWithHttpInfo
+     * Operation findConversationMessagesWithHttpInfo
      *
      * Find multiple objects
      *
@@ -458,15 +458,15 @@ class ConversationMessagesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessage'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessages'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindConversationMessage200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindConversationMessages200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findConversationMessageWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessage'][0])
+    public function findConversationMessagesWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessages'][0])
     {
-        $request = $this->findConversationMessageRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findConversationMessagesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -505,23 +505,23 @@ class ConversationMessagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindConversationMessage200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindConversationMessages200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindConversationMessage200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindConversationMessages200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindConversationMessage200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindConversationMessages200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindConversationMessage200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindConversationMessages200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -542,7 +542,7 @@ class ConversationMessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindConversationMessage200Response',
+                        '\OpenAPI\Client\CircuitID\FindConversationMessages200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -553,7 +553,7 @@ class ConversationMessagesApi
     }
 
     /**
-     * Operation findConversationMessageAsync
+     * Operation findConversationMessagesAsync
      *
      * Find multiple objects
      *
@@ -564,14 +564,14 @@ class ConversationMessagesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessage'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessages'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findConversationMessageAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessage'][0])
+    public function findConversationMessagesAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessages'][0])
     {
-        return $this->findConversationMessageAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findConversationMessagesAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,7 +580,7 @@ class ConversationMessagesApi
     }
 
     /**
-     * Operation findConversationMessageAsyncWithHttpInfo
+     * Operation findConversationMessagesAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -591,15 +591,15 @@ class ConversationMessagesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessage'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessages'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findConversationMessageAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessage'][0])
+    public function findConversationMessagesAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessages'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindConversationMessage200Response';
-        $request = $this->findConversationMessageRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindConversationMessages200Response';
+        $request = $this->findConversationMessagesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -638,7 +638,7 @@ class ConversationMessagesApi
     }
 
     /**
-     * Create request for operation 'findConversationMessage'
+     * Create request for operation 'findConversationMessages'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -647,12 +647,12 @@ class ConversationMessagesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessage'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findConversationMessages'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findConversationMessageRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessage'][0])
+    public function findConversationMessagesRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findConversationMessages'][0])
     {
 
 
