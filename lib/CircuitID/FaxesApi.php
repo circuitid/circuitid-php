@@ -72,16 +72,16 @@ class FaxesApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'createFaxe' => [
+        'createFax' => [
             'application/json',
         ],
-        'findFaxe' => [
+        'findFaxes' => [
             'application/json',
         ],
-        'getFaxe' => [
+        'getFax' => [
             'application/json',
         ],
-        'removeFaxe' => [
+        'removeFax' => [
             'application/json',
         ],
     ];
@@ -133,38 +133,38 @@ class FaxesApi
     }
 
     /**
-     * Operation createFaxe
+     * Operation createFax
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Faxes $faxes The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFax'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function createFaxe($faxes, string $contentType = self::contentTypes['createFaxe'][0])
+    public function createFax($faxes, string $contentType = self::contentTypes['createFax'][0])
     {
-        list($response) = $this->createFaxeWithHttpInfo($faxes, $contentType);
+        list($response) = $this->createFaxWithHttpInfo($faxes, $contentType);
         return $response;
     }
 
     /**
-     * Operation createFaxeWithHttpInfo
+     * Operation createFaxWithHttpInfo
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Faxes $faxes The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFax'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createFaxeWithHttpInfo($faxes, string $contentType = self::contentTypes['createFaxe'][0])
+    public function createFaxWithHttpInfo($faxes, string $contentType = self::contentTypes['createFax'][0])
     {
-        $request = $this->createFaxeRequest($faxes, $contentType);
+        $request = $this->createFaxRequest($faxes, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -251,19 +251,19 @@ class FaxesApi
     }
 
     /**
-     * Operation createFaxeAsync
+     * Operation createFaxAsync
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Faxes $faxes The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFaxeAsync($faxes, string $contentType = self::contentTypes['createFaxe'][0])
+    public function createFaxAsync($faxes, string $contentType = self::contentTypes['createFax'][0])
     {
-        return $this->createFaxeAsyncWithHttpInfo($faxes, $contentType)
+        return $this->createFaxAsyncWithHttpInfo($faxes, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -272,20 +272,20 @@ class FaxesApi
     }
 
     /**
-     * Operation createFaxeAsyncWithHttpInfo
+     * Operation createFaxAsyncWithHttpInfo
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Faxes $faxes The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFaxeAsyncWithHttpInfo($faxes, string $contentType = self::contentTypes['createFaxe'][0])
+    public function createFaxAsyncWithHttpInfo($faxes, string $contentType = self::contentTypes['createFax'][0])
     {
         $returnType = 'mixed';
-        $request = $this->createFaxeRequest($faxes, $contentType);
+        $request = $this->createFaxRequest($faxes, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -324,21 +324,21 @@ class FaxesApi
     }
 
     /**
-     * Create request for operation 'createFaxe'
+     * Create request for operation 'createFax'
      *
      * @param  \OpenAPI\Client\CircuitID\Faxes $faxes The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createFaxeRequest($faxes, string $contentType = self::contentTypes['createFaxe'][0])
+    public function createFaxRequest($faxes, string $contentType = self::contentTypes['createFax'][0])
     {
 
         // verify the required parameter 'faxes' is set
         if ($faxes === null || (is_array($faxes) && count($faxes) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $faxes when calling createFaxe'
+                'Missing the required parameter $faxes when calling createFax'
             );
         }
 
@@ -420,7 +420,7 @@ class FaxesApi
     }
 
     /**
-     * Operation findFaxe
+     * Operation findFaxes
      *
      * Find multiple objects
      *
@@ -431,20 +431,20 @@ class FaxesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxes'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\CircuitID\FindFaxe200Response
+     * @return \OpenAPI\Client\CircuitID\FindFaxes200Response
      */
-    public function findFaxe($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxe'][0])
+    public function findFaxes($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxes'][0])
     {
-        list($response) = $this->findFaxeWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        list($response) = $this->findFaxesWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
         return $response;
     }
 
     /**
-     * Operation findFaxeWithHttpInfo
+     * Operation findFaxesWithHttpInfo
      *
      * Find multiple objects
      *
@@ -455,15 +455,15 @@ class FaxesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxes'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\CircuitID\FindFaxe200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\CircuitID\FindFaxes200Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findFaxeWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxe'][0])
+    public function findFaxesWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxes'][0])
     {
-        $request = $this->findFaxeRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $request = $this->findFaxesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -502,23 +502,23 @@ class FaxesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\CircuitID\FindFaxe200Response' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\CircuitID\FindFaxes200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\CircuitID\FindFaxe200Response' !== 'string') {
+                        if ('\OpenAPI\Client\CircuitID\FindFaxes200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindFaxe200Response', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\CircuitID\FindFaxes200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\CircuitID\FindFaxe200Response';
+            $returnType = '\OpenAPI\Client\CircuitID\FindFaxes200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -539,7 +539,7 @@ class FaxesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\CircuitID\FindFaxe200Response',
+                        '\OpenAPI\Client\CircuitID\FindFaxes200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class FaxesApi
     }
 
     /**
-     * Operation findFaxeAsync
+     * Operation findFaxesAsync
      *
      * Find multiple objects
      *
@@ -561,14 +561,14 @@ class FaxesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findFaxeAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxe'][0])
+    public function findFaxesAsync($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxes'][0])
     {
-        return $this->findFaxeAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
+        return $this->findFaxesAsyncWithHttpInfo($search, $limit, $skip, $sort, $select, $or, $and, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -577,7 +577,7 @@ class FaxesApi
     }
 
     /**
-     * Operation findFaxeAsyncWithHttpInfo
+     * Operation findFaxesAsyncWithHttpInfo
      *
      * Find multiple objects
      *
@@ -588,15 +588,15 @@ class FaxesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findFaxeAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxe'][0])
+    public function findFaxesAsyncWithHttpInfo($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxes'][0])
     {
-        $returnType = '\OpenAPI\Client\CircuitID\FindFaxe200Response';
-        $request = $this->findFaxeRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
+        $returnType = '\OpenAPI\Client\CircuitID\FindFaxes200Response';
+        $request = $this->findFaxesRequest($search, $limit, $skip, $sort, $select, $or, $and, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -635,7 +635,7 @@ class FaxesApi
     }
 
     /**
-     * Create request for operation 'findFaxe'
+     * Create request for operation 'findFaxes'
      *
      * @param  mixed $search Filter results by the specified value. (optional)
      * @param  mixed $limit $limit will return only the number of results you specify. (optional)
@@ -644,12 +644,12 @@ class FaxesApi
      * @param  mixed $select $select allows to pick which fields to include in the result. (optional)
      * @param  mixed $or Find all records that match any of the given criteria. (optional)
      * @param  mixed $and Find all records that match all of the given criteria. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFaxes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findFaxeRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxe'][0])
+    public function findFaxesRequest($search = null, $limit = null, $skip = null, $sort = null, $select = null, $or = null, $and = null, string $contentType = self::contentTypes['findFaxes'][0])
     {
 
 
@@ -793,38 +793,38 @@ class FaxesApi
     }
 
     /**
-     * Operation getFaxe
+     * Operation getFax
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFax'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function getFaxe($id, string $contentType = self::contentTypes['getFaxe'][0])
+    public function getFax($id, string $contentType = self::contentTypes['getFax'][0])
     {
-        list($response) = $this->getFaxeWithHttpInfo($id, $contentType);
+        list($response) = $this->getFaxWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation getFaxeWithHttpInfo
+     * Operation getFaxWithHttpInfo
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFax'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFaxeWithHttpInfo($id, string $contentType = self::contentTypes['getFaxe'][0])
+    public function getFaxWithHttpInfo($id, string $contentType = self::contentTypes['getFax'][0])
     {
-        $request = $this->getFaxeRequest($id, $contentType);
+        $request = $this->getFaxRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -934,19 +934,19 @@ class FaxesApi
     }
 
     /**
-     * Operation getFaxeAsync
+     * Operation getFaxAsync
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFaxeAsync($id, string $contentType = self::contentTypes['getFaxe'][0])
+    public function getFaxAsync($id, string $contentType = self::contentTypes['getFax'][0])
     {
-        return $this->getFaxeAsyncWithHttpInfo($id, $contentType)
+        return $this->getFaxAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -955,20 +955,20 @@ class FaxesApi
     }
 
     /**
-     * Operation getFaxeAsyncWithHttpInfo
+     * Operation getFaxAsyncWithHttpInfo
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFaxeAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getFaxe'][0])
+    public function getFaxAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getFax'][0])
     {
         $returnType = 'mixed';
-        $request = $this->getFaxeRequest($id, $contentType);
+        $request = $this->getFaxRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1007,21 +1007,21 @@ class FaxesApi
     }
 
     /**
-     * Create request for operation 'getFaxe'
+     * Create request for operation 'getFax'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFaxeRequest($id, string $contentType = self::contentTypes['getFaxe'][0])
+    public function getFaxRequest($id, string $contentType = self::contentTypes['getFax'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getFaxe'
+                'Missing the required parameter $id when calling getFax'
             );
         }
 
@@ -1104,38 +1104,38 @@ class FaxesApi
     }
 
     /**
-     * Operation removeFaxe
+     * Operation removeFax
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFax'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function removeFaxe($id, string $contentType = self::contentTypes['removeFaxe'][0])
+    public function removeFax($id, string $contentType = self::contentTypes['removeFax'][0])
     {
-        list($response) = $this->removeFaxeWithHttpInfo($id, $contentType);
+        list($response) = $this->removeFaxWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation removeFaxeWithHttpInfo
+     * Operation removeFaxWithHttpInfo
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFax'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeFaxeWithHttpInfo($id, string $contentType = self::contentTypes['removeFaxe'][0])
+    public function removeFaxWithHttpInfo($id, string $contentType = self::contentTypes['removeFax'][0])
     {
-        $request = $this->removeFaxeRequest($id, $contentType);
+        $request = $this->removeFaxRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1222,19 +1222,19 @@ class FaxesApi
     }
 
     /**
-     * Operation removeFaxeAsync
+     * Operation removeFaxAsync
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeFaxeAsync($id, string $contentType = self::contentTypes['removeFaxe'][0])
+    public function removeFaxAsync($id, string $contentType = self::contentTypes['removeFax'][0])
     {
-        return $this->removeFaxeAsyncWithHttpInfo($id, $contentType)
+        return $this->removeFaxAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1243,20 +1243,20 @@ class FaxesApi
     }
 
     /**
-     * Operation removeFaxeAsyncWithHttpInfo
+     * Operation removeFaxAsyncWithHttpInfo
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeFaxeAsyncWithHttpInfo($id, string $contentType = self::contentTypes['removeFaxe'][0])
+    public function removeFaxAsyncWithHttpInfo($id, string $contentType = self::contentTypes['removeFax'][0])
     {
         $returnType = 'mixed';
-        $request = $this->removeFaxeRequest($id, $contentType);
+        $request = $this->removeFaxRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1295,21 +1295,21 @@ class FaxesApi
     }
 
     /**
-     * Create request for operation 'removeFaxe'
+     * Create request for operation 'removeFax'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFaxe'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeFax'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function removeFaxeRequest($id, string $contentType = self::contentTypes['removeFaxe'][0])
+    public function removeFaxRequest($id, string $contentType = self::contentTypes['removeFax'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling removeFaxe'
+                'Missing the required parameter $id when calling removeFax'
             );
         }
 

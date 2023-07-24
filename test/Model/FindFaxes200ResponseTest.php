@@ -1,6 +1,6 @@
 <?php
 /**
- * FindFaxe200ResponseTest
+ * FindFaxes200ResponseTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FindFaxe200ResponseTest Class Doc Comment
+ * FindFaxes200ResponseTest Class Doc Comment
  *
  * @category    Class
- * @description FindFaxe200Response
+ * @description FindFaxes200Response
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FindFaxe200ResponseTest extends TestCase
+class FindFaxes200ResponseTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class FindFaxe200ResponseTest extends TestCase
     }
 
     /**
-     * Test "FindFaxe200Response"
+     * Test "FindFaxes200Response"
      */
-    public function testFindFaxe200Response()
+    public function testFindFaxes200Response()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * FindFaxe200Response
+ * FindFaxes200Response
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * FindFaxe200Response Class Doc Comment
+ * FindFaxes200Response Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindFaxe200Response implements ModelInterface, ArrayAccess, \JsonSerializable
+class FindFaxes200Response implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class FindFaxe200Response implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'findFaxe_200_response';
+    protected static $openAPIModelName = 'findFaxes_200_response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

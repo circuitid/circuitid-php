@@ -73,48 +73,48 @@ class FaxesApiTest extends TestCase
     }
 
     /**
-     * Test case for createFaxe
+     * Test case for createFax
      *
      * Create a new object.
      *
      */
-    public function testCreateFaxe()
+    public function testCreateFax()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for findFaxe
+     * Test case for findFaxes
      *
      * Find multiple objects.
      *
      */
-    public function testFindFaxe()
+    public function testFindFaxes()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for getFaxe
+     * Test case for getFax
      *
      * Get object by id.
      *
      */
-    public function testGetFaxe()
+    public function testGetFax()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for removeFaxe
+     * Test case for removeFax
      *
      * Delete object by id.
      *
      */
-    public function testRemoveFaxe()
+    public function testRemoveFax()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

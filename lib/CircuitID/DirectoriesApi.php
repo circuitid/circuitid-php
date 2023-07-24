@@ -72,19 +72,19 @@ class DirectoriesApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'createDirectorie' => [
+        'createdirectory' => [
             'application/json',
         ],
         'findDirectorie' => [
             'application/json',
         ],
-        'getDirectorie' => [
+        'getdirectory' => [
             'application/json',
         ],
-        'patchDirectorie' => [
+        'patchdirectory' => [
             'application/json',
         ],
-        'removeDirectorie' => [
+        'removedirectory' => [
             'application/json',
         ],
     ];
@@ -136,38 +136,38 @@ class DirectoriesApi
     }
 
     /**
-     * Operation createDirectorie
+     * Operation createdirectory
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function createDirectorie($directories, string $contentType = self::contentTypes['createDirectorie'][0])
+    public function createdirectory($directories, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        list($response) = $this->createDirectorieWithHttpInfo($directories, $contentType);
+        list($response) = $this->createdirectoryWithHttpInfo($directories, $contentType);
         return $response;
     }
 
     /**
-     * Operation createDirectorieWithHttpInfo
+     * Operation createdirectoryWithHttpInfo
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDirectorieWithHttpInfo($directories, string $contentType = self::contentTypes['createDirectorie'][0])
+    public function createdirectoryWithHttpInfo($directories, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        $request = $this->createDirectorieRequest($directories, $contentType);
+        $request = $this->createdirectoryRequest($directories, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -254,19 +254,19 @@ class DirectoriesApi
     }
 
     /**
-     * Operation createDirectorieAsync
+     * Operation createdirectoryAsync
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDirectorieAsync($directories, string $contentType = self::contentTypes['createDirectorie'][0])
+    public function createdirectoryAsync($directories, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        return $this->createDirectorieAsyncWithHttpInfo($directories, $contentType)
+        return $this->createdirectoryAsyncWithHttpInfo($directories, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -275,20 +275,20 @@ class DirectoriesApi
     }
 
     /**
-     * Operation createDirectorieAsyncWithHttpInfo
+     * Operation createdirectoryAsyncWithHttpInfo
      *
      * Create a new object
      *
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDirectorieAsyncWithHttpInfo($directories, string $contentType = self::contentTypes['createDirectorie'][0])
+    public function createdirectoryAsyncWithHttpInfo($directories, string $contentType = self::contentTypes['createdirectory'][0])
     {
         $returnType = 'mixed';
-        $request = $this->createDirectorieRequest($directories, $contentType);
+        $request = $this->createdirectoryRequest($directories, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -327,21 +327,21 @@ class DirectoriesApi
     }
 
     /**
-     * Create request for operation 'createDirectorie'
+     * Create request for operation 'createdirectory'
      *
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDirectorieRequest($directories, string $contentType = self::contentTypes['createDirectorie'][0])
+    public function createdirectoryRequest($directories, string $contentType = self::contentTypes['createdirectory'][0])
     {
 
         // verify the required parameter 'directories' is set
         if ($directories === null || (is_array($directories) && count($directories) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $directories when calling createDirectorie'
+                'Missing the required parameter $directories when calling createdirectory'
             );
         }
 
@@ -796,38 +796,38 @@ class DirectoriesApi
     }
 
     /**
-     * Operation getDirectorie
+     * Operation getdirectory
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function getDirectorie($id, string $contentType = self::contentTypes['getDirectorie'][0])
+    public function getdirectory($id, string $contentType = self::contentTypes['getdirectory'][0])
     {
-        list($response) = $this->getDirectorieWithHttpInfo($id, $contentType);
+        list($response) = $this->getdirectoryWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation getDirectorieWithHttpInfo
+     * Operation getdirectoryWithHttpInfo
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDirectorieWithHttpInfo($id, string $contentType = self::contentTypes['getDirectorie'][0])
+    public function getdirectoryWithHttpInfo($id, string $contentType = self::contentTypes['getdirectory'][0])
     {
-        $request = $this->getDirectorieRequest($id, $contentType);
+        $request = $this->getdirectoryRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -937,19 +937,19 @@ class DirectoriesApi
     }
 
     /**
-     * Operation getDirectorieAsync
+     * Operation getdirectoryAsync
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDirectorieAsync($id, string $contentType = self::contentTypes['getDirectorie'][0])
+    public function getdirectoryAsync($id, string $contentType = self::contentTypes['getdirectory'][0])
     {
-        return $this->getDirectorieAsyncWithHttpInfo($id, $contentType)
+        return $this->getdirectoryAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -958,20 +958,20 @@ class DirectoriesApi
     }
 
     /**
-     * Operation getDirectorieAsyncWithHttpInfo
+     * Operation getdirectoryAsyncWithHttpInfo
      *
      * Get object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDirectorieAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getDirectorie'][0])
+    public function getdirectoryAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getdirectory'][0])
     {
         $returnType = 'mixed';
-        $request = $this->getDirectorieRequest($id, $contentType);
+        $request = $this->getdirectoryRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1010,21 +1010,21 @@ class DirectoriesApi
     }
 
     /**
-     * Create request for operation 'getDirectorie'
+     * Create request for operation 'getdirectory'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDirectorieRequest($id, string $contentType = self::contentTypes['getDirectorie'][0])
+    public function getdirectoryRequest($id, string $contentType = self::contentTypes['getdirectory'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getDirectorie'
+                'Missing the required parameter $id when calling getdirectory'
             );
         }
 
@@ -1107,40 +1107,40 @@ class DirectoriesApi
     }
 
     /**
-     * Operation patchDirectorie
+     * Operation patchdirectory
      *
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function patchDirectorie($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchdirectory($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
     {
-        list($response) = $this->patchDirectorieWithHttpInfo($id, $directories, $contentType);
+        list($response) = $this->patchdirectoryWithHttpInfo($id, $directories, $contentType);
         return $response;
     }
 
     /**
-     * Operation patchDirectorieWithHttpInfo
+     * Operation patchdirectoryWithHttpInfo
      *
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchDirectorieWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchdirectoryWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
     {
-        $request = $this->patchDirectorieRequest($id, $directories, $contentType);
+        $request = $this->patchdirectoryRequest($id, $directories, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1227,20 +1227,20 @@ class DirectoriesApi
     }
 
     /**
-     * Operation patchDirectorieAsync
+     * Operation patchdirectoryAsync
      *
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDirectorieAsync($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchdirectoryAsync($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
     {
-        return $this->patchDirectorieAsyncWithHttpInfo($id, $directories, $contentType)
+        return $this->patchdirectoryAsyncWithHttpInfo($id, $directories, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1249,21 +1249,21 @@ class DirectoriesApi
     }
 
     /**
-     * Operation patchDirectorieAsyncWithHttpInfo
+     * Operation patchdirectoryAsyncWithHttpInfo
      *
      * Patch object&#39;s data
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDirectorieAsyncWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchdirectoryAsyncWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
     {
         $returnType = 'mixed';
-        $request = $this->patchDirectorieRequest($id, $directories, $contentType);
+        $request = $this->patchdirectoryRequest($id, $directories, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1302,29 +1302,29 @@ class DirectoriesApi
     }
 
     /**
-     * Create request for operation 'patchDirectorie'
+     * Create request for operation 'patchdirectory'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
      * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchDirectorieRequest($id, $directories, string $contentType = self::contentTypes['patchDirectorie'][0])
+    public function patchdirectoryRequest($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling patchDirectorie'
+                'Missing the required parameter $id when calling patchdirectory'
             );
         }
 
         // verify the required parameter 'directories' is set
         if ($directories === null || (is_array($directories) && count($directories) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $directories when calling patchDirectorie'
+                'Missing the required parameter $directories when calling patchdirectory'
             );
         }
 
@@ -1414,38 +1414,38 @@ class DirectoriesApi
     }
 
     /**
-     * Operation removeDirectorie
+     * Operation removedirectory
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removedirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
-    public function removeDirectorie($id, string $contentType = self::contentTypes['removeDirectorie'][0])
+    public function removedirectory($id, string $contentType = self::contentTypes['removedirectory'][0])
     {
-        list($response) = $this->removeDirectorieWithHttpInfo($id, $contentType);
+        list($response) = $this->removedirectoryWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation removeDirectorieWithHttpInfo
+     * Operation removedirectoryWithHttpInfo
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removedirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeDirectorieWithHttpInfo($id, string $contentType = self::contentTypes['removeDirectorie'][0])
+    public function removedirectoryWithHttpInfo($id, string $contentType = self::contentTypes['removedirectory'][0])
     {
-        $request = $this->removeDirectorieRequest($id, $contentType);
+        $request = $this->removedirectoryRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1532,19 +1532,19 @@ class DirectoriesApi
     }
 
     /**
-     * Operation removeDirectorieAsync
+     * Operation removedirectoryAsync
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removedirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeDirectorieAsync($id, string $contentType = self::contentTypes['removeDirectorie'][0])
+    public function removedirectoryAsync($id, string $contentType = self::contentTypes['removedirectory'][0])
     {
-        return $this->removeDirectorieAsyncWithHttpInfo($id, $contentType)
+        return $this->removedirectoryAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1553,20 +1553,20 @@ class DirectoriesApi
     }
 
     /**
-     * Operation removeDirectorieAsyncWithHttpInfo
+     * Operation removedirectoryAsyncWithHttpInfo
      *
      * Delete object by id
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removedirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeDirectorieAsyncWithHttpInfo($id, string $contentType = self::contentTypes['removeDirectorie'][0])
+    public function removedirectoryAsyncWithHttpInfo($id, string $contentType = self::contentTypes['removedirectory'][0])
     {
         $returnType = 'mixed';
-        $request = $this->removeDirectorieRequest($id, $contentType);
+        $request = $this->removedirectoryRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1605,21 +1605,21 @@ class DirectoriesApi
     }
 
     /**
-     * Create request for operation 'removeDirectorie'
+     * Create request for operation 'removedirectory'
      *
      * @param  mixed $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeDirectorie'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removedirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function removeDirectorieRequest($id, string $contentType = self::contentTypes['removeDirectorie'][0])
+    public function removedirectoryRequest($id, string $contentType = self::contentTypes['removedirectory'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling removeDirectorie'
+                'Missing the required parameter $id when calling removedirectory'
             );
         }
 

@@ -87,7 +87,7 @@ docs/Model/FindDeveloperAppSubscription200Response.md
 docs/Model/FindDirectorie200Response.md
 docs/Model/FindDomain200Response.md
 docs/Model/FindFaxAccount200Response.md
-docs/Model/FindFaxe200Response.md
+docs/Model/FindFaxes200Response.md
 docs/Model/FindFirewall200Response.md
 docs/Model/FindGroup200Response.md
 docs/Model/FindGroupMember200Response.md
@@ -197,7 +197,7 @@ lib/CircuitID/FindDeveloperAppSubscription200Response.php
 lib/CircuitID/FindDirectorie200Response.php
 lib/CircuitID/FindDomain200Response.php
 lib/CircuitID/FindFaxAccount200Response.php
-lib/CircuitID/FindFaxe200Response.php
+lib/CircuitID/FindFaxes200Response.php
 lib/CircuitID/FindFirewall200Response.php
 lib/CircuitID/FindGroup200Response.php
 lib/CircuitID/FindGroupMember200Response.php
@@ -363,7 +363,7 @@ test/Model/FindDeveloperAppSubscription200ResponseTest.php
 test/Model/FindDirectorie200ResponseTest.php
 test/Model/FindDomain200ResponseTest.php
 test/Model/FindFaxAccount200ResponseTest.php
-test/Model/FindFaxe200ResponseTest.php
+test/Model/FindFaxes200ResponseTest.php
 test/Model/FindFirewall200ResponseTest.php
 test/Model/FindGroup200ResponseTest.php
 test/Model/FindGroupMember200ResponseTest.php

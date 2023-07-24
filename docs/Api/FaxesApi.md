@@ -4,16 +4,16 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createFaxe()**](FaxesApi.md#createFaxe) | **POST** /faxes | Create a new object |
-| [**findFaxe()**](FaxesApi.md#findFaxe) | **GET** /faxes | Find multiple objects |
-| [**getFaxe()**](FaxesApi.md#getFaxe) | **GET** /faxes/{id} | Get object by id |
-| [**removeFaxe()**](FaxesApi.md#removeFaxe) | **DELETE** /faxes/{id} | Delete object by id |
+| [**createFax()**](FaxesApi.md#createFax) | **POST** /faxes | Create a new object |
+| [**findFaxes()**](FaxesApi.md#findFaxes) | **GET** /faxes | Find multiple objects |
+| [**getFax()**](FaxesApi.md#getFax) | **GET** /faxes/{id} | Get object by id |
+| [**removeFax()**](FaxesApi.md#removeFax) | **DELETE** /faxes/{id} | Delete object by id |
 
 
-## `createFaxe()`
+## `createFax()`
 
 ```php
-createFaxe($faxes): mixed
+createFax($faxes): mixed
 ```
 
 Create a new object
@@ -42,10 +42,10 @@ $apiInstance = new OpenAPI\Client\Api\FaxesApi(
 $faxes = new \OpenAPI\Client\CircuitID\Faxes(); // \OpenAPI\Client\CircuitID\Faxes | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createFaxe($faxes);
+    $result = $apiInstance->createFax($faxes);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaxesApi->createFaxe: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FaxesApi->createFax: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -72,10 +72,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findFaxe()`
+## `findFaxes()`
 
 ```php
-findFaxe($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFaxe200Response
+findFaxes($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindFaxes200Response
 ```
 
 Find multiple objects
@@ -110,10 +110,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findFaxe($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findFaxes($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaxesApi->findFaxe: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FaxesApi->findFaxes: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -131,7 +131,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindFaxe200Response**](../Model/FindFaxe200Response.md)
+[**\OpenAPI\Client\CircuitID\FindFaxes200Response**](../Model/FindFaxes200Response.md)
 
 ### Authorization
 
@@ -146,10 +146,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getFaxe()`
+## `getFax()`
 
 ```php
-getFaxe($id): mixed
+getFax($id): mixed
 ```
 
 Get object by id
@@ -178,10 +178,10 @@ $apiInstance = new OpenAPI\Client\Api\FaxesApi(
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 try {
-    $result = $apiInstance->getFaxe($id);
+    $result = $apiInstance->getFax($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaxesApi->getFaxe: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FaxesApi->getFax: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -208,10 +208,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `removeFaxe()`
+## `removeFax()`
 
 ```php
-removeFaxe($id): mixed
+removeFax($id): mixed
 ```
 
 Delete object by id
@@ -240,10 +240,10 @@ $apiInstance = new OpenAPI\Client\Api\FaxesApi(
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 try {
-    $result = $apiInstance->removeFaxe($id);
+    $result = $apiInstance->removeFax($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FaxesApi->removeFaxe: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FaxesApi->removeFax: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

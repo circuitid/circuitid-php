@@ -73,12 +73,12 @@ class DirectoriesApiTest extends TestCase
     }
 
     /**
-     * Test case for createDirectorie
+     * Test case for createdirectory
      *
      * Create a new object.
      *
      */
-    public function testCreateDirectorie()
+    public function testCreatedirectory()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -97,36 +97,36 @@ class DirectoriesApiTest extends TestCase
     }
 
     /**
-     * Test case for getDirectorie
+     * Test case for getdirectory
      *
      * Get object by id.
      *
      */
-    public function testGetDirectorie()
+    public function testGetdirectory()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for patchDirectorie
+     * Test case for patchdirectory
      *
      * Patch object's data.
      *
      */
-    public function testPatchDirectorie()
+    public function testPatchdirectory()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for removeDirectorie
+     * Test case for removedirectory
      *
      * Delete object by id.
      *
      */
-    public function testRemoveDirectorie()
+    public function testRemovedirectory()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

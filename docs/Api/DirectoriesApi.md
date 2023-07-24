@@ -4,17 +4,17 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createDirectorie()**](DirectoriesApi.md#createDirectorie) | **POST** /directories | Create a new object |
+| [**createdirectory()**](DirectoriesApi.md#createdirectory) | **POST** /directories | Create a new object |
 | [**findDirectorie()**](DirectoriesApi.md#findDirectorie) | **GET** /directories | Find multiple objects |
-| [**getDirectorie()**](DirectoriesApi.md#getDirectorie) | **GET** /directories/{id} | Get object by id |
-| [**patchDirectorie()**](DirectoriesApi.md#patchDirectorie) | **PATCH** /directories/{id} | Patch object&#39;s data |
-| [**removeDirectorie()**](DirectoriesApi.md#removeDirectorie) | **DELETE** /directories/{id} | Delete object by id |
+| [**getdirectory()**](DirectoriesApi.md#getdirectory) | **GET** /directories/{id} | Get object by id |
+| [**patchdirectory()**](DirectoriesApi.md#patchdirectory) | **PATCH** /directories/{id} | Patch object&#39;s data |
+| [**removedirectory()**](DirectoriesApi.md#removedirectory) | **DELETE** /directories/{id} | Delete object by id |
 
 
-## `createDirectorie()`
+## `createdirectory()`
 
 ```php
-createDirectorie($directories): mixed
+createdirectory($directories): mixed
 ```
 
 Create a new object
@@ -43,10 +43,10 @@ $apiInstance = new OpenAPI\Client\Api\DirectoriesApi(
 $directories = new \OpenAPI\Client\CircuitID\Directories(); // \OpenAPI\Client\CircuitID\Directories | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createDirectorie($directories);
+    $result = $apiInstance->createdirectory($directories);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DirectoriesApi->createDirectorie: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DirectoriesApi->createdirectory: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -147,10 +147,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getDirectorie()`
+## `getdirectory()`
 
 ```php
-getDirectorie($id): mixed
+getdirectory($id): mixed
 ```
 
 Get object by id
@@ -179,10 +179,10 @@ $apiInstance = new OpenAPI\Client\Api\DirectoriesApi(
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 try {
-    $result = $apiInstance->getDirectorie($id);
+    $result = $apiInstance->getdirectory($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DirectoriesApi->getDirectorie: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DirectoriesApi->getdirectory: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -209,10 +209,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `patchDirectorie()`
+## `patchdirectory()`
 
 ```php
-patchDirectorie($id, $directories): mixed
+patchdirectory($id, $directories): mixed
 ```
 
 Patch object's data
@@ -242,10 +242,10 @@ $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would lik
 $directories = new \OpenAPI\Client\CircuitID\Directories(); // \OpenAPI\Client\CircuitID\Directories | The request data.
 
 try {
-    $result = $apiInstance->patchDirectorie($id, $directories);
+    $result = $apiInstance->patchdirectory($id, $directories);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DirectoriesApi->patchDirectorie: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DirectoriesApi->patchdirectory: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -273,10 +273,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `removeDirectorie()`
+## `removedirectory()`
 
 ```php
-removeDirectorie($id): mixed
+removedirectory($id): mixed
 ```
 
 Delete object by id
@@ -305,10 +305,10 @@ $apiInstance = new OpenAPI\Client\Api\DirectoriesApi(
 $id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 try {
-    $result = $apiInstance->removeDirectorie($id);
+    $result = $apiInstance->removedirectory($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DirectoriesApi->removeDirectorie: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DirectoriesApi->removedirectory: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

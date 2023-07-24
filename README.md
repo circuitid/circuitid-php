@@ -155,11 +155,11 @@ Class | Method | HTTP request | Description
 *DeveloperAppsApi* | [**getDeveloperApp**](docs/Api/DeveloperAppsApi.md#getdeveloperapp) | **GET** /developerapps/{id} | Get object by id
 *DeveloperAppsApi* | [**patchDeveloperApp**](docs/Api/DeveloperAppsApi.md#patchdeveloperapp) | **PATCH** /developerapps/{id} | Patch object&#39;s data
 *DeveloperAppsApi* | [**removeDeveloperApp**](docs/Api/DeveloperAppsApi.md#removedeveloperapp) | **DELETE** /developerapps/{id} | Delete object by id
-*DirectoriesApi* | [**createDirectorie**](docs/Api/DirectoriesApi.md#createdirectorie) | **POST** /directories | Create a new object
+*DirectoriesApi* | [**createdirectory**](docs/Api/DirectoriesApi.md#createdirectory) | **POST** /directories | Create a new object
 *DirectoriesApi* | [**findDirectorie**](docs/Api/DirectoriesApi.md#finddirectorie) | **GET** /directories | Find multiple objects
-*DirectoriesApi* | [**getDirectorie**](docs/Api/DirectoriesApi.md#getdirectorie) | **GET** /directories/{id} | Get object by id
-*DirectoriesApi* | [**patchDirectorie**](docs/Api/DirectoriesApi.md#patchdirectorie) | **PATCH** /directories/{id} | Patch object&#39;s data
-*DirectoriesApi* | [**removeDirectorie**](docs/Api/DirectoriesApi.md#removedirectorie) | **DELETE** /directories/{id} | Delete object by id
+*DirectoriesApi* | [**getdirectory**](docs/Api/DirectoriesApi.md#getdirectory) | **GET** /directories/{id} | Get object by id
+*DirectoriesApi* | [**patchdirectory**](docs/Api/DirectoriesApi.md#patchdirectory) | **PATCH** /directories/{id} | Patch object&#39;s data
+*DirectoriesApi* | [**removedirectory**](docs/Api/DirectoriesApi.md#removedirectory) | **DELETE** /directories/{id} | Delete object by id
 *DomainsApi* | [**createDomain**](docs/Api/DomainsApi.md#createdomain) | **POST** /domains | Create a new object
 *DomainsApi* | [**findDomain**](docs/Api/DomainsApi.md#finddomain) | **GET** /domains | Find multiple objects
 *DomainsApi* | [**getDomain**](docs/Api/DomainsApi.md#getdomain) | **GET** /domains/{id} | Get object by id
@@ -170,10 +170,10 @@ Class | Method | HTTP request | Description
 *FaxAccountsApi* | [**getFaxAccount**](docs/Api/FaxAccountsApi.md#getfaxaccount) | **GET** /faxaccounts/{id} | Get object by id
 *FaxAccountsApi* | [**patchFaxAccount**](docs/Api/FaxAccountsApi.md#patchfaxaccount) | **PATCH** /faxaccounts/{id} | Patch object&#39;s data
 *FaxAccountsApi* | [**removeFaxAccount**](docs/Api/FaxAccountsApi.md#removefaxaccount) | **DELETE** /faxaccounts/{id} | Delete object by id
-*FaxesApi* | [**createFaxe**](docs/Api/FaxesApi.md#createfaxe) | **POST** /faxes | Create a new object
-*FaxesApi* | [**findFaxe**](docs/Api/FaxesApi.md#findfaxe) | **GET** /faxes | Find multiple objects
-*FaxesApi* | [**getFaxe**](docs/Api/FaxesApi.md#getfaxe) | **GET** /faxes/{id} | Get object by id
-*FaxesApi* | [**removeFaxe**](docs/Api/FaxesApi.md#removefaxe) | **DELETE** /faxes/{id} | Delete object by id
+*FaxesApi* | [**createFax**](docs/Api/FaxesApi.md#createfax) | **POST** /faxes | Create a new object
+*FaxesApi* | [**findFaxes**](docs/Api/FaxesApi.md#findfaxes) | **GET** /faxes | Find multiple objects
+*FaxesApi* | [**getFax**](docs/Api/FaxesApi.md#getfax) | **GET** /faxes/{id} | Get object by id
+*FaxesApi* | [**removeFax**](docs/Api/FaxesApi.md#removefax) | **DELETE** /faxes/{id} | Delete object by id
 *FindNumbersApi* | [**findFindNumber**](docs/Api/FindNumbersApi.md#findfindnumber) | **GET** /findnumbers | Find multiple objects
 *FirewallApi* | [**createFirewall**](docs/Api/FirewallApi.md#createfirewall) | **POST** /firewall | Create a new object
 *FirewallApi* | [**findFirewall**](docs/Api/FirewallApi.md#findfirewall) | **GET** /firewall | Find multiple objects
@@ -324,7 +324,7 @@ Class | Method | HTTP request | Description
 - [FindDirectorie200Response](docs/Model/FindDirectorie200Response.md)
 - [FindDomain200Response](docs/Model/FindDomain200Response.md)
 - [FindFaxAccount200Response](docs/Model/FindFaxAccount200Response.md)
-- [FindFaxe200Response](docs/Model/FindFaxe200Response.md)
+- [FindFaxes200Response](docs/Model/FindFaxes200Response.md)
 - [FindFirewall200Response](docs/Model/FindFirewall200Response.md)
 - [FindGroup200Response](docs/Model/FindGroup200Response.md)
 - [FindGroupMember200Response](docs/Model/FindGroupMember200Response.md)
