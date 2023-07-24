@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDirectorie200ResponseTest
+ * FindDirectories200ResponseTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FindDirectorie200ResponseTest Class Doc Comment
+ * FindDirectories200ResponseTest Class Doc Comment
  *
  * @category    Class
- * @description FindDirectorie200Response
+ * @description FindDirectories200Response
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FindDirectorie200ResponseTest extends TestCase
+class FindDirectories200ResponseTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class FindDirectorie200ResponseTest extends TestCase
     }
 
     /**
-     * Test "FindDirectorie200Response"
+     * Test "FindDirectories200Response"
      */
-    public function testFindDirectorie200Response()
+    public function testFindDirectories200Response()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

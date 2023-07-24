@@ -1,4 +1,4 @@
-# # FindDirectorie200Response
+# # FindDirectories200Response
 
 ## Properties
 

@@ -5,7 +5,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createdirectory()**](DirectoriesApi.md#createdirectory) | **POST** /directories | Create a new object |
-| [**findDirectorie()**](DirectoriesApi.md#findDirectorie) | **GET** /directories | Find multiple objects |
+| [**findDirectories()**](DirectoriesApi.md#findDirectories) | **GET** /directories | Find multiple objects |
 | [**getdirectory()**](DirectoriesApi.md#getdirectory) | **GET** /directories/{id} | Get object by id |
 | [**patchdirectory()**](DirectoriesApi.md#patchdirectory) | **PATCH** /directories/{id} | Patch object&#39;s data |
 | [**removedirectory()**](DirectoriesApi.md#removedirectory) | **DELETE** /directories/{id} | Delete object by id |
@@ -73,10 +73,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `findDirectorie()`
+## `findDirectories()`
 
 ```php
-findDirectorie($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDirectorie200Response
+findDirectories($search, $limit, $skip, $sort, $select, $or, $and): \OpenAPI\Client\CircuitID\FindDirectories200Response
 ```
 
 Find multiple objects
@@ -111,10 +111,10 @@ $or = NULL; // mixed | Find all records that match any of the given criteria.
 $and = NULL; // mixed | Find all records that match all of the given criteria.
 
 try {
-    $result = $apiInstance->findDirectorie($search, $limit, $skip, $sort, $select, $or, $and);
+    $result = $apiInstance->findDirectories($search, $limit, $skip, $sort, $select, $or, $and);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DirectoriesApi->findDirectorie: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DirectoriesApi->findDirectories: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\CircuitID\FindDirectorie200Response**](../Model/FindDirectorie200Response.md)
+[**\OpenAPI\Client\CircuitID\FindDirectories200Response**](../Model/FindDirectories200Response.md)
 
 ### Authorization
 

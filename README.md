@@ -156,7 +156,7 @@ Class | Method | HTTP request | Description
 *DeveloperAppsApi* | [**patchDeveloperApp**](docs/Api/DeveloperAppsApi.md#patchdeveloperapp) | **PATCH** /developerapps/{id} | Patch object&#39;s data
 *DeveloperAppsApi* | [**removeDeveloperApp**](docs/Api/DeveloperAppsApi.md#removedeveloperapp) | **DELETE** /developerapps/{id} | Delete object by id
 *DirectoriesApi* | [**createdirectory**](docs/Api/DirectoriesApi.md#createdirectory) | **POST** /directories | Create a new object
-*DirectoriesApi* | [**findDirectorie**](docs/Api/DirectoriesApi.md#finddirectorie) | **GET** /directories | Find multiple objects
+*DirectoriesApi* | [**findDirectories**](docs/Api/DirectoriesApi.md#finddirectories) | **GET** /directories | Find multiple objects
 *DirectoriesApi* | [**getdirectory**](docs/Api/DirectoriesApi.md#getdirectory) | **GET** /directories/{id} | Get object by id
 *DirectoriesApi* | [**patchdirectory**](docs/Api/DirectoriesApi.md#patchdirectory) | **PATCH** /directories/{id} | Patch object&#39;s data
 *DirectoriesApi* | [**removedirectory**](docs/Api/DirectoriesApi.md#removedirectory) | **DELETE** /directories/{id} | Delete object by id
@@ -321,7 +321,7 @@ Class | Method | HTTP request | Description
 - [FindCustomers200Response](docs/Model/FindCustomers200Response.md)
 - [FindDeveloperAppSubscriptions200Response](docs/Model/FindDeveloperAppSubscriptions200Response.md)
 - [FindDeveloperApps200Response](docs/Model/FindDeveloperApps200Response.md)
-- [FindDirectorie200Response](docs/Model/FindDirectorie200Response.md)
+- [FindDirectories200Response](docs/Model/FindDirectories200Response.md)
 - [FindDomains200Response](docs/Model/FindDomains200Response.md)
 - [FindFaxAccounts200Response](docs/Model/FindFaxAccounts200Response.md)
 - [FindFaxes200Response](docs/Model/FindFaxes200Response.md)

@@ -84,7 +84,7 @@ docs/Model/FindConversations200Response.md
 docs/Model/FindCustomers200Response.md
 docs/Model/FindDeveloperAppSubscriptions200Response.md
 docs/Model/FindDeveloperApps200Response.md
-docs/Model/FindDirectorie200Response.md
+docs/Model/FindDirectories200Response.md
 docs/Model/FindDomains200Response.md
 docs/Model/FindFaxAccounts200Response.md
 docs/Model/FindFaxes200Response.md
@@ -194,7 +194,7 @@ lib/CircuitID/FindConversations200Response.php
 lib/CircuitID/FindCustomers200Response.php
 lib/CircuitID/FindDeveloperAppSubscriptions200Response.php
 lib/CircuitID/FindDeveloperApps200Response.php
-lib/CircuitID/FindDirectorie200Response.php
+lib/CircuitID/FindDirectories200Response.php
 lib/CircuitID/FindDomains200Response.php
 lib/CircuitID/FindFaxAccounts200Response.php
 lib/CircuitID/FindFaxes200Response.php
@@ -360,7 +360,7 @@ test/Model/FindConversations200ResponseTest.php
 test/Model/FindCustomers200ResponseTest.php
 test/Model/FindDeveloperAppSubscriptions200ResponseTest.php
 test/Model/FindDeveloperApps200ResponseTest.php
-test/Model/FindDirectorie200ResponseTest.php
+test/Model/FindDirectories200ResponseTest.php
 test/Model/FindDomains200ResponseTest.php
 test/Model/FindFaxAccounts200ResponseTest.php
 test/Model/FindFaxes200ResponseTest.php

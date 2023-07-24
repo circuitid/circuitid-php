@@ -85,12 +85,12 @@ class DirectoriesApiTest extends TestCase
     }
 
     /**
-     * Test case for findDirectorie
+     * Test case for findDirectories
      *
      * Find multiple objects.
      *
      */
-    public function testFindDirectorie()
+    public function testFindDirectories()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
