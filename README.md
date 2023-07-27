@@ -1,5 +1,9 @@
 # circuitid
 
+[![Tests](https://github.com/circuitid/circuitid-php/actions/workflows/test-and-deploy.yml/badge.svg)](https://github.com/circuitid/circuitid-php/actions/workflows/test-and-deploy.yml) 
+[![Packagist](https://img.shields.io/packagist/v/circuitid/sdk.svg)](https://packagist.org/packages/circuitid/sdk)
+[![Packagist](https://img.shields.io/packagist/dt/circuitid/sdk.svg)](https://packagist.org/packages/circuitid/sdk)
+ 
 # Introduction
 Circuit ID&reg; is an innovative cloud communications platform that redefines your connectivity experience. Our cutting-edge AI-powered solution seamlessly integrates calling, meetings, messaging, voicemail, fax, SIP Trunking, mobile broadband, and mobile phone services, accessible wherever you and your devices go.
                 
@@ -11,6 +15,12 @@ Happy coding!
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/).
 
+## Documentation
+
+The documentation for the Circuit ID API can be found [here][apidocs].
+
+The PHP library documentation can be found [here][libdocs].
+
 ## Installation & Usage
 
 ### Requirements
@@ -18,7 +28,15 @@ For more information, please visit [https://www.circuitid.com/](https://www.circ
 PHP 7.4 and later.
 Should also work with PHP 8.0.
 
-### Composer
+### Composer Method #1
+
+`circuitid-php` is available on Packagist as the [`circuitid/sdk`](https://packagist.org/packages/circuitid/sdk) package:
+
+```shell
+composer require circuitid/sdk
+```
+
+### Composer Method #2
 
 To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
 
@@ -31,7 +49,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
     }
   ],
   "require": {
-    "circuitid/circuitid-php": "*@dev"
+    "circuitid/sdk": "*@dev"
   }
 }
 ```
@@ -396,4 +414,6 @@ composer install
 vendor/bin/phpunit
 ```
 
+[apidocs]: https://rest.circuitid.com/doc.html
+[libdocs]: https://github.com/abberdeen/circuitid-php
 
