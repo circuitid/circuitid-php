@@ -30,6 +30,8 @@ Should also work with PHP 8.0.
 
 ### Composer Method #1
 
+You can install `circuitid-php`  via [Composer](https://getcomposer.org/) 
+
 `circuitid-php` is available on Packagist as the [`circuitid/sdk`](https://packagist.org/packages/circuitid/sdk) package:
 
 ```shell
