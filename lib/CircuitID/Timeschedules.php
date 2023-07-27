@@ -669,7 +669,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     public const TIMEZONE_EGYPT = 'Egypt';
     public const TIMEZONE_EIRE = 'Eire';
     public const TIMEZONE_ETC_GMT = 'Etc/GMT';
-    public const TIMEZONE_ETC_GMT0 = 'Etc/GMT+0';
+    public const TIMEZONE_ETC_GMT_PLUS_0 = 'Etc/GMT+0';
     public const TIMEZONE_ETC_GMT1 = 'Etc/GMT+1';
     public const TIMEZONE_ETC_GMT10 = 'Etc/GMT+10';
     public const TIMEZONE_ETC_GMT11 = 'Etc/GMT+11';
@@ -770,8 +770,8 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     public const TIMEZONE_GB = 'GB';
     public const TIMEZONE_GB_EIRE = 'GB-Eire';
     public const TIMEZONE_GMT = 'GMT';
-    public const TIMEZONE_GMT0 = 'GMT+0';
-    public const TIMEZONE_GMT_0 = 'GMT-0';
+    public const TIMEZONE_GMT_PLUS_0 = 'GMT+0';
+    public const TIMEZONE_GMT_MINUS_0 = 'GMT-0';
     public const TIMEZONE_GMT0 = 'GMT0';
     public const TIMEZONE_GREENWICH = 'Greenwich';
     public const TIMEZONE_HST = 'HST';
@@ -1376,8 +1376,8 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
             self::TIMEZONE_GB_EIRE,
             self::TIMEZONE_GMT,
             self::TIMEZONE_GMT0,
-            self::TIMEZONE_GMT_0,
-            self::TIMEZONE_GMT0,
+            self::TIMEZONE_GMT_MINUS_0,
+            self::TIMEZONE_GMT_PLUS_0,
             self::TIMEZONE_GREENWICH,
             self::TIMEZONE_HST,
             self::TIMEZONE_HONGKONG,
