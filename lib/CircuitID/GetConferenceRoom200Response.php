@@ -301,42 +301,12 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         return self::$openAPIModelName;
     }
 
-    public const IS_USER_ROOM_TRUE = 'true';
-    public const IS_USER_ROOM_FALSE = 'false';
-    public const IS_CHAT_ROOM_TRUE = 'true';
-    public const IS_CHAT_ROOM_FALSE = 'false';
     public const LOBBY_1 = 1;
     public const LOBBY_0 = 0;
     public const REQUIRE_PASSCODE_1 = 1;
     public const REQUIRE_PASSCODE_0 = 0;
     public const SHARE_GROUPS = 'groups';
     public const SHARE_CUSTOMERS = 'customers';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getIsUserRoomAllowableValues()
-    {
-        return [
-            self::IS_USER_ROOM_TRUE,
-            self::IS_USER_ROOM_FALSE,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getIsChatRoomAllowableValues()
-    {
-        return [
-            self::IS_CHAT_ROOM_TRUE,
-            self::IS_CHAT_ROOM_FALSE,
-        ];
-    }
 
     /**
      * Gets allowable values of the enum
@@ -447,24 +417,6 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
 
         if (!is_null($this->container['passcode']) && (mb_strlen($this->container['passcode']) < 6)) {
             $invalidProperties[] = "invalid value for 'passcode', the character length must be bigger than or equal to 6.";
-        }
-
-        $allowedValues = $this->getIsUserRoomAllowableValues();
-        if (!is_null($this->container['isUserRoom']) && !in_array($this->container['isUserRoom'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'isUserRoom', must be one of '%s'",
-                $this->container['isUserRoom'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getIsChatRoomAllowableValues();
-        if (!is_null($this->container['isChatRoom']) && !in_array($this->container['isChatRoom'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'isChatRoom', must be one of '%s'",
-                $this->container['isChatRoom'],
-                implode("', '", $allowedValues)
-            );
         }
 
         $allowedValues = $this->getLobbyAllowableValues();
@@ -623,16 +575,6 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         if (is_null($isUserRoom)) {
             throw new \InvalidArgumentException('non-nullable isUserRoom cannot be null');
         }
-        $allowedValues = $this->getIsUserRoomAllowableValues();
-        if (!in_array($isUserRoom, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'isUserRoom', must be one of '%s'",
-                    $isUserRoom,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['isUserRoom'] = $isUserRoom;
 
         return $this;
@@ -659,16 +601,6 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
     {
         if (is_null($isChatRoom)) {
             throw new \InvalidArgumentException('non-nullable isChatRoom cannot be null');
-        }
-        $allowedValues = $this->getIsChatRoomAllowableValues();
-        if (!in_array($isChatRoom, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'isChatRoom', must be one of '%s'",
-                    $isChatRoom,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['isChatRoom'] = $isChatRoom;
 

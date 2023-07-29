@@ -271,21 +271,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         return self::$openAPIModelName;
     }
 
-    public const DIRECT_TRUE = 'true';
-    public const DIRECT_FALSE = 'false';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getDirectAllowableValues()
-    {
-        return [
-            self::DIRECT_TRUE,
-            self::DIRECT_FALSE,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -348,15 +333,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         }
         if (!is_null($this->container['avatar']) && (mb_strlen($this->container['avatar']) > 512)) {
             $invalidProperties[] = "invalid value for 'avatar', the character length must be smaller than or equal to 512.";
-        }
-
-        $allowedValues = $this->getDirectAllowableValues();
-        if (!is_null($this->container['direct']) && !in_array($this->container['direct'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'direct', must be one of '%s'",
-                $this->container['direct'],
-                implode("', '", $allowedValues)
-            );
         }
 
         return $invalidProperties;
@@ -484,16 +460,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
     {
         if (is_null($direct)) {
             throw new \InvalidArgumentException('non-nullable direct cannot be null');
-        }
-        $allowedValues = $this->getDirectAllowableValues();
-        if (!in_array($direct, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'direct', must be one of '%s'",
-                    $direct,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['direct'] = $direct;
 

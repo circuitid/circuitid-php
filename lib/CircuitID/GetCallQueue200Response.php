@@ -377,14 +377,6 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
     public const STRATEGY_RANDOM = 'random';
     public const TIME_BASED_SCORE_QUEUE = 'queue';
     public const TIME_BASED_SCORE_SYSTEM = 'system';
-    public const TIER_RULES_APPLY_TRUE = 'true';
-    public const TIER_RULES_APPLY_FALSE = 'false';
-    public const TIER_RULE_NO_AGENT_NO_WAIT_TRUE = 'true';
-    public const TIER_RULE_NO_AGENT_NO_WAIT_FALSE = 'false';
-    public const TIER_RULE_WAIT_MULTIPLY_LEVEL_TRUE = 'true';
-    public const TIER_RULE_WAIT_MULTIPLY_LEVEL_FALSE = 'false';
-    public const ABANDONED_RESUME_ALLOWED_TRUE = 'true';
-    public const ABANDONED_RESUME_ALLOWED_FALSE = 'false';
 
     /**
      * Gets allowable values of the enum
@@ -415,58 +407,6 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         return [
             self::TIME_BASED_SCORE_QUEUE,
             self::TIME_BASED_SCORE_SYSTEM,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTierRulesApplyAllowableValues()
-    {
-        return [
-            self::TIER_RULES_APPLY_TRUE,
-            self::TIER_RULES_APPLY_FALSE,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTierRuleNoAgentNoWaitAllowableValues()
-    {
-        return [
-            self::TIER_RULE_NO_AGENT_NO_WAIT_TRUE,
-            self::TIER_RULE_NO_AGENT_NO_WAIT_FALSE,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTierRuleWaitMultiplyLevelAllowableValues()
-    {
-        return [
-            self::TIER_RULE_WAIT_MULTIPLY_LEVEL_TRUE,
-            self::TIER_RULE_WAIT_MULTIPLY_LEVEL_FALSE,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getAbandonedResumeAllowedAllowableValues()
-    {
-        return [
-            self::ABANDONED_RESUME_ALLOWED_TRUE,
-            self::ABANDONED_RESUME_ALLOWED_FALSE,
         ];
     }
 
@@ -591,51 +531,15 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         if ($this->container['tierRulesApply'] === null) {
             $invalidProperties[] = "'tierRulesApply' can't be null";
         }
-        $allowedValues = $this->getTierRulesApplyAllowableValues();
-        if (!is_null($this->container['tierRulesApply']) && !in_array($this->container['tierRulesApply'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'tierRulesApply', must be one of '%s'",
-                $this->container['tierRulesApply'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['tierRuleNoAgentNoWait'] === null) {
             $invalidProperties[] = "'tierRuleNoAgentNoWait' can't be null";
         }
-        $allowedValues = $this->getTierRuleNoAgentNoWaitAllowableValues();
-        if (!is_null($this->container['tierRuleNoAgentNoWait']) && !in_array($this->container['tierRuleNoAgentNoWait'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'tierRuleNoAgentNoWait', must be one of '%s'",
-                $this->container['tierRuleNoAgentNoWait'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['tierRuleWaitMultiplyLevel'] === null) {
             $invalidProperties[] = "'tierRuleWaitMultiplyLevel' can't be null";
         }
-        $allowedValues = $this->getTierRuleWaitMultiplyLevelAllowableValues();
-        if (!is_null($this->container['tierRuleWaitMultiplyLevel']) && !in_array($this->container['tierRuleWaitMultiplyLevel'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'tierRuleWaitMultiplyLevel', must be one of '%s'",
-                $this->container['tierRuleWaitMultiplyLevel'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['abandonedResumeAllowed'] === null) {
             $invalidProperties[] = "'abandonedResumeAllowed' can't be null";
         }
-        $allowedValues = $this->getAbandonedResumeAllowedAllowableValues();
-        if (!is_null($this->container['abandonedResumeAllowed']) && !in_array($this->container['abandonedResumeAllowed'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'abandonedResumeAllowed', must be one of '%s'",
-                $this->container['abandonedResumeAllowed'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['maxWaitTimeNoAgentTimeReached'] === null) {
             $invalidProperties[] = "'maxWaitTimeNoAgentTimeReached' can't be null";
         }
@@ -1055,16 +959,6 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         if (is_null($tierRulesApply)) {
             throw new \InvalidArgumentException('non-nullable tierRulesApply cannot be null');
         }
-        $allowedValues = $this->getTierRulesApplyAllowableValues();
-        if (!in_array($tierRulesApply, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'tierRulesApply', must be one of '%s'",
-                    $tierRulesApply,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['tierRulesApply'] = $tierRulesApply;
 
         return $this;
@@ -1091,16 +985,6 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($tierRuleNoAgentNoWait)) {
             throw new \InvalidArgumentException('non-nullable tierRuleNoAgentNoWait cannot be null');
-        }
-        $allowedValues = $this->getTierRuleNoAgentNoWaitAllowableValues();
-        if (!in_array($tierRuleNoAgentNoWait, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'tierRuleNoAgentNoWait', must be one of '%s'",
-                    $tierRuleNoAgentNoWait,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['tierRuleNoAgentNoWait'] = $tierRuleNoAgentNoWait;
 
@@ -1156,16 +1040,6 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         if (is_null($tierRuleWaitMultiplyLevel)) {
             throw new \InvalidArgumentException('non-nullable tierRuleWaitMultiplyLevel cannot be null');
         }
-        $allowedValues = $this->getTierRuleWaitMultiplyLevelAllowableValues();
-        if (!in_array($tierRuleWaitMultiplyLevel, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'tierRuleWaitMultiplyLevel', must be one of '%s'",
-                    $tierRuleWaitMultiplyLevel,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['tierRuleWaitMultiplyLevel'] = $tierRuleWaitMultiplyLevel;
 
         return $this;
@@ -1192,16 +1066,6 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
     {
         if (is_null($abandonedResumeAllowed)) {
             throw new \InvalidArgumentException('non-nullable abandonedResumeAllowed cannot be null');
-        }
-        $allowedValues = $this->getAbandonedResumeAllowedAllowableValues();
-        if (!in_array($abandonedResumeAllowed, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'abandonedResumeAllowed', must be one of '%s'",
-                    $abandonedResumeAllowed,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['abandonedResumeAllowed'] = $abandonedResumeAllowed;
 
