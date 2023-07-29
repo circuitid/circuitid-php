@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  |
 **type** | **string** |  |
-**groups** | **mixed** |  | [optional]
+**groups** | **string[]** |  | [optional]
 **announcement** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]

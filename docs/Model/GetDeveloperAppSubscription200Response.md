@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **ref** | **string** |  | [optional]
 **permissions** | **object** |  | [optional]
 **requireId** | **int** |  | [optional] [default to self::REQUIRE_ID_0]
-**services** | **mixed** |  | [optional]
-**events** | **mixed** |  | [optional]
+**services** | **string[]** |  |
+**events** | **string[]** |  | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

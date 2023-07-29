@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**attachments** | **string[]** |  | [optional]
 **name** | **string** |  |
 **type** | **string** |  |
 **voice** | **string** |  | [optional]

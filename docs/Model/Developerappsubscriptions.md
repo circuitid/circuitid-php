@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **ref** | **string** |  | [optional]
 **permissions** | **object** |  | [optional]
 **requireId** | **int** |  | [optional] [default to self::REQUIRE_ID_0]
-**services** | **mixed** |  | [optional]
-**events** | **mixed** |  | [optional]
+**services** | **string[]** |  |
+**events** | **string[]** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

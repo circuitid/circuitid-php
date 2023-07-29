@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **isFree** | **int** |  | [optional] [default to self::IS_FREE_1]
 **feeDescription** | **string** |  | [optional]
 **integrationType** | **string** |  |
-**services** | **mixed** |  | [optional]
-**events** | **mixed** |  | [optional]
+**services** | **string[]** |  |
+**events** | **string[]** |  | [optional]
 **user** | **string** | ObjectId (unique 12 bytes ID) |
 **webhookUrl** | **string** |  | [optional]
 **termsOfServiceUrl** | **string** |  | [optional]

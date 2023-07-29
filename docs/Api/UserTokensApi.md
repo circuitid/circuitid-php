@@ -1,6 +1,6 @@
 # OpenAPI\Client\UserTokensApi
 
-All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |

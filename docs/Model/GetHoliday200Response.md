@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** |  |
 **object** | **string** | ObjectId (unique 12 bytes ID) |
 **objectRef** | **string** |  |
-**dateTimeRanges** | **mixed** |  | [optional]
+**dateTimeRanges** | **\DateTime[][]** |  |
 **status** | **int** |  | [optional] [default to self::STATUS_1]
 **destinationType** | **string** |  |
 **destination** | **string** | ObjectId (unique 12 bytes ID) | [optional]
