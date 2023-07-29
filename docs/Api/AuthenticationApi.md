@@ -1,6 +1,6 @@
 # OpenAPI\Client\AuthenticationApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -10,7 +10,7 @@ All URIs are relative to https://rest.circuitid.com, except if the operation def
 ## `createAuthentication()`
 
 ```php
-createAuthentication($authentication): mixed
+createAuthentication($authentication): \OpenAPI\Client\CircuitID\CreateAuthentication200Response
 ```
 
 Create a new object
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-**mixed**
+[**\OpenAPI\Client\CircuitID\CreateAuthentication200Response**](../Model/CreateAuthentication200Response.md)
 
 ### Authorization
 

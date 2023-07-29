@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **mixed** |  | [optional]
-**first** | **mixed** |  |
-**last** | **mixed** |  | [optional]
-**mobilePhone** | **mixed** |  | [optional]
-**businessPhone** | **mixed** |  | [optional]
-**faxPhone** | **mixed** |  | [optional]
-**extension** | **mixed** |  | [optional]
-**jobTitle** | **mixed** |  | [optional]
-**department** | **mixed** |  | [optional]
-**avatar** | **mixed** |  | [optional]
+**email** | **string** |  | [optional]
+**first** | **string** |  |
+**last** | **string** |  | [optional]
+**mobilePhone** | **string** |  | [optional]
+**businessPhone** | **string** |  | [optional]
+**faxPhone** | **string** |  | [optional]
+**extension** | **int** |  | [optional]
+**jobTitle** | **string** |  | [optional]
+**department** | **string** |  | [optional]
+**avatar** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

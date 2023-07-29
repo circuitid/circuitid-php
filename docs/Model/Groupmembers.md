@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**group** | **mixed** | ObjectId (unique 12 bytes ID) |
-**object** | **mixed** | ObjectId (unique 12 bytes ID) |
-**priority** | **mixed** |  | [optional]
-**ref** | **mixed** |  |
+**group** | **string** | ObjectId (unique 12 bytes ID) |
+**object** | **string** | ObjectId (unique 12 bytes ID) |
+**priority** | **int** |  | [optional]
+**ref** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,6 +1,6 @@
 # OpenAPI\Client\InfoApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -10,7 +10,7 @@ All URIs are relative to https://rest.circuitid.com, except if the operation def
 ## `getInfo()`
 
 ```php
-getInfo(): mixed
+getInfo(): object
 ```
 
 Get object
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**mixed**
+**object**
 
 ### Authorization
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **mixed** |  | [optional]
-**users** | **mixed** |  |
-**avatar** | **mixed** |  | [optional]
-**direct** | **mixed** |  | [optional]
+**name** | **string** |  | [optional]
+**users** | **object** |  |
+**avatar** | **string** |  | [optional]
+**direct** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

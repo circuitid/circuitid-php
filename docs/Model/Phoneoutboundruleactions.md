@@ -4,22 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **mixed** |  |
-**group** | **mixed** | ObjectId (unique 12 bytes ID) | [optional]
-**phoneoutboundrule** | **mixed** | ObjectId (unique 12 bytes ID) |
-**status** | **mixed** |  | [optional]
-**priority** | **mixed** |  |
-**startingChars** | **mixed** |  | [optional]
-**contains** | **mixed** |  | [optional]
-**lengthType** | **mixed** |  | [optional]
-**length** | **mixed** |  | [optional]
-**appendChars** | **mixed** |  | [optional]
-**prependChars** | **mixed** |  | [optional]
-**rangeStart** | **mixed** |  | [optional]
-**rangeEnd** | **mixed** |  | [optional]
-**removeStartingChars** | **mixed** |  | [optional]
-**removeEndingChars** | **mixed** |  | [optional]
-**route** | **mixed** |  |
-**routingType** | **mixed** |  | [optional]
+**name** | **string** |  |
+**group** | **string** | ObjectId (unique 12 bytes ID) | [optional]
+**phoneoutboundrule** | **string** | ObjectId (unique 12 bytes ID) |
+**status** | **int** |  | [optional] [default to self::STATUS_1]
+**priority** | **int** |  | [default to 1]
+**startingChars** | **string** |  | [optional]
+**contains** | **string** |  | [optional]
+**lengthType** | **string** |  | [optional]
+**length** | **int** |  | [optional]
+**appendChars** | **string** |  | [optional]
+**prependChars** | **string** |  | [optional]
+**rangeStart** | **int** |  | [optional]
+**rangeEnd** | **int** |  | [optional]
+**removeStartingChars** | **int** |  | [optional]
+**removeEndingChars** | **int** |  | [optional]
+**route** | **string** |  | [default to 'default']
+**routingType** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

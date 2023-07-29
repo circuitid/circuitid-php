@@ -4,26 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **mixed** |  |
-**description** | **mixed** |  | [optional]
-**type** | **mixed** |  |
-**visibility** | **mixed** |  |
-**requireId** | **mixed** |  | [optional]
-**isFree** | **mixed** |  | [optional]
-**feeDescription** | **mixed** |  | [optional]
-**integrationType** | **mixed** |  |
-**services** | **mixed** |  |
+**name** | **string** |  |
+**description** | **string** |  | [optional]
+**type** | **string** |  |
+**visibility** | **string** |  |
+**requireId** | **int** |  | [optional] [default to self::REQUIRE_ID_0]
+**isFree** | **int** |  | [optional] [default to self::IS_FREE_1]
+**feeDescription** | **string** |  | [optional]
+**integrationType** | **string** |  |
+**services** | **mixed** |  | [optional]
 **events** | **mixed** |  | [optional]
-**user** | **mixed** | ObjectId (unique 12 bytes ID) |
-**webhookUrl** | **mixed** |  | [optional]
-**termsOfServiceUrl** | **mixed** |  | [optional]
-**privacyPolicyUrl** | **mixed** |  | [optional]
-**permissions** | **mixed** |  | [optional]
-**status** | **mixed** |  |
-**webhookAuthType** | **mixed** |  | [optional]
-**webhookUsername** | **mixed** |  | [optional]
-**webhookPassword** | **mixed** |  | [optional]
-**webhookTokenName** | **mixed** |  | [optional]
-**webhookToken** | **mixed** |  | [optional]
+**user** | **string** | ObjectId (unique 12 bytes ID) |
+**webhookUrl** | **string** |  | [optional]
+**termsOfServiceUrl** | **string** |  | [optional]
+**privacyPolicyUrl** | **string** |  | [optional]
+**permissions** | **object** |  | [optional]
+**status** | **string** |  | [default to 'pending']
+**webhookAuthType** | **string** |  | [optional]
+**webhookUsername** | **string** |  | [optional]
+**webhookPassword** | **string** |  | [optional]
+**webhookTokenName** | **string** |  | [optional]
+**webhookToken** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

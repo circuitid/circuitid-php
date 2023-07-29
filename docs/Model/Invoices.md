@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **mixed** |  |
-**subtotal** | **mixed** |  |
-**tax** | **mixed** |  | [optional]
-**setup** | **mixed** |  | [optional]
-**discount** | **mixed** |  | [optional]
-**closedAt** | **mixed** |  | [optional]
-**dueAt** | **mixed** |  |
-**status** | **mixed** |  |
-**error** | **mixed** |  | [optional]
+**amount** | **int** |  |
+**subtotal** | **int** |  |
+**tax** | **int** |  | [optional]
+**setup** | **int** |  | [optional]
+**discount** | **int** |  | [optional]
+**closedAt** | **\DateTime** |  | [optional]
+**dueAt** | **\DateTime** |  |
+**status** | **string** |  | [default to 'open']
+**error** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

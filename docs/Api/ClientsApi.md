@@ -1,6 +1,6 @@
 # OpenAPI\Client\ClientsApi
 
-All URIs are relative to https://rest.circuitid.com, except if the operation defines another base path.
+All URIs are relative to https://cloud9.circuitid.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -14,7 +14,7 @@ All URIs are relative to https://rest.circuitid.com, except if the operation def
 ## `createClient()`
 
 ```php
-createClient($clients): mixed
+createClient($clients): \OpenAPI\Client\CircuitID\GetClient200Response
 ```
 
 Create a new object
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-**mixed**
+[**\OpenAPI\Client\CircuitID\GetClient200Response**](../Model/GetClient200Response.md)
 
 ### Authorization
 
@@ -102,13 +102,13 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$search = NULL; // mixed | Filter results by the specified value.
-$limit = NULL; // mixed | $limit will return only the number of results you specify.
-$skip = NULL; // mixed | $skip will skip the specified number of results.
-$sort = NULL; // mixed | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
-$select = NULL; // mixed | $select allows to pick which fields to include in the result.
-$or = NULL; // mixed | Find all records that match any of the given criteria.
-$and = NULL; // mixed | Find all records that match all of the given criteria.
+$search = 'search_example'; // string | Filter results by the specified value.
+$limit = 56; // int | $limit will return only the number of results you specify.
+$skip = 56; // int | $skip will skip the specified number of results.
+$sort = array('key' => new \stdClass); // object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
+$select = array('select_example'); // string[] | $select allows to pick which fields to include in the result.
+$or = array(new \stdClass); // object[] | Find all records that match any of the given criteria.
+$and = array(new \stdClass); // object[] | Find all records that match all of the given criteria.
 
 try {
     $result = $apiInstance->findClients($search, $limit, $skip, $sort, $select, $or, $and);
@@ -122,13 +122,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **search** | [**mixed**](../Model/.md)| Filter results by the specified value. | [optional] |
-| **limit** | [**mixed**](../Model/.md)| $limit will return only the number of results you specify. | [optional] |
-| **skip** | [**mixed**](../Model/.md)| $skip will skip the specified number of results. | [optional] |
-| **sort** | [**mixed**](../Model/.md)| $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
-| **select** | [**mixed**](../Model/.md)| $select allows to pick which fields to include in the result. | [optional] |
-| **or** | [**mixed**](../Model/.md)| Find all records that match any of the given criteria. | [optional] |
-| **and** | [**mixed**](../Model/.md)| Find all records that match all of the given criteria. | [optional] |
+| **search** | **string**| Filter results by the specified value. | [optional] |
+| **limit** | **int**| $limit will return only the number of results you specify. | [optional] |
+| **skip** | **int**| $skip will skip the specified number of results. | [optional] |
+| **sort** | [**object**](../Model/.md)| $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
+| **select** | [**string[]**](../Model/string.md)| $select allows to pick which fields to include in the result. | [optional] |
+| **or** | [**object[]**](../Model/object.md)| Find all records that match any of the given criteria. | [optional] |
+| **and** | [**object[]**](../Model/object.md)| Find all records that match all of the given criteria. | [optional] |
 
 ### Return type
 
@@ -150,7 +150,7 @@ try {
 ## `getClient()`
 
 ```php
-getClient($id): mixed
+getClient($id): \OpenAPI\Client\CircuitID\GetClient200Response
 ```
 
 Get object by id
@@ -176,7 +176,7 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+$id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 try {
     $result = $apiInstance->getClient($id);
@@ -190,11 +190,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
+| **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
 
 ### Return type
 
-**mixed**
+[**\OpenAPI\Client\CircuitID\GetClient200Response**](../Model/GetClient200Response.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ try {
 ## `patchClient()`
 
 ```php
-patchClient($id, $clients): mixed
+patchClient($id, $clients): \OpenAPI\Client\CircuitID\GetClient200Response
 ```
 
 Patch object's data
@@ -238,7 +238,7 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+$id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 $clients = new \OpenAPI\Client\CircuitID\Clients(); // \OpenAPI\Client\CircuitID\Clients | The request data.
 
 try {
@@ -253,12 +253,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
+| **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
 | **clients** | [**\OpenAPI\Client\CircuitID\Clients**](../Model/Clients.md)| The request data. | |
 
 ### Return type
 
-**mixed**
+[**\OpenAPI\Client\CircuitID\GetClient200Response**](../Model/GetClient200Response.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ try {
 ## `removeClient()`
 
 ```php
-removeClient($id): mixed
+removeClient($id): \OpenAPI\Client\CircuitID\GetClient200Response
 ```
 
 Delete object by id
@@ -302,7 +302,7 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = NULL; // mixed | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+$id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 try {
     $result = $apiInstance->removeClient($id);
@@ -316,11 +316,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | [**mixed**](../Model/.md)| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
+| **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
 
 ### Return type
 
-**mixed**
+[**\OpenAPI\Client\CircuitID\GetClient200Response**](../Model/GetClient200Response.md)
 
 ### Authorization
 
