@@ -199,7 +199,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'token' => 'token',
         'expiresInYears' => 'expiresInYears',
         'status' => 'status',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

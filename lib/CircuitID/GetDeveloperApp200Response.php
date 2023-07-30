@@ -263,7 +263,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         'webhookPassword' => 'webhookPassword',
         'webhookTokenName' => 'webhookTokenName',
         'webhookToken' => 'webhookToken',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

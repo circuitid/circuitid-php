@@ -267,7 +267,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         'sample3' => 'sample3',
         'sample4' => 'sample4',
         'sample5' => 'sample5',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

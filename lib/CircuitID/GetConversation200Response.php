@@ -203,7 +203,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
         'ref' => 'ref',
         'object' => 'object',
         'status' => 'status',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

@@ -259,7 +259,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'abandonedResumeAllowed' => 'abandonedResumeAllowed',
         'discardAbandonedAfter' => 'discardAbandonedAfter',
         'maxWaitTimeNoAgentTimeReached' => 'maxWaitTimeNoAgentTimeReached',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

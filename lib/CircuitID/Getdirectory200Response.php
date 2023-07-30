@@ -195,7 +195,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'type',
         'groups' => 'groups',
         'announcement' => 'announcement',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

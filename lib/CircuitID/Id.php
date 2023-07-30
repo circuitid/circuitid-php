@@ -167,7 +167,7 @@ class Id implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => '_id'
+        'id' => '__id'
     ];
 
     /**

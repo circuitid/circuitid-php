@@ -195,7 +195,7 @@ class GetAcceptedSender200Response implements ModelInterface, ArrayAccess, \Json
         'service' => 'service',
         'serviceRef' => 'serviceRef',
         'ref' => 'ref',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

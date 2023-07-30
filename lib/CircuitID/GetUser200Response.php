@@ -323,7 +323,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'timezone' => 'timezone',
         'vmTranscription' => 'vmTranscription',
         'communication' => 'communication',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

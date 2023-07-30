@@ -223,7 +223,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'ai' => 'ai',
         'status' => 'status',
         'notificationHits' => 'notificationHits',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

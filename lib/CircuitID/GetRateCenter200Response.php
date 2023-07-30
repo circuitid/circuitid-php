@@ -199,7 +199,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'lata' => 'lata',
         'locState' => 'locState',
         'rcAbbre' => 'rcAbbre',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

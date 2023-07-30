@@ -207,7 +207,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
         'requireId' => 'requireId',
         'services' => 'services',
         'events' => 'events',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

@@ -215,7 +215,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         'requirePasscode' => 'requirePasscode',
         'share' => 'share',
         'chatroom' => 'chatroom',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

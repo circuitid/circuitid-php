@@ -191,7 +191,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'name',
         'description' => 'description',
         'outboundCallerId' => 'outboundCallerId',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

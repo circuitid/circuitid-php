@@ -195,7 +195,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'users' => 'users',
         'avatar' => 'avatar',
         'direct' => 'direct',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

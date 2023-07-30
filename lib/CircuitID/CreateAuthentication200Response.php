@@ -191,7 +191,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         'username' => 'username',
         'password' => 'password',
         'strategy' => 'strategy',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

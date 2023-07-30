@@ -195,7 +195,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
         'object' => 'object',
         'priority' => 'priority',
         'ref' => 'ref',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

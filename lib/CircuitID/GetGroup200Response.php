@@ -191,7 +191,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'name',
         'description' => 'description',
         'status' => 'status',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

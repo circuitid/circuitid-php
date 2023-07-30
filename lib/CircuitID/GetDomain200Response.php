@@ -187,7 +187,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $attributeMap = [
         'name' => 'name',
         'status' => 'status',
-        'id' => '_id',
+        'id' => '__id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
