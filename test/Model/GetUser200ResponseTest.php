@@ -225,15 +225,6 @@ class GetUser200ResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "vmGreetingType"
      */
     public function testPropertyVmGreetingType()
@@ -327,51 +318,6 @@ class GetUser200ResponseTest extends TestCase
      * Test attribute "phonePermission"
      */
     public function testPropertyPhonePermission()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "agilePermission"
-     */
-    public function testPropertyAgilePermission()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "jobServerPermission"
-     */
-    public function testPropertyJobServerPermission()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "mediaServerPermission"
-     */
-    public function testPropertyMediaServerPermission()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "mailServerPermission"
-     */
-    public function testPropertyMailServerPermission()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "superAdminPermission"
-     */
-    public function testPropertySuperAdminPermission()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

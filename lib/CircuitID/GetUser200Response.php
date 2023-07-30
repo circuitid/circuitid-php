@@ -74,7 +74,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'avatar' => 'string',
         'language' => 'string',
         'isPrimary' => 'int',
-        'status' => 'string',
         'vmGreetingType' => 'string',
         'vmTimeout' => 'int',
         'vmFile' => 'string',
@@ -86,11 +85,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'adminPermission' => 'string',
         'billingPermission' => 'string',
         'phonePermission' => 'string',
-        'agilePermission' => 'string',
-        'jobServerPermission' => 'string',
-        'mediaServerPermission' => 'string',
-        'mailServerPermission' => 'string',
-        'superAdminPermission' => 'string',
         'timezone' => 'string',
         'vmTranscription' => 'int',
         'communication' => 'object',
@@ -109,8 +103,8 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'email' => null,
-        'password' => null,
+        'email' => 'email',
+        'password' => 'password',
         'sipPassword' => null,
         'turnPassword' => null,
         'first' => null,
@@ -122,10 +116,9 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'jobTitle' => null,
         'department' => null,
         'office' => null,
-        'avatar' => null,
+        'avatar' => 'url',
         'language' => null,
         'isPrimary' => 'int32',
-        'status' => null,
         'vmGreetingType' => null,
         'vmTimeout' => 'int32',
         'vmFile' => null,
@@ -137,11 +130,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'adminPermission' => null,
         'billingPermission' => null,
         'phonePermission' => null,
-        'agilePermission' => null,
-        'jobServerPermission' => null,
-        'mediaServerPermission' => null,
-        'mailServerPermission' => null,
-        'superAdminPermission' => null,
         'timezone' => null,
         'vmTranscription' => 'int32',
         'communication' => null,
@@ -174,7 +162,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
 		'avatar' => false,
 		'language' => false,
 		'isPrimary' => false,
-		'status' => false,
 		'vmGreetingType' => false,
 		'vmTimeout' => false,
 		'vmFile' => false,
@@ -186,11 +173,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
 		'adminPermission' => true,
 		'billingPermission' => true,
 		'phonePermission' => true,
-		'agilePermission' => true,
-		'jobServerPermission' => true,
-		'mediaServerPermission' => true,
-		'mailServerPermission' => true,
-		'superAdminPermission' => true,
 		'timezone' => false,
 		'vmTranscription' => false,
 		'communication' => false,
@@ -303,7 +285,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'avatar' => 'avatar',
         'language' => 'language',
         'isPrimary' => 'isPrimary',
-        'status' => 'status',
         'vmGreetingType' => 'vmGreetingType',
         'vmTimeout' => 'vmTimeout',
         'vmFile' => 'vmFile',
@@ -315,11 +296,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'adminPermission' => 'adminPermission',
         'billingPermission' => 'billingPermission',
         'phonePermission' => 'phonePermission',
-        'agilePermission' => 'agilePermission',
-        'jobServerPermission' => 'jobServerPermission',
-        'mediaServerPermission' => 'mediaServerPermission',
-        'mailServerPermission' => 'mailServerPermission',
-        'superAdminPermission' => 'superAdminPermission',
         'timezone' => 'timezone',
         'vmTranscription' => 'vmTranscription',
         'communication' => 'communication',
@@ -352,7 +328,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'avatar' => 'setAvatar',
         'language' => 'setLanguage',
         'isPrimary' => 'setIsPrimary',
-        'status' => 'setStatus',
         'vmGreetingType' => 'setVmGreetingType',
         'vmTimeout' => 'setVmTimeout',
         'vmFile' => 'setVmFile',
@@ -364,11 +339,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'adminPermission' => 'setAdminPermission',
         'billingPermission' => 'setBillingPermission',
         'phonePermission' => 'setPhonePermission',
-        'agilePermission' => 'setAgilePermission',
-        'jobServerPermission' => 'setJobServerPermission',
-        'mediaServerPermission' => 'setMediaServerPermission',
-        'mailServerPermission' => 'setMailServerPermission',
-        'superAdminPermission' => 'setSuperAdminPermission',
         'timezone' => 'setTimezone',
         'vmTranscription' => 'setVmTranscription',
         'communication' => 'setCommunication',
@@ -401,7 +371,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'avatar' => 'getAvatar',
         'language' => 'getLanguage',
         'isPrimary' => 'getIsPrimary',
-        'status' => 'getStatus',
         'vmGreetingType' => 'getVmGreetingType',
         'vmTimeout' => 'getVmTimeout',
         'vmFile' => 'getVmFile',
@@ -413,11 +382,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'adminPermission' => 'getAdminPermission',
         'billingPermission' => 'getBillingPermission',
         'phonePermission' => 'getPhonePermission',
-        'agilePermission' => 'getAgilePermission',
-        'jobServerPermission' => 'getJobServerPermission',
-        'mediaServerPermission' => 'getMediaServerPermission',
-        'mailServerPermission' => 'getMailServerPermission',
-        'superAdminPermission' => 'getSuperAdminPermission',
         'timezone' => 'getTimezone',
         'vmTranscription' => 'getVmTranscription',
         'communication' => 'getCommunication',
@@ -476,9 +440,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
     public const LANGUAGE_ES = 'es';
     public const IS_PRIMARY_1 = 1;
     public const IS_PRIMARY_0 = 0;
-    public const STATUS_ACTIVE = 'active';
-    public const STATUS_DISABLED = 'disabled';
-    public const STATUS_TERMINATED = 'terminated';
     public const VM_GREETING_TYPE__DEFAULT = 'default';
     public const VM_GREETING_TYPE_MP3 = 'mp3';
     public const VM_GREETING_TYPE_NUMBER = 'number';
@@ -488,16 +449,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
     public const BILLING_PERMISSION_RW = 'rw';
     public const PHONE_PERMISSION_R = 'r';
     public const PHONE_PERMISSION_RW = 'rw';
-    public const AGILE_PERMISSION_R = 'r';
-    public const AGILE_PERMISSION_RW = 'rw';
-    public const JOB_SERVER_PERMISSION_R = 'r';
-    public const JOB_SERVER_PERMISSION_RW = 'rw';
-    public const MEDIA_SERVER_PERMISSION_R = 'r';
-    public const MEDIA_SERVER_PERMISSION_RW = 'rw';
-    public const MAIL_SERVER_PERMISSION_R = 'r';
-    public const MAIL_SERVER_PERMISSION_RW = 'rw';
-    public const SUPER_ADMIN_PERMISSION_R = 'r';
-    public const SUPER_ADMIN_PERMISSION_RW = 'rw';
     public const TIMEZONE_EUROPE_ANDORRA = 'Europe/Andorra';
     public const TIMEZONE_ASIA_DUBAI = 'Asia/Dubai';
     public const TIMEZONE_ASIA_KABUL = 'Asia/Kabul';
@@ -883,20 +834,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ACTIVE,
-            self::STATUS_DISABLED,
-            self::STATUS_TERMINATED,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
     public function getVmGreetingTypeAllowableValues()
     {
         return [
@@ -942,71 +879,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         return [
             self::PHONE_PERMISSION_R,
             self::PHONE_PERMISSION_RW,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getAgilePermissionAllowableValues()
-    {
-        return [
-            self::AGILE_PERMISSION_R,
-            self::AGILE_PERMISSION_RW,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getJobServerPermissionAllowableValues()
-    {
-        return [
-            self::JOB_SERVER_PERMISSION_R,
-            self::JOB_SERVER_PERMISSION_RW,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getMediaServerPermissionAllowableValues()
-    {
-        return [
-            self::MEDIA_SERVER_PERMISSION_R,
-            self::MEDIA_SERVER_PERMISSION_RW,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getMailServerPermissionAllowableValues()
-    {
-        return [
-            self::MAIL_SERVER_PERMISSION_R,
-            self::MAIL_SERVER_PERMISSION_RW,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getSuperAdminPermissionAllowableValues()
-    {
-        return [
-            self::SUPER_ADMIN_PERMISSION_R,
-            self::SUPER_ADMIN_PERMISSION_RW,
         ];
     }
 
@@ -1413,7 +1285,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('avatar', $data ?? [], null);
         $this->setIfExists('language', $data ?? [], 'en');
         $this->setIfExists('isPrimary', $data ?? [], self::IS_PRIMARY_0);
-        $this->setIfExists('status', $data ?? [], 'active');
         $this->setIfExists('vmGreetingType', $data ?? [], 'default');
         $this->setIfExists('vmTimeout', $data ?? [], 20);
         $this->setIfExists('vmFile', $data ?? [], null);
@@ -1425,11 +1296,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('adminPermission', $data ?? [], null);
         $this->setIfExists('billingPermission', $data ?? [], null);
         $this->setIfExists('phonePermission', $data ?? [], null);
-        $this->setIfExists('agilePermission', $data ?? [], null);
-        $this->setIfExists('jobServerPermission', $data ?? [], null);
-        $this->setIfExists('mediaServerPermission', $data ?? [], null);
-        $this->setIfExists('mailServerPermission', $data ?? [], null);
-        $this->setIfExists('superAdminPermission', $data ?? [], null);
         $this->setIfExists('timezone', $data ?? [], 'America/New_York');
         $this->setIfExists('vmTranscription', $data ?? [], self::VM_TRANSCRIPTION_0);
         $this->setIfExists('communication', $data ?? [], null);
@@ -1568,15 +1434,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
             );
         }
 
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         $allowedValues = $this->getVmGreetingTypeAllowableValues();
         if (!is_null($this->container['vmGreetingType']) && !in_array($this->container['vmGreetingType'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -1617,51 +1474,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'phonePermission', must be one of '%s'",
                 $this->container['phonePermission'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getAgilePermissionAllowableValues();
-        if (!is_null($this->container['agilePermission']) && !in_array($this->container['agilePermission'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'agilePermission', must be one of '%s'",
-                $this->container['agilePermission'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getJobServerPermissionAllowableValues();
-        if (!is_null($this->container['jobServerPermission']) && !in_array($this->container['jobServerPermission'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'jobServerPermission', must be one of '%s'",
-                $this->container['jobServerPermission'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getMediaServerPermissionAllowableValues();
-        if (!is_null($this->container['mediaServerPermission']) && !in_array($this->container['mediaServerPermission'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'mediaServerPermission', must be one of '%s'",
-                $this->container['mediaServerPermission'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getMailServerPermissionAllowableValues();
-        if (!is_null($this->container['mailServerPermission']) && !in_array($this->container['mailServerPermission'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'mailServerPermission', must be one of '%s'",
-                $this->container['mailServerPermission'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getSuperAdminPermissionAllowableValues();
-        if (!is_null($this->container['superAdminPermission']) && !in_array($this->container['superAdminPermission'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'superAdminPermission', must be one of '%s'",
-                $this->container['superAdminPermission'],
                 implode("', '", $allowedValues)
             );
         }
@@ -2222,43 +2034,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets status
-     *
-     * @return string|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string|null $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
      * Gets vmGreetingType
      *
      * @return string|null
@@ -2620,226 +2395,6 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
             );
         }
         $this->container['phonePermission'] = $phonePermission;
-
-        return $this;
-    }
-
-    /**
-     * Gets agilePermission
-     *
-     * @return string|null
-     */
-    public function getAgilePermission()
-    {
-        return $this->container['agilePermission'];
-    }
-
-    /**
-     * Sets agilePermission
-     *
-     * @param string|null $agilePermission agilePermission
-     *
-     * @return self
-     */
-    public function setAgilePermission($agilePermission)
-    {
-        if (is_null($agilePermission)) {
-            array_push($this->openAPINullablesSetToNull, 'agilePermission');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('agilePermission', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $allowedValues = $this->getAgilePermissionAllowableValues();
-        if (!is_null($agilePermission) && !in_array($agilePermission, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'agilePermission', must be one of '%s'",
-                    $agilePermission,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['agilePermission'] = $agilePermission;
-
-        return $this;
-    }
-
-    /**
-     * Gets jobServerPermission
-     *
-     * @return string|null
-     */
-    public function getJobServerPermission()
-    {
-        return $this->container['jobServerPermission'];
-    }
-
-    /**
-     * Sets jobServerPermission
-     *
-     * @param string|null $jobServerPermission jobServerPermission
-     *
-     * @return self
-     */
-    public function setJobServerPermission($jobServerPermission)
-    {
-        if (is_null($jobServerPermission)) {
-            array_push($this->openAPINullablesSetToNull, 'jobServerPermission');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('jobServerPermission', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $allowedValues = $this->getJobServerPermissionAllowableValues();
-        if (!is_null($jobServerPermission) && !in_array($jobServerPermission, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'jobServerPermission', must be one of '%s'",
-                    $jobServerPermission,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['jobServerPermission'] = $jobServerPermission;
-
-        return $this;
-    }
-
-    /**
-     * Gets mediaServerPermission
-     *
-     * @return string|null
-     */
-    public function getMediaServerPermission()
-    {
-        return $this->container['mediaServerPermission'];
-    }
-
-    /**
-     * Sets mediaServerPermission
-     *
-     * @param string|null $mediaServerPermission mediaServerPermission
-     *
-     * @return self
-     */
-    public function setMediaServerPermission($mediaServerPermission)
-    {
-        if (is_null($mediaServerPermission)) {
-            array_push($this->openAPINullablesSetToNull, 'mediaServerPermission');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mediaServerPermission', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $allowedValues = $this->getMediaServerPermissionAllowableValues();
-        if (!is_null($mediaServerPermission) && !in_array($mediaServerPermission, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'mediaServerPermission', must be one of '%s'",
-                    $mediaServerPermission,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['mediaServerPermission'] = $mediaServerPermission;
-
-        return $this;
-    }
-
-    /**
-     * Gets mailServerPermission
-     *
-     * @return string|null
-     */
-    public function getMailServerPermission()
-    {
-        return $this->container['mailServerPermission'];
-    }
-
-    /**
-     * Sets mailServerPermission
-     *
-     * @param string|null $mailServerPermission mailServerPermission
-     *
-     * @return self
-     */
-    public function setMailServerPermission($mailServerPermission)
-    {
-        if (is_null($mailServerPermission)) {
-            array_push($this->openAPINullablesSetToNull, 'mailServerPermission');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mailServerPermission', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $allowedValues = $this->getMailServerPermissionAllowableValues();
-        if (!is_null($mailServerPermission) && !in_array($mailServerPermission, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'mailServerPermission', must be one of '%s'",
-                    $mailServerPermission,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['mailServerPermission'] = $mailServerPermission;
-
-        return $this;
-    }
-
-    /**
-     * Gets superAdminPermission
-     *
-     * @return string|null
-     */
-    public function getSuperAdminPermission()
-    {
-        return $this->container['superAdminPermission'];
-    }
-
-    /**
-     * Sets superAdminPermission
-     *
-     * @param string|null $superAdminPermission superAdminPermission
-     *
-     * @return self
-     */
-    public function setSuperAdminPermission($superAdminPermission)
-    {
-        if (is_null($superAdminPermission)) {
-            array_push($this->openAPINullablesSetToNull, 'superAdminPermission');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('superAdminPermission', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $allowedValues = $this->getSuperAdminPermissionAllowableValues();
-        if (!is_null($superAdminPermission) && !in_array($superAdminPermission, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'superAdminPermission', must be one of '%s'",
-                    $superAdminPermission,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['superAdminPermission'] = $superAdminPermission;
 
         return $this;
     }
