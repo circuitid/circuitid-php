@@ -140,16 +140,16 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetFaxAccount200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createFaxAccount($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccount($faxaccountsCreateOrPatch, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
-        list($response) = $this->createFaxAccountWithHttpInfo($createfaxaccounts, $contentType);
+        list($response) = $this->createFaxAccountWithHttpInfo($faxaccountsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetFaxAccount200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createFaxAccountWithHttpInfo($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountWithHttpInfo($faxaccountsCreateOrPatch, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
-        $request = $this->createFaxAccountRequest($createfaxaccounts, $contentType);
+        $request = $this->createFaxAccountRequest($faxaccountsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFaxAccountAsync($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountAsync($faxaccountsCreateOrPatch, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
-        return $this->createFaxAccountAsyncWithHttpInfo($createfaxaccounts, $contentType)
+        return $this->createFaxAccountAsyncWithHttpInfo($faxaccountsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFaxAccountAsyncWithHttpInfo($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountAsyncWithHttpInfo($faxaccountsCreateOrPatch, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetFaxAccount200Response';
-        $request = $this->createFaxAccountRequest($createfaxaccounts, $contentType);
+        $request = $this->createFaxAccountRequest($faxaccountsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class FaxAccountsApi
     /**
      * Create request for operation 'createFaxAccount'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createFaxAccountRequest($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountRequest($faxaccountsCreateOrPatch, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
 
-        // verify the required parameter 'createfaxaccounts' is set
-        if ($createfaxaccounts === null || (is_array($createfaxaccounts) && count($createfaxaccounts) === 0)) {
+        // verify the required parameter 'faxaccountsCreateOrPatch' is set
+        if ($faxaccountsCreateOrPatch === null || (is_array($faxaccountsCreateOrPatch) && count($faxaccountsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createfaxaccounts when calling createFaxAccount'
+                'Missing the required parameter $faxaccountsCreateOrPatch when calling createFaxAccount'
             );
         }
 
@@ -571,12 +571,12 @@ class FaxAccountsApi
         );
 
         // for model (json/xml)
-        if (isset($createfaxaccounts)) {
+        if (isset($faxaccountsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createfaxaccounts));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($faxaccountsCreateOrPatch));
             } else {
-                $httpBody = $createfaxaccounts;
+                $httpBody = $faxaccountsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class FaxAccountsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFaxAccount'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetFaxAccount200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchFaxAccount($id, $faxaccounts, string $contentType = self::contentTypes['patchFaxAccount'][0])
+    public function patchFaxAccount($id, $faxaccountsCreateOrPatch, string $contentType = self::contentTypes['patchFaxAccount'][0])
     {
-        list($response) = $this->patchFaxAccountWithHttpInfo($id, $faxaccounts, $contentType);
+        list($response) = $this->patchFaxAccountWithHttpInfo($id, $faxaccountsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class FaxAccountsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFaxAccount'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetFaxAccount200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchFaxAccountWithHttpInfo($id, $faxaccounts, string $contentType = self::contentTypes['patchFaxAccount'][0])
+    public function patchFaxAccountWithHttpInfo($id, $faxaccountsCreateOrPatch, string $contentType = self::contentTypes['patchFaxAccount'][0])
     {
-        $request = $this->patchFaxAccountRequest($id, $faxaccounts, $contentType);
+        $request = $this->patchFaxAccountRequest($id, $faxaccountsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class FaxAccountsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchFaxAccountAsync($id, $faxaccounts, string $contentType = self::contentTypes['patchFaxAccount'][0])
+    public function patchFaxAccountAsync($id, $faxaccountsCreateOrPatch, string $contentType = self::contentTypes['patchFaxAccount'][0])
     {
-        return $this->patchFaxAccountAsyncWithHttpInfo($id, $faxaccounts, $contentType)
+        return $this->patchFaxAccountAsyncWithHttpInfo($id, $faxaccountsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class FaxAccountsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchFaxAccountAsyncWithHttpInfo($id, $faxaccounts, string $contentType = self::contentTypes['patchFaxAccount'][0])
+    public function patchFaxAccountAsyncWithHttpInfo($id, $faxaccountsCreateOrPatch, string $contentType = self::contentTypes['patchFaxAccount'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetFaxAccount200Response';
-        $request = $this->patchFaxAccountRequest($id, $faxaccounts, $contentType);
+        $request = $this->patchFaxAccountRequest($id, $faxaccountsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class FaxAccountsApi
      * Create request for operation 'patchFaxAccount'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch $faxaccountsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchFaxAccountRequest($id, $faxaccounts, string $contentType = self::contentTypes['patchFaxAccount'][0])
+    public function patchFaxAccountRequest($id, $faxaccountsCreateOrPatch, string $contentType = self::contentTypes['patchFaxAccount'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class FaxAccountsApi
             );
         }
 
-        // verify the required parameter 'faxaccounts' is set
-        if ($faxaccounts === null || (is_array($faxaccounts) && count($faxaccounts) === 0)) {
+        // verify the required parameter 'faxaccountsCreateOrPatch' is set
+        if ($faxaccountsCreateOrPatch === null || (is_array($faxaccountsCreateOrPatch) && count($faxaccountsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $faxaccounts when calling patchFaxAccount'
+                'Missing the required parameter $faxaccountsCreateOrPatch when calling patchFaxAccount'
             );
         }
 
@@ -2183,12 +2183,12 @@ class FaxAccountsApi
         );
 
         // for model (json/xml)
-        if (isset($faxaccounts)) {
+        if (isset($faxaccountsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($faxaccounts));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($faxaccountsCreateOrPatch));
             } else {
-                $httpBody = $faxaccounts;
+                $httpBody = $faxaccountsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

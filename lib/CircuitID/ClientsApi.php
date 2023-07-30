@@ -140,16 +140,16 @@ class ClientsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createclients $createclients The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createClient'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetClient200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createClient($createclients, string $contentType = self::contentTypes['createClient'][0])
+    public function createClient($clientsCreateOrPatch, string $contentType = self::contentTypes['createClient'][0])
     {
-        list($response) = $this->createClientWithHttpInfo($createclients, $contentType);
+        list($response) = $this->createClientWithHttpInfo($clientsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ClientsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createclients $createclients The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createClient'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetClient200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createClientWithHttpInfo($createclients, string $contentType = self::contentTypes['createClient'][0])
+    public function createClientWithHttpInfo($clientsCreateOrPatch, string $contentType = self::contentTypes['createClient'][0])
     {
-        $request = $this->createClientRequest($createclients, $contentType);
+        $request = $this->createClientRequest($clientsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ClientsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createclients $createclients The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createClientAsync($createclients, string $contentType = self::contentTypes['createClient'][0])
+    public function createClientAsync($clientsCreateOrPatch, string $contentType = self::contentTypes['createClient'][0])
     {
-        return $this->createClientAsyncWithHttpInfo($createclients, $contentType)
+        return $this->createClientAsyncWithHttpInfo($clientsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ClientsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createclients $createclients The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createClientAsyncWithHttpInfo($createclients, string $contentType = self::contentTypes['createClient'][0])
+    public function createClientAsyncWithHttpInfo($clientsCreateOrPatch, string $contentType = self::contentTypes['createClient'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetClient200Response';
-        $request = $this->createClientRequest($createclients, $contentType);
+        $request = $this->createClientRequest($clientsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ClientsApi
     /**
      * Create request for operation 'createClient'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createclients $createclients The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createClientRequest($createclients, string $contentType = self::contentTypes['createClient'][0])
+    public function createClientRequest($clientsCreateOrPatch, string $contentType = self::contentTypes['createClient'][0])
     {
 
-        // verify the required parameter 'createclients' is set
-        if ($createclients === null || (is_array($createclients) && count($createclients) === 0)) {
+        // verify the required parameter 'clientsCreateOrPatch' is set
+        if ($clientsCreateOrPatch === null || (is_array($clientsCreateOrPatch) && count($clientsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createclients when calling createClient'
+                'Missing the required parameter $clientsCreateOrPatch when calling createClient'
             );
         }
 
@@ -571,12 +571,12 @@ class ClientsApi
         );
 
         // for model (json/xml)
-        if (isset($createclients)) {
+        if (isset($clientsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createclients));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($clientsCreateOrPatch));
             } else {
-                $httpBody = $createclients;
+                $httpBody = $clientsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class ClientsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Clients $clients The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchClient'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetClient200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchClient($id, $clients, string $contentType = self::contentTypes['patchClient'][0])
+    public function patchClient($id, $clientsCreateOrPatch, string $contentType = self::contentTypes['patchClient'][0])
     {
-        list($response) = $this->patchClientWithHttpInfo($id, $clients, $contentType);
+        list($response) = $this->patchClientWithHttpInfo($id, $clientsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class ClientsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Clients $clients The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchClient'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetClient200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchClientWithHttpInfo($id, $clients, string $contentType = self::contentTypes['patchClient'][0])
+    public function patchClientWithHttpInfo($id, $clientsCreateOrPatch, string $contentType = self::contentTypes['patchClient'][0])
     {
-        $request = $this->patchClientRequest($id, $clients, $contentType);
+        $request = $this->patchClientRequest($id, $clientsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class ClientsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Clients $clients The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchClientAsync($id, $clients, string $contentType = self::contentTypes['patchClient'][0])
+    public function patchClientAsync($id, $clientsCreateOrPatch, string $contentType = self::contentTypes['patchClient'][0])
     {
-        return $this->patchClientAsyncWithHttpInfo($id, $clients, $contentType)
+        return $this->patchClientAsyncWithHttpInfo($id, $clientsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class ClientsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Clients $clients The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchClientAsyncWithHttpInfo($id, $clients, string $contentType = self::contentTypes['patchClient'][0])
+    public function patchClientAsyncWithHttpInfo($id, $clientsCreateOrPatch, string $contentType = self::contentTypes['patchClient'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetClient200Response';
-        $request = $this->patchClientRequest($id, $clients, $contentType);
+        $request = $this->patchClientRequest($id, $clientsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class ClientsApi
      * Create request for operation 'patchClient'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Clients $clients The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ClientsCreateOrPatch $clientsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchClient'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchClientRequest($id, $clients, string $contentType = self::contentTypes['patchClient'][0])
+    public function patchClientRequest($id, $clientsCreateOrPatch, string $contentType = self::contentTypes['patchClient'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class ClientsApi
             );
         }
 
-        // verify the required parameter 'clients' is set
-        if ($clients === null || (is_array($clients) && count($clients) === 0)) {
+        // verify the required parameter 'clientsCreateOrPatch' is set
+        if ($clientsCreateOrPatch === null || (is_array($clientsCreateOrPatch) && count($clientsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $clients when calling patchClient'
+                'Missing the required parameter $clientsCreateOrPatch when calling patchClient'
             );
         }
 
@@ -2183,12 +2183,12 @@ class ClientsApi
         );
 
         // for model (json/xml)
-        if (isset($clients)) {
+        if (isset($clientsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($clients));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($clientsCreateOrPatch));
             } else {
-                $httpBody = $clients;
+                $httpBody = $clientsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

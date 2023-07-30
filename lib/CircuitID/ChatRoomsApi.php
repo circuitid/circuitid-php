@@ -140,16 +140,16 @@ class ChatRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createchatrooms $createchatrooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createChatRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetChatRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createChatRoom($createchatrooms, string $contentType = self::contentTypes['createChatRoom'][0])
+    public function createChatRoom($chatroomsCreateOrPatch, string $contentType = self::contentTypes['createChatRoom'][0])
     {
-        list($response) = $this->createChatRoomWithHttpInfo($createchatrooms, $contentType);
+        list($response) = $this->createChatRoomWithHttpInfo($chatroomsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ChatRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createchatrooms $createchatrooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createChatRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetChatRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createChatRoomWithHttpInfo($createchatrooms, string $contentType = self::contentTypes['createChatRoom'][0])
+    public function createChatRoomWithHttpInfo($chatroomsCreateOrPatch, string $contentType = self::contentTypes['createChatRoom'][0])
     {
-        $request = $this->createChatRoomRequest($createchatrooms, $contentType);
+        $request = $this->createChatRoomRequest($chatroomsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ChatRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createchatrooms $createchatrooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createChatRoomAsync($createchatrooms, string $contentType = self::contentTypes['createChatRoom'][0])
+    public function createChatRoomAsync($chatroomsCreateOrPatch, string $contentType = self::contentTypes['createChatRoom'][0])
     {
-        return $this->createChatRoomAsyncWithHttpInfo($createchatrooms, $contentType)
+        return $this->createChatRoomAsyncWithHttpInfo($chatroomsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ChatRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createchatrooms $createchatrooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createChatRoomAsyncWithHttpInfo($createchatrooms, string $contentType = self::contentTypes['createChatRoom'][0])
+    public function createChatRoomAsyncWithHttpInfo($chatroomsCreateOrPatch, string $contentType = self::contentTypes['createChatRoom'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetChatRoom200Response';
-        $request = $this->createChatRoomRequest($createchatrooms, $contentType);
+        $request = $this->createChatRoomRequest($chatroomsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ChatRoomsApi
     /**
      * Create request for operation 'createChatRoom'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createchatrooms $createchatrooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createChatRoomRequest($createchatrooms, string $contentType = self::contentTypes['createChatRoom'][0])
+    public function createChatRoomRequest($chatroomsCreateOrPatch, string $contentType = self::contentTypes['createChatRoom'][0])
     {
 
-        // verify the required parameter 'createchatrooms' is set
-        if ($createchatrooms === null || (is_array($createchatrooms) && count($createchatrooms) === 0)) {
+        // verify the required parameter 'chatroomsCreateOrPatch' is set
+        if ($chatroomsCreateOrPatch === null || (is_array($chatroomsCreateOrPatch) && count($chatroomsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createchatrooms when calling createChatRoom'
+                'Missing the required parameter $chatroomsCreateOrPatch when calling createChatRoom'
             );
         }
 
@@ -571,12 +571,12 @@ class ChatRoomsApi
         );
 
         // for model (json/xml)
-        if (isset($createchatrooms)) {
+        if (isset($chatroomsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createchatrooms));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($chatroomsCreateOrPatch));
             } else {
-                $httpBody = $createchatrooms;
+                $httpBody = $chatroomsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetChatRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchChatRoom($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoom($id, $chatroomsCreateOrPatch, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
-        list($response) = $this->patchChatRoomWithHttpInfo($id, $chatrooms, $contentType);
+        list($response) = $this->patchChatRoomWithHttpInfo($id, $chatroomsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetChatRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchChatRoomWithHttpInfo($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomWithHttpInfo($id, $chatroomsCreateOrPatch, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
-        $request = $this->patchChatRoomRequest($id, $chatrooms, $contentType);
+        $request = $this->patchChatRoomRequest($id, $chatroomsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchChatRoomAsync($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomAsync($id, $chatroomsCreateOrPatch, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
-        return $this->patchChatRoomAsyncWithHttpInfo($id, $chatrooms, $contentType)
+        return $this->patchChatRoomAsyncWithHttpInfo($id, $chatroomsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class ChatRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchChatRoomAsyncWithHttpInfo($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomAsyncWithHttpInfo($id, $chatroomsCreateOrPatch, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetChatRoom200Response';
-        $request = $this->patchChatRoomRequest($id, $chatrooms, $contentType);
+        $request = $this->patchChatRoomRequest($id, $chatroomsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class ChatRoomsApi
      * Create request for operation 'patchChatRoom'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Chatrooms $chatrooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch $chatroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchChatRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchChatRoomRequest($id, $chatrooms, string $contentType = self::contentTypes['patchChatRoom'][0])
+    public function patchChatRoomRequest($id, $chatroomsCreateOrPatch, string $contentType = self::contentTypes['patchChatRoom'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class ChatRoomsApi
             );
         }
 
-        // verify the required parameter 'chatrooms' is set
-        if ($chatrooms === null || (is_array($chatrooms) && count($chatrooms) === 0)) {
+        // verify the required parameter 'chatroomsCreateOrPatch' is set
+        if ($chatroomsCreateOrPatch === null || (is_array($chatroomsCreateOrPatch) && count($chatroomsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $chatrooms when calling patchChatRoom'
+                'Missing the required parameter $chatroomsCreateOrPatch when calling patchChatRoom'
             );
         }
 
@@ -2183,12 +2183,12 @@ class ChatRoomsApi
         );
 
         // for model (json/xml)
-        if (isset($chatrooms)) {
+        if (isset($chatroomsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($chatrooms));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($chatroomsCreateOrPatch));
             } else {
-                $httpBody = $chatrooms;
+                $httpBody = $chatroomsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

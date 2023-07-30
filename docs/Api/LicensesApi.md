@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createLicense()`
 
 ```php
-createLicense($createlicenses): \OpenAPI\Client\CircuitID\GetLicense200Response
+createLicense($licensesCreateOrPatch): \OpenAPI\Client\CircuitID\GetLicense200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\LicensesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createlicenses = new \OpenAPI\Client\CircuitID\Createlicenses(); // \OpenAPI\Client\CircuitID\Createlicenses | The JSON object that will be posted to the REST API endpoint.
+$licensesCreateOrPatch = new \OpenAPI\Client\CircuitID\LicensesCreateOrPatch(); // \OpenAPI\Client\CircuitID\LicensesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createLicense($createlicenses);
+    $result = $apiInstance->createLicense($licensesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LicensesApi->createLicense: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createlicenses** | [**\OpenAPI\Client\CircuitID\Createlicenses**](../Model/Createlicenses.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **licensesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\LicensesCreateOrPatch**](../Model/LicensesCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchLicense()`
 
 ```php
-patchLicense($id, $licenses): \OpenAPI\Client\CircuitID\GetLicense200Response
+patchLicense($id, $licensesCreateOrPatch): \OpenAPI\Client\CircuitID\GetLicense200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\LicensesApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$licenses = new \OpenAPI\Client\CircuitID\Licenses(); // \OpenAPI\Client\CircuitID\Licenses | The request data.
+$licensesCreateOrPatch = new \OpenAPI\Client\CircuitID\LicensesCreateOrPatch(); // \OpenAPI\Client\CircuitID\LicensesCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchLicense($id, $licenses);
+    $result = $apiInstance->patchLicense($id, $licensesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LicensesApi->patchLicense: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **licenses** | [**\OpenAPI\Client\CircuitID\Licenses**](../Model/Licenses.md)| The request data. | |
+| **licensesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\LicensesCreateOrPatch**](../Model/LicensesCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

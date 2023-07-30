@@ -140,16 +140,16 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetServer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createServer($createservers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServer($serversCreateOrPatch, string $contentType = self::contentTypes['createServer'][0])
     {
-        list($response) = $this->createServerWithHttpInfo($createservers, $contentType);
+        list($response) = $this->createServerWithHttpInfo($serversCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetServer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createServerWithHttpInfo($createservers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerWithHttpInfo($serversCreateOrPatch, string $contentType = self::contentTypes['createServer'][0])
     {
-        $request = $this->createServerRequest($createservers, $contentType);
+        $request = $this->createServerRequest($serversCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createServerAsync($createservers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerAsync($serversCreateOrPatch, string $contentType = self::contentTypes['createServer'][0])
     {
-        return $this->createServerAsyncWithHttpInfo($createservers, $contentType)
+        return $this->createServerAsyncWithHttpInfo($serversCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createServerAsyncWithHttpInfo($createservers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerAsyncWithHttpInfo($serversCreateOrPatch, string $contentType = self::contentTypes['createServer'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetServer200Response';
-        $request = $this->createServerRequest($createservers, $contentType);
+        $request = $this->createServerRequest($serversCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ServersApi
     /**
      * Create request for operation 'createServer'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createServerRequest($createservers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerRequest($serversCreateOrPatch, string $contentType = self::contentTypes['createServer'][0])
     {
 
-        // verify the required parameter 'createservers' is set
-        if ($createservers === null || (is_array($createservers) && count($createservers) === 0)) {
+        // verify the required parameter 'serversCreateOrPatch' is set
+        if ($serversCreateOrPatch === null || (is_array($serversCreateOrPatch) && count($serversCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createservers when calling createServer'
+                'Missing the required parameter $serversCreateOrPatch when calling createServer'
             );
         }
 
@@ -571,12 +571,12 @@ class ServersApi
         );
 
         // for model (json/xml)
-        if (isset($createservers)) {
+        if (isset($serversCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createservers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($serversCreateOrPatch));
             } else {
-                $httpBody = $createservers;
+                $httpBody = $serversCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetServer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchServer($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServer($id, $serversCreateOrPatch, string $contentType = self::contentTypes['patchServer'][0])
     {
-        list($response) = $this->patchServerWithHttpInfo($id, $servers, $contentType);
+        list($response) = $this->patchServerWithHttpInfo($id, $serversCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetServer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchServerWithHttpInfo($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerWithHttpInfo($id, $serversCreateOrPatch, string $contentType = self::contentTypes['patchServer'][0])
     {
-        $request = $this->patchServerRequest($id, $servers, $contentType);
+        $request = $this->patchServerRequest($id, $serversCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchServerAsync($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerAsync($id, $serversCreateOrPatch, string $contentType = self::contentTypes['patchServer'][0])
     {
-        return $this->patchServerAsyncWithHttpInfo($id, $servers, $contentType)
+        return $this->patchServerAsyncWithHttpInfo($id, $serversCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class ServersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchServerAsyncWithHttpInfo($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerAsyncWithHttpInfo($id, $serversCreateOrPatch, string $contentType = self::contentTypes['patchServer'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetServer200Response';
-        $request = $this->patchServerRequest($id, $servers, $contentType);
+        $request = $this->patchServerRequest($id, $serversCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class ServersApi
      * Create request for operation 'patchServer'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ServersCreateOrPatch $serversCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchServerRequest($id, $servers, string $contentType = self::contentTypes['patchServer'][0])
+    public function patchServerRequest($id, $serversCreateOrPatch, string $contentType = self::contentTypes['patchServer'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class ServersApi
             );
         }
 
-        // verify the required parameter 'servers' is set
-        if ($servers === null || (is_array($servers) && count($servers) === 0)) {
+        // verify the required parameter 'serversCreateOrPatch' is set
+        if ($serversCreateOrPatch === null || (is_array($serversCreateOrPatch) && count($serversCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $servers when calling patchServer'
+                'Missing the required parameter $serversCreateOrPatch when calling patchServer'
             );
         }
 
@@ -2183,12 +2183,12 @@ class ServersApi
         );
 
         // for model (json/xml)
-        if (isset($servers)) {
+        if (isset($serversCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($servers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($serversCreateOrPatch));
             } else {
-                $httpBody = $servers;
+                $httpBody = $serversCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -140,16 +140,16 @@ class PhoneOutboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createphoneoutboundrules $createphoneoutboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createPhoneOutboundRule($createphoneoutboundrules, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
+    public function createPhoneOutboundRule($phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
     {
-        list($response) = $this->createPhoneOutboundRuleWithHttpInfo($createphoneoutboundrules, $contentType);
+        list($response) = $this->createPhoneOutboundRuleWithHttpInfo($phoneoutboundrulesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class PhoneOutboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createphoneoutboundrules $createphoneoutboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createPhoneOutboundRuleWithHttpInfo($createphoneoutboundrules, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
+    public function createPhoneOutboundRuleWithHttpInfo($phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
     {
-        $request = $this->createPhoneOutboundRuleRequest($createphoneoutboundrules, $contentType);
+        $request = $this->createPhoneOutboundRuleRequest($phoneoutboundrulesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class PhoneOutboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createphoneoutboundrules $createphoneoutboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPhoneOutboundRuleAsync($createphoneoutboundrules, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
+    public function createPhoneOutboundRuleAsync($phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
     {
-        return $this->createPhoneOutboundRuleAsyncWithHttpInfo($createphoneoutboundrules, $contentType)
+        return $this->createPhoneOutboundRuleAsyncWithHttpInfo($phoneoutboundrulesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class PhoneOutboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createphoneoutboundrules $createphoneoutboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPhoneOutboundRuleAsyncWithHttpInfo($createphoneoutboundrules, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
+    public function createPhoneOutboundRuleAsyncWithHttpInfo($phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response';
-        $request = $this->createPhoneOutboundRuleRequest($createphoneoutboundrules, $contentType);
+        $request = $this->createPhoneOutboundRuleRequest($phoneoutboundrulesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class PhoneOutboundRulesApi
     /**
      * Create request for operation 'createPhoneOutboundRule'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createphoneoutboundrules $createphoneoutboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createPhoneOutboundRuleRequest($createphoneoutboundrules, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
+    public function createPhoneOutboundRuleRequest($phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['createPhoneOutboundRule'][0])
     {
 
-        // verify the required parameter 'createphoneoutboundrules' is set
-        if ($createphoneoutboundrules === null || (is_array($createphoneoutboundrules) && count($createphoneoutboundrules) === 0)) {
+        // verify the required parameter 'phoneoutboundrulesCreateOrPatch' is set
+        if ($phoneoutboundrulesCreateOrPatch === null || (is_array($phoneoutboundrulesCreateOrPatch) && count($phoneoutboundrulesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createphoneoutboundrules when calling createPhoneOutboundRule'
+                'Missing the required parameter $phoneoutboundrulesCreateOrPatch when calling createPhoneOutboundRule'
             );
         }
 
@@ -571,12 +571,12 @@ class PhoneOutboundRulesApi
         );
 
         // for model (json/xml)
-        if (isset($createphoneoutboundrules)) {
+        if (isset($phoneoutboundrulesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createphoneoutboundrules));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneoutboundrulesCreateOrPatch));
             } else {
-                $httpBody = $createphoneoutboundrules;
+                $httpBody = $phoneoutboundrulesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class PhoneOutboundRulesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Phoneoutboundrules $phoneoutboundrules The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchPhoneOutboundRule($id, $phoneoutboundrules, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
+    public function patchPhoneOutboundRule($id, $phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
     {
-        list($response) = $this->patchPhoneOutboundRuleWithHttpInfo($id, $phoneoutboundrules, $contentType);
+        list($response) = $this->patchPhoneOutboundRuleWithHttpInfo($id, $phoneoutboundrulesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class PhoneOutboundRulesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Phoneoutboundrules $phoneoutboundrules The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchPhoneOutboundRuleWithHttpInfo($id, $phoneoutboundrules, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
+    public function patchPhoneOutboundRuleWithHttpInfo($id, $phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
     {
-        $request = $this->patchPhoneOutboundRuleRequest($id, $phoneoutboundrules, $contentType);
+        $request = $this->patchPhoneOutboundRuleRequest($id, $phoneoutboundrulesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class PhoneOutboundRulesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Phoneoutboundrules $phoneoutboundrules The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchPhoneOutboundRuleAsync($id, $phoneoutboundrules, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
+    public function patchPhoneOutboundRuleAsync($id, $phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
     {
-        return $this->patchPhoneOutboundRuleAsyncWithHttpInfo($id, $phoneoutboundrules, $contentType)
+        return $this->patchPhoneOutboundRuleAsyncWithHttpInfo($id, $phoneoutboundrulesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class PhoneOutboundRulesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Phoneoutboundrules $phoneoutboundrules The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchPhoneOutboundRuleAsyncWithHttpInfo($id, $phoneoutboundrules, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
+    public function patchPhoneOutboundRuleAsyncWithHttpInfo($id, $phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response';
-        $request = $this->patchPhoneOutboundRuleRequest($id, $phoneoutboundrules, $contentType);
+        $request = $this->patchPhoneOutboundRuleRequest($id, $phoneoutboundrulesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class PhoneOutboundRulesApi
      * Create request for operation 'patchPhoneOutboundRule'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Phoneoutboundrules $phoneoutboundrules The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\PhoneoutboundrulesCreateOrPatch $phoneoutboundrulesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchPhoneOutboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchPhoneOutboundRuleRequest($id, $phoneoutboundrules, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
+    public function patchPhoneOutboundRuleRequest($id, $phoneoutboundrulesCreateOrPatch, string $contentType = self::contentTypes['patchPhoneOutboundRule'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class PhoneOutboundRulesApi
             );
         }
 
-        // verify the required parameter 'phoneoutboundrules' is set
-        if ($phoneoutboundrules === null || (is_array($phoneoutboundrules) && count($phoneoutboundrules) === 0)) {
+        // verify the required parameter 'phoneoutboundrulesCreateOrPatch' is set
+        if ($phoneoutboundrulesCreateOrPatch === null || (is_array($phoneoutboundrulesCreateOrPatch) && count($phoneoutboundrulesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phoneoutboundrules when calling patchPhoneOutboundRule'
+                'Missing the required parameter $phoneoutboundrulesCreateOrPatch when calling patchPhoneOutboundRule'
             );
         }
 
@@ -2183,12 +2183,12 @@ class PhoneOutboundRulesApi
         );
 
         // for model (json/xml)
-        if (isset($phoneoutboundrules)) {
+        if (isset($phoneoutboundrulesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneoutboundrules));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneoutboundrulesCreateOrPatch));
             } else {
-                $httpBody = $phoneoutboundrules;
+                $httpBody = $phoneoutboundrulesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

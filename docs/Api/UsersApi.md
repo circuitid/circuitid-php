@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createUser()`
 
 ```php
-createUser($createusers): \OpenAPI\Client\CircuitID\GetUser200Response
+createUser($usersCreateOrPatch): \OpenAPI\Client\CircuitID\GetUser200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createusers = new \OpenAPI\Client\CircuitID\Createusers(); // \OpenAPI\Client\CircuitID\Createusers | The JSON object that will be posted to the REST API endpoint.
+$usersCreateOrPatch = new \OpenAPI\Client\CircuitID\UsersCreateOrPatch(); // \OpenAPI\Client\CircuitID\UsersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createUser($createusers);
+    $result = $apiInstance->createUser($usersCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->createUser: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createusers** | [**\OpenAPI\Client\CircuitID\Createusers**](../Model/Createusers.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **usersCreateOrPatch** | [**\OpenAPI\Client\CircuitID\UsersCreateOrPatch**](../Model/UsersCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchUser()`
 
 ```php
-patchUser($id, $users): \OpenAPI\Client\CircuitID\GetUser200Response
+patchUser($id, $usersCreateOrPatch): \OpenAPI\Client\CircuitID\GetUser200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\UsersApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$users = new \OpenAPI\Client\CircuitID\Users(); // \OpenAPI\Client\CircuitID\Users | The request data.
+$usersCreateOrPatch = new \OpenAPI\Client\CircuitID\UsersCreateOrPatch(); // \OpenAPI\Client\CircuitID\UsersCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchUser($id, $users);
+    $result = $apiInstance->patchUser($id, $usersCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->patchUser: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **users** | [**\OpenAPI\Client\CircuitID\Users**](../Model/Users.md)| The request data. | |
+| **usersCreateOrPatch** | [**\OpenAPI\Client\CircuitID\UsersCreateOrPatch**](../Model/UsersCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

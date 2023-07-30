@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createFirewall()`
 
 ```php
-createFirewall($createfirewall): \OpenAPI\Client\CircuitID\GetFirewall200Response
+createFirewall($firewallCreateOrPatch): \OpenAPI\Client\CircuitID\GetFirewall200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\FirewallApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createfirewall = new \OpenAPI\Client\CircuitID\Createfirewall(); // \OpenAPI\Client\CircuitID\Createfirewall | The JSON object that will be posted to the REST API endpoint.
+$firewallCreateOrPatch = new \OpenAPI\Client\CircuitID\FirewallCreateOrPatch(); // \OpenAPI\Client\CircuitID\FirewallCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createFirewall($createfirewall);
+    $result = $apiInstance->createFirewall($firewallCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FirewallApi->createFirewall: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createfirewall** | [**\OpenAPI\Client\CircuitID\Createfirewall**](../Model/Createfirewall.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **firewallCreateOrPatch** | [**\OpenAPI\Client\CircuitID\FirewallCreateOrPatch**](../Model/FirewallCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchFirewall()`
 
 ```php
-patchFirewall($id, $firewall): \OpenAPI\Client\CircuitID\GetFirewall200Response
+patchFirewall($id, $firewallCreateOrPatch): \OpenAPI\Client\CircuitID\GetFirewall200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\FirewallApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$firewall = new \OpenAPI\Client\CircuitID\Firewall(); // \OpenAPI\Client\CircuitID\Firewall | The request data.
+$firewallCreateOrPatch = new \OpenAPI\Client\CircuitID\FirewallCreateOrPatch(); // \OpenAPI\Client\CircuitID\FirewallCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchFirewall($id, $firewall);
+    $result = $apiInstance->patchFirewall($id, $firewallCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FirewallApi->patchFirewall: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **firewall** | [**\OpenAPI\Client\CircuitID\Firewall**](../Model/Firewall.md)| The request data. | |
+| **firewallCreateOrPatch** | [**\OpenAPI\Client\CircuitID\FirewallCreateOrPatch**](../Model/FirewallCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

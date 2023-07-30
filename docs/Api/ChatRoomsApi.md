@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createChatRoom()`
 
 ```php
-createChatRoom($createchatrooms): \OpenAPI\Client\CircuitID\GetChatRoom200Response
+createChatRoom($chatroomsCreateOrPatch): \OpenAPI\Client\CircuitID\GetChatRoom200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ChatRoomsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createchatrooms = new \OpenAPI\Client\CircuitID\Createchatrooms(); // \OpenAPI\Client\CircuitID\Createchatrooms | The JSON object that will be posted to the REST API endpoint.
+$chatroomsCreateOrPatch = new \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createChatRoom($createchatrooms);
+    $result = $apiInstance->createChatRoom($chatroomsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChatRoomsApi->createChatRoom: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createchatrooms** | [**\OpenAPI\Client\CircuitID\Createchatrooms**](../Model/Createchatrooms.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **chatroomsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch**](../Model/ChatroomsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchChatRoom()`
 
 ```php
-patchChatRoom($id, $chatrooms): \OpenAPI\Client\CircuitID\GetChatRoom200Response
+patchChatRoom($id, $chatroomsCreateOrPatch): \OpenAPI\Client\CircuitID\GetChatRoom200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ChatRoomsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$chatrooms = new \OpenAPI\Client\CircuitID\Chatrooms(); // \OpenAPI\Client\CircuitID\Chatrooms | The request data.
+$chatroomsCreateOrPatch = new \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchChatRoom($id, $chatrooms);
+    $result = $apiInstance->patchChatRoom($id, $chatroomsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChatRoomsApi->patchChatRoom: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **chatrooms** | [**\OpenAPI\Client\CircuitID\Chatrooms**](../Model/Chatrooms.md)| The request data. | |
+| **chatroomsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ChatroomsCreateOrPatch**](../Model/ChatroomsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

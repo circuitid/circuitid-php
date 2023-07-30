@@ -140,16 +140,16 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetFirewall200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createFirewall($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewall($firewallCreateOrPatch, string $contentType = self::contentTypes['createFirewall'][0])
     {
-        list($response) = $this->createFirewallWithHttpInfo($createfirewall, $contentType);
+        list($response) = $this->createFirewallWithHttpInfo($firewallCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetFirewall200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createFirewallWithHttpInfo($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallWithHttpInfo($firewallCreateOrPatch, string $contentType = self::contentTypes['createFirewall'][0])
     {
-        $request = $this->createFirewallRequest($createfirewall, $contentType);
+        $request = $this->createFirewallRequest($firewallCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFirewallAsync($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallAsync($firewallCreateOrPatch, string $contentType = self::contentTypes['createFirewall'][0])
     {
-        return $this->createFirewallAsyncWithHttpInfo($createfirewall, $contentType)
+        return $this->createFirewallAsyncWithHttpInfo($firewallCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFirewallAsyncWithHttpInfo($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallAsyncWithHttpInfo($firewallCreateOrPatch, string $contentType = self::contentTypes['createFirewall'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetFirewall200Response';
-        $request = $this->createFirewallRequest($createfirewall, $contentType);
+        $request = $this->createFirewallRequest($firewallCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class FirewallApi
     /**
      * Create request for operation 'createFirewall'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createFirewallRequest($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallRequest($firewallCreateOrPatch, string $contentType = self::contentTypes['createFirewall'][0])
     {
 
-        // verify the required parameter 'createfirewall' is set
-        if ($createfirewall === null || (is_array($createfirewall) && count($createfirewall) === 0)) {
+        // verify the required parameter 'firewallCreateOrPatch' is set
+        if ($firewallCreateOrPatch === null || (is_array($firewallCreateOrPatch) && count($firewallCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createfirewall when calling createFirewall'
+                'Missing the required parameter $firewallCreateOrPatch when calling createFirewall'
             );
         }
 
@@ -571,12 +571,12 @@ class FirewallApi
         );
 
         // for model (json/xml)
-        if (isset($createfirewall)) {
+        if (isset($firewallCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createfirewall));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($firewallCreateOrPatch));
             } else {
-                $httpBody = $createfirewall;
+                $httpBody = $firewallCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class FirewallApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetFirewall200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchFirewall($id, $firewall, string $contentType = self::contentTypes['patchFirewall'][0])
+    public function patchFirewall($id, $firewallCreateOrPatch, string $contentType = self::contentTypes['patchFirewall'][0])
     {
-        list($response) = $this->patchFirewallWithHttpInfo($id, $firewall, $contentType);
+        list($response) = $this->patchFirewallWithHttpInfo($id, $firewallCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class FirewallApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetFirewall200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchFirewallWithHttpInfo($id, $firewall, string $contentType = self::contentTypes['patchFirewall'][0])
+    public function patchFirewallWithHttpInfo($id, $firewallCreateOrPatch, string $contentType = self::contentTypes['patchFirewall'][0])
     {
-        $request = $this->patchFirewallRequest($id, $firewall, $contentType);
+        $request = $this->patchFirewallRequest($id, $firewallCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class FirewallApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchFirewallAsync($id, $firewall, string $contentType = self::contentTypes['patchFirewall'][0])
+    public function patchFirewallAsync($id, $firewallCreateOrPatch, string $contentType = self::contentTypes['patchFirewall'][0])
     {
-        return $this->patchFirewallAsyncWithHttpInfo($id, $firewall, $contentType)
+        return $this->patchFirewallAsyncWithHttpInfo($id, $firewallCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class FirewallApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchFirewallAsyncWithHttpInfo($id, $firewall, string $contentType = self::contentTypes['patchFirewall'][0])
+    public function patchFirewallAsyncWithHttpInfo($id, $firewallCreateOrPatch, string $contentType = self::contentTypes['patchFirewall'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetFirewall200Response';
-        $request = $this->patchFirewallRequest($id, $firewall, $contentType);
+        $request = $this->patchFirewallRequest($id, $firewallCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class FirewallApi
      * Create request for operation 'patchFirewall'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\FirewallCreateOrPatch $firewallCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchFirewallRequest($id, $firewall, string $contentType = self::contentTypes['patchFirewall'][0])
+    public function patchFirewallRequest($id, $firewallCreateOrPatch, string $contentType = self::contentTypes['patchFirewall'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class FirewallApi
             );
         }
 
-        // verify the required parameter 'firewall' is set
-        if ($firewall === null || (is_array($firewall) && count($firewall) === 0)) {
+        // verify the required parameter 'firewallCreateOrPatch' is set
+        if ($firewallCreateOrPatch === null || (is_array($firewallCreateOrPatch) && count($firewallCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $firewall when calling patchFirewall'
+                'Missing the required parameter $firewallCreateOrPatch when calling patchFirewall'
             );
         }
 
@@ -2183,12 +2183,12 @@ class FirewallApi
         );
 
         // for model (json/xml)
-        if (isset($firewall)) {
+        if (isset($firewallCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($firewall));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($firewallCreateOrPatch));
             } else {
-                $httpBody = $firewall;
+                $httpBody = $firewallCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

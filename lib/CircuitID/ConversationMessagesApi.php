@@ -140,16 +140,16 @@ class ConversationMessagesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconversationmessages $createconversationmessages The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConversationMessage'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetConversationMessage200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createConversationMessage($createconversationmessages, string $contentType = self::contentTypes['createConversationMessage'][0])
+    public function createConversationMessage($conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['createConversationMessage'][0])
     {
-        list($response) = $this->createConversationMessageWithHttpInfo($createconversationmessages, $contentType);
+        list($response) = $this->createConversationMessageWithHttpInfo($conversationmessagesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ConversationMessagesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconversationmessages $createconversationmessages The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConversationMessage'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetConversationMessage200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createConversationMessageWithHttpInfo($createconversationmessages, string $contentType = self::contentTypes['createConversationMessage'][0])
+    public function createConversationMessageWithHttpInfo($conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['createConversationMessage'][0])
     {
-        $request = $this->createConversationMessageRequest($createconversationmessages, $contentType);
+        $request = $this->createConversationMessageRequest($conversationmessagesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ConversationMessagesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconversationmessages $createconversationmessages The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConversationMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConversationMessageAsync($createconversationmessages, string $contentType = self::contentTypes['createConversationMessage'][0])
+    public function createConversationMessageAsync($conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['createConversationMessage'][0])
     {
-        return $this->createConversationMessageAsyncWithHttpInfo($createconversationmessages, $contentType)
+        return $this->createConversationMessageAsyncWithHttpInfo($conversationmessagesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ConversationMessagesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconversationmessages $createconversationmessages The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConversationMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConversationMessageAsyncWithHttpInfo($createconversationmessages, string $contentType = self::contentTypes['createConversationMessage'][0])
+    public function createConversationMessageAsyncWithHttpInfo($conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['createConversationMessage'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetConversationMessage200Response';
-        $request = $this->createConversationMessageRequest($createconversationmessages, $contentType);
+        $request = $this->createConversationMessageRequest($conversationmessagesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ConversationMessagesApi
     /**
      * Create request for operation 'createConversationMessage'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconversationmessages $createconversationmessages The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConversationMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createConversationMessageRequest($createconversationmessages, string $contentType = self::contentTypes['createConversationMessage'][0])
+    public function createConversationMessageRequest($conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['createConversationMessage'][0])
     {
 
-        // verify the required parameter 'createconversationmessages' is set
-        if ($createconversationmessages === null || (is_array($createconversationmessages) && count($createconversationmessages) === 0)) {
+        // verify the required parameter 'conversationmessagesCreateOrPatch' is set
+        if ($conversationmessagesCreateOrPatch === null || (is_array($conversationmessagesCreateOrPatch) && count($conversationmessagesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createconversationmessages when calling createConversationMessage'
+                'Missing the required parameter $conversationmessagesCreateOrPatch when calling createConversationMessage'
             );
         }
 
@@ -571,12 +571,12 @@ class ConversationMessagesApi
         );
 
         // for model (json/xml)
-        if (isset($createconversationmessages)) {
+        if (isset($conversationmessagesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createconversationmessages));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conversationmessagesCreateOrPatch));
             } else {
-                $httpBody = $createconversationmessages;
+                $httpBody = $conversationmessagesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class ConversationMessagesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conversationmessages $conversationmessages The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversationMessage'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetConversationMessage200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchConversationMessage($id, $conversationmessages, string $contentType = self::contentTypes['patchConversationMessage'][0])
+    public function patchConversationMessage($id, $conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['patchConversationMessage'][0])
     {
-        list($response) = $this->patchConversationMessageWithHttpInfo($id, $conversationmessages, $contentType);
+        list($response) = $this->patchConversationMessageWithHttpInfo($id, $conversationmessagesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class ConversationMessagesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conversationmessages $conversationmessages The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversationMessage'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetConversationMessage200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchConversationMessageWithHttpInfo($id, $conversationmessages, string $contentType = self::contentTypes['patchConversationMessage'][0])
+    public function patchConversationMessageWithHttpInfo($id, $conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['patchConversationMessage'][0])
     {
-        $request = $this->patchConversationMessageRequest($id, $conversationmessages, $contentType);
+        $request = $this->patchConversationMessageRequest($id, $conversationmessagesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class ConversationMessagesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conversationmessages $conversationmessages The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversationMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConversationMessageAsync($id, $conversationmessages, string $contentType = self::contentTypes['patchConversationMessage'][0])
+    public function patchConversationMessageAsync($id, $conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['patchConversationMessage'][0])
     {
-        return $this->patchConversationMessageAsyncWithHttpInfo($id, $conversationmessages, $contentType)
+        return $this->patchConversationMessageAsyncWithHttpInfo($id, $conversationmessagesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class ConversationMessagesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conversationmessages $conversationmessages The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversationMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConversationMessageAsyncWithHttpInfo($id, $conversationmessages, string $contentType = self::contentTypes['patchConversationMessage'][0])
+    public function patchConversationMessageAsyncWithHttpInfo($id, $conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['patchConversationMessage'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetConversationMessage200Response';
-        $request = $this->patchConversationMessageRequest($id, $conversationmessages, $contentType);
+        $request = $this->patchConversationMessageRequest($id, $conversationmessagesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class ConversationMessagesApi
      * Create request for operation 'patchConversationMessage'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conversationmessages $conversationmessages The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch $conversationmessagesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConversationMessage'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchConversationMessageRequest($id, $conversationmessages, string $contentType = self::contentTypes['patchConversationMessage'][0])
+    public function patchConversationMessageRequest($id, $conversationmessagesCreateOrPatch, string $contentType = self::contentTypes['patchConversationMessage'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class ConversationMessagesApi
             );
         }
 
-        // verify the required parameter 'conversationmessages' is set
-        if ($conversationmessages === null || (is_array($conversationmessages) && count($conversationmessages) === 0)) {
+        // verify the required parameter 'conversationmessagesCreateOrPatch' is set
+        if ($conversationmessagesCreateOrPatch === null || (is_array($conversationmessagesCreateOrPatch) && count($conversationmessagesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $conversationmessages when calling patchConversationMessage'
+                'Missing the required parameter $conversationmessagesCreateOrPatch when calling patchConversationMessage'
             );
         }
 
@@ -2183,12 +2183,12 @@ class ConversationMessagesApi
         );
 
         // for model (json/xml)
-        if (isset($conversationmessages)) {
+        if (isset($conversationmessagesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conversationmessages));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conversationmessagesCreateOrPatch));
             } else {
-                $httpBody = $conversationmessages;
+                $httpBody = $conversationmessagesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

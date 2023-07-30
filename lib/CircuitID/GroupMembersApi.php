@@ -140,16 +140,16 @@ class GroupMembersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Creategroupmembers $creategroupmembers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroupMember'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetGroupMember200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createGroupMember($creategroupmembers, string $contentType = self::contentTypes['createGroupMember'][0])
+    public function createGroupMember($groupmembersCreateOrPatch, string $contentType = self::contentTypes['createGroupMember'][0])
     {
-        list($response) = $this->createGroupMemberWithHttpInfo($creategroupmembers, $contentType);
+        list($response) = $this->createGroupMemberWithHttpInfo($groupmembersCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class GroupMembersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Creategroupmembers $creategroupmembers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroupMember'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetGroupMember200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createGroupMemberWithHttpInfo($creategroupmembers, string $contentType = self::contentTypes['createGroupMember'][0])
+    public function createGroupMemberWithHttpInfo($groupmembersCreateOrPatch, string $contentType = self::contentTypes['createGroupMember'][0])
     {
-        $request = $this->createGroupMemberRequest($creategroupmembers, $contentType);
+        $request = $this->createGroupMemberRequest($groupmembersCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class GroupMembersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Creategroupmembers $creategroupmembers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createGroupMemberAsync($creategroupmembers, string $contentType = self::contentTypes['createGroupMember'][0])
+    public function createGroupMemberAsync($groupmembersCreateOrPatch, string $contentType = self::contentTypes['createGroupMember'][0])
     {
-        return $this->createGroupMemberAsyncWithHttpInfo($creategroupmembers, $contentType)
+        return $this->createGroupMemberAsyncWithHttpInfo($groupmembersCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class GroupMembersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Creategroupmembers $creategroupmembers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createGroupMemberAsyncWithHttpInfo($creategroupmembers, string $contentType = self::contentTypes['createGroupMember'][0])
+    public function createGroupMemberAsyncWithHttpInfo($groupmembersCreateOrPatch, string $contentType = self::contentTypes['createGroupMember'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetGroupMember200Response';
-        $request = $this->createGroupMemberRequest($creategroupmembers, $contentType);
+        $request = $this->createGroupMemberRequest($groupmembersCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class GroupMembersApi
     /**
      * Create request for operation 'createGroupMember'
      *
-     * @param  \OpenAPI\Client\CircuitID\Creategroupmembers $creategroupmembers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createGroupMemberRequest($creategroupmembers, string $contentType = self::contentTypes['createGroupMember'][0])
+    public function createGroupMemberRequest($groupmembersCreateOrPatch, string $contentType = self::contentTypes['createGroupMember'][0])
     {
 
-        // verify the required parameter 'creategroupmembers' is set
-        if ($creategroupmembers === null || (is_array($creategroupmembers) && count($creategroupmembers) === 0)) {
+        // verify the required parameter 'groupmembersCreateOrPatch' is set
+        if ($groupmembersCreateOrPatch === null || (is_array($groupmembersCreateOrPatch) && count($groupmembersCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $creategroupmembers when calling createGroupMember'
+                'Missing the required parameter $groupmembersCreateOrPatch when calling createGroupMember'
             );
         }
 
@@ -571,12 +571,12 @@ class GroupMembersApi
         );
 
         // for model (json/xml)
-        if (isset($creategroupmembers)) {
+        if (isset($groupmembersCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($creategroupmembers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($groupmembersCreateOrPatch));
             } else {
-                $httpBody = $creategroupmembers;
+                $httpBody = $groupmembersCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetGroupMember200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchGroupMember($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMember($id, $groupmembersCreateOrPatch, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
-        list($response) = $this->patchGroupMemberWithHttpInfo($id, $groupmembers, $contentType);
+        list($response) = $this->patchGroupMemberWithHttpInfo($id, $groupmembersCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetGroupMember200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchGroupMemberWithHttpInfo($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberWithHttpInfo($id, $groupmembersCreateOrPatch, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
-        $request = $this->patchGroupMemberRequest($id, $groupmembers, $contentType);
+        $request = $this->patchGroupMemberRequest($id, $groupmembersCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchGroupMemberAsync($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberAsync($id, $groupmembersCreateOrPatch, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
-        return $this->patchGroupMemberAsyncWithHttpInfo($id, $groupmembers, $contentType)
+        return $this->patchGroupMemberAsyncWithHttpInfo($id, $groupmembersCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class GroupMembersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchGroupMemberAsyncWithHttpInfo($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberAsyncWithHttpInfo($id, $groupmembersCreateOrPatch, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetGroupMember200Response';
-        $request = $this->patchGroupMemberRequest($id, $groupmembers, $contentType);
+        $request = $this->patchGroupMemberRequest($id, $groupmembersCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class GroupMembersApi
      * Create request for operation 'patchGroupMember'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Groupmembers $groupmembers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch $groupmembersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchGroupMember'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchGroupMemberRequest($id, $groupmembers, string $contentType = self::contentTypes['patchGroupMember'][0])
+    public function patchGroupMemberRequest($id, $groupmembersCreateOrPatch, string $contentType = self::contentTypes['patchGroupMember'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class GroupMembersApi
             );
         }
 
-        // verify the required parameter 'groupmembers' is set
-        if ($groupmembers === null || (is_array($groupmembers) && count($groupmembers) === 0)) {
+        // verify the required parameter 'groupmembersCreateOrPatch' is set
+        if ($groupmembersCreateOrPatch === null || (is_array($groupmembersCreateOrPatch) && count($groupmembersCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $groupmembers when calling patchGroupMember'
+                'Missing the required parameter $groupmembersCreateOrPatch when calling patchGroupMember'
             );
         }
 
@@ -2183,12 +2183,12 @@ class GroupMembersApi
         );
 
         // for model (json/xml)
-        if (isset($groupmembers)) {
+        if (isset($groupmembersCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($groupmembers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($groupmembersCreateOrPatch));
             } else {
-                $httpBody = $groupmembers;
+                $httpBody = $groupmembersCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

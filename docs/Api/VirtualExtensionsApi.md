@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createVirtualExtension()`
 
 ```php
-createVirtualExtension($createvirtualextensions): \OpenAPI\Client\CircuitID\GetVirtualExtension200Response
+createVirtualExtension($virtualextensionsCreateOrPatch): \OpenAPI\Client\CircuitID\GetVirtualExtension200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\VirtualExtensionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createvirtualextensions = new \OpenAPI\Client\CircuitID\Createvirtualextensions(); // \OpenAPI\Client\CircuitID\Createvirtualextensions | The JSON object that will be posted to the REST API endpoint.
+$virtualextensionsCreateOrPatch = new \OpenAPI\Client\CircuitID\VirtualextensionsCreateOrPatch(); // \OpenAPI\Client\CircuitID\VirtualextensionsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createVirtualExtension($createvirtualextensions);
+    $result = $apiInstance->createVirtualExtension($virtualextensionsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VirtualExtensionsApi->createVirtualExtension: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createvirtualextensions** | [**\OpenAPI\Client\CircuitID\Createvirtualextensions**](../Model/Createvirtualextensions.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **virtualextensionsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\VirtualextensionsCreateOrPatch**](../Model/VirtualextensionsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchVirtualExtension()`
 
 ```php
-patchVirtualExtension($id, $virtualextensions): \OpenAPI\Client\CircuitID\GetVirtualExtension200Response
+patchVirtualExtension($id, $virtualextensionsCreateOrPatch): \OpenAPI\Client\CircuitID\GetVirtualExtension200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\VirtualExtensionsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$virtualextensions = new \OpenAPI\Client\CircuitID\Virtualextensions(); // \OpenAPI\Client\CircuitID\Virtualextensions | The request data.
+$virtualextensionsCreateOrPatch = new \OpenAPI\Client\CircuitID\VirtualextensionsCreateOrPatch(); // \OpenAPI\Client\CircuitID\VirtualextensionsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchVirtualExtension($id, $virtualextensions);
+    $result = $apiInstance->patchVirtualExtension($id, $virtualextensionsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VirtualExtensionsApi->patchVirtualExtension: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **virtualextensions** | [**\OpenAPI\Client\CircuitID\Virtualextensions**](../Model/Virtualextensions.md)| The request data. | |
+| **virtualextensionsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\VirtualextensionsCreateOrPatch**](../Model/VirtualextensionsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

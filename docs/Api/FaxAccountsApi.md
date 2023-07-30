@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createFaxAccount()`
 
 ```php
-createFaxAccount($createfaxaccounts): \OpenAPI\Client\CircuitID\GetFaxAccount200Response
+createFaxAccount($faxaccountsCreateOrPatch): \OpenAPI\Client\CircuitID\GetFaxAccount200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\FaxAccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createfaxaccounts = new \OpenAPI\Client\CircuitID\Createfaxaccounts(); // \OpenAPI\Client\CircuitID\Createfaxaccounts | The JSON object that will be posted to the REST API endpoint.
+$faxaccountsCreateOrPatch = new \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch(); // \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createFaxAccount($createfaxaccounts);
+    $result = $apiInstance->createFaxAccount($faxaccountsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FaxAccountsApi->createFaxAccount: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createfaxaccounts** | [**\OpenAPI\Client\CircuitID\Createfaxaccounts**](../Model/Createfaxaccounts.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **faxaccountsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch**](../Model/FaxaccountsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchFaxAccount()`
 
 ```php
-patchFaxAccount($id, $faxaccounts): \OpenAPI\Client\CircuitID\GetFaxAccount200Response
+patchFaxAccount($id, $faxaccountsCreateOrPatch): \OpenAPI\Client\CircuitID\GetFaxAccount200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\FaxAccountsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$faxaccounts = new \OpenAPI\Client\CircuitID\Faxaccounts(); // \OpenAPI\Client\CircuitID\Faxaccounts | The request data.
+$faxaccountsCreateOrPatch = new \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch(); // \OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchFaxAccount($id, $faxaccounts);
+    $result = $apiInstance->patchFaxAccount($id, $faxaccountsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FaxAccountsApi->patchFaxAccount: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **faxaccounts** | [**\OpenAPI\Client\CircuitID\Faxaccounts**](../Model/Faxaccounts.md)| The request data. | |
+| **faxaccountsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\FaxaccountsCreateOrPatch**](../Model/FaxaccountsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

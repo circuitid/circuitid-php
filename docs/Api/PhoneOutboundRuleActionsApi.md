@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createPhoneOutboundRuleAction()`
 
 ```php
-createPhoneOutboundRuleAction($createphoneoutboundruleactions): \OpenAPI\Client\CircuitID\GetPhoneOutboundRuleAction200Response
+createPhoneOutboundRuleAction($phoneoutboundruleactionsCreateOrPatch): \OpenAPI\Client\CircuitID\GetPhoneOutboundRuleAction200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\PhoneOutboundRuleActionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createphoneoutboundruleactions = new \OpenAPI\Client\CircuitID\Createphoneoutboundruleactions(); // \OpenAPI\Client\CircuitID\Createphoneoutboundruleactions | The JSON object that will be posted to the REST API endpoint.
+$phoneoutboundruleactionsCreateOrPatch = new \OpenAPI\Client\CircuitID\PhoneoutboundruleactionsCreateOrPatch(); // \OpenAPI\Client\CircuitID\PhoneoutboundruleactionsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createPhoneOutboundRuleAction($createphoneoutboundruleactions);
+    $result = $apiInstance->createPhoneOutboundRuleAction($phoneoutboundruleactionsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PhoneOutboundRuleActionsApi->createPhoneOutboundRuleAction: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createphoneoutboundruleactions** | [**\OpenAPI\Client\CircuitID\Createphoneoutboundruleactions**](../Model/Createphoneoutboundruleactions.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **phoneoutboundruleactionsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\PhoneoutboundruleactionsCreateOrPatch**](../Model/PhoneoutboundruleactionsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchPhoneOutboundRuleAction()`
 
 ```php
-patchPhoneOutboundRuleAction($id, $phoneoutboundruleactions): \OpenAPI\Client\CircuitID\GetPhoneOutboundRuleAction200Response
+patchPhoneOutboundRuleAction($id, $phoneoutboundruleactionsCreateOrPatch): \OpenAPI\Client\CircuitID\GetPhoneOutboundRuleAction200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\PhoneOutboundRuleActionsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$phoneoutboundruleactions = new \OpenAPI\Client\CircuitID\Phoneoutboundruleactions(); // \OpenAPI\Client\CircuitID\Phoneoutboundruleactions | The request data.
+$phoneoutboundruleactionsCreateOrPatch = new \OpenAPI\Client\CircuitID\PhoneoutboundruleactionsCreateOrPatch(); // \OpenAPI\Client\CircuitID\PhoneoutboundruleactionsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchPhoneOutboundRuleAction($id, $phoneoutboundruleactions);
+    $result = $apiInstance->patchPhoneOutboundRuleAction($id, $phoneoutboundruleactionsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PhoneOutboundRuleActionsApi->patchPhoneOutboundRuleAction: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **phoneoutboundruleactions** | [**\OpenAPI\Client\CircuitID\Phoneoutboundruleactions**](../Model/Phoneoutboundruleactions.md)| The request data. | |
+| **phoneoutboundruleactionsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\PhoneoutboundruleactionsCreateOrPatch**](../Model/PhoneoutboundruleactionsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

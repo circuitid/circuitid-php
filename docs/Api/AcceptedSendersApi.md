@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createAcceptedSender()`
 
 ```php
-createAcceptedSender($createacceptedsenders): \OpenAPI\Client\CircuitID\GetAcceptedSender200Response
+createAcceptedSender($acceptedsendersCreateOrPatch): \OpenAPI\Client\CircuitID\GetAcceptedSender200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\AcceptedSendersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createacceptedsenders = new \OpenAPI\Client\CircuitID\Createacceptedsenders(); // \OpenAPI\Client\CircuitID\Createacceptedsenders | The JSON object that will be posted to the REST API endpoint.
+$acceptedsendersCreateOrPatch = new \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch(); // \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createAcceptedSender($createacceptedsenders);
+    $result = $apiInstance->createAcceptedSender($acceptedsendersCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcceptedSendersApi->createAcceptedSender: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createacceptedsenders** | [**\OpenAPI\Client\CircuitID\Createacceptedsenders**](../Model/Createacceptedsenders.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **acceptedsendersCreateOrPatch** | [**\OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch**](../Model/AcceptedsendersCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchAcceptedSender()`
 
 ```php
-patchAcceptedSender($id, $acceptedsenders): \OpenAPI\Client\CircuitID\GetAcceptedSender200Response
+patchAcceptedSender($id, $acceptedsendersCreateOrPatch): \OpenAPI\Client\CircuitID\GetAcceptedSender200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\AcceptedSendersApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$acceptedsenders = new \OpenAPI\Client\CircuitID\Acceptedsenders(); // \OpenAPI\Client\CircuitID\Acceptedsenders | The request data.
+$acceptedsendersCreateOrPatch = new \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch(); // \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchAcceptedSender($id, $acceptedsenders);
+    $result = $apiInstance->patchAcceptedSender($id, $acceptedsendersCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcceptedSendersApi->patchAcceptedSender: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **acceptedsenders** | [**\OpenAPI\Client\CircuitID\Acceptedsenders**](../Model/Acceptedsenders.md)| The request data. | |
+| **acceptedsendersCreateOrPatch** | [**\OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch**](../Model/AcceptedsendersCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

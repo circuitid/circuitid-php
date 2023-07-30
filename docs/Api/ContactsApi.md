@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createContact()`
 
 ```php
-createContact($createcontacts): \OpenAPI\Client\CircuitID\GetContact200Response
+createContact($contactsCreateOrPatch): \OpenAPI\Client\CircuitID\GetContact200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ContactsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createcontacts = new \OpenAPI\Client\CircuitID\Createcontacts(); // \OpenAPI\Client\CircuitID\Createcontacts | The JSON object that will be posted to the REST API endpoint.
+$contactsCreateOrPatch = new \OpenAPI\Client\CircuitID\ContactsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ContactsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createContact($createcontacts);
+    $result = $apiInstance->createContact($contactsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->createContact: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createcontacts** | [**\OpenAPI\Client\CircuitID\Createcontacts**](../Model/Createcontacts.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **contactsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ContactsCreateOrPatch**](../Model/ContactsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchContact()`
 
 ```php
-patchContact($id, $contacts): \OpenAPI\Client\CircuitID\GetContact200Response
+patchContact($id, $contactsCreateOrPatch): \OpenAPI\Client\CircuitID\GetContact200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ContactsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$contacts = new \OpenAPI\Client\CircuitID\Contacts(); // \OpenAPI\Client\CircuitID\Contacts | The request data.
+$contactsCreateOrPatch = new \OpenAPI\Client\CircuitID\ContactsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ContactsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchContact($id, $contacts);
+    $result = $apiInstance->patchContact($id, $contactsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->patchContact: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **contacts** | [**\OpenAPI\Client\CircuitID\Contacts**](../Model/Contacts.md)| The request data. | |
+| **contactsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ContactsCreateOrPatch**](../Model/ContactsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

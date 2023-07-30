@@ -140,16 +140,16 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetCallQueue200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createCallQueue($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueue($callqueuesCreateOrPatch, string $contentType = self::contentTypes['createCallQueue'][0])
     {
-        list($response) = $this->createCallQueueWithHttpInfo($createcallqueues, $contentType);
+        list($response) = $this->createCallQueueWithHttpInfo($callqueuesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetCallQueue200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCallQueueWithHttpInfo($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueWithHttpInfo($callqueuesCreateOrPatch, string $contentType = self::contentTypes['createCallQueue'][0])
     {
-        $request = $this->createCallQueueRequest($createcallqueues, $contentType);
+        $request = $this->createCallQueueRequest($callqueuesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallQueueAsync($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueAsync($callqueuesCreateOrPatch, string $contentType = self::contentTypes['createCallQueue'][0])
     {
-        return $this->createCallQueueAsyncWithHttpInfo($createcallqueues, $contentType)
+        return $this->createCallQueueAsyncWithHttpInfo($callqueuesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallQueueAsyncWithHttpInfo($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueAsyncWithHttpInfo($callqueuesCreateOrPatch, string $contentType = self::contentTypes['createCallQueue'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetCallQueue200Response';
-        $request = $this->createCallQueueRequest($createcallqueues, $contentType);
+        $request = $this->createCallQueueRequest($callqueuesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class CallQueuesApi
     /**
      * Create request for operation 'createCallQueue'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createCallQueueRequest($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueRequest($callqueuesCreateOrPatch, string $contentType = self::contentTypes['createCallQueue'][0])
     {
 
-        // verify the required parameter 'createcallqueues' is set
-        if ($createcallqueues === null || (is_array($createcallqueues) && count($createcallqueues) === 0)) {
+        // verify the required parameter 'callqueuesCreateOrPatch' is set
+        if ($callqueuesCreateOrPatch === null || (is_array($callqueuesCreateOrPatch) && count($callqueuesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createcallqueues when calling createCallQueue'
+                'Missing the required parameter $callqueuesCreateOrPatch when calling createCallQueue'
             );
         }
 
@@ -571,12 +571,12 @@ class CallQueuesApi
         );
 
         // for model (json/xml)
-        if (isset($createcallqueues)) {
+        if (isset($callqueuesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createcallqueues));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($callqueuesCreateOrPatch));
             } else {
-                $httpBody = $createcallqueues;
+                $httpBody = $callqueuesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class CallQueuesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueue'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetCallQueue200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchCallQueue($id, $callqueues, string $contentType = self::contentTypes['patchCallQueue'][0])
+    public function patchCallQueue($id, $callqueuesCreateOrPatch, string $contentType = self::contentTypes['patchCallQueue'][0])
     {
-        list($response) = $this->patchCallQueueWithHttpInfo($id, $callqueues, $contentType);
+        list($response) = $this->patchCallQueueWithHttpInfo($id, $callqueuesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class CallQueuesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueue'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetCallQueue200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchCallQueueWithHttpInfo($id, $callqueues, string $contentType = self::contentTypes['patchCallQueue'][0])
+    public function patchCallQueueWithHttpInfo($id, $callqueuesCreateOrPatch, string $contentType = self::contentTypes['patchCallQueue'][0])
     {
-        $request = $this->patchCallQueueRequest($id, $callqueues, $contentType);
+        $request = $this->patchCallQueueRequest($id, $callqueuesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class CallQueuesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchCallQueueAsync($id, $callqueues, string $contentType = self::contentTypes['patchCallQueue'][0])
+    public function patchCallQueueAsync($id, $callqueuesCreateOrPatch, string $contentType = self::contentTypes['patchCallQueue'][0])
     {
-        return $this->patchCallQueueAsyncWithHttpInfo($id, $callqueues, $contentType)
+        return $this->patchCallQueueAsyncWithHttpInfo($id, $callqueuesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class CallQueuesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchCallQueueAsyncWithHttpInfo($id, $callqueues, string $contentType = self::contentTypes['patchCallQueue'][0])
+    public function patchCallQueueAsyncWithHttpInfo($id, $callqueuesCreateOrPatch, string $contentType = self::contentTypes['patchCallQueue'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetCallQueue200Response';
-        $request = $this->patchCallQueueRequest($id, $callqueues, $contentType);
+        $request = $this->patchCallQueueRequest($id, $callqueuesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class CallQueuesApi
      * Create request for operation 'patchCallQueue'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch $callqueuesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchCallQueueRequest($id, $callqueues, string $contentType = self::contentTypes['patchCallQueue'][0])
+    public function patchCallQueueRequest($id, $callqueuesCreateOrPatch, string $contentType = self::contentTypes['patchCallQueue'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class CallQueuesApi
             );
         }
 
-        // verify the required parameter 'callqueues' is set
-        if ($callqueues === null || (is_array($callqueues) && count($callqueues) === 0)) {
+        // verify the required parameter 'callqueuesCreateOrPatch' is set
+        if ($callqueuesCreateOrPatch === null || (is_array($callqueuesCreateOrPatch) && count($callqueuesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $callqueues when calling patchCallQueue'
+                'Missing the required parameter $callqueuesCreateOrPatch when calling patchCallQueue'
             );
         }
 
@@ -2183,12 +2183,12 @@ class CallQueuesApi
         );
 
         // for model (json/xml)
-        if (isset($callqueues)) {
+        if (isset($callqueuesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($callqueues));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($callqueuesCreateOrPatch));
             } else {
-                $httpBody = $callqueues;
+                $httpBody = $callqueuesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

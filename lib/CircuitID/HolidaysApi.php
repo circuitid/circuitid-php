@@ -140,16 +140,16 @@ class HolidaysApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createholidays $createholidays The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHoliday'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetHoliday200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createHoliday($createholidays, string $contentType = self::contentTypes['createHoliday'][0])
+    public function createHoliday($holidaysCreateOrPatch, string $contentType = self::contentTypes['createHoliday'][0])
     {
-        list($response) = $this->createHolidayWithHttpInfo($createholidays, $contentType);
+        list($response) = $this->createHolidayWithHttpInfo($holidaysCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class HolidaysApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createholidays $createholidays The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHoliday'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetHoliday200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createHolidayWithHttpInfo($createholidays, string $contentType = self::contentTypes['createHoliday'][0])
+    public function createHolidayWithHttpInfo($holidaysCreateOrPatch, string $contentType = self::contentTypes['createHoliday'][0])
     {
-        $request = $this->createHolidayRequest($createholidays, $contentType);
+        $request = $this->createHolidayRequest($holidaysCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class HolidaysApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createholidays $createholidays The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHoliday'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createHolidayAsync($createholidays, string $contentType = self::contentTypes['createHoliday'][0])
+    public function createHolidayAsync($holidaysCreateOrPatch, string $contentType = self::contentTypes['createHoliday'][0])
     {
-        return $this->createHolidayAsyncWithHttpInfo($createholidays, $contentType)
+        return $this->createHolidayAsyncWithHttpInfo($holidaysCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class HolidaysApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createholidays $createholidays The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHoliday'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createHolidayAsyncWithHttpInfo($createholidays, string $contentType = self::contentTypes['createHoliday'][0])
+    public function createHolidayAsyncWithHttpInfo($holidaysCreateOrPatch, string $contentType = self::contentTypes['createHoliday'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetHoliday200Response';
-        $request = $this->createHolidayRequest($createholidays, $contentType);
+        $request = $this->createHolidayRequest($holidaysCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class HolidaysApi
     /**
      * Create request for operation 'createHoliday'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createholidays $createholidays The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHoliday'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createHolidayRequest($createholidays, string $contentType = self::contentTypes['createHoliday'][0])
+    public function createHolidayRequest($holidaysCreateOrPatch, string $contentType = self::contentTypes['createHoliday'][0])
     {
 
-        // verify the required parameter 'createholidays' is set
-        if ($createholidays === null || (is_array($createholidays) && count($createholidays) === 0)) {
+        // verify the required parameter 'holidaysCreateOrPatch' is set
+        if ($holidaysCreateOrPatch === null || (is_array($holidaysCreateOrPatch) && count($holidaysCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createholidays when calling createHoliday'
+                'Missing the required parameter $holidaysCreateOrPatch when calling createHoliday'
             );
         }
 
@@ -571,12 +571,12 @@ class HolidaysApi
         );
 
         // for model (json/xml)
-        if (isset($createholidays)) {
+        if (isset($holidaysCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createholidays));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($holidaysCreateOrPatch));
             } else {
-                $httpBody = $createholidays;
+                $httpBody = $holidaysCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class HolidaysApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Holidays $holidays The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchHoliday'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetHoliday200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchHoliday($id, $holidays, string $contentType = self::contentTypes['patchHoliday'][0])
+    public function patchHoliday($id, $holidaysCreateOrPatch, string $contentType = self::contentTypes['patchHoliday'][0])
     {
-        list($response) = $this->patchHolidayWithHttpInfo($id, $holidays, $contentType);
+        list($response) = $this->patchHolidayWithHttpInfo($id, $holidaysCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class HolidaysApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Holidays $holidays The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchHoliday'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetHoliday200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchHolidayWithHttpInfo($id, $holidays, string $contentType = self::contentTypes['patchHoliday'][0])
+    public function patchHolidayWithHttpInfo($id, $holidaysCreateOrPatch, string $contentType = self::contentTypes['patchHoliday'][0])
     {
-        $request = $this->patchHolidayRequest($id, $holidays, $contentType);
+        $request = $this->patchHolidayRequest($id, $holidaysCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class HolidaysApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Holidays $holidays The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchHoliday'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchHolidayAsync($id, $holidays, string $contentType = self::contentTypes['patchHoliday'][0])
+    public function patchHolidayAsync($id, $holidaysCreateOrPatch, string $contentType = self::contentTypes['patchHoliday'][0])
     {
-        return $this->patchHolidayAsyncWithHttpInfo($id, $holidays, $contentType)
+        return $this->patchHolidayAsyncWithHttpInfo($id, $holidaysCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class HolidaysApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Holidays $holidays The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchHoliday'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchHolidayAsyncWithHttpInfo($id, $holidays, string $contentType = self::contentTypes['patchHoliday'][0])
+    public function patchHolidayAsyncWithHttpInfo($id, $holidaysCreateOrPatch, string $contentType = self::contentTypes['patchHoliday'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetHoliday200Response';
-        $request = $this->patchHolidayRequest($id, $holidays, $contentType);
+        $request = $this->patchHolidayRequest($id, $holidaysCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class HolidaysApi
      * Create request for operation 'patchHoliday'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Holidays $holidays The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch $holidaysCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchHoliday'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchHolidayRequest($id, $holidays, string $contentType = self::contentTypes['patchHoliday'][0])
+    public function patchHolidayRequest($id, $holidaysCreateOrPatch, string $contentType = self::contentTypes['patchHoliday'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class HolidaysApi
             );
         }
 
-        // verify the required parameter 'holidays' is set
-        if ($holidays === null || (is_array($holidays) && count($holidays) === 0)) {
+        // verify the required parameter 'holidaysCreateOrPatch' is set
+        if ($holidaysCreateOrPatch === null || (is_array($holidaysCreateOrPatch) && count($holidaysCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $holidays when calling patchHoliday'
+                'Missing the required parameter $holidaysCreateOrPatch when calling patchHoliday'
             );
         }
 
@@ -2183,12 +2183,12 @@ class HolidaysApi
         );
 
         // for model (json/xml)
-        if (isset($holidays)) {
+        if (isset($holidaysCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($holidays));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($holidaysCreateOrPatch));
             } else {
-                $httpBody = $holidays;
+                $httpBody = $holidaysCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

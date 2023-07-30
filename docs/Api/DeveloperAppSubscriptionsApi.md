@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createDeveloperAppSubscription()`
 
 ```php
-createDeveloperAppSubscription($createdeveloperappsubscriptions): \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response
+createDeveloperAppSubscription($developerappsubscriptionsCreateOrPatch): \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppSubscriptionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createdeveloperappsubscriptions = new \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions(); // \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions | The JSON object that will be posted to the REST API endpoint.
+$developerappsubscriptionsCreateOrPatch = new \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch(); // \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createDeveloperAppSubscription($createdeveloperappsubscriptions);
+    $result = $apiInstance->createDeveloperAppSubscription($developerappsubscriptionsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppSubscriptionsApi->createDeveloperAppSubscription: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createdeveloperappsubscriptions** | [**\OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions**](../Model/Createdeveloperappsubscriptions.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **developerappsubscriptionsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch**](../Model/DeveloperappsubscriptionsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchDeveloperAppSubscription()`
 
 ```php
-patchDeveloperAppSubscription($id, $developerappsubscriptions): \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response
+patchDeveloperAppSubscription($id, $developerappsubscriptionsCreateOrPatch): \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppSubscriptionsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$developerappsubscriptions = new \OpenAPI\Client\CircuitID\Developerappsubscriptions(); // \OpenAPI\Client\CircuitID\Developerappsubscriptions | The request data.
+$developerappsubscriptionsCreateOrPatch = new \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch(); // \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchDeveloperAppSubscription($id, $developerappsubscriptions);
+    $result = $apiInstance->patchDeveloperAppSubscription($id, $developerappsubscriptionsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppSubscriptionsApi->patchDeveloperAppSubscription: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **developerappsubscriptions** | [**\OpenAPI\Client\CircuitID\Developerappsubscriptions**](../Model/Developerappsubscriptions.md)| The request data. | |
+| **developerappsubscriptionsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch**](../Model/DeveloperappsubscriptionsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

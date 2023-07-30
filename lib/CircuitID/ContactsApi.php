@@ -140,16 +140,16 @@ class ContactsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcontacts $createcontacts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetContact200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createContact($createcontacts, string $contentType = self::contentTypes['createContact'][0])
+    public function createContact($contactsCreateOrPatch, string $contentType = self::contentTypes['createContact'][0])
     {
-        list($response) = $this->createContactWithHttpInfo($createcontacts, $contentType);
+        list($response) = $this->createContactWithHttpInfo($contactsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ContactsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcontacts $createcontacts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetContact200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createContactWithHttpInfo($createcontacts, string $contentType = self::contentTypes['createContact'][0])
+    public function createContactWithHttpInfo($contactsCreateOrPatch, string $contentType = self::contentTypes['createContact'][0])
     {
-        $request = $this->createContactRequest($createcontacts, $contentType);
+        $request = $this->createContactRequest($contactsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ContactsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcontacts $createcontacts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createContactAsync($createcontacts, string $contentType = self::contentTypes['createContact'][0])
+    public function createContactAsync($contactsCreateOrPatch, string $contentType = self::contentTypes['createContact'][0])
     {
-        return $this->createContactAsyncWithHttpInfo($createcontacts, $contentType)
+        return $this->createContactAsyncWithHttpInfo($contactsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ContactsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcontacts $createcontacts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createContactAsyncWithHttpInfo($createcontacts, string $contentType = self::contentTypes['createContact'][0])
+    public function createContactAsyncWithHttpInfo($contactsCreateOrPatch, string $contentType = self::contentTypes['createContact'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetContact200Response';
-        $request = $this->createContactRequest($createcontacts, $contentType);
+        $request = $this->createContactRequest($contactsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ContactsApi
     /**
      * Create request for operation 'createContact'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createcontacts $createcontacts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createContactRequest($createcontacts, string $contentType = self::contentTypes['createContact'][0])
+    public function createContactRequest($contactsCreateOrPatch, string $contentType = self::contentTypes['createContact'][0])
     {
 
-        // verify the required parameter 'createcontacts' is set
-        if ($createcontacts === null || (is_array($createcontacts) && count($createcontacts) === 0)) {
+        // verify the required parameter 'contactsCreateOrPatch' is set
+        if ($contactsCreateOrPatch === null || (is_array($contactsCreateOrPatch) && count($contactsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createcontacts when calling createContact'
+                'Missing the required parameter $contactsCreateOrPatch when calling createContact'
             );
         }
 
@@ -571,12 +571,12 @@ class ContactsApi
         );
 
         // for model (json/xml)
-        if (isset($createcontacts)) {
+        if (isset($contactsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createcontacts));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contactsCreateOrPatch));
             } else {
-                $httpBody = $createcontacts;
+                $httpBody = $contactsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetContact200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchContact($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContact($id, $contactsCreateOrPatch, string $contentType = self::contentTypes['patchContact'][0])
     {
-        list($response) = $this->patchContactWithHttpInfo($id, $contacts, $contentType);
+        list($response) = $this->patchContactWithHttpInfo($id, $contactsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetContact200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchContactWithHttpInfo($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactWithHttpInfo($id, $contactsCreateOrPatch, string $contentType = self::contentTypes['patchContact'][0])
     {
-        $request = $this->patchContactRequest($id, $contacts, $contentType);
+        $request = $this->patchContactRequest($id, $contactsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchContactAsync($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactAsync($id, $contactsCreateOrPatch, string $contentType = self::contentTypes['patchContact'][0])
     {
-        return $this->patchContactAsyncWithHttpInfo($id, $contacts, $contentType)
+        return $this->patchContactAsyncWithHttpInfo($id, $contactsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class ContactsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchContactAsyncWithHttpInfo($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactAsyncWithHttpInfo($id, $contactsCreateOrPatch, string $contentType = self::contentTypes['patchContact'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetContact200Response';
-        $request = $this->patchContactRequest($id, $contacts, $contentType);
+        $request = $this->patchContactRequest($id, $contactsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class ContactsApi
      * Create request for operation 'patchContact'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Contacts $contacts The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ContactsCreateOrPatch $contactsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchContactRequest($id, $contacts, string $contentType = self::contentTypes['patchContact'][0])
+    public function patchContactRequest($id, $contactsCreateOrPatch, string $contentType = self::contentTypes['patchContact'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class ContactsApi
             );
         }
 
-        // verify the required parameter 'contacts' is set
-        if ($contacts === null || (is_array($contacts) && count($contacts) === 0)) {
+        // verify the required parameter 'contactsCreateOrPatch' is set
+        if ($contactsCreateOrPatch === null || (is_array($contactsCreateOrPatch) && count($contactsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $contacts when calling patchContact'
+                'Missing the required parameter $contactsCreateOrPatch when calling patchContact'
             );
         }
 
@@ -2183,12 +2183,12 @@ class ContactsApi
         );
 
         // for model (json/xml)
-        if (isset($contacts)) {
+        if (isset($contactsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contacts));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contactsCreateOrPatch));
             } else {
-                $httpBody = $contacts;
+                $httpBody = $contactsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

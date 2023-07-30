@@ -140,16 +140,16 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetAnnouncement200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createAnnouncement($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncement($announcementsCreateOrPatch, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
-        list($response) = $this->createAnnouncementWithHttpInfo($createannouncements, $contentType);
+        list($response) = $this->createAnnouncementWithHttpInfo($announcementsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetAnnouncement200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAnnouncementWithHttpInfo($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementWithHttpInfo($announcementsCreateOrPatch, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
-        $request = $this->createAnnouncementRequest($createannouncements, $contentType);
+        $request = $this->createAnnouncementRequest($announcementsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAnnouncementAsync($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementAsync($announcementsCreateOrPatch, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
-        return $this->createAnnouncementAsyncWithHttpInfo($createannouncements, $contentType)
+        return $this->createAnnouncementAsyncWithHttpInfo($announcementsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAnnouncementAsyncWithHttpInfo($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementAsyncWithHttpInfo($announcementsCreateOrPatch, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetAnnouncement200Response';
-        $request = $this->createAnnouncementRequest($createannouncements, $contentType);
+        $request = $this->createAnnouncementRequest($announcementsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class AnnouncementsApi
     /**
      * Create request for operation 'createAnnouncement'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAnnouncementRequest($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementRequest($announcementsCreateOrPatch, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
 
-        // verify the required parameter 'createannouncements' is set
-        if ($createannouncements === null || (is_array($createannouncements) && count($createannouncements) === 0)) {
+        // verify the required parameter 'announcementsCreateOrPatch' is set
+        if ($announcementsCreateOrPatch === null || (is_array($announcementsCreateOrPatch) && count($announcementsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createannouncements when calling createAnnouncement'
+                'Missing the required parameter $announcementsCreateOrPatch when calling createAnnouncement'
             );
         }
 
@@ -571,12 +571,12 @@ class AnnouncementsApi
         );
 
         // for model (json/xml)
-        if (isset($createannouncements)) {
+        if (isset($announcementsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createannouncements));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($announcementsCreateOrPatch));
             } else {
-                $httpBody = $createannouncements;
+                $httpBody = $announcementsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetAnnouncement200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchAnnouncement($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncement($id, $announcementsCreateOrPatch, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
-        list($response) = $this->patchAnnouncementWithHttpInfo($id, $announcements, $contentType);
+        list($response) = $this->patchAnnouncementWithHttpInfo($id, $announcementsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetAnnouncement200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchAnnouncementWithHttpInfo($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementWithHttpInfo($id, $announcementsCreateOrPatch, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
-        $request = $this->patchAnnouncementRequest($id, $announcements, $contentType);
+        $request = $this->patchAnnouncementRequest($id, $announcementsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchAnnouncementAsync($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementAsync($id, $announcementsCreateOrPatch, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
-        return $this->patchAnnouncementAsyncWithHttpInfo($id, $announcements, $contentType)
+        return $this->patchAnnouncementAsyncWithHttpInfo($id, $announcementsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class AnnouncementsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchAnnouncementAsyncWithHttpInfo($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementAsyncWithHttpInfo($id, $announcementsCreateOrPatch, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetAnnouncement200Response';
-        $request = $this->patchAnnouncementRequest($id, $announcements, $contentType);
+        $request = $this->patchAnnouncementRequest($id, $announcementsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class AnnouncementsApi
      * Create request for operation 'patchAnnouncement'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch $announcementsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchAnnouncementRequest($id, $announcements, string $contentType = self::contentTypes['patchAnnouncement'][0])
+    public function patchAnnouncementRequest($id, $announcementsCreateOrPatch, string $contentType = self::contentTypes['patchAnnouncement'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class AnnouncementsApi
             );
         }
 
-        // verify the required parameter 'announcements' is set
-        if ($announcements === null || (is_array($announcements) && count($announcements) === 0)) {
+        // verify the required parameter 'announcementsCreateOrPatch' is set
+        if ($announcementsCreateOrPatch === null || (is_array($announcementsCreateOrPatch) && count($announcementsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $announcements when calling patchAnnouncement'
+                'Missing the required parameter $announcementsCreateOrPatch when calling patchAnnouncement'
             );
         }
 
@@ -2183,12 +2183,12 @@ class AnnouncementsApi
         );
 
         // for model (json/xml)
-        if (isset($announcements)) {
+        if (isset($announcementsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($announcements));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($announcementsCreateOrPatch));
             } else {
-                $httpBody = $announcements;
+                $httpBody = $announcementsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

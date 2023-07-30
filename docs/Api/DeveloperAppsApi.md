@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createDeveloperApp()`
 
 ```php
-createDeveloperApp($createdeveloperapps): \OpenAPI\Client\CircuitID\GetDeveloperApp200Response
+createDeveloperApp($developerappsCreateOrPatch): \OpenAPI\Client\CircuitID\GetDeveloperApp200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createdeveloperapps = new \OpenAPI\Client\CircuitID\Createdeveloperapps(); // \OpenAPI\Client\CircuitID\Createdeveloperapps | The JSON object that will be posted to the REST API endpoint.
+$developerappsCreateOrPatch = new \OpenAPI\Client\CircuitID\DeveloperappsCreateOrPatch(); // \OpenAPI\Client\CircuitID\DeveloperappsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createDeveloperApp($createdeveloperapps);
+    $result = $apiInstance->createDeveloperApp($developerappsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppsApi->createDeveloperApp: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createdeveloperapps** | [**\OpenAPI\Client\CircuitID\Createdeveloperapps**](../Model/Createdeveloperapps.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **developerappsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DeveloperappsCreateOrPatch**](../Model/DeveloperappsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchDeveloperApp()`
 
 ```php
-patchDeveloperApp($id, $developerapps): \OpenAPI\Client\CircuitID\GetDeveloperApp200Response
+patchDeveloperApp($id, $developerappsCreateOrPatch): \OpenAPI\Client\CircuitID\GetDeveloperApp200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$developerapps = new \OpenAPI\Client\CircuitID\Developerapps(); // \OpenAPI\Client\CircuitID\Developerapps | The request data.
+$developerappsCreateOrPatch = new \OpenAPI\Client\CircuitID\DeveloperappsCreateOrPatch(); // \OpenAPI\Client\CircuitID\DeveloperappsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchDeveloperApp($id, $developerapps);
+    $result = $apiInstance->patchDeveloperApp($id, $developerappsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppsApi->patchDeveloperApp: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **developerapps** | [**\OpenAPI\Client\CircuitID\Developerapps**](../Model/Developerapps.md)| The request data. | |
+| **developerappsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DeveloperappsCreateOrPatch**](../Model/DeveloperappsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

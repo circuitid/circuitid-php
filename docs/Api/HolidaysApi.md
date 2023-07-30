@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createHoliday()`
 
 ```php
-createHoliday($createholidays): \OpenAPI\Client\CircuitID\GetHoliday200Response
+createHoliday($holidaysCreateOrPatch): \OpenAPI\Client\CircuitID\GetHoliday200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\HolidaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createholidays = new \OpenAPI\Client\CircuitID\Createholidays(); // \OpenAPI\Client\CircuitID\Createholidays | The JSON object that will be posted to the REST API endpoint.
+$holidaysCreateOrPatch = new \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch(); // \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createHoliday($createholidays);
+    $result = $apiInstance->createHoliday($holidaysCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HolidaysApi->createHoliday: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createholidays** | [**\OpenAPI\Client\CircuitID\Createholidays**](../Model/Createholidays.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **holidaysCreateOrPatch** | [**\OpenAPI\Client\CircuitID\HolidaysCreateOrPatch**](../Model/HolidaysCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchHoliday()`
 
 ```php
-patchHoliday($id, $holidays): \OpenAPI\Client\CircuitID\GetHoliday200Response
+patchHoliday($id, $holidaysCreateOrPatch): \OpenAPI\Client\CircuitID\GetHoliday200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\HolidaysApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$holidays = new \OpenAPI\Client\CircuitID\Holidays(); // \OpenAPI\Client\CircuitID\Holidays | The request data.
+$holidaysCreateOrPatch = new \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch(); // \OpenAPI\Client\CircuitID\HolidaysCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchHoliday($id, $holidays);
+    $result = $apiInstance->patchHoliday($id, $holidaysCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HolidaysApi->patchHoliday: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **holidays** | [**\OpenAPI\Client\CircuitID\Holidays**](../Model/Holidays.md)| The request data. | |
+| **holidaysCreateOrPatch** | [**\OpenAPI\Client\CircuitID\HolidaysCreateOrPatch**](../Model/HolidaysCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

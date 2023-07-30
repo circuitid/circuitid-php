@@ -13,7 +13,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createNumberPort()`
 
 ```php
-createNumberPort($createnumberports): \OpenAPI\Client\CircuitID\GetNumberPort200Response
+createNumberPort($numberportsCreateOrPatch): \OpenAPI\Client\CircuitID\GetNumberPort200Response
 ```
 
 Create a new object
@@ -39,10 +39,10 @@ $apiInstance = new OpenAPI\Client\Api\NumberPortsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createnumberports = new \OpenAPI\Client\CircuitID\Createnumberports(); // \OpenAPI\Client\CircuitID\Createnumberports | The JSON object that will be posted to the REST API endpoint.
+$numberportsCreateOrPatch = new \OpenAPI\Client\CircuitID\NumberportsCreateOrPatch(); // \OpenAPI\Client\CircuitID\NumberportsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createNumberPort($createnumberports);
+    $result = $apiInstance->createNumberPort($numberportsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NumberPortsApi->createNumberPort: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +53,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createnumberports** | [**\OpenAPI\Client\CircuitID\Createnumberports**](../Model/Createnumberports.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **numberportsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\NumberportsCreateOrPatch**](../Model/NumberportsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -211,7 +211,7 @@ try {
 ## `patchNumberPort()`
 
 ```php
-patchNumberPort($id, $numberports): \OpenAPI\Client\CircuitID\GetNumberPort200Response
+patchNumberPort($id, $numberportsCreateOrPatch): \OpenAPI\Client\CircuitID\GetNumberPort200Response
 ```
 
 Patch object's data
@@ -238,10 +238,10 @@ $apiInstance = new OpenAPI\Client\Api\NumberPortsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$numberports = new \OpenAPI\Client\CircuitID\Numberports(); // \OpenAPI\Client\CircuitID\Numberports | The request data.
+$numberportsCreateOrPatch = new \OpenAPI\Client\CircuitID\NumberportsCreateOrPatch(); // \OpenAPI\Client\CircuitID\NumberportsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchNumberPort($id, $numberports);
+    $result = $apiInstance->patchNumberPort($id, $numberportsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NumberPortsApi->patchNumberPort: ', $e->getMessage(), PHP_EOL;
@@ -253,7 +253,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **numberports** | [**\OpenAPI\Client\CircuitID\Numberports**](../Model/Numberports.md)| The request data. | |
+| **numberportsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\NumberportsCreateOrPatch**](../Model/NumberportsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

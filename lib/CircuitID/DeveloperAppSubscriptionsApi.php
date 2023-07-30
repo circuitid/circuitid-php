@@ -140,16 +140,16 @@ class DeveloperAppSubscriptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions $createdeveloperappsubscriptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createDeveloperAppSubscription($createdeveloperappsubscriptions, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
+    public function createDeveloperAppSubscription($developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
     {
-        list($response) = $this->createDeveloperAppSubscriptionWithHttpInfo($createdeveloperappsubscriptions, $contentType);
+        list($response) = $this->createDeveloperAppSubscriptionWithHttpInfo($developerappsubscriptionsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class DeveloperAppSubscriptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions $createdeveloperappsubscriptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDeveloperAppSubscriptionWithHttpInfo($createdeveloperappsubscriptions, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
+    public function createDeveloperAppSubscriptionWithHttpInfo($developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
     {
-        $request = $this->createDeveloperAppSubscriptionRequest($createdeveloperappsubscriptions, $contentType);
+        $request = $this->createDeveloperAppSubscriptionRequest($developerappsubscriptionsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class DeveloperAppSubscriptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions $createdeveloperappsubscriptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDeveloperAppSubscriptionAsync($createdeveloperappsubscriptions, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
+    public function createDeveloperAppSubscriptionAsync($developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
     {
-        return $this->createDeveloperAppSubscriptionAsyncWithHttpInfo($createdeveloperappsubscriptions, $contentType)
+        return $this->createDeveloperAppSubscriptionAsyncWithHttpInfo($developerappsubscriptionsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class DeveloperAppSubscriptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions $createdeveloperappsubscriptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDeveloperAppSubscriptionAsyncWithHttpInfo($createdeveloperappsubscriptions, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
+    public function createDeveloperAppSubscriptionAsyncWithHttpInfo($developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response';
-        $request = $this->createDeveloperAppSubscriptionRequest($createdeveloperappsubscriptions, $contentType);
+        $request = $this->createDeveloperAppSubscriptionRequest($developerappsubscriptionsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class DeveloperAppSubscriptionsApi
     /**
      * Create request for operation 'createDeveloperAppSubscription'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions $createdeveloperappsubscriptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDeveloperAppSubscriptionRequest($createdeveloperappsubscriptions, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
+    public function createDeveloperAppSubscriptionRequest($developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['createDeveloperAppSubscription'][0])
     {
 
-        // verify the required parameter 'createdeveloperappsubscriptions' is set
-        if ($createdeveloperappsubscriptions === null || (is_array($createdeveloperappsubscriptions) && count($createdeveloperappsubscriptions) === 0)) {
+        // verify the required parameter 'developerappsubscriptionsCreateOrPatch' is set
+        if ($developerappsubscriptionsCreateOrPatch === null || (is_array($developerappsubscriptionsCreateOrPatch) && count($developerappsubscriptionsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createdeveloperappsubscriptions when calling createDeveloperAppSubscription'
+                'Missing the required parameter $developerappsubscriptionsCreateOrPatch when calling createDeveloperAppSubscription'
             );
         }
 
@@ -571,12 +571,12 @@ class DeveloperAppSubscriptionsApi
         );
 
         // for model (json/xml)
-        if (isset($createdeveloperappsubscriptions)) {
+        if (isset($developerappsubscriptionsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createdeveloperappsubscriptions));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($developerappsubscriptionsCreateOrPatch));
             } else {
-                $httpBody = $createdeveloperappsubscriptions;
+                $httpBody = $developerappsubscriptionsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class DeveloperAppSubscriptionsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Developerappsubscriptions $developerappsubscriptions The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchDeveloperAppSubscription($id, $developerappsubscriptions, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
+    public function patchDeveloperAppSubscription($id, $developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
     {
-        list($response) = $this->patchDeveloperAppSubscriptionWithHttpInfo($id, $developerappsubscriptions, $contentType);
+        list($response) = $this->patchDeveloperAppSubscriptionWithHttpInfo($id, $developerappsubscriptionsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class DeveloperAppSubscriptionsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Developerappsubscriptions $developerappsubscriptions The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchDeveloperAppSubscriptionWithHttpInfo($id, $developerappsubscriptions, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
+    public function patchDeveloperAppSubscriptionWithHttpInfo($id, $developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
     {
-        $request = $this->patchDeveloperAppSubscriptionRequest($id, $developerappsubscriptions, $contentType);
+        $request = $this->patchDeveloperAppSubscriptionRequest($id, $developerappsubscriptionsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class DeveloperAppSubscriptionsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Developerappsubscriptions $developerappsubscriptions The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDeveloperAppSubscriptionAsync($id, $developerappsubscriptions, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
+    public function patchDeveloperAppSubscriptionAsync($id, $developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
     {
-        return $this->patchDeveloperAppSubscriptionAsyncWithHttpInfo($id, $developerappsubscriptions, $contentType)
+        return $this->patchDeveloperAppSubscriptionAsyncWithHttpInfo($id, $developerappsubscriptionsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class DeveloperAppSubscriptionsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Developerappsubscriptions $developerappsubscriptions The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDeveloperAppSubscriptionAsyncWithHttpInfo($id, $developerappsubscriptions, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
+    public function patchDeveloperAppSubscriptionAsyncWithHttpInfo($id, $developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response';
-        $request = $this->patchDeveloperAppSubscriptionRequest($id, $developerappsubscriptions, $contentType);
+        $request = $this->patchDeveloperAppSubscriptionRequest($id, $developerappsubscriptionsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class DeveloperAppSubscriptionsApi
      * Create request for operation 'patchDeveloperAppSubscription'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Developerappsubscriptions $developerappsubscriptions The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DeveloperappsubscriptionsCreateOrPatch $developerappsubscriptionsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDeveloperAppSubscription'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchDeveloperAppSubscriptionRequest($id, $developerappsubscriptions, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
+    public function patchDeveloperAppSubscriptionRequest($id, $developerappsubscriptionsCreateOrPatch, string $contentType = self::contentTypes['patchDeveloperAppSubscription'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class DeveloperAppSubscriptionsApi
             );
         }
 
-        // verify the required parameter 'developerappsubscriptions' is set
-        if ($developerappsubscriptions === null || (is_array($developerappsubscriptions) && count($developerappsubscriptions) === 0)) {
+        // verify the required parameter 'developerappsubscriptionsCreateOrPatch' is set
+        if ($developerappsubscriptionsCreateOrPatch === null || (is_array($developerappsubscriptionsCreateOrPatch) && count($developerappsubscriptionsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $developerappsubscriptions when calling patchDeveloperAppSubscription'
+                'Missing the required parameter $developerappsubscriptionsCreateOrPatch when calling patchDeveloperAppSubscription'
             );
         }
 
@@ -2183,12 +2183,12 @@ class DeveloperAppSubscriptionsApi
         );
 
         // for model (json/xml)
-        if (isset($developerappsubscriptions)) {
+        if (isset($developerappsubscriptionsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($developerappsubscriptions));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($developerappsubscriptionsCreateOrPatch));
             } else {
-                $httpBody = $developerappsubscriptions;
+                $httpBody = $developerappsubscriptionsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

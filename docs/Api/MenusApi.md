@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createMenu()`
 
 ```php
-createMenu($createmenus): \OpenAPI\Client\CircuitID\GetMenu200Response
+createMenu($menusCreateOrPatch): \OpenAPI\Client\CircuitID\GetMenu200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createmenus = new \OpenAPI\Client\CircuitID\Createmenus(); // \OpenAPI\Client\CircuitID\Createmenus | The JSON object that will be posted to the REST API endpoint.
+$menusCreateOrPatch = new \OpenAPI\Client\CircuitID\MenusCreateOrPatch(); // \OpenAPI\Client\CircuitID\MenusCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createMenu($createmenus);
+    $result = $apiInstance->createMenu($menusCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MenusApi->createMenu: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createmenus** | [**\OpenAPI\Client\CircuitID\Createmenus**](../Model/Createmenus.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **menusCreateOrPatch** | [**\OpenAPI\Client\CircuitID\MenusCreateOrPatch**](../Model/MenusCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchMenu()`
 
 ```php
-patchMenu($id, $menus): \OpenAPI\Client\CircuitID\GetMenu200Response
+patchMenu($id, $menusCreateOrPatch): \OpenAPI\Client\CircuitID\GetMenu200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\MenusApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$menus = new \OpenAPI\Client\CircuitID\Menus(); // \OpenAPI\Client\CircuitID\Menus | The request data.
+$menusCreateOrPatch = new \OpenAPI\Client\CircuitID\MenusCreateOrPatch(); // \OpenAPI\Client\CircuitID\MenusCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchMenu($id, $menus);
+    $result = $apiInstance->patchMenu($id, $menusCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MenusApi->patchMenu: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **menus** | [**\OpenAPI\Client\CircuitID\Menus**](../Model/Menus.md)| The request data. | |
+| **menusCreateOrPatch** | [**\OpenAPI\Client\CircuitID\MenusCreateOrPatch**](../Model/MenusCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

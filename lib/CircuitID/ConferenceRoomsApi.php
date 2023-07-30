@@ -140,16 +140,16 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetConferenceRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createConferenceRoom($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoom($conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
-        list($response) = $this->createConferenceRoomWithHttpInfo($createconferencerooms, $contentType);
+        list($response) = $this->createConferenceRoomWithHttpInfo($conferenceroomsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetConferenceRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createConferenceRoomWithHttpInfo($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomWithHttpInfo($conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
-        $request = $this->createConferenceRoomRequest($createconferencerooms, $contentType);
+        $request = $this->createConferenceRoomRequest($conferenceroomsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConferenceRoomAsync($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomAsync($conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
-        return $this->createConferenceRoomAsyncWithHttpInfo($createconferencerooms, $contentType)
+        return $this->createConferenceRoomAsyncWithHttpInfo($conferenceroomsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConferenceRoomAsyncWithHttpInfo($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomAsyncWithHttpInfo($conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetConferenceRoom200Response';
-        $request = $this->createConferenceRoomRequest($createconferencerooms, $contentType);
+        $request = $this->createConferenceRoomRequest($conferenceroomsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ConferenceRoomsApi
     /**
      * Create request for operation 'createConferenceRoom'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createConferenceRoomRequest($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomRequest($conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
 
-        // verify the required parameter 'createconferencerooms' is set
-        if ($createconferencerooms === null || (is_array($createconferencerooms) && count($createconferencerooms) === 0)) {
+        // verify the required parameter 'conferenceroomsCreateOrPatch' is set
+        if ($conferenceroomsCreateOrPatch === null || (is_array($conferenceroomsCreateOrPatch) && count($conferenceroomsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createconferencerooms when calling createConferenceRoom'
+                'Missing the required parameter $conferenceroomsCreateOrPatch when calling createConferenceRoom'
             );
         }
 
@@ -571,12 +571,12 @@ class ConferenceRoomsApi
         );
 
         // for model (json/xml)
-        if (isset($createconferencerooms)) {
+        if (isset($conferenceroomsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createconferencerooms));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conferenceroomsCreateOrPatch));
             } else {
-                $httpBody = $createconferencerooms;
+                $httpBody = $conferenceroomsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetConferenceRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchConferenceRoom($id, $conferencerooms, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoom($id, $conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
-        list($response) = $this->patchConferenceRoomWithHttpInfo($id, $conferencerooms, $contentType);
+        list($response) = $this->patchConferenceRoomWithHttpInfo($id, $conferenceroomsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetConferenceRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchConferenceRoomWithHttpInfo($id, $conferencerooms, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomWithHttpInfo($id, $conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
-        $request = $this->patchConferenceRoomRequest($id, $conferencerooms, $contentType);
+        $request = $this->patchConferenceRoomRequest($id, $conferenceroomsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConferenceRoomAsync($id, $conferencerooms, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomAsync($id, $conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
-        return $this->patchConferenceRoomAsyncWithHttpInfo($id, $conferencerooms, $contentType)
+        return $this->patchConferenceRoomAsyncWithHttpInfo($id, $conferenceroomsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class ConferenceRoomsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchConferenceRoomAsyncWithHttpInfo($id, $conferencerooms, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomAsyncWithHttpInfo($id, $conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetConferenceRoom200Response';
-        $request = $this->patchConferenceRoomRequest($id, $conferencerooms, $contentType);
+        $request = $this->patchConferenceRoomRequest($id, $conferenceroomsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class ConferenceRoomsApi
      * Create request for operation 'patchConferenceRoom'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch $conferenceroomsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchConferenceRoomRequest($id, $conferencerooms, string $contentType = self::contentTypes['patchConferenceRoom'][0])
+    public function patchConferenceRoomRequest($id, $conferenceroomsCreateOrPatch, string $contentType = self::contentTypes['patchConferenceRoom'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class ConferenceRoomsApi
             );
         }
 
-        // verify the required parameter 'conferencerooms' is set
-        if ($conferencerooms === null || (is_array($conferencerooms) && count($conferencerooms) === 0)) {
+        // verify the required parameter 'conferenceroomsCreateOrPatch' is set
+        if ($conferenceroomsCreateOrPatch === null || (is_array($conferenceroomsCreateOrPatch) && count($conferenceroomsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $conferencerooms when calling patchConferenceRoom'
+                'Missing the required parameter $conferenceroomsCreateOrPatch when calling patchConferenceRoom'
             );
         }
 
@@ -2183,12 +2183,12 @@ class ConferenceRoomsApi
         );
 
         // for model (json/xml)
-        if (isset($conferencerooms)) {
+        if (isset($conferenceroomsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conferencerooms));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conferenceroomsCreateOrPatch));
             } else {
-                $httpBody = $conferencerooms;
+                $httpBody = $conferenceroomsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

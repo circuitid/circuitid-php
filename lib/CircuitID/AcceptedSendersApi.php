@@ -140,16 +140,16 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetAcceptedSender200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createAcceptedSender($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSender($acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
-        list($response) = $this->createAcceptedSenderWithHttpInfo($createacceptedsenders, $contentType);
+        list($response) = $this->createAcceptedSenderWithHttpInfo($acceptedsendersCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetAcceptedSender200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAcceptedSenderWithHttpInfo($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderWithHttpInfo($acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
-        $request = $this->createAcceptedSenderRequest($createacceptedsenders, $contentType);
+        $request = $this->createAcceptedSenderRequest($acceptedsendersCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAcceptedSenderAsync($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderAsync($acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
-        return $this->createAcceptedSenderAsyncWithHttpInfo($createacceptedsenders, $contentType)
+        return $this->createAcceptedSenderAsyncWithHttpInfo($acceptedsendersCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAcceptedSenderAsyncWithHttpInfo($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderAsyncWithHttpInfo($acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetAcceptedSender200Response';
-        $request = $this->createAcceptedSenderRequest($createacceptedsenders, $contentType);
+        $request = $this->createAcceptedSenderRequest($acceptedsendersCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class AcceptedSendersApi
     /**
      * Create request for operation 'createAcceptedSender'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAcceptedSenderRequest($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderRequest($acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
 
-        // verify the required parameter 'createacceptedsenders' is set
-        if ($createacceptedsenders === null || (is_array($createacceptedsenders) && count($createacceptedsenders) === 0)) {
+        // verify the required parameter 'acceptedsendersCreateOrPatch' is set
+        if ($acceptedsendersCreateOrPatch === null || (is_array($acceptedsendersCreateOrPatch) && count($acceptedsendersCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createacceptedsenders when calling createAcceptedSender'
+                'Missing the required parameter $acceptedsendersCreateOrPatch when calling createAcceptedSender'
             );
         }
 
@@ -571,12 +571,12 @@ class AcceptedSendersApi
         );
 
         // for model (json/xml)
-        if (isset($createacceptedsenders)) {
+        if (isset($acceptedsendersCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createacceptedsenders));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($acceptedsendersCreateOrPatch));
             } else {
-                $httpBody = $createacceptedsenders;
+                $httpBody = $acceptedsendersCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class AcceptedSendersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAcceptedSender'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetAcceptedSender200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchAcceptedSender($id, $acceptedsenders, string $contentType = self::contentTypes['patchAcceptedSender'][0])
+    public function patchAcceptedSender($id, $acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['patchAcceptedSender'][0])
     {
-        list($response) = $this->patchAcceptedSenderWithHttpInfo($id, $acceptedsenders, $contentType);
+        list($response) = $this->patchAcceptedSenderWithHttpInfo($id, $acceptedsendersCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class AcceptedSendersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAcceptedSender'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetAcceptedSender200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchAcceptedSenderWithHttpInfo($id, $acceptedsenders, string $contentType = self::contentTypes['patchAcceptedSender'][0])
+    public function patchAcceptedSenderWithHttpInfo($id, $acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['patchAcceptedSender'][0])
     {
-        $request = $this->patchAcceptedSenderRequest($id, $acceptedsenders, $contentType);
+        $request = $this->patchAcceptedSenderRequest($id, $acceptedsendersCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class AcceptedSendersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchAcceptedSenderAsync($id, $acceptedsenders, string $contentType = self::contentTypes['patchAcceptedSender'][0])
+    public function patchAcceptedSenderAsync($id, $acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['patchAcceptedSender'][0])
     {
-        return $this->patchAcceptedSenderAsyncWithHttpInfo($id, $acceptedsenders, $contentType)
+        return $this->patchAcceptedSenderAsyncWithHttpInfo($id, $acceptedsendersCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class AcceptedSendersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchAcceptedSenderAsyncWithHttpInfo($id, $acceptedsenders, string $contentType = self::contentTypes['patchAcceptedSender'][0])
+    public function patchAcceptedSenderAsyncWithHttpInfo($id, $acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['patchAcceptedSender'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetAcceptedSender200Response';
-        $request = $this->patchAcceptedSenderRequest($id, $acceptedsenders, $contentType);
+        $request = $this->patchAcceptedSenderRequest($id, $acceptedsendersCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class AcceptedSendersApi
      * Create request for operation 'patchAcceptedSender'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\AcceptedsendersCreateOrPatch $acceptedsendersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchAcceptedSenderRequest($id, $acceptedsenders, string $contentType = self::contentTypes['patchAcceptedSender'][0])
+    public function patchAcceptedSenderRequest($id, $acceptedsendersCreateOrPatch, string $contentType = self::contentTypes['patchAcceptedSender'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class AcceptedSendersApi
             );
         }
 
-        // verify the required parameter 'acceptedsenders' is set
-        if ($acceptedsenders === null || (is_array($acceptedsenders) && count($acceptedsenders) === 0)) {
+        // verify the required parameter 'acceptedsendersCreateOrPatch' is set
+        if ($acceptedsendersCreateOrPatch === null || (is_array($acceptedsendersCreateOrPatch) && count($acceptedsendersCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $acceptedsenders when calling patchAcceptedSender'
+                'Missing the required parameter $acceptedsendersCreateOrPatch when calling patchAcceptedSender'
             );
         }
 
@@ -2183,12 +2183,12 @@ class AcceptedSendersApi
         );
 
         // for model (json/xml)
-        if (isset($acceptedsenders)) {
+        if (isset($acceptedsendersCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($acceptedsenders));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($acceptedsendersCreateOrPatch));
             } else {
-                $httpBody = $acceptedsenders;
+                $httpBody = $acceptedsendersCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createMessageBrand()`
 
 ```php
-createMessageBrand($createmessagebrands): \OpenAPI\Client\CircuitID\GetMessageBrand200Response
+createMessageBrand($messagebrandsCreateOrPatch): \OpenAPI\Client\CircuitID\GetMessageBrand200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageBrandsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createmessagebrands = new \OpenAPI\Client\CircuitID\Createmessagebrands(); // \OpenAPI\Client\CircuitID\Createmessagebrands | The JSON object that will be posted to the REST API endpoint.
+$messagebrandsCreateOrPatch = new \OpenAPI\Client\CircuitID\MessagebrandsCreateOrPatch(); // \OpenAPI\Client\CircuitID\MessagebrandsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createMessageBrand($createmessagebrands);
+    $result = $apiInstance->createMessageBrand($messagebrandsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageBrandsApi->createMessageBrand: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createmessagebrands** | [**\OpenAPI\Client\CircuitID\Createmessagebrands**](../Model/Createmessagebrands.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **messagebrandsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\MessagebrandsCreateOrPatch**](../Model/MessagebrandsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchMessageBrand()`
 
 ```php
-patchMessageBrand($id, $messagebrands): \OpenAPI\Client\CircuitID\GetMessageBrand200Response
+patchMessageBrand($id, $messagebrandsCreateOrPatch): \OpenAPI\Client\CircuitID\GetMessageBrand200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageBrandsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$messagebrands = new \OpenAPI\Client\CircuitID\Messagebrands(); // \OpenAPI\Client\CircuitID\Messagebrands | The request data.
+$messagebrandsCreateOrPatch = new \OpenAPI\Client\CircuitID\MessagebrandsCreateOrPatch(); // \OpenAPI\Client\CircuitID\MessagebrandsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchMessageBrand($id, $messagebrands);
+    $result = $apiInstance->patchMessageBrand($id, $messagebrandsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageBrandsApi->patchMessageBrand: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **messagebrands** | [**\OpenAPI\Client\CircuitID\Messagebrands**](../Model/Messagebrands.md)| The request data. | |
+| **messagebrandsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\MessagebrandsCreateOrPatch**](../Model/MessagebrandsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

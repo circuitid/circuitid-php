@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createAnnouncement()`
 
 ```php
-createAnnouncement($createannouncements): \OpenAPI\Client\CircuitID\GetAnnouncement200Response
+createAnnouncement($announcementsCreateOrPatch): \OpenAPI\Client\CircuitID\GetAnnouncement200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\AnnouncementsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createannouncements = new \OpenAPI\Client\CircuitID\Createannouncements(); // \OpenAPI\Client\CircuitID\Createannouncements | The JSON object that will be posted to the REST API endpoint.
+$announcementsCreateOrPatch = new \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch(); // \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createAnnouncement($createannouncements);
+    $result = $apiInstance->createAnnouncement($announcementsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnouncementsApi->createAnnouncement: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createannouncements** | [**\OpenAPI\Client\CircuitID\Createannouncements**](../Model/Createannouncements.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **announcementsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch**](../Model/AnnouncementsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchAnnouncement()`
 
 ```php
-patchAnnouncement($id, $announcements): \OpenAPI\Client\CircuitID\GetAnnouncement200Response
+patchAnnouncement($id, $announcementsCreateOrPatch): \OpenAPI\Client\CircuitID\GetAnnouncement200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\AnnouncementsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$announcements = new \OpenAPI\Client\CircuitID\Announcements(); // \OpenAPI\Client\CircuitID\Announcements | The request data.
+$announcementsCreateOrPatch = new \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch(); // \OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchAnnouncement($id, $announcements);
+    $result = $apiInstance->patchAnnouncement($id, $announcementsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnouncementsApi->patchAnnouncement: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **announcements** | [**\OpenAPI\Client\CircuitID\Announcements**](../Model/Announcements.md)| The request data. | |
+| **announcementsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\AnnouncementsCreateOrPatch**](../Model/AnnouncementsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

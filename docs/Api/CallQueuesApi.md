@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createCallQueue()`
 
 ```php
-createCallQueue($createcallqueues): \OpenAPI\Client\CircuitID\GetCallQueue200Response
+createCallQueue($callqueuesCreateOrPatch): \OpenAPI\Client\CircuitID\GetCallQueue200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\CallQueuesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createcallqueues = new \OpenAPI\Client\CircuitID\Createcallqueues(); // \OpenAPI\Client\CircuitID\Createcallqueues | The JSON object that will be posted to the REST API endpoint.
+$callqueuesCreateOrPatch = new \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch(); // \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createCallQueue($createcallqueues);
+    $result = $apiInstance->createCallQueue($callqueuesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CallQueuesApi->createCallQueue: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createcallqueues** | [**\OpenAPI\Client\CircuitID\Createcallqueues**](../Model/Createcallqueues.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **callqueuesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch**](../Model/CallqueuesCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchCallQueue()`
 
 ```php
-patchCallQueue($id, $callqueues): \OpenAPI\Client\CircuitID\GetCallQueue200Response
+patchCallQueue($id, $callqueuesCreateOrPatch): \OpenAPI\Client\CircuitID\GetCallQueue200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\CallQueuesApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$callqueues = new \OpenAPI\Client\CircuitID\Callqueues(); // \OpenAPI\Client\CircuitID\Callqueues | The request data.
+$callqueuesCreateOrPatch = new \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch(); // \OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchCallQueue($id, $callqueues);
+    $result = $apiInstance->patchCallQueue($id, $callqueuesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CallQueuesApi->patchCallQueue: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **callqueues** | [**\OpenAPI\Client\CircuitID\Callqueues**](../Model/Callqueues.md)| The request data. | |
+| **callqueuesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\CallqueuesCreateOrPatch**](../Model/CallqueuesCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

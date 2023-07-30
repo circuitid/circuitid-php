@@ -140,16 +140,16 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetUserToken200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createUserToken($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserToken($usertokensCreateOrPatch, string $contentType = self::contentTypes['createUserToken'][0])
     {
-        list($response) = $this->createUserTokenWithHttpInfo($createusertokens, $contentType);
+        list($response) = $this->createUserTokenWithHttpInfo($usertokensCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetUserToken200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUserTokenWithHttpInfo($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenWithHttpInfo($usertokensCreateOrPatch, string $contentType = self::contentTypes['createUserToken'][0])
     {
-        $request = $this->createUserTokenRequest($createusertokens, $contentType);
+        $request = $this->createUserTokenRequest($usertokensCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserTokenAsync($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenAsync($usertokensCreateOrPatch, string $contentType = self::contentTypes['createUserToken'][0])
     {
-        return $this->createUserTokenAsyncWithHttpInfo($createusertokens, $contentType)
+        return $this->createUserTokenAsyncWithHttpInfo($usertokensCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserTokenAsyncWithHttpInfo($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenAsyncWithHttpInfo($usertokensCreateOrPatch, string $contentType = self::contentTypes['createUserToken'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetUserToken200Response';
-        $request = $this->createUserTokenRequest($createusertokens, $contentType);
+        $request = $this->createUserTokenRequest($usertokensCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class UserTokensApi
     /**
      * Create request for operation 'createUserToken'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUserTokenRequest($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenRequest($usertokensCreateOrPatch, string $contentType = self::contentTypes['createUserToken'][0])
     {
 
-        // verify the required parameter 'createusertokens' is set
-        if ($createusertokens === null || (is_array($createusertokens) && count($createusertokens) === 0)) {
+        // verify the required parameter 'usertokensCreateOrPatch' is set
+        if ($usertokensCreateOrPatch === null || (is_array($usertokensCreateOrPatch) && count($usertokensCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createusertokens when calling createUserToken'
+                'Missing the required parameter $usertokensCreateOrPatch when calling createUserToken'
             );
         }
 
@@ -571,12 +571,12 @@ class UserTokensApi
         );
 
         // for model (json/xml)
-        if (isset($createusertokens)) {
+        if (isset($usertokensCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createusertokens));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($usertokensCreateOrPatch));
             } else {
-                $httpBody = $createusertokens;
+                $httpBody = $usertokensCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class UserTokensApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserToken'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetUserToken200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchUserToken($id, $usertokens, string $contentType = self::contentTypes['patchUserToken'][0])
+    public function patchUserToken($id, $usertokensCreateOrPatch, string $contentType = self::contentTypes['patchUserToken'][0])
     {
-        list($response) = $this->patchUserTokenWithHttpInfo($id, $usertokens, $contentType);
+        list($response) = $this->patchUserTokenWithHttpInfo($id, $usertokensCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class UserTokensApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserToken'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetUserToken200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchUserTokenWithHttpInfo($id, $usertokens, string $contentType = self::contentTypes['patchUserToken'][0])
+    public function patchUserTokenWithHttpInfo($id, $usertokensCreateOrPatch, string $contentType = self::contentTypes['patchUserToken'][0])
     {
-        $request = $this->patchUserTokenRequest($id, $usertokens, $contentType);
+        $request = $this->patchUserTokenRequest($id, $usertokensCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class UserTokensApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserTokenAsync($id, $usertokens, string $contentType = self::contentTypes['patchUserToken'][0])
+    public function patchUserTokenAsync($id, $usertokensCreateOrPatch, string $contentType = self::contentTypes['patchUserToken'][0])
     {
-        return $this->patchUserTokenAsyncWithHttpInfo($id, $usertokens, $contentType)
+        return $this->patchUserTokenAsyncWithHttpInfo($id, $usertokensCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class UserTokensApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserTokenAsyncWithHttpInfo($id, $usertokens, string $contentType = self::contentTypes['patchUserToken'][0])
+    public function patchUserTokenAsyncWithHttpInfo($id, $usertokensCreateOrPatch, string $contentType = self::contentTypes['patchUserToken'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetUserToken200Response';
-        $request = $this->patchUserTokenRequest($id, $usertokens, $contentType);
+        $request = $this->patchUserTokenRequest($id, $usertokensCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class UserTokensApi
      * Create request for operation 'patchUserToken'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch $usertokensCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchUserTokenRequest($id, $usertokens, string $contentType = self::contentTypes['patchUserToken'][0])
+    public function patchUserTokenRequest($id, $usertokensCreateOrPatch, string $contentType = self::contentTypes['patchUserToken'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class UserTokensApi
             );
         }
 
-        // verify the required parameter 'usertokens' is set
-        if ($usertokens === null || (is_array($usertokens) && count($usertokens) === 0)) {
+        // verify the required parameter 'usertokensCreateOrPatch' is set
+        if ($usertokensCreateOrPatch === null || (is_array($usertokensCreateOrPatch) && count($usertokensCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $usertokens when calling patchUserToken'
+                'Missing the required parameter $usertokensCreateOrPatch when calling patchUserToken'
             );
         }
 
@@ -2183,12 +2183,12 @@ class UserTokensApi
         );
 
         // for model (json/xml)
-        if (isset($usertokens)) {
+        if (isset($usertokensCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($usertokens));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($usertokensCreateOrPatch));
             } else {
-                $httpBody = $usertokens;
+                $httpBody = $usertokensCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

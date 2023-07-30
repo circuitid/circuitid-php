@@ -140,16 +140,16 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetUser200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createUser($createusers, string $contentType = self::contentTypes['createUser'][0])
+    public function createUser($usersCreateOrPatch, string $contentType = self::contentTypes['createUser'][0])
     {
-        list($response) = $this->createUserWithHttpInfo($createusers, $contentType);
+        list($response) = $this->createUserWithHttpInfo($usersCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetUser200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUserWithHttpInfo($createusers, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserWithHttpInfo($usersCreateOrPatch, string $contentType = self::contentTypes['createUser'][0])
     {
-        $request = $this->createUserRequest($createusers, $contentType);
+        $request = $this->createUserRequest($usersCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserAsync($createusers, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserAsync($usersCreateOrPatch, string $contentType = self::contentTypes['createUser'][0])
     {
-        return $this->createUserAsyncWithHttpInfo($createusers, $contentType)
+        return $this->createUserAsyncWithHttpInfo($usersCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserAsyncWithHttpInfo($createusers, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserAsyncWithHttpInfo($usersCreateOrPatch, string $contentType = self::contentTypes['createUser'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetUser200Response';
-        $request = $this->createUserRequest($createusers, $contentType);
+        $request = $this->createUserRequest($usersCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class UsersApi
     /**
      * Create request for operation 'createUser'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUserRequest($createusers, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserRequest($usersCreateOrPatch, string $contentType = self::contentTypes['createUser'][0])
     {
 
-        // verify the required parameter 'createusers' is set
-        if ($createusers === null || (is_array($createusers) && count($createusers) === 0)) {
+        // verify the required parameter 'usersCreateOrPatch' is set
+        if ($usersCreateOrPatch === null || (is_array($usersCreateOrPatch) && count($usersCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createusers when calling createUser'
+                'Missing the required parameter $usersCreateOrPatch when calling createUser'
             );
         }
 
@@ -571,12 +571,12 @@ class UsersApi
         );
 
         // for model (json/xml)
-        if (isset($createusers)) {
+        if (isset($usersCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createusers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($usersCreateOrPatch));
             } else {
-                $httpBody = $createusers;
+                $httpBody = $usersCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetUser200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchUser($id, $users, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUser($id, $usersCreateOrPatch, string $contentType = self::contentTypes['patchUser'][0])
     {
-        list($response) = $this->patchUserWithHttpInfo($id, $users, $contentType);
+        list($response) = $this->patchUserWithHttpInfo($id, $usersCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetUser200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchUserWithHttpInfo($id, $users, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserWithHttpInfo($id, $usersCreateOrPatch, string $contentType = self::contentTypes['patchUser'][0])
     {
-        $request = $this->patchUserRequest($id, $users, $contentType);
+        $request = $this->patchUserRequest($id, $usersCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserAsync($id, $users, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserAsync($id, $usersCreateOrPatch, string $contentType = self::contentTypes['patchUser'][0])
     {
-        return $this->patchUserAsyncWithHttpInfo($id, $users, $contentType)
+        return $this->patchUserAsyncWithHttpInfo($id, $usersCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class UsersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchUserAsyncWithHttpInfo($id, $users, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserAsyncWithHttpInfo($id, $usersCreateOrPatch, string $contentType = self::contentTypes['patchUser'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetUser200Response';
-        $request = $this->patchUserRequest($id, $users, $contentType);
+        $request = $this->patchUserRequest($id, $usersCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class UsersApi
      * Create request for operation 'patchUser'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Users $users The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\UsersCreateOrPatch $usersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchUserRequest($id, $users, string $contentType = self::contentTypes['patchUser'][0])
+    public function patchUserRequest($id, $usersCreateOrPatch, string $contentType = self::contentTypes['patchUser'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class UsersApi
             );
         }
 
-        // verify the required parameter 'users' is set
-        if ($users === null || (is_array($users) && count($users) === 0)) {
+        // verify the required parameter 'usersCreateOrPatch' is set
+        if ($usersCreateOrPatch === null || (is_array($usersCreateOrPatch) && count($usersCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $users when calling patchUser'
+                'Missing the required parameter $usersCreateOrPatch when calling patchUser'
             );
         }
 
@@ -2183,12 +2183,12 @@ class UsersApi
         );
 
         // for model (json/xml)
-        if (isset($users)) {
+        if (isset($usersCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($users));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($usersCreateOrPatch));
             } else {
-                $httpBody = $users;
+                $httpBody = $usersCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

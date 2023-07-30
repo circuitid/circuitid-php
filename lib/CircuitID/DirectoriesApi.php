@@ -140,16 +140,16 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\Getdirectory200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createdirectory($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectory($directoriesCreateOrPatch, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        list($response) = $this->createdirectoryWithHttpInfo($createdirectories, $contentType);
+        list($response) = $this->createdirectoryWithHttpInfo($directoriesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\Getdirectory200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createdirectoryWithHttpInfo($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryWithHttpInfo($directoriesCreateOrPatch, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        $request = $this->createdirectoryRequest($createdirectories, $contentType);
+        $request = $this->createdirectoryRequest($directoriesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createdirectoryAsync($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryAsync($directoriesCreateOrPatch, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        return $this->createdirectoryAsyncWithHttpInfo($createdirectories, $contentType)
+        return $this->createdirectoryAsyncWithHttpInfo($directoriesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createdirectoryAsyncWithHttpInfo($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryAsyncWithHttpInfo($directoriesCreateOrPatch, string $contentType = self::contentTypes['createdirectory'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\Getdirectory200Response';
-        $request = $this->createdirectoryRequest($createdirectories, $contentType);
+        $request = $this->createdirectoryRequest($directoriesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class DirectoriesApi
     /**
      * Create request for operation 'createdirectory'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createdirectoryRequest($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryRequest($directoriesCreateOrPatch, string $contentType = self::contentTypes['createdirectory'][0])
     {
 
-        // verify the required parameter 'createdirectories' is set
-        if ($createdirectories === null || (is_array($createdirectories) && count($createdirectories) === 0)) {
+        // verify the required parameter 'directoriesCreateOrPatch' is set
+        if ($directoriesCreateOrPatch === null || (is_array($directoriesCreateOrPatch) && count($directoriesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createdirectories when calling createdirectory'
+                'Missing the required parameter $directoriesCreateOrPatch when calling createdirectory'
             );
         }
 
@@ -571,12 +571,12 @@ class DirectoriesApi
         );
 
         // for model (json/xml)
-        if (isset($createdirectories)) {
+        if (isset($directoriesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createdirectories));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($directoriesCreateOrPatch));
             } else {
-                $httpBody = $createdirectories;
+                $httpBody = $directoriesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\Getdirectory200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchdirectory($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
+    public function patchdirectory($id, $directoriesCreateOrPatch, string $contentType = self::contentTypes['patchdirectory'][0])
     {
-        list($response) = $this->patchdirectoryWithHttpInfo($id, $directories, $contentType);
+        list($response) = $this->patchdirectoryWithHttpInfo($id, $directoriesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\Getdirectory200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchdirectoryWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
+    public function patchdirectoryWithHttpInfo($id, $directoriesCreateOrPatch, string $contentType = self::contentTypes['patchdirectory'][0])
     {
-        $request = $this->patchdirectoryRequest($id, $directories, $contentType);
+        $request = $this->patchdirectoryRequest($id, $directoriesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchdirectoryAsync($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
+    public function patchdirectoryAsync($id, $directoriesCreateOrPatch, string $contentType = self::contentTypes['patchdirectory'][0])
     {
-        return $this->patchdirectoryAsyncWithHttpInfo($id, $directories, $contentType)
+        return $this->patchdirectoryAsyncWithHttpInfo($id, $directoriesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class DirectoriesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchdirectoryAsyncWithHttpInfo($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
+    public function patchdirectoryAsyncWithHttpInfo($id, $directoriesCreateOrPatch, string $contentType = self::contentTypes['patchdirectory'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\Getdirectory200Response';
-        $request = $this->patchdirectoryRequest($id, $directories, $contentType);
+        $request = $this->patchdirectoryRequest($id, $directoriesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class DirectoriesApi
      * Create request for operation 'patchdirectory'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch $directoriesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchdirectoryRequest($id, $directories, string $contentType = self::contentTypes['patchdirectory'][0])
+    public function patchdirectoryRequest($id, $directoriesCreateOrPatch, string $contentType = self::contentTypes['patchdirectory'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class DirectoriesApi
             );
         }
 
-        // verify the required parameter 'directories' is set
-        if ($directories === null || (is_array($directories) && count($directories) === 0)) {
+        // verify the required parameter 'directoriesCreateOrPatch' is set
+        if ($directoriesCreateOrPatch === null || (is_array($directoriesCreateOrPatch) && count($directoriesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $directories when calling patchdirectory'
+                'Missing the required parameter $directoriesCreateOrPatch when calling patchdirectory'
             );
         }
 
@@ -2183,12 +2183,12 @@ class DirectoriesApi
         );
 
         // for model (json/xml)
-        if (isset($directories)) {
+        if (isset($directoriesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($directories));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($directoriesCreateOrPatch));
             } else {
-                $httpBody = $directories;
+                $httpBody = $directoriesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createUserToken()`
 
 ```php
-createUserToken($createusertokens): \OpenAPI\Client\CircuitID\GetUserToken200Response
+createUserToken($usertokensCreateOrPatch): \OpenAPI\Client\CircuitID\GetUserToken200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\UserTokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createusertokens = new \OpenAPI\Client\CircuitID\Createusertokens(); // \OpenAPI\Client\CircuitID\Createusertokens | The JSON object that will be posted to the REST API endpoint.
+$usertokensCreateOrPatch = new \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch(); // \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createUserToken($createusertokens);
+    $result = $apiInstance->createUserToken($usertokensCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserTokensApi->createUserToken: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createusertokens** | [**\OpenAPI\Client\CircuitID\Createusertokens**](../Model/Createusertokens.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **usertokensCreateOrPatch** | [**\OpenAPI\Client\CircuitID\UsertokensCreateOrPatch**](../Model/UsertokensCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchUserToken()`
 
 ```php
-patchUserToken($id, $usertokens): \OpenAPI\Client\CircuitID\GetUserToken200Response
+patchUserToken($id, $usertokensCreateOrPatch): \OpenAPI\Client\CircuitID\GetUserToken200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\UserTokensApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$usertokens = new \OpenAPI\Client\CircuitID\Usertokens(); // \OpenAPI\Client\CircuitID\Usertokens | The request data.
+$usertokensCreateOrPatch = new \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch(); // \OpenAPI\Client\CircuitID\UsertokensCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchUserToken($id, $usertokens);
+    $result = $apiInstance->patchUserToken($id, $usertokensCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserTokensApi->patchUserToken: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **usertokens** | [**\OpenAPI\Client\CircuitID\Usertokens**](../Model/Usertokens.md)| The request data. | |
+| **usertokensCreateOrPatch** | [**\OpenAPI\Client\CircuitID\UsertokensCreateOrPatch**](../Model/UsertokensCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

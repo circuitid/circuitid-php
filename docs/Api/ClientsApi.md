@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createClient()`
 
 ```php
-createClient($createclients): \OpenAPI\Client\CircuitID\GetClient200Response
+createClient($clientsCreateOrPatch): \OpenAPI\Client\CircuitID\GetClient200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createclients = new \OpenAPI\Client\CircuitID\Createclients(); // \OpenAPI\Client\CircuitID\Createclients | The JSON object that will be posted to the REST API endpoint.
+$clientsCreateOrPatch = new \OpenAPI\Client\CircuitID\ClientsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ClientsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createClient($createclients);
+    $result = $apiInstance->createClient($clientsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientsApi->createClient: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createclients** | [**\OpenAPI\Client\CircuitID\Createclients**](../Model/Createclients.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **clientsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ClientsCreateOrPatch**](../Model/ClientsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchClient()`
 
 ```php
-patchClient($id, $clients): \OpenAPI\Client\CircuitID\GetClient200Response
+patchClient($id, $clientsCreateOrPatch): \OpenAPI\Client\CircuitID\GetClient200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$clients = new \OpenAPI\Client\CircuitID\Clients(); // \OpenAPI\Client\CircuitID\Clients | The request data.
+$clientsCreateOrPatch = new \OpenAPI\Client\CircuitID\ClientsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ClientsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchClient($id, $clients);
+    $result = $apiInstance->patchClient($id, $clientsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientsApi->patchClient: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **clients** | [**\OpenAPI\Client\CircuitID\Clients**](../Model/Clients.md)| The request data. | |
+| **clientsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ClientsCreateOrPatch**](../Model/ClientsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

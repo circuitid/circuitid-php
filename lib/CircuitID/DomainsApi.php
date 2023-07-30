@@ -140,16 +140,16 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetDomain200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createDomain($createdomains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomain($domainsCreateOrPatch, string $contentType = self::contentTypes['createDomain'][0])
     {
-        list($response) = $this->createDomainWithHttpInfo($createdomains, $contentType);
+        list($response) = $this->createDomainWithHttpInfo($domainsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetDomain200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDomainWithHttpInfo($createdomains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainWithHttpInfo($domainsCreateOrPatch, string $contentType = self::contentTypes['createDomain'][0])
     {
-        $request = $this->createDomainRequest($createdomains, $contentType);
+        $request = $this->createDomainRequest($domainsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDomainAsync($createdomains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainAsync($domainsCreateOrPatch, string $contentType = self::contentTypes['createDomain'][0])
     {
-        return $this->createDomainAsyncWithHttpInfo($createdomains, $contentType)
+        return $this->createDomainAsyncWithHttpInfo($domainsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDomainAsyncWithHttpInfo($createdomains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainAsyncWithHttpInfo($domainsCreateOrPatch, string $contentType = self::contentTypes['createDomain'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetDomain200Response';
-        $request = $this->createDomainRequest($createdomains, $contentType);
+        $request = $this->createDomainRequest($domainsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class DomainsApi
     /**
      * Create request for operation 'createDomain'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDomainRequest($createdomains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainRequest($domainsCreateOrPatch, string $contentType = self::contentTypes['createDomain'][0])
     {
 
-        // verify the required parameter 'createdomains' is set
-        if ($createdomains === null || (is_array($createdomains) && count($createdomains) === 0)) {
+        // verify the required parameter 'domainsCreateOrPatch' is set
+        if ($domainsCreateOrPatch === null || (is_array($domainsCreateOrPatch) && count($domainsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createdomains when calling createDomain'
+                'Missing the required parameter $domainsCreateOrPatch when calling createDomain'
             );
         }
 
@@ -571,12 +571,12 @@ class DomainsApi
         );
 
         // for model (json/xml)
-        if (isset($createdomains)) {
+        if (isset($domainsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createdomains));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($domainsCreateOrPatch));
             } else {
-                $httpBody = $createdomains;
+                $httpBody = $domainsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetDomain200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchDomain($id, $domains, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomain($id, $domainsCreateOrPatch, string $contentType = self::contentTypes['patchDomain'][0])
     {
-        list($response) = $this->patchDomainWithHttpInfo($id, $domains, $contentType);
+        list($response) = $this->patchDomainWithHttpInfo($id, $domainsCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetDomain200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchDomainWithHttpInfo($id, $domains, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainWithHttpInfo($id, $domainsCreateOrPatch, string $contentType = self::contentTypes['patchDomain'][0])
     {
-        $request = $this->patchDomainRequest($id, $domains, $contentType);
+        $request = $this->patchDomainRequest($id, $domainsCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDomainAsync($id, $domains, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainAsync($id, $domainsCreateOrPatch, string $contentType = self::contentTypes['patchDomain'][0])
     {
-        return $this->patchDomainAsyncWithHttpInfo($id, $domains, $contentType)
+        return $this->patchDomainAsyncWithHttpInfo($id, $domainsCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class DomainsApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchDomainAsyncWithHttpInfo($id, $domains, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainAsyncWithHttpInfo($id, $domainsCreateOrPatch, string $contentType = self::contentTypes['patchDomain'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetDomain200Response';
-        $request = $this->patchDomainRequest($id, $domains, $contentType);
+        $request = $this->patchDomainRequest($id, $domainsCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class DomainsApi
      * Create request for operation 'patchDomain'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\DomainsCreateOrPatch $domainsCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchDomainRequest($id, $domains, string $contentType = self::contentTypes['patchDomain'][0])
+    public function patchDomainRequest($id, $domainsCreateOrPatch, string $contentType = self::contentTypes['patchDomain'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class DomainsApi
             );
         }
 
-        // verify the required parameter 'domains' is set
-        if ($domains === null || (is_array($domains) && count($domains) === 0)) {
+        // verify the required parameter 'domainsCreateOrPatch' is set
+        if ($domainsCreateOrPatch === null || (is_array($domainsCreateOrPatch) && count($domainsCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $domains when calling patchDomain'
+                'Missing the required parameter $domainsCreateOrPatch when calling patchDomain'
             );
         }
 
@@ -2183,12 +2183,12 @@ class DomainsApi
         );
 
         // for model (json/xml)
-        if (isset($domains)) {
+        if (isset($domainsCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($domains));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($domainsCreateOrPatch));
             } else {
-                $httpBody = $domains;
+                $httpBody = $domainsCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

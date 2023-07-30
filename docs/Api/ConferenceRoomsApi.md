@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createConferenceRoom()`
 
 ```php
-createConferenceRoom($createconferencerooms): \OpenAPI\Client\CircuitID\GetConferenceRoom200Response
+createConferenceRoom($conferenceroomsCreateOrPatch): \OpenAPI\Client\CircuitID\GetConferenceRoom200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ConferenceRoomsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createconferencerooms = new \OpenAPI\Client\CircuitID\Createconferencerooms(); // \OpenAPI\Client\CircuitID\Createconferencerooms | The JSON object that will be posted to the REST API endpoint.
+$conferenceroomsCreateOrPatch = new \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createConferenceRoom($createconferencerooms);
+    $result = $apiInstance->createConferenceRoom($conferenceroomsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConferenceRoomsApi->createConferenceRoom: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createconferencerooms** | [**\OpenAPI\Client\CircuitID\Createconferencerooms**](../Model/Createconferencerooms.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **conferenceroomsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch**](../Model/ConferenceroomsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchConferenceRoom()`
 
 ```php
-patchConferenceRoom($id, $conferencerooms): \OpenAPI\Client\CircuitID\GetConferenceRoom200Response
+patchConferenceRoom($id, $conferenceroomsCreateOrPatch): \OpenAPI\Client\CircuitID\GetConferenceRoom200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ConferenceRoomsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$conferencerooms = new \OpenAPI\Client\CircuitID\Conferencerooms(); // \OpenAPI\Client\CircuitID\Conferencerooms | The request data.
+$conferenceroomsCreateOrPatch = new \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch(); // \OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchConferenceRoom($id, $conferencerooms);
+    $result = $apiInstance->patchConferenceRoom($id, $conferenceroomsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConferenceRoomsApi->patchConferenceRoom: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **conferencerooms** | [**\OpenAPI\Client\CircuitID\Conferencerooms**](../Model/Conferencerooms.md)| The request data. | |
+| **conferenceroomsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ConferenceroomsCreateOrPatch**](../Model/ConferenceroomsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

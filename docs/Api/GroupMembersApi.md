@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createGroupMember()`
 
 ```php
-createGroupMember($creategroupmembers): \OpenAPI\Client\CircuitID\GetGroupMember200Response
+createGroupMember($groupmembersCreateOrPatch): \OpenAPI\Client\CircuitID\GetGroupMember200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\GroupMembersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$creategroupmembers = new \OpenAPI\Client\CircuitID\Creategroupmembers(); // \OpenAPI\Client\CircuitID\Creategroupmembers | The JSON object that will be posted to the REST API endpoint.
+$groupmembersCreateOrPatch = new \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch(); // \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createGroupMember($creategroupmembers);
+    $result = $apiInstance->createGroupMember($groupmembersCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupMembersApi->createGroupMember: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **creategroupmembers** | [**\OpenAPI\Client\CircuitID\Creategroupmembers**](../Model/Creategroupmembers.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **groupmembersCreateOrPatch** | [**\OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch**](../Model/GroupmembersCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchGroupMember()`
 
 ```php
-patchGroupMember($id, $groupmembers): \OpenAPI\Client\CircuitID\GetGroupMember200Response
+patchGroupMember($id, $groupmembersCreateOrPatch): \OpenAPI\Client\CircuitID\GetGroupMember200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\GroupMembersApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$groupmembers = new \OpenAPI\Client\CircuitID\Groupmembers(); // \OpenAPI\Client\CircuitID\Groupmembers | The request data.
+$groupmembersCreateOrPatch = new \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch(); // \OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchGroupMember($id, $groupmembers);
+    $result = $apiInstance->patchGroupMember($id, $groupmembersCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupMembersApi->patchGroupMember: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **groupmembers** | [**\OpenAPI\Client\CircuitID\Groupmembers**](../Model/Groupmembers.md)| The request data. | |
+| **groupmembersCreateOrPatch** | [**\OpenAPI\Client\CircuitID\GroupmembersCreateOrPatch**](../Model/GroupmembersCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createMessageCampaign()`
 
 ```php
-createMessageCampaign($createmessagecampaigns): \OpenAPI\Client\CircuitID\GetMessageCampaign200Response
+createMessageCampaign($messagecampaignsCreateOrPatch): \OpenAPI\Client\CircuitID\GetMessageCampaign200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageCampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createmessagecampaigns = new \OpenAPI\Client\CircuitID\Createmessagecampaigns(); // \OpenAPI\Client\CircuitID\Createmessagecampaigns | The JSON object that will be posted to the REST API endpoint.
+$messagecampaignsCreateOrPatch = new \OpenAPI\Client\CircuitID\MessagecampaignsCreateOrPatch(); // \OpenAPI\Client\CircuitID\MessagecampaignsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createMessageCampaign($createmessagecampaigns);
+    $result = $apiInstance->createMessageCampaign($messagecampaignsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageCampaignsApi->createMessageCampaign: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createmessagecampaigns** | [**\OpenAPI\Client\CircuitID\Createmessagecampaigns**](../Model/Createmessagecampaigns.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **messagecampaignsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\MessagecampaignsCreateOrPatch**](../Model/MessagecampaignsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchMessageCampaign()`
 
 ```php
-patchMessageCampaign($id, $messagecampaigns): \OpenAPI\Client\CircuitID\GetMessageCampaign200Response
+patchMessageCampaign($id, $messagecampaignsCreateOrPatch): \OpenAPI\Client\CircuitID\GetMessageCampaign200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageCampaignsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$messagecampaigns = new \OpenAPI\Client\CircuitID\Messagecampaigns(); // \OpenAPI\Client\CircuitID\Messagecampaigns | The request data.
+$messagecampaignsCreateOrPatch = new \OpenAPI\Client\CircuitID\MessagecampaignsCreateOrPatch(); // \OpenAPI\Client\CircuitID\MessagecampaignsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchMessageCampaign($id, $messagecampaigns);
+    $result = $apiInstance->patchMessageCampaign($id, $messagecampaignsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageCampaignsApi->patchMessageCampaign: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **messagecampaigns** | [**\OpenAPI\Client\CircuitID\Messagecampaigns**](../Model/Messagecampaigns.md)| The request data. | |
+| **messagecampaignsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\MessagecampaignsCreateOrPatch**](../Model/MessagecampaignsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

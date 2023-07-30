@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createdirectory()`
 
 ```php
-createdirectory($createdirectories): \OpenAPI\Client\CircuitID\Getdirectory200Response
+createdirectory($directoriesCreateOrPatch): \OpenAPI\Client\CircuitID\Getdirectory200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DirectoriesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createdirectories = new \OpenAPI\Client\CircuitID\Createdirectories(); // \OpenAPI\Client\CircuitID\Createdirectories | The JSON object that will be posted to the REST API endpoint.
+$directoriesCreateOrPatch = new \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch(); // \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createdirectory($createdirectories);
+    $result = $apiInstance->createdirectory($directoriesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectoriesApi->createdirectory: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createdirectories** | [**\OpenAPI\Client\CircuitID\Createdirectories**](../Model/Createdirectories.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **directoriesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch**](../Model/DirectoriesCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchdirectory()`
 
 ```php
-patchdirectory($id, $directories): \OpenAPI\Client\CircuitID\Getdirectory200Response
+patchdirectory($id, $directoriesCreateOrPatch): \OpenAPI\Client\CircuitID\Getdirectory200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DirectoriesApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$directories = new \OpenAPI\Client\CircuitID\Directories(); // \OpenAPI\Client\CircuitID\Directories | The request data.
+$directoriesCreateOrPatch = new \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch(); // \OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchdirectory($id, $directories);
+    $result = $apiInstance->patchdirectory($id, $directoriesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectoriesApi->patchdirectory: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **directories** | [**\OpenAPI\Client\CircuitID\Directories**](../Model/Directories.md)| The request data. | |
+| **directoriesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DirectoriesCreateOrPatch**](../Model/DirectoriesCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

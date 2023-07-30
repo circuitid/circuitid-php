@@ -140,16 +140,16 @@ class MenusApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createmenus $createmenus The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenu'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetMenu200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createMenu($createmenus, string $contentType = self::contentTypes['createMenu'][0])
+    public function createMenu($menusCreateOrPatch, string $contentType = self::contentTypes['createMenu'][0])
     {
-        list($response) = $this->createMenuWithHttpInfo($createmenus, $contentType);
+        list($response) = $this->createMenuWithHttpInfo($menusCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class MenusApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createmenus $createmenus The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenu'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetMenu200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createMenuWithHttpInfo($createmenus, string $contentType = self::contentTypes['createMenu'][0])
+    public function createMenuWithHttpInfo($menusCreateOrPatch, string $contentType = self::contentTypes['createMenu'][0])
     {
-        $request = $this->createMenuRequest($createmenus, $contentType);
+        $request = $this->createMenuRequest($menusCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class MenusApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createmenus $createmenus The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMenuAsync($createmenus, string $contentType = self::contentTypes['createMenu'][0])
+    public function createMenuAsync($menusCreateOrPatch, string $contentType = self::contentTypes['createMenu'][0])
     {
-        return $this->createMenuAsyncWithHttpInfo($createmenus, $contentType)
+        return $this->createMenuAsyncWithHttpInfo($menusCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class MenusApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createmenus $createmenus The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMenuAsyncWithHttpInfo($createmenus, string $contentType = self::contentTypes['createMenu'][0])
+    public function createMenuAsyncWithHttpInfo($menusCreateOrPatch, string $contentType = self::contentTypes['createMenu'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetMenu200Response';
-        $request = $this->createMenuRequest($createmenus, $contentType);
+        $request = $this->createMenuRequest($menusCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class MenusApi
     /**
      * Create request for operation 'createMenu'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createmenus $createmenus The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createMenuRequest($createmenus, string $contentType = self::contentTypes['createMenu'][0])
+    public function createMenuRequest($menusCreateOrPatch, string $contentType = self::contentTypes['createMenu'][0])
     {
 
-        // verify the required parameter 'createmenus' is set
-        if ($createmenus === null || (is_array($createmenus) && count($createmenus) === 0)) {
+        // verify the required parameter 'menusCreateOrPatch' is set
+        if ($menusCreateOrPatch === null || (is_array($menusCreateOrPatch) && count($menusCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createmenus when calling createMenu'
+                'Missing the required parameter $menusCreateOrPatch when calling createMenu'
             );
         }
 
@@ -571,12 +571,12 @@ class MenusApi
         );
 
         // for model (json/xml)
-        if (isset($createmenus)) {
+        if (isset($menusCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createmenus));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($menusCreateOrPatch));
             } else {
-                $httpBody = $createmenus;
+                $httpBody = $menusCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Menus $menus The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetMenu200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchMenu($id, $menus, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenu($id, $menusCreateOrPatch, string $contentType = self::contentTypes['patchMenu'][0])
     {
-        list($response) = $this->patchMenuWithHttpInfo($id, $menus, $contentType);
+        list($response) = $this->patchMenuWithHttpInfo($id, $menusCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Menus $menus The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetMenu200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchMenuWithHttpInfo($id, $menus, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuWithHttpInfo($id, $menusCreateOrPatch, string $contentType = self::contentTypes['patchMenu'][0])
     {
-        $request = $this->patchMenuRequest($id, $menus, $contentType);
+        $request = $this->patchMenuRequest($id, $menusCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Menus $menus The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchMenuAsync($id, $menus, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuAsync($id, $menusCreateOrPatch, string $contentType = self::contentTypes['patchMenu'][0])
     {
-        return $this->patchMenuAsyncWithHttpInfo($id, $menus, $contentType)
+        return $this->patchMenuAsyncWithHttpInfo($id, $menusCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class MenusApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Menus $menus The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchMenuAsyncWithHttpInfo($id, $menus, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuAsyncWithHttpInfo($id, $menusCreateOrPatch, string $contentType = self::contentTypes['patchMenu'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetMenu200Response';
-        $request = $this->patchMenuRequest($id, $menus, $contentType);
+        $request = $this->patchMenuRequest($id, $menusCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class MenusApi
      * Create request for operation 'patchMenu'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Menus $menus The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\MenusCreateOrPatch $menusCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchMenu'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchMenuRequest($id, $menus, string $contentType = self::contentTypes['patchMenu'][0])
+    public function patchMenuRequest($id, $menusCreateOrPatch, string $contentType = self::contentTypes['patchMenu'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class MenusApi
             );
         }
 
-        // verify the required parameter 'menus' is set
-        if ($menus === null || (is_array($menus) && count($menus) === 0)) {
+        // verify the required parameter 'menusCreateOrPatch' is set
+        if ($menusCreateOrPatch === null || (is_array($menusCreateOrPatch) && count($menusCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $menus when calling patchMenu'
+                'Missing the required parameter $menusCreateOrPatch when calling patchMenu'
             );
         }
 
@@ -2183,12 +2183,12 @@ class MenusApi
         );
 
         // for model (json/xml)
-        if (isset($menus)) {
+        if (isset($menusCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($menus));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($menusCreateOrPatch));
             } else {
-                $httpBody = $menus;
+                $httpBody = $menusCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

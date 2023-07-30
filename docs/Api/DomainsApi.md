@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createDomain()`
 
 ```php
-createDomain($createdomains): \OpenAPI\Client\CircuitID\GetDomain200Response
+createDomain($domainsCreateOrPatch): \OpenAPI\Client\CircuitID\GetDomain200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DomainsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createdomains = new \OpenAPI\Client\CircuitID\Createdomains(); // \OpenAPI\Client\CircuitID\Createdomains | The JSON object that will be posted to the REST API endpoint.
+$domainsCreateOrPatch = new \OpenAPI\Client\CircuitID\DomainsCreateOrPatch(); // \OpenAPI\Client\CircuitID\DomainsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createDomain($createdomains);
+    $result = $apiInstance->createDomain($domainsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DomainsApi->createDomain: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createdomains** | [**\OpenAPI\Client\CircuitID\Createdomains**](../Model/Createdomains.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **domainsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DomainsCreateOrPatch**](../Model/DomainsCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchDomain()`
 
 ```php
-patchDomain($id, $domains): \OpenAPI\Client\CircuitID\GetDomain200Response
+patchDomain($id, $domainsCreateOrPatch): \OpenAPI\Client\CircuitID\GetDomain200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\DomainsApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$domains = new \OpenAPI\Client\CircuitID\Domains(); // \OpenAPI\Client\CircuitID\Domains | The request data.
+$domainsCreateOrPatch = new \OpenAPI\Client\CircuitID\DomainsCreateOrPatch(); // \OpenAPI\Client\CircuitID\DomainsCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchDomain($id, $domains);
+    $result = $apiInstance->patchDomain($id, $domainsCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DomainsApi->patchDomain: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **domains** | [**\OpenAPI\Client\CircuitID\Domains**](../Model/Domains.md)| The request data. | |
+| **domainsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\DomainsCreateOrPatch**](../Model/DomainsCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

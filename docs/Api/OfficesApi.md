@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createOffice()`
 
 ```php
-createOffice($createoffices): \OpenAPI\Client\CircuitID\GetOffice200Response
+createOffice($officesCreateOrPatch): \OpenAPI\Client\CircuitID\GetOffice200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\OfficesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createoffices = new \OpenAPI\Client\CircuitID\Createoffices(); // \OpenAPI\Client\CircuitID\Createoffices | The JSON object that will be posted to the REST API endpoint.
+$officesCreateOrPatch = new \OpenAPI\Client\CircuitID\OfficesCreateOrPatch(); // \OpenAPI\Client\CircuitID\OfficesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createOffice($createoffices);
+    $result = $apiInstance->createOffice($officesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OfficesApi->createOffice: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createoffices** | [**\OpenAPI\Client\CircuitID\Createoffices**](../Model/Createoffices.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **officesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\OfficesCreateOrPatch**](../Model/OfficesCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchOffice()`
 
 ```php
-patchOffice($id, $offices): \OpenAPI\Client\CircuitID\GetOffice200Response
+patchOffice($id, $officesCreateOrPatch): \OpenAPI\Client\CircuitID\GetOffice200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\OfficesApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$offices = new \OpenAPI\Client\CircuitID\Offices(); // \OpenAPI\Client\CircuitID\Offices | The request data.
+$officesCreateOrPatch = new \OpenAPI\Client\CircuitID\OfficesCreateOrPatch(); // \OpenAPI\Client\CircuitID\OfficesCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchOffice($id, $offices);
+    $result = $apiInstance->patchOffice($id, $officesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OfficesApi->patchOffice: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **offices** | [**\OpenAPI\Client\CircuitID\Offices**](../Model/Offices.md)| The request data. | |
+| **officesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\OfficesCreateOrPatch**](../Model/OfficesCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

@@ -140,16 +140,16 @@ class OfficesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createoffices $createoffices The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffice'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetOffice200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createOffice($createoffices, string $contentType = self::contentTypes['createOffice'][0])
+    public function createOffice($officesCreateOrPatch, string $contentType = self::contentTypes['createOffice'][0])
     {
-        list($response) = $this->createOfficeWithHttpInfo($createoffices, $contentType);
+        list($response) = $this->createOfficeWithHttpInfo($officesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class OfficesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createoffices $createoffices The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffice'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetOffice200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOfficeWithHttpInfo($createoffices, string $contentType = self::contentTypes['createOffice'][0])
+    public function createOfficeWithHttpInfo($officesCreateOrPatch, string $contentType = self::contentTypes['createOffice'][0])
     {
-        $request = $this->createOfficeRequest($createoffices, $contentType);
+        $request = $this->createOfficeRequest($officesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class OfficesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createoffices $createoffices The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOfficeAsync($createoffices, string $contentType = self::contentTypes['createOffice'][0])
+    public function createOfficeAsync($officesCreateOrPatch, string $contentType = self::contentTypes['createOffice'][0])
     {
-        return $this->createOfficeAsyncWithHttpInfo($createoffices, $contentType)
+        return $this->createOfficeAsyncWithHttpInfo($officesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class OfficesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createoffices $createoffices The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOfficeAsyncWithHttpInfo($createoffices, string $contentType = self::contentTypes['createOffice'][0])
+    public function createOfficeAsyncWithHttpInfo($officesCreateOrPatch, string $contentType = self::contentTypes['createOffice'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetOffice200Response';
-        $request = $this->createOfficeRequest($createoffices, $contentType);
+        $request = $this->createOfficeRequest($officesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class OfficesApi
     /**
      * Create request for operation 'createOffice'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createoffices $createoffices The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createOfficeRequest($createoffices, string $contentType = self::contentTypes['createOffice'][0])
+    public function createOfficeRequest($officesCreateOrPatch, string $contentType = self::contentTypes['createOffice'][0])
     {
 
-        // verify the required parameter 'createoffices' is set
-        if ($createoffices === null || (is_array($createoffices) && count($createoffices) === 0)) {
+        // verify the required parameter 'officesCreateOrPatch' is set
+        if ($officesCreateOrPatch === null || (is_array($officesCreateOrPatch) && count($officesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createoffices when calling createOffice'
+                'Missing the required parameter $officesCreateOrPatch when calling createOffice'
             );
         }
 
@@ -571,12 +571,12 @@ class OfficesApi
         );
 
         // for model (json/xml)
-        if (isset($createoffices)) {
+        if (isset($officesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createoffices));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($officesCreateOrPatch));
             } else {
-                $httpBody = $createoffices;
+                $httpBody = $officesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1733,16 +1733,16 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetOffice200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchOffice($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOffice($id, $officesCreateOrPatch, string $contentType = self::contentTypes['patchOffice'][0])
     {
-        list($response) = $this->patchOfficeWithHttpInfo($id, $offices, $contentType);
+        list($response) = $this->patchOfficeWithHttpInfo($id, $officesCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1752,16 +1752,16 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetOffice200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchOfficeWithHttpInfo($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeWithHttpInfo($id, $officesCreateOrPatch, string $contentType = self::contentTypes['patchOffice'][0])
     {
-        $request = $this->patchOfficeRequest($id, $offices, $contentType);
+        $request = $this->patchOfficeRequest($id, $officesCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2060,15 +2060,15 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOfficeAsync($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeAsync($id, $officesCreateOrPatch, string $contentType = self::contentTypes['patchOffice'][0])
     {
-        return $this->patchOfficeAsyncWithHttpInfo($id, $offices, $contentType)
+        return $this->patchOfficeAsyncWithHttpInfo($id, $officesCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2082,16 +2082,16 @@ class OfficesApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchOfficeAsyncWithHttpInfo($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeAsyncWithHttpInfo($id, $officesCreateOrPatch, string $contentType = self::contentTypes['patchOffice'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetOffice200Response';
-        $request = $this->patchOfficeRequest($id, $offices, $contentType);
+        $request = $this->patchOfficeRequest($id, $officesCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2133,13 +2133,13 @@ class OfficesApi
      * Create request for operation 'patchOffice'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Offices $offices The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\OfficesCreateOrPatch $officesCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchOffice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchOfficeRequest($id, $offices, string $contentType = self::contentTypes['patchOffice'][0])
+    public function patchOfficeRequest($id, $officesCreateOrPatch, string $contentType = self::contentTypes['patchOffice'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -2149,10 +2149,10 @@ class OfficesApi
             );
         }
 
-        // verify the required parameter 'offices' is set
-        if ($offices === null || (is_array($offices) && count($offices) === 0)) {
+        // verify the required parameter 'officesCreateOrPatch' is set
+        if ($officesCreateOrPatch === null || (is_array($officesCreateOrPatch) && count($officesCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $offices when calling patchOffice'
+                'Missing the required parameter $officesCreateOrPatch when calling patchOffice'
             );
         }
 
@@ -2183,12 +2183,12 @@ class OfficesApi
         );
 
         // for model (json/xml)
-        if (isset($offices)) {
+        if (isset($officesCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($offices));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($officesCreateOrPatch));
             } else {
-                $httpBody = $offices;
+                $httpBody = $officesCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

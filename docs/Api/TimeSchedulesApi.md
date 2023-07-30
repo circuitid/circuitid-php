@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createTimeSchedule()`
 
 ```php
-createTimeSchedule($createtimeschedules): \OpenAPI\Client\CircuitID\GetTimeSchedule200Response
+createTimeSchedule($timeschedulesCreateOrPatch): \OpenAPI\Client\CircuitID\GetTimeSchedule200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\TimeSchedulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createtimeschedules = new \OpenAPI\Client\CircuitID\Createtimeschedules(); // \OpenAPI\Client\CircuitID\Createtimeschedules | The JSON object that will be posted to the REST API endpoint.
+$timeschedulesCreateOrPatch = new \OpenAPI\Client\CircuitID\TimeschedulesCreateOrPatch(); // \OpenAPI\Client\CircuitID\TimeschedulesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createTimeSchedule($createtimeschedules);
+    $result = $apiInstance->createTimeSchedule($timeschedulesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TimeSchedulesApi->createTimeSchedule: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createtimeschedules** | [**\OpenAPI\Client\CircuitID\Createtimeschedules**](../Model/Createtimeschedules.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **timeschedulesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\TimeschedulesCreateOrPatch**](../Model/TimeschedulesCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchTimeSchedule()`
 
 ```php
-patchTimeSchedule($id, $timeschedules): \OpenAPI\Client\CircuitID\GetTimeSchedule200Response
+patchTimeSchedule($id, $timeschedulesCreateOrPatch): \OpenAPI\Client\CircuitID\GetTimeSchedule200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\TimeSchedulesApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$timeschedules = new \OpenAPI\Client\CircuitID\Timeschedules(); // \OpenAPI\Client\CircuitID\Timeschedules | The request data.
+$timeschedulesCreateOrPatch = new \OpenAPI\Client\CircuitID\TimeschedulesCreateOrPatch(); // \OpenAPI\Client\CircuitID\TimeschedulesCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchTimeSchedule($id, $timeschedules);
+    $result = $apiInstance->patchTimeSchedule($id, $timeschedulesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TimeSchedulesApi->patchTimeSchedule: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **timeschedules** | [**\OpenAPI\Client\CircuitID\Timeschedules**](../Model/Timeschedules.md)| The request data. | |
+| **timeschedulesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\TimeschedulesCreateOrPatch**](../Model/TimeschedulesCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createConversationMessage()`
 
 ```php
-createConversationMessage($createconversationmessages): \OpenAPI\Client\CircuitID\GetConversationMessage200Response
+createConversationMessage($conversationmessagesCreateOrPatch): \OpenAPI\Client\CircuitID\GetConversationMessage200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ConversationMessagesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$createconversationmessages = new \OpenAPI\Client\CircuitID\Createconversationmessages(); // \OpenAPI\Client\CircuitID\Createconversationmessages | The JSON object that will be posted to the REST API endpoint.
+$conversationmessagesCreateOrPatch = new \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch(); // \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createConversationMessage($createconversationmessages);
+    $result = $apiInstance->createConversationMessage($conversationmessagesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationMessagesApi->createConversationMessage: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createconversationmessages** | [**\OpenAPI\Client\CircuitID\Createconversationmessages**](../Model/Createconversationmessages.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **conversationmessagesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch**](../Model/ConversationmessagesCreateOrPatch.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
@@ -212,7 +212,7 @@ try {
 ## `patchConversationMessage()`
 
 ```php
-patchConversationMessage($id, $conversationmessages): \OpenAPI\Client\CircuitID\GetConversationMessage200Response
+patchConversationMessage($id, $conversationmessagesCreateOrPatch): \OpenAPI\Client\CircuitID\GetConversationMessage200Response
 ```
 
 Patch object's data
@@ -239,10 +239,10 @@ $apiInstance = new OpenAPI\Client\Api\ConversationMessagesApi(
     $config
 );
 $id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$conversationmessages = new \OpenAPI\Client\CircuitID\Conversationmessages(); // \OpenAPI\Client\CircuitID\Conversationmessages | The request data.
+$conversationmessagesCreateOrPatch = new \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch(); // \OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch | The request data.
 
 try {
-    $result = $apiInstance->patchConversationMessage($id, $conversationmessages);
+    $result = $apiInstance->patchConversationMessage($id, $conversationmessagesCreateOrPatch);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationMessagesApi->patchConversationMessage: ', $e->getMessage(), PHP_EOL;
@@ -254,7 +254,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **conversationmessages** | [**\OpenAPI\Client\CircuitID\Conversationmessages**](../Model/Conversationmessages.md)| The request data. | |
+| **conversationmessagesCreateOrPatch** | [**\OpenAPI\Client\CircuitID\ConversationmessagesCreateOrPatch**](../Model/ConversationmessagesCreateOrPatch.md)| The request data. | |
 
 ### Return type
 

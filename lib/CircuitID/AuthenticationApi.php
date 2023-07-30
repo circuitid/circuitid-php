@@ -128,16 +128,16 @@ class AuthenticationApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createauthentication $createauthentication The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AuthenticationCreateOrPatch $authenticationCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthentication'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\CreateAuthentication200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createAuthentication($createauthentication, string $contentType = self::contentTypes['createAuthentication'][0])
+    public function createAuthentication($authenticationCreateOrPatch, string $contentType = self::contentTypes['createAuthentication'][0])
     {
-        list($response) = $this->createAuthenticationWithHttpInfo($createauthentication, $contentType);
+        list($response) = $this->createAuthenticationWithHttpInfo($authenticationCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -146,16 +146,16 @@ class AuthenticationApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createauthentication $createauthentication The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AuthenticationCreateOrPatch $authenticationCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthentication'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\CreateAuthentication200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAuthenticationWithHttpInfo($createauthentication, string $contentType = self::contentTypes['createAuthentication'][0])
+    public function createAuthenticationWithHttpInfo($authenticationCreateOrPatch, string $contentType = self::contentTypes['createAuthentication'][0])
     {
-        $request = $this->createAuthenticationRequest($createauthentication, $contentType);
+        $request = $this->createAuthenticationRequest($authenticationCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -453,15 +453,15 @@ class AuthenticationApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createauthentication $createauthentication The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AuthenticationCreateOrPatch $authenticationCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthentication'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAuthenticationAsync($createauthentication, string $contentType = self::contentTypes['createAuthentication'][0])
+    public function createAuthenticationAsync($authenticationCreateOrPatch, string $contentType = self::contentTypes['createAuthentication'][0])
     {
-        return $this->createAuthenticationAsyncWithHttpInfo($createauthentication, $contentType)
+        return $this->createAuthenticationAsyncWithHttpInfo($authenticationCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -474,16 +474,16 @@ class AuthenticationApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Createauthentication $createauthentication The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AuthenticationCreateOrPatch $authenticationCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthentication'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAuthenticationAsyncWithHttpInfo($createauthentication, string $contentType = self::contentTypes['createAuthentication'][0])
+    public function createAuthenticationAsyncWithHttpInfo($authenticationCreateOrPatch, string $contentType = self::contentTypes['createAuthentication'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\CreateAuthentication200Response';
-        $request = $this->createAuthenticationRequest($createauthentication, $contentType);
+        $request = $this->createAuthenticationRequest($authenticationCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -524,19 +524,19 @@ class AuthenticationApi
     /**
      * Create request for operation 'createAuthentication'
      *
-     * @param  \OpenAPI\Client\CircuitID\Createauthentication $createauthentication The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\AuthenticationCreateOrPatch $authenticationCreateOrPatch The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAuthentication'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAuthenticationRequest($createauthentication, string $contentType = self::contentTypes['createAuthentication'][0])
+    public function createAuthenticationRequest($authenticationCreateOrPatch, string $contentType = self::contentTypes['createAuthentication'][0])
     {
 
-        // verify the required parameter 'createauthentication' is set
-        if ($createauthentication === null || (is_array($createauthentication) && count($createauthentication) === 0)) {
+        // verify the required parameter 'authenticationCreateOrPatch' is set
+        if ($authenticationCreateOrPatch === null || (is_array($authenticationCreateOrPatch) && count($authenticationCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $createauthentication when calling createAuthentication'
+                'Missing the required parameter $authenticationCreateOrPatch when calling createAuthentication'
             );
         }
 
@@ -559,12 +559,12 @@ class AuthenticationApi
         );
 
         // for model (json/xml)
-        if (isset($createauthentication)) {
+        if (isset($authenticationCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createauthentication));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($authenticationCreateOrPatch));
             } else {
-                $httpBody = $createauthentication;
+                $httpBody = $authenticationCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

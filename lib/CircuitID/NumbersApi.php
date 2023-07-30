@@ -1233,16 +1233,16 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Numbers $numbers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\NumbersCreateOrPatch $numbersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetNumber200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function patchNumber($id, $numbers, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumber($id, $numbersCreateOrPatch, string $contentType = self::contentTypes['patchNumber'][0])
     {
-        list($response) = $this->patchNumberWithHttpInfo($id, $numbers, $contentType);
+        list($response) = $this->patchNumberWithHttpInfo($id, $numbersCreateOrPatch, $contentType);
         return $response;
     }
 
@@ -1252,16 +1252,16 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Numbers $numbers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\NumbersCreateOrPatch $numbersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetNumber200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchNumberWithHttpInfo($id, $numbers, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberWithHttpInfo($id, $numbersCreateOrPatch, string $contentType = self::contentTypes['patchNumber'][0])
     {
-        $request = $this->patchNumberRequest($id, $numbers, $contentType);
+        $request = $this->patchNumberRequest($id, $numbersCreateOrPatch, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1560,15 +1560,15 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Numbers $numbers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\NumbersCreateOrPatch $numbersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchNumberAsync($id, $numbers, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberAsync($id, $numbersCreateOrPatch, string $contentType = self::contentTypes['patchNumber'][0])
     {
-        return $this->patchNumberAsyncWithHttpInfo($id, $numbers, $contentType)
+        return $this->patchNumberAsyncWithHttpInfo($id, $numbersCreateOrPatch, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1582,16 +1582,16 @@ class NumbersApi
      * Patch object&#39;s data
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Numbers $numbers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\NumbersCreateOrPatch $numbersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchNumberAsyncWithHttpInfo($id, $numbers, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberAsyncWithHttpInfo($id, $numbersCreateOrPatch, string $contentType = self::contentTypes['patchNumber'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetNumber200Response';
-        $request = $this->patchNumberRequest($id, $numbers, $contentType);
+        $request = $this->patchNumberRequest($id, $numbersCreateOrPatch, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1633,13 +1633,13 @@ class NumbersApi
      * Create request for operation 'patchNumber'
      *
      * @param  string $id The ObjectId (unique 12 bytes ID) of record you would like to GET. (required)
-     * @param  \OpenAPI\Client\CircuitID\Numbers $numbers The request data. (required)
+     * @param  \OpenAPI\Client\CircuitID\NumbersCreateOrPatch $numbersCreateOrPatch The request data. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['patchNumber'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function patchNumberRequest($id, $numbers, string $contentType = self::contentTypes['patchNumber'][0])
+    public function patchNumberRequest($id, $numbersCreateOrPatch, string $contentType = self::contentTypes['patchNumber'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -1649,10 +1649,10 @@ class NumbersApi
             );
         }
 
-        // verify the required parameter 'numbers' is set
-        if ($numbers === null || (is_array($numbers) && count($numbers) === 0)) {
+        // verify the required parameter 'numbersCreateOrPatch' is set
+        if ($numbersCreateOrPatch === null || (is_array($numbersCreateOrPatch) && count($numbersCreateOrPatch) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $numbers when calling patchNumber'
+                'Missing the required parameter $numbersCreateOrPatch when calling patchNumber'
             );
         }
 
@@ -1683,12 +1683,12 @@ class NumbersApi
         );
 
         // for model (json/xml)
-        if (isset($numbers)) {
+        if (isset($numbersCreateOrPatch)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($numbers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($numbersCreateOrPatch));
             } else {
-                $httpBody = $numbers;
+                $httpBody = $numbersCreateOrPatch;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
