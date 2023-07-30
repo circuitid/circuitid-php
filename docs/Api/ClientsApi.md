@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createClient()`
 
 ```php
-createClient($clients): \OpenAPI\Client\CircuitID\GetClient200Response
+createClient($createclients): \OpenAPI\Client\CircuitID\GetClient200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$clients = new \OpenAPI\Client\CircuitID\Clients(); // \OpenAPI\Client\CircuitID\Clients | The JSON object that will be posted to the REST API endpoint.
+$createclients = new \OpenAPI\Client\CircuitID\Createclients(); // \OpenAPI\Client\CircuitID\Createclients | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createClient($clients);
+    $result = $apiInstance->createClient($createclients);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClientsApi->createClient: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **clients** | [**\OpenAPI\Client\CircuitID\Clients**](../Model/Clients.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createclients** | [**\OpenAPI\Client\CircuitID\Createclients**](../Model/Createclients.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

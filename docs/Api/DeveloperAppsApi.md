@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createDeveloperApp()`
 
 ```php
-createDeveloperApp($developerapps): \OpenAPI\Client\CircuitID\GetDeveloperApp200Response
+createDeveloperApp($createdeveloperapps): \OpenAPI\Client\CircuitID\GetDeveloperApp200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$developerapps = new \OpenAPI\Client\CircuitID\Developerapps(); // \OpenAPI\Client\CircuitID\Developerapps | The JSON object that will be posted to the REST API endpoint.
+$createdeveloperapps = new \OpenAPI\Client\CircuitID\Createdeveloperapps(); // \OpenAPI\Client\CircuitID\Createdeveloperapps | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createDeveloperApp($developerapps);
+    $result = $apiInstance->createDeveloperApp($createdeveloperapps);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppsApi->createDeveloperApp: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **developerapps** | [**\OpenAPI\Client\CircuitID\Developerapps**](../Model/Developerapps.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createdeveloperapps** | [**\OpenAPI\Client\CircuitID\Createdeveloperapps**](../Model/Createdeveloperapps.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

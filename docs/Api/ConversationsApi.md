@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createConversation()`
 
 ```php
-createConversation($conversations): \OpenAPI\Client\CircuitID\GetConversation200Response
+createConversation($createconversations): \OpenAPI\Client\CircuitID\GetConversation200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ConversationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$conversations = new \OpenAPI\Client\CircuitID\Conversations(); // \OpenAPI\Client\CircuitID\Conversations | The JSON object that will be posted to the REST API endpoint.
+$createconversations = new \OpenAPI\Client\CircuitID\Createconversations(); // \OpenAPI\Client\CircuitID\Createconversations | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createConversation($conversations);
+    $result = $apiInstance->createConversation($createconversations);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConversationsApi->createConversation: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversations** | [**\OpenAPI\Client\CircuitID\Conversations**](../Model/Conversations.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createconversations** | [**\OpenAPI\Client\CircuitID\Createconversations**](../Model/Createconversations.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

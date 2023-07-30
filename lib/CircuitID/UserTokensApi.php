@@ -140,16 +140,16 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetUserToken200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createUserToken($usertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserToken($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
     {
-        list($response) = $this->createUserTokenWithHttpInfo($usertokens, $contentType);
+        list($response) = $this->createUserTokenWithHttpInfo($createusertokens, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetUserToken200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUserTokenWithHttpInfo($usertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenWithHttpInfo($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
     {
-        $request = $this->createUserTokenRequest($usertokens, $contentType);
+        $request = $this->createUserTokenRequest($createusertokens, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserTokenAsync($usertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenAsync($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
     {
-        return $this->createUserTokenAsyncWithHttpInfo($usertokens, $contentType)
+        return $this->createUserTokenAsyncWithHttpInfo($createusertokens, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class UserTokensApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserTokenAsyncWithHttpInfo($usertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenAsyncWithHttpInfo($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetUserToken200Response';
-        $request = $this->createUserTokenRequest($usertokens, $contentType);
+        $request = $this->createUserTokenRequest($createusertokens, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class UserTokensApi
     /**
      * Create request for operation 'createUserToken'
      *
-     * @param  \OpenAPI\Client\CircuitID\Usertokens $usertokens The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusertokens $createusertokens The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUserToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUserTokenRequest($usertokens, string $contentType = self::contentTypes['createUserToken'][0])
+    public function createUserTokenRequest($createusertokens, string $contentType = self::contentTypes['createUserToken'][0])
     {
 
-        // verify the required parameter 'usertokens' is set
-        if ($usertokens === null || (is_array($usertokens) && count($usertokens) === 0)) {
+        // verify the required parameter 'createusertokens' is set
+        if ($createusertokens === null || (is_array($createusertokens) && count($createusertokens) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $usertokens when calling createUserToken'
+                'Missing the required parameter $createusertokens when calling createUserToken'
             );
         }
 
@@ -571,12 +571,12 @@ class UserTokensApi
         );
 
         // for model (json/xml)
-        if (isset($usertokens)) {
+        if (isset($createusertokens)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($usertokens));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createusertokens));
             } else {
-                $httpBody = $usertokens;
+                $httpBody = $createusertokens;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

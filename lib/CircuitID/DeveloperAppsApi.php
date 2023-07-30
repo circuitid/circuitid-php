@@ -140,16 +140,16 @@ class DeveloperAppsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdeveloperapps $createdeveloperapps The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperApp'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetDeveloperApp200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createDeveloperApp($developerapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
+    public function createDeveloperApp($createdeveloperapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
     {
-        list($response) = $this->createDeveloperAppWithHttpInfo($developerapps, $contentType);
+        list($response) = $this->createDeveloperAppWithHttpInfo($createdeveloperapps, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class DeveloperAppsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdeveloperapps $createdeveloperapps The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperApp'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetDeveloperApp200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDeveloperAppWithHttpInfo($developerapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
+    public function createDeveloperAppWithHttpInfo($createdeveloperapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
     {
-        $request = $this->createDeveloperAppRequest($developerapps, $contentType);
+        $request = $this->createDeveloperAppRequest($createdeveloperapps, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class DeveloperAppsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdeveloperapps $createdeveloperapps The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDeveloperAppAsync($developerapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
+    public function createDeveloperAppAsync($createdeveloperapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
     {
-        return $this->createDeveloperAppAsyncWithHttpInfo($developerapps, $contentType)
+        return $this->createDeveloperAppAsyncWithHttpInfo($createdeveloperapps, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class DeveloperAppsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdeveloperapps $createdeveloperapps The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDeveloperAppAsyncWithHttpInfo($developerapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
+    public function createDeveloperAppAsyncWithHttpInfo($createdeveloperapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetDeveloperApp200Response';
-        $request = $this->createDeveloperAppRequest($developerapps, $contentType);
+        $request = $this->createDeveloperAppRequest($createdeveloperapps, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class DeveloperAppsApi
     /**
      * Create request for operation 'createDeveloperApp'
      *
-     * @param  \OpenAPI\Client\CircuitID\Developerapps $developerapps The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdeveloperapps $createdeveloperapps The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDeveloperApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDeveloperAppRequest($developerapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
+    public function createDeveloperAppRequest($createdeveloperapps, string $contentType = self::contentTypes['createDeveloperApp'][0])
     {
 
-        // verify the required parameter 'developerapps' is set
-        if ($developerapps === null || (is_array($developerapps) && count($developerapps) === 0)) {
+        // verify the required parameter 'createdeveloperapps' is set
+        if ($createdeveloperapps === null || (is_array($createdeveloperapps) && count($createdeveloperapps) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $developerapps when calling createDeveloperApp'
+                'Missing the required parameter $createdeveloperapps when calling createDeveloperApp'
             );
         }
 
@@ -571,12 +571,12 @@ class DeveloperAppsApi
         );
 
         // for model (json/xml)
-        if (isset($developerapps)) {
+        if (isset($createdeveloperapps)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($developerapps));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createdeveloperapps));
             } else {
-                $httpBody = $developerapps;
+                $httpBody = $createdeveloperapps;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

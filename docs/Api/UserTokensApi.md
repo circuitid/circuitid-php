@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createUserToken()`
 
 ```php
-createUserToken($usertokens): \OpenAPI\Client\CircuitID\GetUserToken200Response
+createUserToken($createusertokens): \OpenAPI\Client\CircuitID\GetUserToken200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\UserTokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$usertokens = new \OpenAPI\Client\CircuitID\Usertokens(); // \OpenAPI\Client\CircuitID\Usertokens | The JSON object that will be posted to the REST API endpoint.
+$createusertokens = new \OpenAPI\Client\CircuitID\Createusertokens(); // \OpenAPI\Client\CircuitID\Createusertokens | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createUserToken($usertokens);
+    $result = $apiInstance->createUserToken($createusertokens);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserTokensApi->createUserToken: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **usertokens** | [**\OpenAPI\Client\CircuitID\Usertokens**](../Model/Usertokens.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createusertokens** | [**\OpenAPI\Client\CircuitID\Createusertokens**](../Model/Createusertokens.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createConferenceRoom()`
 
 ```php
-createConferenceRoom($conferencerooms): \OpenAPI\Client\CircuitID\GetConferenceRoom200Response
+createConferenceRoom($createconferencerooms): \OpenAPI\Client\CircuitID\GetConferenceRoom200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ConferenceRoomsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$conferencerooms = new \OpenAPI\Client\CircuitID\Conferencerooms(); // \OpenAPI\Client\CircuitID\Conferencerooms | The JSON object that will be posted to the REST API endpoint.
+$createconferencerooms = new \OpenAPI\Client\CircuitID\Createconferencerooms(); // \OpenAPI\Client\CircuitID\Createconferencerooms | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createConferenceRoom($conferencerooms);
+    $result = $apiInstance->createConferenceRoom($createconferencerooms);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConferenceRoomsApi->createConferenceRoom: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conferencerooms** | [**\OpenAPI\Client\CircuitID\Conferencerooms**](../Model/Conferencerooms.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createconferencerooms** | [**\OpenAPI\Client\CircuitID\Createconferencerooms**](../Model/Createconferencerooms.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

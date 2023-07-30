@@ -140,16 +140,16 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\Getdirectory200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createdirectory($directories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectory($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        list($response) = $this->createdirectoryWithHttpInfo($directories, $contentType);
+        list($response) = $this->createdirectoryWithHttpInfo($createdirectories, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\Getdirectory200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createdirectoryWithHttpInfo($directories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryWithHttpInfo($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        $request = $this->createdirectoryRequest($directories, $contentType);
+        $request = $this->createdirectoryRequest($createdirectories, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createdirectoryAsync($directories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryAsync($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
     {
-        return $this->createdirectoryAsyncWithHttpInfo($directories, $contentType)
+        return $this->createdirectoryAsyncWithHttpInfo($createdirectories, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class DirectoriesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createdirectoryAsyncWithHttpInfo($directories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryAsyncWithHttpInfo($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\Getdirectory200Response';
-        $request = $this->createdirectoryRequest($directories, $contentType);
+        $request = $this->createdirectoryRequest($createdirectories, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class DirectoriesApi
     /**
      * Create request for operation 'createdirectory'
      *
-     * @param  \OpenAPI\Client\CircuitID\Directories $directories The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdirectories $createdirectories The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createdirectory'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createdirectoryRequest($directories, string $contentType = self::contentTypes['createdirectory'][0])
+    public function createdirectoryRequest($createdirectories, string $contentType = self::contentTypes['createdirectory'][0])
     {
 
-        // verify the required parameter 'directories' is set
-        if ($directories === null || (is_array($directories) && count($directories) === 0)) {
+        // verify the required parameter 'createdirectories' is set
+        if ($createdirectories === null || (is_array($createdirectories) && count($createdirectories) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $directories when calling createdirectory'
+                'Missing the required parameter $createdirectories when calling createdirectory'
             );
         }
 
@@ -571,12 +571,12 @@ class DirectoriesApi
         );
 
         // for model (json/xml)
-        if (isset($directories)) {
+        if (isset($createdirectories)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($directories));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createdirectories));
             } else {
-                $httpBody = $directories;
+                $httpBody = $createdirectories;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

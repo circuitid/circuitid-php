@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createHoliday()`
 
 ```php
-createHoliday($holidays): \OpenAPI\Client\CircuitID\GetHoliday200Response
+createHoliday($createholidays): \OpenAPI\Client\CircuitID\GetHoliday200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\HolidaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$holidays = new \OpenAPI\Client\CircuitID\Holidays(); // \OpenAPI\Client\CircuitID\Holidays | The JSON object that will be posted to the REST API endpoint.
+$createholidays = new \OpenAPI\Client\CircuitID\Createholidays(); // \OpenAPI\Client\CircuitID\Createholidays | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createHoliday($holidays);
+    $result = $apiInstance->createHoliday($createholidays);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HolidaysApi->createHoliday: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **holidays** | [**\OpenAPI\Client\CircuitID\Holidays**](../Model/Holidays.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createholidays** | [**\OpenAPI\Client\CircuitID\Createholidays**](../Model/Createholidays.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

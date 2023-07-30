@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createPhoneInboundRuleAction()`
 
 ```php
-createPhoneInboundRuleAction($phoneinboundruleactions): \OpenAPI\Client\CircuitID\GetPhoneInboundRuleAction200Response
+createPhoneInboundRuleAction($createphoneinboundruleactions): \OpenAPI\Client\CircuitID\GetPhoneInboundRuleAction200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\PhoneInboundRuleActionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$phoneinboundruleactions = new \OpenAPI\Client\CircuitID\Phoneinboundruleactions(); // \OpenAPI\Client\CircuitID\Phoneinboundruleactions | The JSON object that will be posted to the REST API endpoint.
+$createphoneinboundruleactions = new \OpenAPI\Client\CircuitID\Createphoneinboundruleactions(); // \OpenAPI\Client\CircuitID\Createphoneinboundruleactions | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createPhoneInboundRuleAction($phoneinboundruleactions);
+    $result = $apiInstance->createPhoneInboundRuleAction($createphoneinboundruleactions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PhoneInboundRuleActionsApi->createPhoneInboundRuleAction: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **phoneinboundruleactions** | [**\OpenAPI\Client\CircuitID\Phoneinboundruleactions**](../Model/Phoneinboundruleactions.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createphoneinboundruleactions** | [**\OpenAPI\Client\CircuitID\Createphoneinboundruleactions**](../Model/Createphoneinboundruleactions.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

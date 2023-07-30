@@ -140,16 +140,16 @@ class MessageCampaignsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagecampaigns $messagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagecampaigns $createmessagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageCampaign'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetMessageCampaign200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createMessageCampaign($messagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
+    public function createMessageCampaign($createmessagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
     {
-        list($response) = $this->createMessageCampaignWithHttpInfo($messagecampaigns, $contentType);
+        list($response) = $this->createMessageCampaignWithHttpInfo($createmessagecampaigns, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class MessageCampaignsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagecampaigns $messagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagecampaigns $createmessagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageCampaign'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetMessageCampaign200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createMessageCampaignWithHttpInfo($messagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
+    public function createMessageCampaignWithHttpInfo($createmessagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
     {
-        $request = $this->createMessageCampaignRequest($messagecampaigns, $contentType);
+        $request = $this->createMessageCampaignRequest($createmessagecampaigns, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class MessageCampaignsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagecampaigns $messagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagecampaigns $createmessagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMessageCampaignAsync($messagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
+    public function createMessageCampaignAsync($createmessagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
     {
-        return $this->createMessageCampaignAsyncWithHttpInfo($messagecampaigns, $contentType)
+        return $this->createMessageCampaignAsyncWithHttpInfo($createmessagecampaigns, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class MessageCampaignsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagecampaigns $messagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagecampaigns $createmessagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMessageCampaignAsyncWithHttpInfo($messagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
+    public function createMessageCampaignAsyncWithHttpInfo($createmessagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetMessageCampaign200Response';
-        $request = $this->createMessageCampaignRequest($messagecampaigns, $contentType);
+        $request = $this->createMessageCampaignRequest($createmessagecampaigns, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class MessageCampaignsApi
     /**
      * Create request for operation 'createMessageCampaign'
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagecampaigns $messagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagecampaigns $createmessagecampaigns The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageCampaign'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createMessageCampaignRequest($messagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
+    public function createMessageCampaignRequest($createmessagecampaigns, string $contentType = self::contentTypes['createMessageCampaign'][0])
     {
 
-        // verify the required parameter 'messagecampaigns' is set
-        if ($messagecampaigns === null || (is_array($messagecampaigns) && count($messagecampaigns) === 0)) {
+        // verify the required parameter 'createmessagecampaigns' is set
+        if ($createmessagecampaigns === null || (is_array($createmessagecampaigns) && count($createmessagecampaigns) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $messagecampaigns when calling createMessageCampaign'
+                'Missing the required parameter $createmessagecampaigns when calling createMessageCampaign'
             );
         }
 
@@ -571,12 +571,12 @@ class MessageCampaignsApi
         );
 
         // for model (json/xml)
-        if (isset($messagecampaigns)) {
+        if (isset($createmessagecampaigns)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($messagecampaigns));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createmessagecampaigns));
             } else {
-                $httpBody = $messagecampaigns;
+                $httpBody = $createmessagecampaigns;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

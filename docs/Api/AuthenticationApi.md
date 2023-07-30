@@ -10,7 +10,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createAuthentication()`
 
 ```php
-createAuthentication($authentication): \OpenAPI\Client\CircuitID\CreateAuthentication200Response
+createAuthentication($createauthentication): \OpenAPI\Client\CircuitID\CreateAuthentication200Response
 ```
 
 Create a new object
@@ -36,10 +36,10 @@ $apiInstance = new OpenAPI\Client\Api\AuthenticationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$authentication = new \OpenAPI\Client\CircuitID\Authentication(); // \OpenAPI\Client\CircuitID\Authentication | The JSON object that will be posted to the REST API endpoint.
+$createauthentication = new \OpenAPI\Client\CircuitID\Createauthentication(); // \OpenAPI\Client\CircuitID\Createauthentication | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createAuthentication($authentication);
+    $result = $apiInstance->createAuthentication($createauthentication);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthenticationApi->createAuthentication: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **authentication** | [**\OpenAPI\Client\CircuitID\Authentication**](../Model/Authentication.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createauthentication** | [**\OpenAPI\Client\CircuitID\Createauthentication**](../Model/Createauthentication.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

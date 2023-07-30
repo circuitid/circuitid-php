@@ -137,16 +137,16 @@ class NumberPortsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createnumberports $createnumberports The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNumberPort'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetNumberPort200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createNumberPort($numberports, string $contentType = self::contentTypes['createNumberPort'][0])
+    public function createNumberPort($createnumberports, string $contentType = self::contentTypes['createNumberPort'][0])
     {
-        list($response) = $this->createNumberPortWithHttpInfo($numberports, $contentType);
+        list($response) = $this->createNumberPortWithHttpInfo($createnumberports, $contentType);
         return $response;
     }
 
@@ -155,16 +155,16 @@ class NumberPortsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createnumberports $createnumberports The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNumberPort'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetNumberPort200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNumberPortWithHttpInfo($numberports, string $contentType = self::contentTypes['createNumberPort'][0])
+    public function createNumberPortWithHttpInfo($createnumberports, string $contentType = self::contentTypes['createNumberPort'][0])
     {
-        $request = $this->createNumberPortRequest($numberports, $contentType);
+        $request = $this->createNumberPortRequest($createnumberports, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -462,15 +462,15 @@ class NumberPortsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createnumberports $createnumberports The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNumberPort'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNumberPortAsync($numberports, string $contentType = self::contentTypes['createNumberPort'][0])
+    public function createNumberPortAsync($createnumberports, string $contentType = self::contentTypes['createNumberPort'][0])
     {
-        return $this->createNumberPortAsyncWithHttpInfo($numberports, $contentType)
+        return $this->createNumberPortAsyncWithHttpInfo($createnumberports, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -483,16 +483,16 @@ class NumberPortsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createnumberports $createnumberports The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNumberPort'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNumberPortAsyncWithHttpInfo($numberports, string $contentType = self::contentTypes['createNumberPort'][0])
+    public function createNumberPortAsyncWithHttpInfo($createnumberports, string $contentType = self::contentTypes['createNumberPort'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetNumberPort200Response';
-        $request = $this->createNumberPortRequest($numberports, $contentType);
+        $request = $this->createNumberPortRequest($createnumberports, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -533,19 +533,19 @@ class NumberPortsApi
     /**
      * Create request for operation 'createNumberPort'
      *
-     * @param  \OpenAPI\Client\CircuitID\Numberports $numberports The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createnumberports $createnumberports The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNumberPort'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createNumberPortRequest($numberports, string $contentType = self::contentTypes['createNumberPort'][0])
+    public function createNumberPortRequest($createnumberports, string $contentType = self::contentTypes['createNumberPort'][0])
     {
 
-        // verify the required parameter 'numberports' is set
-        if ($numberports === null || (is_array($numberports) && count($numberports) === 0)) {
+        // verify the required parameter 'createnumberports' is set
+        if ($createnumberports === null || (is_array($createnumberports) && count($createnumberports) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $numberports when calling createNumberPort'
+                'Missing the required parameter $createnumberports when calling createNumberPort'
             );
         }
 
@@ -568,12 +568,12 @@ class NumberPortsApi
         );
 
         // for model (json/xml)
-        if (isset($numberports)) {
+        if (isset($createnumberports)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($numberports));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createnumberports));
             } else {
-                $httpBody = $numberports;
+                $httpBody = $createnumberports;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -140,16 +140,16 @@ class CallQueueAgentsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueueagents $createcallqueueagents The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetCallQueueAgent200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createCallQueueAgent($callqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
+    public function createCallQueueAgent($createcallqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
     {
-        list($response) = $this->createCallQueueAgentWithHttpInfo($callqueueagents, $contentType);
+        list($response) = $this->createCallQueueAgentWithHttpInfo($createcallqueueagents, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class CallQueueAgentsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueueagents $createcallqueueagents The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetCallQueueAgent200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCallQueueAgentWithHttpInfo($callqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
+    public function createCallQueueAgentWithHttpInfo($createcallqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
     {
-        $request = $this->createCallQueueAgentRequest($callqueueagents, $contentType);
+        $request = $this->createCallQueueAgentRequest($createcallqueueagents, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class CallQueueAgentsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueueagents $createcallqueueagents The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallQueueAgentAsync($callqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
+    public function createCallQueueAgentAsync($createcallqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
     {
-        return $this->createCallQueueAgentAsyncWithHttpInfo($callqueueagents, $contentType)
+        return $this->createCallQueueAgentAsyncWithHttpInfo($createcallqueueagents, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class CallQueueAgentsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueueagents $createcallqueueagents The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallQueueAgentAsyncWithHttpInfo($callqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
+    public function createCallQueueAgentAsyncWithHttpInfo($createcallqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetCallQueueAgent200Response';
-        $request = $this->createCallQueueAgentRequest($callqueueagents, $contentType);
+        $request = $this->createCallQueueAgentRequest($createcallqueueagents, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class CallQueueAgentsApi
     /**
      * Create request for operation 'createCallQueueAgent'
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueueagents $callqueueagents The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueueagents $createcallqueueagents The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueueAgent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createCallQueueAgentRequest($callqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
+    public function createCallQueueAgentRequest($createcallqueueagents, string $contentType = self::contentTypes['createCallQueueAgent'][0])
     {
 
-        // verify the required parameter 'callqueueagents' is set
-        if ($callqueueagents === null || (is_array($callqueueagents) && count($callqueueagents) === 0)) {
+        // verify the required parameter 'createcallqueueagents' is set
+        if ($createcallqueueagents === null || (is_array($createcallqueueagents) && count($createcallqueueagents) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $callqueueagents when calling createCallQueueAgent'
+                'Missing the required parameter $createcallqueueagents when calling createCallQueueAgent'
             );
         }
 
@@ -571,12 +571,12 @@ class CallQueueAgentsApi
         );
 
         // for model (json/xml)
-        if (isset($callqueueagents)) {
+        if (isset($createcallqueueagents)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($callqueueagents));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createcallqueueagents));
             } else {
-                $httpBody = $callqueueagents;
+                $httpBody = $createcallqueueagents;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createServer()`
 
 ```php
-createServer($servers): \OpenAPI\Client\CircuitID\GetServer200Response
+createServer($createservers): \OpenAPI\Client\CircuitID\GetServer200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ServersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$servers = new \OpenAPI\Client\CircuitID\Servers(); // \OpenAPI\Client\CircuitID\Servers | The JSON object that will be posted to the REST API endpoint.
+$createservers = new \OpenAPI\Client\CircuitID\Createservers(); // \OpenAPI\Client\CircuitID\Createservers | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createServer($servers);
+    $result = $apiInstance->createServer($createservers);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ServersApi->createServer: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **servers** | [**\OpenAPI\Client\CircuitID\Servers**](../Model/Servers.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createservers** | [**\OpenAPI\Client\CircuitID\Createservers**](../Model/Createservers.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

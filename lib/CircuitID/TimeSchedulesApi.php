@@ -140,16 +140,16 @@ class TimeSchedulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createtimeschedules $createtimeschedules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTimeSchedule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetTimeSchedule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createTimeSchedule($timeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
+    public function createTimeSchedule($createtimeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
     {
-        list($response) = $this->createTimeScheduleWithHttpInfo($timeschedules, $contentType);
+        list($response) = $this->createTimeScheduleWithHttpInfo($createtimeschedules, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class TimeSchedulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createtimeschedules $createtimeschedules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTimeSchedule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetTimeSchedule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTimeScheduleWithHttpInfo($timeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
+    public function createTimeScheduleWithHttpInfo($createtimeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
     {
-        $request = $this->createTimeScheduleRequest($timeschedules, $contentType);
+        $request = $this->createTimeScheduleRequest($createtimeschedules, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class TimeSchedulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createtimeschedules $createtimeschedules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTimeSchedule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTimeScheduleAsync($timeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
+    public function createTimeScheduleAsync($createtimeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
     {
-        return $this->createTimeScheduleAsyncWithHttpInfo($timeschedules, $contentType)
+        return $this->createTimeScheduleAsyncWithHttpInfo($createtimeschedules, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class TimeSchedulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createtimeschedules $createtimeschedules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTimeSchedule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTimeScheduleAsyncWithHttpInfo($timeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
+    public function createTimeScheduleAsyncWithHttpInfo($createtimeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetTimeSchedule200Response';
-        $request = $this->createTimeScheduleRequest($timeschedules, $contentType);
+        $request = $this->createTimeScheduleRequest($createtimeschedules, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class TimeSchedulesApi
     /**
      * Create request for operation 'createTimeSchedule'
      *
-     * @param  \OpenAPI\Client\CircuitID\Timeschedules $timeschedules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createtimeschedules $createtimeschedules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTimeSchedule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTimeScheduleRequest($timeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
+    public function createTimeScheduleRequest($createtimeschedules, string $contentType = self::contentTypes['createTimeSchedule'][0])
     {
 
-        // verify the required parameter 'timeschedules' is set
-        if ($timeschedules === null || (is_array($timeschedules) && count($timeschedules) === 0)) {
+        // verify the required parameter 'createtimeschedules' is set
+        if ($createtimeschedules === null || (is_array($createtimeschedules) && count($createtimeschedules) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $timeschedules when calling createTimeSchedule'
+                'Missing the required parameter $createtimeschedules when calling createTimeSchedule'
             );
         }
 
@@ -571,12 +571,12 @@ class TimeSchedulesApi
         );
 
         // for model (json/xml)
-        if (isset($timeschedules)) {
+        if (isset($createtimeschedules)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($timeschedules));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createtimeschedules));
             } else {
-                $httpBody = $timeschedules;
+                $httpBody = $createtimeschedules;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

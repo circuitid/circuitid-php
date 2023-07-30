@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createDomain()`
 
 ```php
-createDomain($domains): \OpenAPI\Client\CircuitID\GetDomain200Response
+createDomain($createdomains): \OpenAPI\Client\CircuitID\GetDomain200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DomainsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$domains = new \OpenAPI\Client\CircuitID\Domains(); // \OpenAPI\Client\CircuitID\Domains | The JSON object that will be posted to the REST API endpoint.
+$createdomains = new \OpenAPI\Client\CircuitID\Createdomains(); // \OpenAPI\Client\CircuitID\Createdomains | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createDomain($domains);
+    $result = $apiInstance->createDomain($createdomains);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DomainsApi->createDomain: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **domains** | [**\OpenAPI\Client\CircuitID\Domains**](../Model/Domains.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createdomains** | [**\OpenAPI\Client\CircuitID\Createdomains**](../Model/Createdomains.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

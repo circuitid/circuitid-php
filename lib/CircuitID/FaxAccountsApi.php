@@ -140,16 +140,16 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetFaxAccount200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createFaxAccount($faxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccount($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
-        list($response) = $this->createFaxAccountWithHttpInfo($faxaccounts, $contentType);
+        list($response) = $this->createFaxAccountWithHttpInfo($createfaxaccounts, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetFaxAccount200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createFaxAccountWithHttpInfo($faxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountWithHttpInfo($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
-        $request = $this->createFaxAccountRequest($faxaccounts, $contentType);
+        $request = $this->createFaxAccountRequest($createfaxaccounts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFaxAccountAsync($faxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountAsync($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
-        return $this->createFaxAccountAsyncWithHttpInfo($faxaccounts, $contentType)
+        return $this->createFaxAccountAsyncWithHttpInfo($createfaxaccounts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class FaxAccountsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFaxAccountAsyncWithHttpInfo($faxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountAsyncWithHttpInfo($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetFaxAccount200Response';
-        $request = $this->createFaxAccountRequest($faxaccounts, $contentType);
+        $request = $this->createFaxAccountRequest($createfaxaccounts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class FaxAccountsApi
     /**
      * Create request for operation 'createFaxAccount'
      *
-     * @param  \OpenAPI\Client\CircuitID\Faxaccounts $faxaccounts The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfaxaccounts $createfaxaccounts The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFaxAccount'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createFaxAccountRequest($faxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
+    public function createFaxAccountRequest($createfaxaccounts, string $contentType = self::contentTypes['createFaxAccount'][0])
     {
 
-        // verify the required parameter 'faxaccounts' is set
-        if ($faxaccounts === null || (is_array($faxaccounts) && count($faxaccounts) === 0)) {
+        // verify the required parameter 'createfaxaccounts' is set
+        if ($createfaxaccounts === null || (is_array($createfaxaccounts) && count($createfaxaccounts) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $faxaccounts when calling createFaxAccount'
+                'Missing the required parameter $createfaxaccounts when calling createFaxAccount'
             );
         }
 
@@ -571,12 +571,12 @@ class FaxAccountsApi
         );
 
         // for model (json/xml)
-        if (isset($faxaccounts)) {
+        if (isset($createfaxaccounts)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($faxaccounts));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createfaxaccounts));
             } else {
-                $httpBody = $faxaccounts;
+                $httpBody = $createfaxaccounts;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

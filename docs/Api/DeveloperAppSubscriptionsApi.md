@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createDeveloperAppSubscription()`
 
 ```php
-createDeveloperAppSubscription($developerappsubscriptions): \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response
+createDeveloperAppSubscription($createdeveloperappsubscriptions): \OpenAPI\Client\CircuitID\GetDeveloperAppSubscription200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DeveloperAppSubscriptionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$developerappsubscriptions = new \OpenAPI\Client\CircuitID\Developerappsubscriptions(); // \OpenAPI\Client\CircuitID\Developerappsubscriptions | The JSON object that will be posted to the REST API endpoint.
+$createdeveloperappsubscriptions = new \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions(); // \OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createDeveloperAppSubscription($developerappsubscriptions);
+    $result = $apiInstance->createDeveloperAppSubscription($createdeveloperappsubscriptions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DeveloperAppSubscriptionsApi->createDeveloperAppSubscription: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **developerappsubscriptions** | [**\OpenAPI\Client\CircuitID\Developerappsubscriptions**](../Model/Developerappsubscriptions.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createdeveloperappsubscriptions** | [**\OpenAPI\Client\CircuitID\Createdeveloperappsubscriptions**](../Model/Createdeveloperappsubscriptions.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

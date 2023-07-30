@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createMenuOption()`
 
 ```php
-createMenuOption($menuoptions): \OpenAPI\Client\CircuitID\GetMenuOption200Response
+createMenuOption($createmenuoptions): \OpenAPI\Client\CircuitID\GetMenuOption200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\MenuOptionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menuoptions = new \OpenAPI\Client\CircuitID\Menuoptions(); // \OpenAPI\Client\CircuitID\Menuoptions | The JSON object that will be posted to the REST API endpoint.
+$createmenuoptions = new \OpenAPI\Client\CircuitID\Createmenuoptions(); // \OpenAPI\Client\CircuitID\Createmenuoptions | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createMenuOption($menuoptions);
+    $result = $apiInstance->createMenuOption($createmenuoptions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MenuOptionsApi->createMenuOption: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **menuoptions** | [**\OpenAPI\Client\CircuitID\Menuoptions**](../Model/Menuoptions.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createmenuoptions** | [**\OpenAPI\Client\CircuitID\Createmenuoptions**](../Model/Createmenuoptions.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

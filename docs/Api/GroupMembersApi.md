@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createGroupMember()`
 
 ```php
-createGroupMember($groupmembers): \OpenAPI\Client\CircuitID\GetGroupMember200Response
+createGroupMember($creategroupmembers): \OpenAPI\Client\CircuitID\GetGroupMember200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\GroupMembersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$groupmembers = new \OpenAPI\Client\CircuitID\Groupmembers(); // \OpenAPI\Client\CircuitID\Groupmembers | The JSON object that will be posted to the REST API endpoint.
+$creategroupmembers = new \OpenAPI\Client\CircuitID\Creategroupmembers(); // \OpenAPI\Client\CircuitID\Creategroupmembers | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createGroupMember($groupmembers);
+    $result = $apiInstance->createGroupMember($creategroupmembers);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GroupMembersApi->createGroupMember: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **groupmembers** | [**\OpenAPI\Client\CircuitID\Groupmembers**](../Model/Groupmembers.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **creategroupmembers** | [**\OpenAPI\Client\CircuitID\Creategroupmembers**](../Model/Creategroupmembers.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

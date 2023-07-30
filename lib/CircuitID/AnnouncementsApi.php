@@ -140,16 +140,16 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetAnnouncement200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createAnnouncement($announcements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncement($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
-        list($response) = $this->createAnnouncementWithHttpInfo($announcements, $contentType);
+        list($response) = $this->createAnnouncementWithHttpInfo($createannouncements, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetAnnouncement200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAnnouncementWithHttpInfo($announcements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementWithHttpInfo($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
-        $request = $this->createAnnouncementRequest($announcements, $contentType);
+        $request = $this->createAnnouncementRequest($createannouncements, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAnnouncementAsync($announcements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementAsync($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
-        return $this->createAnnouncementAsyncWithHttpInfo($announcements, $contentType)
+        return $this->createAnnouncementAsyncWithHttpInfo($createannouncements, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class AnnouncementsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAnnouncementAsyncWithHttpInfo($announcements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementAsyncWithHttpInfo($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetAnnouncement200Response';
-        $request = $this->createAnnouncementRequest($announcements, $contentType);
+        $request = $this->createAnnouncementRequest($createannouncements, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class AnnouncementsApi
     /**
      * Create request for operation 'createAnnouncement'
      *
-     * @param  \OpenAPI\Client\CircuitID\Announcements $announcements The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createannouncements $createannouncements The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAnnouncement'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAnnouncementRequest($announcements, string $contentType = self::contentTypes['createAnnouncement'][0])
+    public function createAnnouncementRequest($createannouncements, string $contentType = self::contentTypes['createAnnouncement'][0])
     {
 
-        // verify the required parameter 'announcements' is set
-        if ($announcements === null || (is_array($announcements) && count($announcements) === 0)) {
+        // verify the required parameter 'createannouncements' is set
+        if ($createannouncements === null || (is_array($createannouncements) && count($createannouncements) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $announcements when calling createAnnouncement'
+                'Missing the required parameter $createannouncements when calling createAnnouncement'
             );
         }
 
@@ -571,12 +571,12 @@ class AnnouncementsApi
         );
 
         // for model (json/xml)
-        if (isset($announcements)) {
+        if (isset($createannouncements)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($announcements));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createannouncements));
             } else {
-                $httpBody = $announcements;
+                $httpBody = $createannouncements;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

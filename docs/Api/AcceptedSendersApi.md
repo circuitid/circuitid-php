@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createAcceptedSender()`
 
 ```php
-createAcceptedSender($acceptedsenders): \OpenAPI\Client\CircuitID\GetAcceptedSender200Response
+createAcceptedSender($createacceptedsenders): \OpenAPI\Client\CircuitID\GetAcceptedSender200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\AcceptedSendersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$acceptedsenders = new \OpenAPI\Client\CircuitID\Acceptedsenders(); // \OpenAPI\Client\CircuitID\Acceptedsenders | The JSON object that will be posted to the REST API endpoint.
+$createacceptedsenders = new \OpenAPI\Client\CircuitID\Createacceptedsenders(); // \OpenAPI\Client\CircuitID\Createacceptedsenders | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createAcceptedSender($acceptedsenders);
+    $result = $apiInstance->createAcceptedSender($createacceptedsenders);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcceptedSendersApi->createAcceptedSender: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **acceptedsenders** | [**\OpenAPI\Client\CircuitID\Acceptedsenders**](../Model/Acceptedsenders.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createacceptedsenders** | [**\OpenAPI\Client\CircuitID\Createacceptedsenders**](../Model/Createacceptedsenders.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

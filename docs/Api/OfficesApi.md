@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createOffice()`
 
 ```php
-createOffice($offices): \OpenAPI\Client\CircuitID\GetOffice200Response
+createOffice($createoffices): \OpenAPI\Client\CircuitID\GetOffice200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\OfficesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$offices = new \OpenAPI\Client\CircuitID\Offices(); // \OpenAPI\Client\CircuitID\Offices | The JSON object that will be posted to the REST API endpoint.
+$createoffices = new \OpenAPI\Client\CircuitID\Createoffices(); // \OpenAPI\Client\CircuitID\Createoffices | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createOffice($offices);
+    $result = $apiInstance->createOffice($createoffices);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OfficesApi->createOffice: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **offices** | [**\OpenAPI\Client\CircuitID\Offices**](../Model/Offices.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createoffices** | [**\OpenAPI\Client\CircuitID\Createoffices**](../Model/Createoffices.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

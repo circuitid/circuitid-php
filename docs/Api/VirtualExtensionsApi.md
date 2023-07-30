@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createVirtualExtension()`
 
 ```php
-createVirtualExtension($virtualextensions): \OpenAPI\Client\CircuitID\GetVirtualExtension200Response
+createVirtualExtension($createvirtualextensions): \OpenAPI\Client\CircuitID\GetVirtualExtension200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\VirtualExtensionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$virtualextensions = new \OpenAPI\Client\CircuitID\Virtualextensions(); // \OpenAPI\Client\CircuitID\Virtualextensions | The JSON object that will be posted to the REST API endpoint.
+$createvirtualextensions = new \OpenAPI\Client\CircuitID\Createvirtualextensions(); // \OpenAPI\Client\CircuitID\Createvirtualextensions | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createVirtualExtension($virtualextensions);
+    $result = $apiInstance->createVirtualExtension($createvirtualextensions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VirtualExtensionsApi->createVirtualExtension: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **virtualextensions** | [**\OpenAPI\Client\CircuitID\Virtualextensions**](../Model/Virtualextensions.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createvirtualextensions** | [**\OpenAPI\Client\CircuitID\Createvirtualextensions**](../Model/Createvirtualextensions.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

@@ -140,16 +140,16 @@ class MessageBrandsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagebrands $messagebrands The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagebrands $createmessagebrands The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageBrand'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetMessageBrand200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createMessageBrand($messagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
+    public function createMessageBrand($createmessagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
     {
-        list($response) = $this->createMessageBrandWithHttpInfo($messagebrands, $contentType);
+        list($response) = $this->createMessageBrandWithHttpInfo($createmessagebrands, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class MessageBrandsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagebrands $messagebrands The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagebrands $createmessagebrands The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageBrand'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetMessageBrand200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createMessageBrandWithHttpInfo($messagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
+    public function createMessageBrandWithHttpInfo($createmessagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
     {
-        $request = $this->createMessageBrandRequest($messagebrands, $contentType);
+        $request = $this->createMessageBrandRequest($createmessagebrands, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class MessageBrandsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagebrands $messagebrands The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagebrands $createmessagebrands The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageBrand'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMessageBrandAsync($messagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
+    public function createMessageBrandAsync($createmessagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
     {
-        return $this->createMessageBrandAsyncWithHttpInfo($messagebrands, $contentType)
+        return $this->createMessageBrandAsyncWithHttpInfo($createmessagebrands, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class MessageBrandsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagebrands $messagebrands The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagebrands $createmessagebrands The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageBrand'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMessageBrandAsyncWithHttpInfo($messagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
+    public function createMessageBrandAsyncWithHttpInfo($createmessagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetMessageBrand200Response';
-        $request = $this->createMessageBrandRequest($messagebrands, $contentType);
+        $request = $this->createMessageBrandRequest($createmessagebrands, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class MessageBrandsApi
     /**
      * Create request for operation 'createMessageBrand'
      *
-     * @param  \OpenAPI\Client\CircuitID\Messagebrands $messagebrands The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmessagebrands $createmessagebrands The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMessageBrand'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createMessageBrandRequest($messagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
+    public function createMessageBrandRequest($createmessagebrands, string $contentType = self::contentTypes['createMessageBrand'][0])
     {
 
-        // verify the required parameter 'messagebrands' is set
-        if ($messagebrands === null || (is_array($messagebrands) && count($messagebrands) === 0)) {
+        // verify the required parameter 'createmessagebrands' is set
+        if ($createmessagebrands === null || (is_array($createmessagebrands) && count($createmessagebrands) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $messagebrands when calling createMessageBrand'
+                'Missing the required parameter $createmessagebrands when calling createMessageBrand'
             );
         }
 
@@ -571,12 +571,12 @@ class MessageBrandsApi
         );
 
         // for model (json/xml)
-        if (isset($messagebrands)) {
+        if (isset($createmessagebrands)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($messagebrands));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createmessagebrands));
             } else {
-                $httpBody = $messagebrands;
+                $httpBody = $createmessagebrands;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

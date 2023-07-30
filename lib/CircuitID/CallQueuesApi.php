@@ -140,16 +140,16 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetCallQueue200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createCallQueue($callqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueue($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
     {
-        list($response) = $this->createCallQueueWithHttpInfo($callqueues, $contentType);
+        list($response) = $this->createCallQueueWithHttpInfo($createcallqueues, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetCallQueue200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCallQueueWithHttpInfo($callqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueWithHttpInfo($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
     {
-        $request = $this->createCallQueueRequest($callqueues, $contentType);
+        $request = $this->createCallQueueRequest($createcallqueues, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallQueueAsync($callqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueAsync($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
     {
-        return $this->createCallQueueAsyncWithHttpInfo($callqueues, $contentType)
+        return $this->createCallQueueAsyncWithHttpInfo($createcallqueues, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class CallQueuesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCallQueueAsyncWithHttpInfo($callqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueAsyncWithHttpInfo($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetCallQueue200Response';
-        $request = $this->createCallQueueRequest($callqueues, $contentType);
+        $request = $this->createCallQueueRequest($createcallqueues, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class CallQueuesApi
     /**
      * Create request for operation 'createCallQueue'
      *
-     * @param  \OpenAPI\Client\CircuitID\Callqueues $callqueues The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcallqueues $createcallqueues The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCallQueue'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createCallQueueRequest($callqueues, string $contentType = self::contentTypes['createCallQueue'][0])
+    public function createCallQueueRequest($createcallqueues, string $contentType = self::contentTypes['createCallQueue'][0])
     {
 
-        // verify the required parameter 'callqueues' is set
-        if ($callqueues === null || (is_array($callqueues) && count($callqueues) === 0)) {
+        // verify the required parameter 'createcallqueues' is set
+        if ($createcallqueues === null || (is_array($createcallqueues) && count($createcallqueues) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $callqueues when calling createCallQueue'
+                'Missing the required parameter $createcallqueues when calling createCallQueue'
             );
         }
 
@@ -571,12 +571,12 @@ class CallQueuesApi
         );
 
         // for model (json/xml)
-        if (isset($callqueues)) {
+        if (isset($createcallqueues)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($callqueues));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createcallqueues));
             } else {
-                $httpBody = $callqueues;
+                $httpBody = $createcallqueues;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

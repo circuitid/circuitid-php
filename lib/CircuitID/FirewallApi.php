@@ -140,16 +140,16 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetFirewall200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createFirewall($firewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewall($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
     {
-        list($response) = $this->createFirewallWithHttpInfo($firewall, $contentType);
+        list($response) = $this->createFirewallWithHttpInfo($createfirewall, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetFirewall200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createFirewallWithHttpInfo($firewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallWithHttpInfo($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
     {
-        $request = $this->createFirewallRequest($firewall, $contentType);
+        $request = $this->createFirewallRequest($createfirewall, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFirewallAsync($firewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallAsync($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
     {
-        return $this->createFirewallAsyncWithHttpInfo($firewall, $contentType)
+        return $this->createFirewallAsyncWithHttpInfo($createfirewall, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class FirewallApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFirewallAsyncWithHttpInfo($firewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallAsyncWithHttpInfo($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetFirewall200Response';
-        $request = $this->createFirewallRequest($firewall, $contentType);
+        $request = $this->createFirewallRequest($createfirewall, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class FirewallApi
     /**
      * Create request for operation 'createFirewall'
      *
-     * @param  \OpenAPI\Client\CircuitID\Firewall $firewall The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createfirewall $createfirewall The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFirewall'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createFirewallRequest($firewall, string $contentType = self::contentTypes['createFirewall'][0])
+    public function createFirewallRequest($createfirewall, string $contentType = self::contentTypes['createFirewall'][0])
     {
 
-        // verify the required parameter 'firewall' is set
-        if ($firewall === null || (is_array($firewall) && count($firewall) === 0)) {
+        // verify the required parameter 'createfirewall' is set
+        if ($createfirewall === null || (is_array($createfirewall) && count($createfirewall) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $firewall when calling createFirewall'
+                'Missing the required parameter $createfirewall when calling createFirewall'
             );
         }
 
@@ -571,12 +571,12 @@ class FirewallApi
         );
 
         // for model (json/xml)
-        if (isset($firewall)) {
+        if (isset($createfirewall)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($firewall));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createfirewall));
             } else {
-                $httpBody = $firewall;
+                $httpBody = $createfirewall;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

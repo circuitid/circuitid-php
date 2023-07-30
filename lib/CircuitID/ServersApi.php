@@ -140,16 +140,16 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetServer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createServer($servers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServer($createservers, string $contentType = self::contentTypes['createServer'][0])
     {
-        list($response) = $this->createServerWithHttpInfo($servers, $contentType);
+        list($response) = $this->createServerWithHttpInfo($createservers, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetServer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createServerWithHttpInfo($servers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerWithHttpInfo($createservers, string $contentType = self::contentTypes['createServer'][0])
     {
-        $request = $this->createServerRequest($servers, $contentType);
+        $request = $this->createServerRequest($createservers, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createServerAsync($servers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerAsync($createservers, string $contentType = self::contentTypes['createServer'][0])
     {
-        return $this->createServerAsyncWithHttpInfo($servers, $contentType)
+        return $this->createServerAsyncWithHttpInfo($createservers, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ServersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createServerAsyncWithHttpInfo($servers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerAsyncWithHttpInfo($createservers, string $contentType = self::contentTypes['createServer'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetServer200Response';
-        $request = $this->createServerRequest($servers, $contentType);
+        $request = $this->createServerRequest($createservers, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ServersApi
     /**
      * Create request for operation 'createServer'
      *
-     * @param  \OpenAPI\Client\CircuitID\Servers $servers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createservers $createservers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createServer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createServerRequest($servers, string $contentType = self::contentTypes['createServer'][0])
+    public function createServerRequest($createservers, string $contentType = self::contentTypes['createServer'][0])
     {
 
-        // verify the required parameter 'servers' is set
-        if ($servers === null || (is_array($servers) && count($servers) === 0)) {
+        // verify the required parameter 'createservers' is set
+        if ($createservers === null || (is_array($createservers) && count($createservers) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $servers when calling createServer'
+                'Missing the required parameter $createservers when calling createServer'
             );
         }
 
@@ -571,12 +571,12 @@ class ServersApi
         );
 
         // for model (json/xml)
-        if (isset($servers)) {
+        if (isset($createservers)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($servers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createservers));
             } else {
-                $httpBody = $servers;
+                $httpBody = $createservers;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

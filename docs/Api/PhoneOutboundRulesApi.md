@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createPhoneOutboundRule()`
 
 ```php
-createPhoneOutboundRule($phoneoutboundrules): \OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response
+createPhoneOutboundRule($createphoneoutboundrules): \OpenAPI\Client\CircuitID\GetPhoneOutboundRule200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\PhoneOutboundRulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$phoneoutboundrules = new \OpenAPI\Client\CircuitID\Phoneoutboundrules(); // \OpenAPI\Client\CircuitID\Phoneoutboundrules | The JSON object that will be posted to the REST API endpoint.
+$createphoneoutboundrules = new \OpenAPI\Client\CircuitID\Createphoneoutboundrules(); // \OpenAPI\Client\CircuitID\Createphoneoutboundrules | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createPhoneOutboundRule($phoneoutboundrules);
+    $result = $apiInstance->createPhoneOutboundRule($createphoneoutboundrules);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PhoneOutboundRulesApi->createPhoneOutboundRule: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **phoneoutboundrules** | [**\OpenAPI\Client\CircuitID\Phoneoutboundrules**](../Model/Phoneoutboundrules.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createphoneoutboundrules** | [**\OpenAPI\Client\CircuitID\Createphoneoutboundrules**](../Model/Createphoneoutboundrules.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

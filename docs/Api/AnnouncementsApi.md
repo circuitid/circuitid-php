@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createAnnouncement()`
 
 ```php
-createAnnouncement($announcements): \OpenAPI\Client\CircuitID\GetAnnouncement200Response
+createAnnouncement($createannouncements): \OpenAPI\Client\CircuitID\GetAnnouncement200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\AnnouncementsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$announcements = new \OpenAPI\Client\CircuitID\Announcements(); // \OpenAPI\Client\CircuitID\Announcements | The JSON object that will be posted to the REST API endpoint.
+$createannouncements = new \OpenAPI\Client\CircuitID\Createannouncements(); // \OpenAPI\Client\CircuitID\Createannouncements | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createAnnouncement($announcements);
+    $result = $apiInstance->createAnnouncement($createannouncements);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnnouncementsApi->createAnnouncement: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **announcements** | [**\OpenAPI\Client\CircuitID\Announcements**](../Model/Announcements.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createannouncements** | [**\OpenAPI\Client\CircuitID\Createannouncements**](../Model/Createannouncements.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

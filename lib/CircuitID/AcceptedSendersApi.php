@@ -140,16 +140,16 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetAcceptedSender200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createAcceptedSender($acceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSender($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
-        list($response) = $this->createAcceptedSenderWithHttpInfo($acceptedsenders, $contentType);
+        list($response) = $this->createAcceptedSenderWithHttpInfo($createacceptedsenders, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetAcceptedSender200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAcceptedSenderWithHttpInfo($acceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderWithHttpInfo($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
-        $request = $this->createAcceptedSenderRequest($acceptedsenders, $contentType);
+        $request = $this->createAcceptedSenderRequest($createacceptedsenders, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAcceptedSenderAsync($acceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderAsync($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
-        return $this->createAcceptedSenderAsyncWithHttpInfo($acceptedsenders, $contentType)
+        return $this->createAcceptedSenderAsyncWithHttpInfo($createacceptedsenders, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class AcceptedSendersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAcceptedSenderAsyncWithHttpInfo($acceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderAsyncWithHttpInfo($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetAcceptedSender200Response';
-        $request = $this->createAcceptedSenderRequest($acceptedsenders, $contentType);
+        $request = $this->createAcceptedSenderRequest($createacceptedsenders, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class AcceptedSendersApi
     /**
      * Create request for operation 'createAcceptedSender'
      *
-     * @param  \OpenAPI\Client\CircuitID\Acceptedsenders $acceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createacceptedsenders $createacceptedsenders The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAcceptedSender'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createAcceptedSenderRequest($acceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
+    public function createAcceptedSenderRequest($createacceptedsenders, string $contentType = self::contentTypes['createAcceptedSender'][0])
     {
 
-        // verify the required parameter 'acceptedsenders' is set
-        if ($acceptedsenders === null || (is_array($acceptedsenders) && count($acceptedsenders) === 0)) {
+        // verify the required parameter 'createacceptedsenders' is set
+        if ($createacceptedsenders === null || (is_array($createacceptedsenders) && count($createacceptedsenders) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $acceptedsenders when calling createAcceptedSender'
+                'Missing the required parameter $createacceptedsenders when calling createAcceptedSender'
             );
         }
 
@@ -571,12 +571,12 @@ class AcceptedSendersApi
         );
 
         // for model (json/xml)
-        if (isset($acceptedsenders)) {
+        if (isset($createacceptedsenders)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($acceptedsenders));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createacceptedsenders));
             } else {
-                $httpBody = $acceptedsenders;
+                $httpBody = $createacceptedsenders;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -140,16 +140,16 @@ class MenuOptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Menuoptions $menuoptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmenuoptions $createmenuoptions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenuOption'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetMenuOption200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createMenuOption($menuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
+    public function createMenuOption($createmenuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
     {
-        list($response) = $this->createMenuOptionWithHttpInfo($menuoptions, $contentType);
+        list($response) = $this->createMenuOptionWithHttpInfo($createmenuoptions, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class MenuOptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Menuoptions $menuoptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmenuoptions $createmenuoptions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenuOption'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetMenuOption200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createMenuOptionWithHttpInfo($menuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
+    public function createMenuOptionWithHttpInfo($createmenuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
     {
-        $request = $this->createMenuOptionRequest($menuoptions, $contentType);
+        $request = $this->createMenuOptionRequest($createmenuoptions, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class MenuOptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Menuoptions $menuoptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmenuoptions $createmenuoptions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenuOption'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMenuOptionAsync($menuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
+    public function createMenuOptionAsync($createmenuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
     {
-        return $this->createMenuOptionAsyncWithHttpInfo($menuoptions, $contentType)
+        return $this->createMenuOptionAsyncWithHttpInfo($createmenuoptions, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class MenuOptionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Menuoptions $menuoptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmenuoptions $createmenuoptions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenuOption'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createMenuOptionAsyncWithHttpInfo($menuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
+    public function createMenuOptionAsyncWithHttpInfo($createmenuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetMenuOption200Response';
-        $request = $this->createMenuOptionRequest($menuoptions, $contentType);
+        $request = $this->createMenuOptionRequest($createmenuoptions, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class MenuOptionsApi
     /**
      * Create request for operation 'createMenuOption'
      *
-     * @param  \OpenAPI\Client\CircuitID\Menuoptions $menuoptions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createmenuoptions $createmenuoptions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createMenuOption'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createMenuOptionRequest($menuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
+    public function createMenuOptionRequest($createmenuoptions, string $contentType = self::contentTypes['createMenuOption'][0])
     {
 
-        // verify the required parameter 'menuoptions' is set
-        if ($menuoptions === null || (is_array($menuoptions) && count($menuoptions) === 0)) {
+        // verify the required parameter 'createmenuoptions' is set
+        if ($createmenuoptions === null || (is_array($createmenuoptions) && count($createmenuoptions) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $menuoptions when calling createMenuOption'
+                'Missing the required parameter $createmenuoptions when calling createMenuOption'
             );
         }
 
@@ -571,12 +571,12 @@ class MenuOptionsApi
         );
 
         // for model (json/xml)
-        if (isset($menuoptions)) {
+        if (isset($createmenuoptions)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($menuoptions));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createmenuoptions));
             } else {
-                $httpBody = $menuoptions;
+                $httpBody = $createmenuoptions;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

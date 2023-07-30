@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createTimeSchedule()`
 
 ```php
-createTimeSchedule($timeschedules): \OpenAPI\Client\CircuitID\GetTimeSchedule200Response
+createTimeSchedule($createtimeschedules): \OpenAPI\Client\CircuitID\GetTimeSchedule200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\TimeSchedulesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$timeschedules = new \OpenAPI\Client\CircuitID\Timeschedules(); // \OpenAPI\Client\CircuitID\Timeschedules | The JSON object that will be posted to the REST API endpoint.
+$createtimeschedules = new \OpenAPI\Client\CircuitID\Createtimeschedules(); // \OpenAPI\Client\CircuitID\Createtimeschedules | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createTimeSchedule($timeschedules);
+    $result = $apiInstance->createTimeSchedule($createtimeschedules);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TimeSchedulesApi->createTimeSchedule: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **timeschedules** | [**\OpenAPI\Client\CircuitID\Timeschedules**](../Model/Timeschedules.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createtimeschedules** | [**\OpenAPI\Client\CircuitID\Createtimeschedules**](../Model/Createtimeschedules.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createMessageCampaign()`
 
 ```php
-createMessageCampaign($messagecampaigns): \OpenAPI\Client\CircuitID\GetMessageCampaign200Response
+createMessageCampaign($createmessagecampaigns): \OpenAPI\Client\CircuitID\GetMessageCampaign200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageCampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$messagecampaigns = new \OpenAPI\Client\CircuitID\Messagecampaigns(); // \OpenAPI\Client\CircuitID\Messagecampaigns | The JSON object that will be posted to the REST API endpoint.
+$createmessagecampaigns = new \OpenAPI\Client\CircuitID\Createmessagecampaigns(); // \OpenAPI\Client\CircuitID\Createmessagecampaigns | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createMessageCampaign($messagecampaigns);
+    $result = $apiInstance->createMessageCampaign($createmessagecampaigns);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageCampaignsApi->createMessageCampaign: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messagecampaigns** | [**\OpenAPI\Client\CircuitID\Messagecampaigns**](../Model/Messagecampaigns.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createmessagecampaigns** | [**\OpenAPI\Client\CircuitID\Createmessagecampaigns**](../Model/Createmessagecampaigns.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

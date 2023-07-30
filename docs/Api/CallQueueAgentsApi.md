@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createCallQueueAgent()`
 
 ```php
-createCallQueueAgent($callqueueagents): \OpenAPI\Client\CircuitID\GetCallQueueAgent200Response
+createCallQueueAgent($createcallqueueagents): \OpenAPI\Client\CircuitID\GetCallQueueAgent200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\CallQueueAgentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$callqueueagents = new \OpenAPI\Client\CircuitID\Callqueueagents(); // \OpenAPI\Client\CircuitID\Callqueueagents | The JSON object that will be posted to the REST API endpoint.
+$createcallqueueagents = new \OpenAPI\Client\CircuitID\Createcallqueueagents(); // \OpenAPI\Client\CircuitID\Createcallqueueagents | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createCallQueueAgent($callqueueagents);
+    $result = $apiInstance->createCallQueueAgent($createcallqueueagents);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CallQueueAgentsApi->createCallQueueAgent: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **callqueueagents** | [**\OpenAPI\Client\CircuitID\Callqueueagents**](../Model/Callqueueagents.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createcallqueueagents** | [**\OpenAPI\Client\CircuitID\Createcallqueueagents**](../Model/Createcallqueueagents.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

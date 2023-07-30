@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createFirewall()`
 
 ```php
-createFirewall($firewall): \OpenAPI\Client\CircuitID\GetFirewall200Response
+createFirewall($createfirewall): \OpenAPI\Client\CircuitID\GetFirewall200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\FirewallApi(
     new GuzzleHttp\Client(),
     $config
 );
-$firewall = new \OpenAPI\Client\CircuitID\Firewall(); // \OpenAPI\Client\CircuitID\Firewall | The JSON object that will be posted to the REST API endpoint.
+$createfirewall = new \OpenAPI\Client\CircuitID\Createfirewall(); // \OpenAPI\Client\CircuitID\Createfirewall | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createFirewall($firewall);
+    $result = $apiInstance->createFirewall($createfirewall);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FirewallApi->createFirewall: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **firewall** | [**\OpenAPI\Client\CircuitID\Firewall**](../Model/Firewall.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createfirewall** | [**\OpenAPI\Client\CircuitID\Createfirewall**](../Model/Createfirewall.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

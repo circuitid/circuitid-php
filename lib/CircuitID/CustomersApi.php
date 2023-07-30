@@ -140,16 +140,16 @@ class CustomersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Customers $customers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcustomers $createcustomers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetCustomer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createCustomer($customers, string $contentType = self::contentTypes['createCustomer'][0])
+    public function createCustomer($createcustomers, string $contentType = self::contentTypes['createCustomer'][0])
     {
-        list($response) = $this->createCustomerWithHttpInfo($customers, $contentType);
+        list($response) = $this->createCustomerWithHttpInfo($createcustomers, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class CustomersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Customers $customers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcustomers $createcustomers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetCustomer200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCustomerWithHttpInfo($customers, string $contentType = self::contentTypes['createCustomer'][0])
+    public function createCustomerWithHttpInfo($createcustomers, string $contentType = self::contentTypes['createCustomer'][0])
     {
-        $request = $this->createCustomerRequest($customers, $contentType);
+        $request = $this->createCustomerRequest($createcustomers, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class CustomersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Customers $customers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcustomers $createcustomers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCustomerAsync($customers, string $contentType = self::contentTypes['createCustomer'][0])
+    public function createCustomerAsync($createcustomers, string $contentType = self::contentTypes['createCustomer'][0])
     {
-        return $this->createCustomerAsyncWithHttpInfo($customers, $contentType)
+        return $this->createCustomerAsyncWithHttpInfo($createcustomers, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class CustomersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Customers $customers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcustomers $createcustomers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCustomerAsyncWithHttpInfo($customers, string $contentType = self::contentTypes['createCustomer'][0])
+    public function createCustomerAsyncWithHttpInfo($createcustomers, string $contentType = self::contentTypes['createCustomer'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetCustomer200Response';
-        $request = $this->createCustomerRequest($customers, $contentType);
+        $request = $this->createCustomerRequest($createcustomers, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class CustomersApi
     /**
      * Create request for operation 'createCustomer'
      *
-     * @param  \OpenAPI\Client\CircuitID\Customers $customers The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createcustomers $createcustomers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createCustomerRequest($customers, string $contentType = self::contentTypes['createCustomer'][0])
+    public function createCustomerRequest($createcustomers, string $contentType = self::contentTypes['createCustomer'][0])
     {
 
-        // verify the required parameter 'customers' is set
-        if ($customers === null || (is_array($customers) && count($customers) === 0)) {
+        // verify the required parameter 'createcustomers' is set
+        if ($createcustomers === null || (is_array($createcustomers) && count($createcustomers) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $customers when calling createCustomer'
+                'Missing the required parameter $createcustomers when calling createCustomer'
             );
         }
 
@@ -571,12 +571,12 @@ class CustomersApi
         );
 
         // for model (json/xml)
-        if (isset($customers)) {
+        if (isset($createcustomers)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($customers));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createcustomers));
             } else {
-                $httpBody = $customers;
+                $httpBody = $createcustomers;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

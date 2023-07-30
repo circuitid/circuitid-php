@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createdirectory()`
 
 ```php
-createdirectory($directories): \OpenAPI\Client\CircuitID\Getdirectory200Response
+createdirectory($createdirectories): \OpenAPI\Client\CircuitID\Getdirectory200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\DirectoriesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$directories = new \OpenAPI\Client\CircuitID\Directories(); // \OpenAPI\Client\CircuitID\Directories | The JSON object that will be posted to the REST API endpoint.
+$createdirectories = new \OpenAPI\Client\CircuitID\Createdirectories(); // \OpenAPI\Client\CircuitID\Createdirectories | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createdirectory($directories);
+    $result = $apiInstance->createdirectory($createdirectories);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DirectoriesApi->createdirectory: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **directories** | [**\OpenAPI\Client\CircuitID\Directories**](../Model/Directories.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createdirectories** | [**\OpenAPI\Client\CircuitID\Createdirectories**](../Model/Createdirectories.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

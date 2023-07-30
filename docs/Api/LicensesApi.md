@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createLicense()`
 
 ```php
-createLicense($licenses): \OpenAPI\Client\CircuitID\GetLicense200Response
+createLicense($createlicenses): \OpenAPI\Client\CircuitID\GetLicense200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\LicensesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$licenses = new \OpenAPI\Client\CircuitID\Licenses(); // \OpenAPI\Client\CircuitID\Licenses | The JSON object that will be posted to the REST API endpoint.
+$createlicenses = new \OpenAPI\Client\CircuitID\Createlicenses(); // \OpenAPI\Client\CircuitID\Createlicenses | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createLicense($licenses);
+    $result = $apiInstance->createLicense($createlicenses);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LicensesApi->createLicense: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **licenses** | [**\OpenAPI\Client\CircuitID\Licenses**](../Model/Licenses.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createlicenses** | [**\OpenAPI\Client\CircuitID\Createlicenses**](../Model/Createlicenses.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

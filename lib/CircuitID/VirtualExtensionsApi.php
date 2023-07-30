@@ -140,16 +140,16 @@ class VirtualExtensionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createvirtualextensions $createvirtualextensions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtualExtension'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetVirtualExtension200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createVirtualExtension($virtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
+    public function createVirtualExtension($createvirtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
     {
-        list($response) = $this->createVirtualExtensionWithHttpInfo($virtualextensions, $contentType);
+        list($response) = $this->createVirtualExtensionWithHttpInfo($createvirtualextensions, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class VirtualExtensionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createvirtualextensions $createvirtualextensions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtualExtension'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetVirtualExtension200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createVirtualExtensionWithHttpInfo($virtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
+    public function createVirtualExtensionWithHttpInfo($createvirtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
     {
-        $request = $this->createVirtualExtensionRequest($virtualextensions, $contentType);
+        $request = $this->createVirtualExtensionRequest($createvirtualextensions, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class VirtualExtensionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createvirtualextensions $createvirtualextensions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtualExtension'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createVirtualExtensionAsync($virtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
+    public function createVirtualExtensionAsync($createvirtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
     {
-        return $this->createVirtualExtensionAsyncWithHttpInfo($virtualextensions, $contentType)
+        return $this->createVirtualExtensionAsyncWithHttpInfo($createvirtualextensions, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class VirtualExtensionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createvirtualextensions $createvirtualextensions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtualExtension'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createVirtualExtensionAsyncWithHttpInfo($virtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
+    public function createVirtualExtensionAsyncWithHttpInfo($createvirtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetVirtualExtension200Response';
-        $request = $this->createVirtualExtensionRequest($virtualextensions, $contentType);
+        $request = $this->createVirtualExtensionRequest($createvirtualextensions, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class VirtualExtensionsApi
     /**
      * Create request for operation 'createVirtualExtension'
      *
-     * @param  \OpenAPI\Client\CircuitID\Virtualextensions $virtualextensions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createvirtualextensions $createvirtualextensions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtualExtension'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createVirtualExtensionRequest($virtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
+    public function createVirtualExtensionRequest($createvirtualextensions, string $contentType = self::contentTypes['createVirtualExtension'][0])
     {
 
-        // verify the required parameter 'virtualextensions' is set
-        if ($virtualextensions === null || (is_array($virtualextensions) && count($virtualextensions) === 0)) {
+        // verify the required parameter 'createvirtualextensions' is set
+        if ($createvirtualextensions === null || (is_array($createvirtualextensions) && count($createvirtualextensions) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $virtualextensions when calling createVirtualExtension'
+                'Missing the required parameter $createvirtualextensions when calling createVirtualExtension'
             );
         }
 
@@ -571,12 +571,12 @@ class VirtualExtensionsApi
         );
 
         // for model (json/xml)
-        if (isset($virtualextensions)) {
+        if (isset($createvirtualextensions)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($virtualextensions));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createvirtualextensions));
             } else {
-                $httpBody = $virtualextensions;
+                $httpBody = $createvirtualextensions;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

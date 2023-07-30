@@ -140,16 +140,16 @@ class PhoneInboundRuleActionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundruleactions $phoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundruleactions $createphoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRuleAction'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetPhoneInboundRuleAction200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createPhoneInboundRuleAction($phoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
+    public function createPhoneInboundRuleAction($createphoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
     {
-        list($response) = $this->createPhoneInboundRuleActionWithHttpInfo($phoneinboundruleactions, $contentType);
+        list($response) = $this->createPhoneInboundRuleActionWithHttpInfo($createphoneinboundruleactions, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class PhoneInboundRuleActionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundruleactions $phoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundruleactions $createphoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRuleAction'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetPhoneInboundRuleAction200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createPhoneInboundRuleActionWithHttpInfo($phoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
+    public function createPhoneInboundRuleActionWithHttpInfo($createphoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
     {
-        $request = $this->createPhoneInboundRuleActionRequest($phoneinboundruleactions, $contentType);
+        $request = $this->createPhoneInboundRuleActionRequest($createphoneinboundruleactions, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class PhoneInboundRuleActionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundruleactions $phoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundruleactions $createphoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRuleAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPhoneInboundRuleActionAsync($phoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
+    public function createPhoneInboundRuleActionAsync($createphoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
     {
-        return $this->createPhoneInboundRuleActionAsyncWithHttpInfo($phoneinboundruleactions, $contentType)
+        return $this->createPhoneInboundRuleActionAsyncWithHttpInfo($createphoneinboundruleactions, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class PhoneInboundRuleActionsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundruleactions $phoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundruleactions $createphoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRuleAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPhoneInboundRuleActionAsyncWithHttpInfo($phoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
+    public function createPhoneInboundRuleActionAsyncWithHttpInfo($createphoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetPhoneInboundRuleAction200Response';
-        $request = $this->createPhoneInboundRuleActionRequest($phoneinboundruleactions, $contentType);
+        $request = $this->createPhoneInboundRuleActionRequest($createphoneinboundruleactions, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class PhoneInboundRuleActionsApi
     /**
      * Create request for operation 'createPhoneInboundRuleAction'
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundruleactions $phoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundruleactions $createphoneinboundruleactions The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRuleAction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createPhoneInboundRuleActionRequest($phoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
+    public function createPhoneInboundRuleActionRequest($createphoneinboundruleactions, string $contentType = self::contentTypes['createPhoneInboundRuleAction'][0])
     {
 
-        // verify the required parameter 'phoneinboundruleactions' is set
-        if ($phoneinboundruleactions === null || (is_array($phoneinboundruleactions) && count($phoneinboundruleactions) === 0)) {
+        // verify the required parameter 'createphoneinboundruleactions' is set
+        if ($createphoneinboundruleactions === null || (is_array($createphoneinboundruleactions) && count($createphoneinboundruleactions) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phoneinboundruleactions when calling createPhoneInboundRuleAction'
+                'Missing the required parameter $createphoneinboundruleactions when calling createPhoneInboundRuleAction'
             );
         }
 
@@ -571,12 +571,12 @@ class PhoneInboundRuleActionsApi
         );
 
         // for model (json/xml)
-        if (isset($phoneinboundruleactions)) {
+        if (isset($createphoneinboundruleactions)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneinboundruleactions));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createphoneinboundruleactions));
             } else {
-                $httpBody = $phoneinboundruleactions;
+                $httpBody = $createphoneinboundruleactions;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

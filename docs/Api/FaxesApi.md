@@ -13,7 +13,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createFax()`
 
 ```php
-createFax($faxes): \OpenAPI\Client\CircuitID\GetFax200Response
+createFax($createfaxes): \OpenAPI\Client\CircuitID\GetFax200Response
 ```
 
 Create a new object
@@ -39,10 +39,10 @@ $apiInstance = new OpenAPI\Client\Api\FaxesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$faxes = new \OpenAPI\Client\CircuitID\Faxes(); // \OpenAPI\Client\CircuitID\Faxes | The JSON object that will be posted to the REST API endpoint.
+$createfaxes = new \OpenAPI\Client\CircuitID\Createfaxes(); // \OpenAPI\Client\CircuitID\Createfaxes | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createFax($faxes);
+    $result = $apiInstance->createFax($createfaxes);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FaxesApi->createFax: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +53,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **faxes** | [**\OpenAPI\Client\CircuitID\Faxes**](../Model/Faxes.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createfaxes** | [**\OpenAPI\Client\CircuitID\Createfaxes**](../Model/Createfaxes.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

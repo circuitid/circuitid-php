@@ -140,16 +140,16 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Users $users The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetUser200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createUser($users, string $contentType = self::contentTypes['createUser'][0])
+    public function createUser($createusers, string $contentType = self::contentTypes['createUser'][0])
     {
-        list($response) = $this->createUserWithHttpInfo($users, $contentType);
+        list($response) = $this->createUserWithHttpInfo($createusers, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Users $users The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetUser200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createUserWithHttpInfo($users, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserWithHttpInfo($createusers, string $contentType = self::contentTypes['createUser'][0])
     {
-        $request = $this->createUserRequest($users, $contentType);
+        $request = $this->createUserRequest($createusers, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Users $users The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserAsync($users, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserAsync($createusers, string $contentType = self::contentTypes['createUser'][0])
     {
-        return $this->createUserAsyncWithHttpInfo($users, $contentType)
+        return $this->createUserAsyncWithHttpInfo($createusers, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class UsersApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Users $users The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createUserAsyncWithHttpInfo($users, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserAsyncWithHttpInfo($createusers, string $contentType = self::contentTypes['createUser'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetUser200Response';
-        $request = $this->createUserRequest($users, $contentType);
+        $request = $this->createUserRequest($createusers, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class UsersApi
     /**
      * Create request for operation 'createUser'
      *
-     * @param  \OpenAPI\Client\CircuitID\Users $users The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createusers $createusers The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createUserRequest($users, string $contentType = self::contentTypes['createUser'][0])
+    public function createUserRequest($createusers, string $contentType = self::contentTypes['createUser'][0])
     {
 
-        // verify the required parameter 'users' is set
-        if ($users === null || (is_array($users) && count($users) === 0)) {
+        // verify the required parameter 'createusers' is set
+        if ($createusers === null || (is_array($createusers) && count($createusers) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $users when calling createUser'
+                'Missing the required parameter $createusers when calling createUser'
             );
         }
 
@@ -571,12 +571,12 @@ class UsersApi
         );
 
         // for model (json/xml)
-        if (isset($users)) {
+        if (isset($createusers)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($users));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createusers));
             } else {
-                $httpBody = $users;
+                $httpBody = $createusers;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

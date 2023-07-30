@@ -140,16 +140,16 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetConferenceRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createConferenceRoom($conferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoom($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
-        list($response) = $this->createConferenceRoomWithHttpInfo($conferencerooms, $contentType);
+        list($response) = $this->createConferenceRoomWithHttpInfo($createconferencerooms, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetConferenceRoom200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createConferenceRoomWithHttpInfo($conferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomWithHttpInfo($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
-        $request = $this->createConferenceRoomRequest($conferencerooms, $contentType);
+        $request = $this->createConferenceRoomRequest($createconferencerooms, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConferenceRoomAsync($conferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomAsync($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
-        return $this->createConferenceRoomAsyncWithHttpInfo($conferencerooms, $contentType)
+        return $this->createConferenceRoomAsyncWithHttpInfo($createconferencerooms, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class ConferenceRoomsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createConferenceRoomAsyncWithHttpInfo($conferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomAsyncWithHttpInfo($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetConferenceRoom200Response';
-        $request = $this->createConferenceRoomRequest($conferencerooms, $contentType);
+        $request = $this->createConferenceRoomRequest($createconferencerooms, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class ConferenceRoomsApi
     /**
      * Create request for operation 'createConferenceRoom'
      *
-     * @param  \OpenAPI\Client\CircuitID\Conferencerooms $conferencerooms The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createconferencerooms $createconferencerooms The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createConferenceRoom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createConferenceRoomRequest($conferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
+    public function createConferenceRoomRequest($createconferencerooms, string $contentType = self::contentTypes['createConferenceRoom'][0])
     {
 
-        // verify the required parameter 'conferencerooms' is set
-        if ($conferencerooms === null || (is_array($conferencerooms) && count($conferencerooms) === 0)) {
+        // verify the required parameter 'createconferencerooms' is set
+        if ($createconferencerooms === null || (is_array($createconferencerooms) && count($createconferencerooms) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $conferencerooms when calling createConferenceRoom'
+                'Missing the required parameter $createconferencerooms when calling createConferenceRoom'
             );
         }
 
@@ -571,12 +571,12 @@ class ConferenceRoomsApi
         );
 
         // for model (json/xml)
-        if (isset($conferencerooms)) {
+        if (isset($createconferencerooms)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($conferencerooms));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createconferencerooms));
             } else {
-                $httpBody = $conferencerooms;
+                $httpBody = $createconferencerooms;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

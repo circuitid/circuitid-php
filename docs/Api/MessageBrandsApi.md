@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createMessageBrand()`
 
 ```php
-createMessageBrand($messagebrands): \OpenAPI\Client\CircuitID\GetMessageBrand200Response
+createMessageBrand($createmessagebrands): \OpenAPI\Client\CircuitID\GetMessageBrand200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\MessageBrandsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$messagebrands = new \OpenAPI\Client\CircuitID\Messagebrands(); // \OpenAPI\Client\CircuitID\Messagebrands | The JSON object that will be posted to the REST API endpoint.
+$createmessagebrands = new \OpenAPI\Client\CircuitID\Createmessagebrands(); // \OpenAPI\Client\CircuitID\Createmessagebrands | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createMessageBrand($messagebrands);
+    $result = $apiInstance->createMessageBrand($createmessagebrands);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MessageBrandsApi->createMessageBrand: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messagebrands** | [**\OpenAPI\Client\CircuitID\Messagebrands**](../Model/Messagebrands.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createmessagebrands** | [**\OpenAPI\Client\CircuitID\Createmessagebrands**](../Model/Createmessagebrands.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

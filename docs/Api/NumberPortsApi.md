@@ -13,7 +13,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createNumberPort()`
 
 ```php
-createNumberPort($numberports): \OpenAPI\Client\CircuitID\GetNumberPort200Response
+createNumberPort($createnumberports): \OpenAPI\Client\CircuitID\GetNumberPort200Response
 ```
 
 Create a new object
@@ -39,10 +39,10 @@ $apiInstance = new OpenAPI\Client\Api\NumberPortsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$numberports = new \OpenAPI\Client\CircuitID\Numberports(); // \OpenAPI\Client\CircuitID\Numberports | The JSON object that will be posted to the REST API endpoint.
+$createnumberports = new \OpenAPI\Client\CircuitID\Createnumberports(); // \OpenAPI\Client\CircuitID\Createnumberports | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createNumberPort($numberports);
+    $result = $apiInstance->createNumberPort($createnumberports);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NumberPortsApi->createNumberPort: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +53,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **numberports** | [**\OpenAPI\Client\CircuitID\Numberports**](../Model/Numberports.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createnumberports** | [**\OpenAPI\Client\CircuitID\Createnumberports**](../Model/Createnumberports.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

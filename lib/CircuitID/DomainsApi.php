@@ -140,16 +140,16 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetDomain200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createDomain($domains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomain($createdomains, string $contentType = self::contentTypes['createDomain'][0])
     {
-        list($response) = $this->createDomainWithHttpInfo($domains, $contentType);
+        list($response) = $this->createDomainWithHttpInfo($createdomains, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetDomain200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDomainWithHttpInfo($domains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainWithHttpInfo($createdomains, string $contentType = self::contentTypes['createDomain'][0])
     {
-        $request = $this->createDomainRequest($domains, $contentType);
+        $request = $this->createDomainRequest($createdomains, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDomainAsync($domains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainAsync($createdomains, string $contentType = self::contentTypes['createDomain'][0])
     {
-        return $this->createDomainAsyncWithHttpInfo($domains, $contentType)
+        return $this->createDomainAsyncWithHttpInfo($createdomains, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class DomainsApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createDomainAsyncWithHttpInfo($domains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainAsyncWithHttpInfo($createdomains, string $contentType = self::contentTypes['createDomain'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetDomain200Response';
-        $request = $this->createDomainRequest($domains, $contentType);
+        $request = $this->createDomainRequest($createdomains, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class DomainsApi
     /**
      * Create request for operation 'createDomain'
      *
-     * @param  \OpenAPI\Client\CircuitID\Domains $domains The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createdomains $createdomains The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createDomainRequest($domains, string $contentType = self::contentTypes['createDomain'][0])
+    public function createDomainRequest($createdomains, string $contentType = self::contentTypes['createDomain'][0])
     {
 
-        // verify the required parameter 'domains' is set
-        if ($domains === null || (is_array($domains) && count($domains) === 0)) {
+        // verify the required parameter 'createdomains' is set
+        if ($createdomains === null || (is_array($createdomains) && count($createdomains) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $domains when calling createDomain'
+                'Missing the required parameter $createdomains when calling createDomain'
             );
         }
 
@@ -571,12 +571,12 @@ class DomainsApi
         );
 
         // for model (json/xml)
-        if (isset($domains)) {
+        if (isset($createdomains)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($domains));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createdomains));
             } else {
-                $httpBody = $domains;
+                $httpBody = $createdomains;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

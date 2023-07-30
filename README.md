@@ -69,10 +69,10 @@ $apiInstance = new OpenAPI\Client\Api\AcceptedSendersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$acceptedsenders = new \OpenAPI\Client\CircuitID\Acceptedsenders(); // \OpenAPI\Client\CircuitID\Acceptedsenders | The JSON object that will be posted to the REST API endpoint.
+$createacceptedsenders = new \OpenAPI\Client\CircuitID\Createacceptedsenders(); // \OpenAPI\Client\CircuitID\Createacceptedsenders | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createAcceptedSender($acceptedsenders);
+    $result = $apiInstance->createAcceptedSender($createacceptedsenders);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AcceptedSendersApi->createAcceptedSender: ', $e->getMessage(), PHP_EOL;
@@ -301,6 +301,48 @@ Class | Method | HTTP request | Description
 - [Conversationmessages](docs/Model/Conversationmessages.md)
 - [Conversations](docs/Model/Conversations.md)
 - [CreateAuthentication200Response](docs/Model/CreateAuthentication200Response.md)
+- [Createacceptedsenders](docs/Model/Createacceptedsenders.md)
+- [Createannouncements](docs/Model/Createannouncements.md)
+- [Createauthentication](docs/Model/Createauthentication.md)
+- [Createcallqueueagents](docs/Model/Createcallqueueagents.md)
+- [Createcallqueues](docs/Model/Createcallqueues.md)
+- [Createchatrooms](docs/Model/Createchatrooms.md)
+- [Createclients](docs/Model/Createclients.md)
+- [Createconferencerooms](docs/Model/Createconferencerooms.md)
+- [Createcontacts](docs/Model/Createcontacts.md)
+- [Createconversationmessages](docs/Model/Createconversationmessages.md)
+- [Createconversations](docs/Model/Createconversations.md)
+- [Createcustomers](docs/Model/Createcustomers.md)
+- [Createdeveloperapps](docs/Model/Createdeveloperapps.md)
+- [Createdeveloperappsubscriptions](docs/Model/Createdeveloperappsubscriptions.md)
+- [Createdirectories](docs/Model/Createdirectories.md)
+- [Createdomains](docs/Model/Createdomains.md)
+- [Createfaxaccounts](docs/Model/Createfaxaccounts.md)
+- [Createfaxes](docs/Model/Createfaxes.md)
+- [Createfirewall](docs/Model/Createfirewall.md)
+- [Creategroupmembers](docs/Model/Creategroupmembers.md)
+- [Creategroups](docs/Model/Creategroups.md)
+- [Createholidays](docs/Model/Createholidays.md)
+- [Createinvoiceitems](docs/Model/Createinvoiceitems.md)
+- [Createinvoices](docs/Model/Createinvoices.md)
+- [Createlicenses](docs/Model/Createlicenses.md)
+- [Createmenuoptions](docs/Model/Createmenuoptions.md)
+- [Createmenus](docs/Model/Createmenus.md)
+- [Createmessagebrands](docs/Model/Createmessagebrands.md)
+- [Createmessagecampaigns](docs/Model/Createmessagecampaigns.md)
+- [Createnumberports](docs/Model/Createnumberports.md)
+- [Createnumbers](docs/Model/Createnumbers.md)
+- [Createoffices](docs/Model/Createoffices.md)
+- [Createphoneinboundruleactions](docs/Model/Createphoneinboundruleactions.md)
+- [Createphoneinboundrules](docs/Model/Createphoneinboundrules.md)
+- [Createphoneoutboundruleactions](docs/Model/Createphoneoutboundruleactions.md)
+- [Createphoneoutboundrules](docs/Model/Createphoneoutboundrules.md)
+- [Createratecenters](docs/Model/Createratecenters.md)
+- [Createservers](docs/Model/Createservers.md)
+- [Createtimeschedules](docs/Model/Createtimeschedules.md)
+- [Createusers](docs/Model/Createusers.md)
+- [Createusertokens](docs/Model/Createusertokens.md)
+- [Createvirtualextensions](docs/Model/Createvirtualextensions.md)
 - [Customers](docs/Model/Customers.md)
 - [Developerapps](docs/Model/Developerapps.md)
 - [Developerappsubscriptions](docs/Model/Developerappsubscriptions.md)

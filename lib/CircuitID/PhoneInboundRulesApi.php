@@ -140,16 +140,16 @@ class PhoneInboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundrules $phoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundrules $createphoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\CircuitID\GetPhoneInboundRule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError
      */
-    public function createPhoneInboundRule($phoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
+    public function createPhoneInboundRule($createphoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
     {
-        list($response) = $this->createPhoneInboundRuleWithHttpInfo($phoneinboundrules, $contentType);
+        list($response) = $this->createPhoneInboundRuleWithHttpInfo($createphoneinboundrules, $contentType);
         return $response;
     }
 
@@ -158,16 +158,16 @@ class PhoneInboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundrules $phoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundrules $createphoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\CircuitID\GetPhoneInboundRule200Response|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError|\OpenAPI\Client\CircuitID\ResponseError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createPhoneInboundRuleWithHttpInfo($phoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
+    public function createPhoneInboundRuleWithHttpInfo($createphoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
     {
-        $request = $this->createPhoneInboundRuleRequest($phoneinboundrules, $contentType);
+        $request = $this->createPhoneInboundRuleRequest($createphoneinboundrules, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -465,15 +465,15 @@ class PhoneInboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundrules $phoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundrules $createphoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPhoneInboundRuleAsync($phoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
+    public function createPhoneInboundRuleAsync($createphoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
     {
-        return $this->createPhoneInboundRuleAsyncWithHttpInfo($phoneinboundrules, $contentType)
+        return $this->createPhoneInboundRuleAsyncWithHttpInfo($createphoneinboundrules, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -486,16 +486,16 @@ class PhoneInboundRulesApi
      *
      * Create a new object
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundrules $phoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundrules $createphoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createPhoneInboundRuleAsyncWithHttpInfo($phoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
+    public function createPhoneInboundRuleAsyncWithHttpInfo($createphoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
     {
         $returnType = '\OpenAPI\Client\CircuitID\GetPhoneInboundRule200Response';
-        $request = $this->createPhoneInboundRuleRequest($phoneinboundrules, $contentType);
+        $request = $this->createPhoneInboundRuleRequest($createphoneinboundrules, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -536,19 +536,19 @@ class PhoneInboundRulesApi
     /**
      * Create request for operation 'createPhoneInboundRule'
      *
-     * @param  \OpenAPI\Client\CircuitID\Phoneinboundrules $phoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
+     * @param  \OpenAPI\Client\CircuitID\Createphoneinboundrules $createphoneinboundrules The JSON object that will be posted to the REST API endpoint. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPhoneInboundRule'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createPhoneInboundRuleRequest($phoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
+    public function createPhoneInboundRuleRequest($createphoneinboundrules, string $contentType = self::contentTypes['createPhoneInboundRule'][0])
     {
 
-        // verify the required parameter 'phoneinboundrules' is set
-        if ($phoneinboundrules === null || (is_array($phoneinboundrules) && count($phoneinboundrules) === 0)) {
+        // verify the required parameter 'createphoneinboundrules' is set
+        if ($createphoneinboundrules === null || (is_array($createphoneinboundrules) && count($createphoneinboundrules) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phoneinboundrules when calling createPhoneInboundRule'
+                'Missing the required parameter $createphoneinboundrules when calling createPhoneInboundRule'
             );
         }
 
@@ -571,12 +571,12 @@ class PhoneInboundRulesApi
         );
 
         // for model (json/xml)
-        if (isset($phoneinboundrules)) {
+        if (isset($createphoneinboundrules)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($phoneinboundrules));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($createphoneinboundrules));
             } else {
-                $httpBody = $phoneinboundrules;
+                $httpBody = $createphoneinboundrules;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

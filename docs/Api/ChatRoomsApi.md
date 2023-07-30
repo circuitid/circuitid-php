@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createChatRoom()`
 
 ```php
-createChatRoom($chatrooms): \OpenAPI\Client\CircuitID\GetChatRoom200Response
+createChatRoom($createchatrooms): \OpenAPI\Client\CircuitID\GetChatRoom200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ChatRoomsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$chatrooms = new \OpenAPI\Client\CircuitID\Chatrooms(); // \OpenAPI\Client\CircuitID\Chatrooms | The JSON object that will be posted to the REST API endpoint.
+$createchatrooms = new \OpenAPI\Client\CircuitID\Createchatrooms(); // \OpenAPI\Client\CircuitID\Createchatrooms | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createChatRoom($chatrooms);
+    $result = $apiInstance->createChatRoom($createchatrooms);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChatRoomsApi->createChatRoom: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **chatrooms** | [**\OpenAPI\Client\CircuitID\Chatrooms**](../Model/Chatrooms.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createchatrooms** | [**\OpenAPI\Client\CircuitID\Createchatrooms**](../Model/Createchatrooms.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 

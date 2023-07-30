@@ -14,7 +14,7 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 ## `createContact()`
 
 ```php
-createContact($contacts): \OpenAPI\Client\CircuitID\GetContact200Response
+createContact($createcontacts): \OpenAPI\Client\CircuitID\GetContact200Response
 ```
 
 Create a new object
@@ -40,10 +40,10 @@ $apiInstance = new OpenAPI\Client\Api\ContactsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$contacts = new \OpenAPI\Client\CircuitID\Contacts(); // \OpenAPI\Client\CircuitID\Contacts | The JSON object that will be posted to the REST API endpoint.
+$createcontacts = new \OpenAPI\Client\CircuitID\Createcontacts(); // \OpenAPI\Client\CircuitID\Createcontacts | The JSON object that will be posted to the REST API endpoint.
 
 try {
-    $result = $apiInstance->createContact($contacts);
+    $result = $apiInstance->createContact($createcontacts);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->createContact: ', $e->getMessage(), PHP_EOL;
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contacts** | [**\OpenAPI\Client\CircuitID\Contacts**](../Model/Contacts.md)| The JSON object that will be posted to the REST API endpoint. | |
+| **createcontacts** | [**\OpenAPI\Client\CircuitID\Createcontacts**](../Model/Createcontacts.md)| The JSON object that will be posted to the REST API endpoint. | |
 
 ### Return type
 
