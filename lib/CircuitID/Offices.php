@@ -65,11 +65,9 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
         'streetSuffix' => 'string',
         'city' => 'string',
         'state' => 'string',
-        'zip' => 'string',
         'zipCode' => 'string',
         'address2' => 'string',
         'country' => 'string',
-        'providers' => 'object',
         'region' => 'string'
     ];
 
@@ -88,11 +86,9 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
         'streetSuffix' => null,
         'city' => null,
         'state' => null,
-        'zip' => null,
         'zipCode' => null,
         'address2' => null,
         'country' => null,
-        'providers' => null,
         'region' => null
     ];
 
@@ -109,11 +105,9 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
 		'streetSuffix' => false,
 		'city' => false,
 		'state' => false,
-		'zip' => false,
 		'zipCode' => false,
 		'address2' => false,
 		'country' => false,
-		'providers' => false,
 		'region' => false
     ];
 
@@ -210,11 +204,9 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
         'streetSuffix' => 'streetSuffix',
         'city' => 'city',
         'state' => 'state',
-        'zip' => 'zip',
         'zipCode' => 'zipCode',
         'address2' => 'address2',
         'country' => 'country',
-        'providers' => 'providers',
         'region' => 'region'
     ];
 
@@ -231,11 +223,9 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
         'streetSuffix' => 'setStreetSuffix',
         'city' => 'setCity',
         'state' => 'setState',
-        'zip' => 'setZip',
         'zipCode' => 'setZipCode',
         'address2' => 'setAddress2',
         'country' => 'setCountry',
-        'providers' => 'setProviders',
         'region' => 'setRegion'
     ];
 
@@ -252,11 +242,9 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
         'streetSuffix' => 'getStreetSuffix',
         'city' => 'getCity',
         'state' => 'getState',
-        'zip' => 'getZip',
         'zipCode' => 'getZipCode',
         'address2' => 'getAddress2',
         'country' => 'getCountry',
-        'providers' => 'getProviders',
         'region' => 'getRegion'
     ];
 
@@ -324,11 +312,9 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('streetSuffix', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
-        $this->setIfExists('zip', $data ?? [], null);
         $this->setIfExists('zipCode', $data ?? [], null);
         $this->setIfExists('address2', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
-        $this->setIfExists('providers', $data ?? [], null);
         $this->setIfExists('region', $data ?? [], null);
     }
 
@@ -661,33 +647,6 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets zip
-     *
-     * @return string|null
-     */
-    public function getZip()
-    {
-        return $this->container['zip'];
-    }
-
-    /**
-     * Sets zip
-     *
-     * @param string|null $zip ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setZip($zip)
-    {
-        if (is_null($zip)) {
-            throw new \InvalidArgumentException('non-nullable zip cannot be null');
-        }
-        $this->container['zip'] = $zip;
-
-        return $this;
-    }
-
-    /**
      * Gets zipCode
      *
      * @return string|null
@@ -779,33 +738,6 @@ class Offices implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets providers
-     *
-     * @return object|null
-     */
-    public function getProviders()
-    {
-        return $this->container['providers'];
-    }
-
-    /**
-     * Sets providers
-     *
-     * @param object|null $providers providers
-     *
-     * @return self
-     */
-    public function setProviders($providers)
-    {
-        if (is_null($providers)) {
-            throw new \InvalidArgumentException('non-nullable providers cannot be null');
-        }
-        $this->container['providers'] = $providers;
 
         return $this;
     }

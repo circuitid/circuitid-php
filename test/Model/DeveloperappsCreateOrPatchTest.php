@@ -216,15 +216,6 @@ class DeveloperappsCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "webhookAuthType"
      */
     public function testPropertyWebhookAuthType()

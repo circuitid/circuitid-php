@@ -58,6 +58,8 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'attachments' => 'string[]',
+        'callerDestinations' => 'string[]',
         'callerIdNumber' => 'string',
         'callerDestination' => 'string',
         'pages' => 'int',
@@ -85,6 +87,8 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'attachments' => 'url',
+        'callerDestinations' => null,
         'callerIdNumber' => null,
         'callerDestination' => null,
         'pages' => 'int32',
@@ -110,7 +114,9 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'callerIdNumber' => false,
+        'attachments' => false,
+		'callerDestinations' => false,
+		'callerIdNumber' => false,
 		'callerDestination' => false,
 		'pages' => false,
 		'statusCode' => false,
@@ -215,6 +221,8 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'attachments' => 'attachments',
+        'callerDestinations' => 'callerDestinations',
         'callerIdNumber' => 'callerIdNumber',
         'callerDestination' => 'callerDestination',
         'pages' => 'pages',
@@ -240,6 +248,8 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'attachments' => 'setAttachments',
+        'callerDestinations' => 'setCallerDestinations',
         'callerIdNumber' => 'setCallerIdNumber',
         'callerDestination' => 'setCallerDestination',
         'pages' => 'setPages',
@@ -265,6 +275,8 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'attachments' => 'getAttachments',
+        'callerDestinations' => 'getCallerDestinations',
         'callerIdNumber' => 'getCallerIdNumber',
         'callerDestination' => 'getCallerDestination',
         'pages' => 'getPages',
@@ -373,6 +385,8 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('attachments', $data ?? [], null);
+        $this->setIfExists('callerDestinations', $data ?? [], null);
         $this->setIfExists('callerIdNumber', $data ?? [], null);
         $this->setIfExists('callerDestination', $data ?? [], null);
         $this->setIfExists('pages', $data ?? [], 0);
@@ -419,6 +433,9 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['callerDestinations'] === null) {
+            $invalidProperties[] = "'callerDestinations' can't be null";
+        }
         if ($this->container['callerIdNumber'] === null) {
             $invalidProperties[] = "'callerIdNumber' can't be null";
         }
@@ -489,6 +506,60 @@ class Faxes implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets attachments
+     *
+     * @return string[]|null
+     */
+    public function getAttachments()
+    {
+        return $this->container['attachments'];
+    }
+
+    /**
+     * Sets attachments
+     *
+     * @param string[]|null $attachments attachments
+     *
+     * @return self
+     */
+    public function setAttachments($attachments)
+    {
+        if (is_null($attachments)) {
+            throw new \InvalidArgumentException('non-nullable attachments cannot be null');
+        }
+        $this->container['attachments'] = $attachments;
+
+        return $this;
+    }
+
+    /**
+     * Gets callerDestinations
+     *
+     * @return string[]
+     */
+    public function getCallerDestinations()
+    {
+        return $this->container['callerDestinations'];
+    }
+
+    /**
+     * Sets callerDestinations
+     *
+     * @param string[] $callerDestinations callerDestinations
+     *
+     * @return self
+     */
+    public function setCallerDestinations($callerDestinations)
+    {
+        if (is_null($callerDestinations)) {
+            throw new \InvalidArgumentException('non-nullable callerDestinations cannot be null');
+        }
+        $this->container['callerDestinations'] = $callerDestinations;
+
+        return $this;
+    }
 
     /**
      * Gets callerIdNumber

@@ -97,13 +97,4 @@ class ChatroomsCreateOrPatchTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "direct"
-     */
-    public function testPropertyDirect()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

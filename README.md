@@ -218,8 +218,6 @@ Class | Method | HTTP request | Description
 *MessageBrandsApi* | [**createMessageBrand**](docs/Api/MessageBrandsApi.md#createmessagebrand) | **POST** /messagebrands | Create a new object
 *MessageBrandsApi* | [**findMessageBrands**](docs/Api/MessageBrandsApi.md#findmessagebrands) | **GET** /messagebrands | Find multiple objects
 *MessageBrandsApi* | [**getMessageBrand**](docs/Api/MessageBrandsApi.md#getmessagebrand) | **GET** /messagebrands/{id} | Get object by id
-*MessageBrandsApi* | [**patchMessageBrand**](docs/Api/MessageBrandsApi.md#patchmessagebrand) | **PATCH** /messagebrands/{id} | Patch object&#39;s data
-*MessageBrandsApi* | [**removeMessageBrand**](docs/Api/MessageBrandsApi.md#removemessagebrand) | **DELETE** /messagebrands/{id} | Delete object by id
 *MessageCampaignsApi* | [**createMessageCampaign**](docs/Api/MessageCampaignsApi.md#createmessagecampaign) | **POST** /messagecampaigns | Create a new object
 *MessageCampaignsApi* | [**findMessageCampaigns**](docs/Api/MessageCampaignsApi.md#findmessagecampaigns) | **GET** /messagecampaigns | Find multiple objects
 *MessageCampaignsApi* | [**getMessageCampaign**](docs/Api/MessageCampaignsApi.md#getmessagecampaign) | **GET** /messagecampaigns/{id} | Get object by id
@@ -228,7 +226,6 @@ Class | Method | HTTP request | Description
 *NumberPortsApi* | [**createNumberPort**](docs/Api/NumberPortsApi.md#createnumberport) | **POST** /numberports | Create a new object
 *NumberPortsApi* | [**findNumberPorts**](docs/Api/NumberPortsApi.md#findnumberports) | **GET** /numberports | Find multiple objects
 *NumberPortsApi* | [**getNumberPort**](docs/Api/NumberPortsApi.md#getnumberport) | **GET** /numberports/{id} | Get object by id
-*NumberPortsApi* | [**patchNumberPort**](docs/Api/NumberPortsApi.md#patchnumberport) | **PATCH** /numberports/{id} | Patch object&#39;s data
 *NumbersApi* | [**findNumbers**](docs/Api/NumbersApi.md#findnumbers) | **GET** /numbers | Find multiple objects
 *NumbersApi* | [**getNumber**](docs/Api/NumbersApi.md#getnumber) | **GET** /numbers/{id} | Get object by id
 *NumbersApi* | [**patchNumber**](docs/Api/NumbersApi.md#patchnumber) | **PATCH** /numbers/{id} | Patch object&#39;s data

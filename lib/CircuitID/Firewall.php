@@ -66,9 +66,7 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
         'direction' => 'string',
         'param' => 'string',
         'hits' => 'int',
-        'ai' => 'int',
-        'status' => 'int',
-        'notificationHits' => 'int'
+        'status' => 'int'
     ];
 
     /**
@@ -87,9 +85,7 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
         'direction' => null,
         'param' => null,
         'hits' => 'int32',
-        'ai' => 'int32',
-        'status' => 'int32',
-        'notificationHits' => 'int32'
+        'status' => 'int32'
     ];
 
     /**
@@ -106,9 +102,7 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
 		'direction' => false,
 		'param' => false,
 		'hits' => false,
-		'ai' => false,
-		'status' => false,
-		'notificationHits' => false
+		'status' => false
     ];
 
     /**
@@ -205,9 +199,7 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
         'direction' => 'direction',
         'param' => 'param',
         'hits' => 'hits',
-        'ai' => 'ai',
-        'status' => 'status',
-        'notificationHits' => 'notificationHits'
+        'status' => 'status'
     ];
 
     /**
@@ -224,9 +216,7 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
         'direction' => 'setDirection',
         'param' => 'setParam',
         'hits' => 'setHits',
-        'ai' => 'setAi',
-        'status' => 'setStatus',
-        'notificationHits' => 'setNotificationHits'
+        'status' => 'setStatus'
     ];
 
     /**
@@ -243,9 +233,7 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
         'direction' => 'getDirection',
         'param' => 'getParam',
         'hits' => 'getHits',
-        'ai' => 'getAi',
-        'status' => 'getStatus',
-        'notificationHits' => 'getNotificationHits'
+        'status' => 'getStatus'
     ];
 
     /**
@@ -297,8 +285,6 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
     public const DIRECTION_INBOUND = 'inbound';
     public const DIRECTION_OUTBOUND = 'outbound';
     public const DIRECTION_BOTH = 'both';
-    public const AI_0 = 0;
-    public const AI_1 = 1;
     public const STATUS_0 = 0;
     public const STATUS_1 = 1;
 
@@ -348,19 +334,6 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]
      */
-    public function getAiAllowableValues()
-    {
-        return [
-            self::AI_0,
-            self::AI_1,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
     public function getStatusAllowableValues()
     {
         return [
@@ -392,9 +365,7 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('direction', $data ?? [], null);
         $this->setIfExists('param', $data ?? [], null);
         $this->setIfExists('hits', $data ?? [], null);
-        $this->setIfExists('ai', $data ?? [], self::AI_0);
         $this->setIfExists('status', $data ?? [], self::STATUS_1);
-        $this->setIfExists('notificationHits', $data ?? [], 1);
     }
 
     /**
@@ -480,15 +451,6 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
 
         if ((mb_strlen($this->container['param']) < 1)) {
             $invalidProperties[] = "invalid value for 'param', the character length must be bigger than or equal to 1.";
-        }
-
-        $allowedValues = $this->getAiAllowableValues();
-        if (!is_null($this->container['ai']) && !in_array($this->container['ai'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'ai', must be one of '%s'",
-                $this->container['ai'],
-                implode("', '", $allowedValues)
-            );
         }
 
         $allowedValues = $this->getStatusAllowableValues();
@@ -777,43 +739,6 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets ai
-     *
-     * @return int|null
-     */
-    public function getAi()
-    {
-        return $this->container['ai'];
-    }
-
-    /**
-     * Sets ai
-     *
-     * @param int|null $ai ai
-     *
-     * @return self
-     */
-    public function setAi($ai)
-    {
-        if (is_null($ai)) {
-            throw new \InvalidArgumentException('non-nullable ai cannot be null');
-        }
-        $allowedValues = $this->getAiAllowableValues();
-        if (!in_array($ai, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'ai', must be one of '%s'",
-                    $ai,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['ai'] = $ai;
-
-        return $this;
-    }
-
-    /**
      * Gets status
      *
      * @return int|null
@@ -846,33 +771,6 @@ class Firewall implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets notificationHits
-     *
-     * @return int|null
-     */
-    public function getNotificationHits()
-    {
-        return $this->container['notificationHits'];
-    }
-
-    /**
-     * Sets notificationHits
-     *
-     * @param int|null $notificationHits notificationHits
-     *
-     * @return self
-     */
-    public function setNotificationHits($notificationHits)
-    {
-        if (is_null($notificationHits)) {
-            throw new \InvalidArgumentException('non-nullable notificationHits cannot be null');
-        }
-        $this->container['notificationHits'] = $notificationHits;
 
         return $this;
     }

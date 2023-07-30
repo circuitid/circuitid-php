@@ -59,8 +59,7 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'avatar' => 'string',
-        'direct' => 'bool'
+        'avatar' => 'string'
     ];
 
     /**
@@ -72,8 +71,7 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'avatar' => null,
-        'direct' => null
+        'avatar' => 'url'
     ];
 
     /**
@@ -83,8 +81,7 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'avatar' => false,
-		'direct' => false
+		'avatar' => false
     ];
 
     /**
@@ -174,8 +171,7 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'avatar' => 'avatar',
-        'direct' => 'direct'
+        'avatar' => 'avatar'
     ];
 
     /**
@@ -185,8 +181,7 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'name' => 'setName',
-        'avatar' => 'setAvatar',
-        'direct' => 'setDirect'
+        'avatar' => 'setAvatar'
     ];
 
     /**
@@ -196,8 +191,7 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'name' => 'getName',
-        'avatar' => 'getAvatar',
-        'direct' => 'getDirect'
+        'avatar' => 'getAvatar'
     ];
 
     /**
@@ -259,7 +253,6 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('avatar', $data ?? [], null);
-        $this->setIfExists('direct', $data ?? [], null);
     }
 
     /**
@@ -370,33 +363,6 @@ class ChatroomsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         $this->container['avatar'] = $avatar;
-
-        return $this;
-    }
-
-    /**
-     * Gets direct
-     *
-     * @return bool|null
-     */
-    public function getDirect()
-    {
-        return $this->container['direct'];
-    }
-
-    /**
-     * Sets direct
-     *
-     * @param bool|null $direct direct
-     *
-     * @return self
-     */
-    public function setDirect($direct)
-    {
-        if (is_null($direct)) {
-            throw new \InvalidArgumentException('non-nullable direct cannot be null');
-        }
-        $this->container['direct'] = $direct;
 
         return $this;
     }

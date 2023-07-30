@@ -66,7 +66,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
         'priority' => 'int',
         'destinationType' => 'string',
         'destination' => 'string',
-        'ref' => 'string',
         'callForwardingDestination' => 'string',
         'id' => 'string',
         'createdByUserId' => 'string',
@@ -91,7 +90,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
         'priority' => 'int32',
         'destinationType' => null,
         'destination' => null,
-        'ref' => null,
         'callForwardingDestination' => null,
         'id' => null,
         'createdByUserId' => null,
@@ -114,7 +112,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
 		'priority' => false,
 		'destinationType' => false,
 		'destination' => false,
-		'ref' => false,
 		'callForwardingDestination' => false,
 		'id' => false,
 		'createdByUserId' => false,
@@ -217,7 +214,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
         'priority' => 'priority',
         'destinationType' => 'destinationType',
         'destination' => 'destination',
-        'ref' => 'ref',
         'callForwardingDestination' => 'callForwardingDestination',
         'id' => '_id',
         'createdByUserId' => 'createdByUserId',
@@ -240,7 +236,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
         'priority' => 'setPriority',
         'destinationType' => 'setDestinationType',
         'destination' => 'setDestination',
-        'ref' => 'setRef',
         'callForwardingDestination' => 'setCallForwardingDestination',
         'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
@@ -263,7 +258,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
         'priority' => 'getPriority',
         'destinationType' => 'getDestinationType',
         'destination' => 'getDestination',
-        'ref' => 'getRef',
         'callForwardingDestination' => 'getCallForwardingDestination',
         'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
@@ -391,7 +385,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
         $this->setIfExists('priority', $data ?? [], 1);
         $this->setIfExists('destinationType', $data ?? [], null);
         $this->setIfExists('destination', $data ?? [], null);
-        $this->setIfExists('ref', $data ?? [], null);
         $this->setIfExists('callForwardingDestination', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
@@ -459,14 +452,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
                 $this->container['destinationType'],
                 implode("', '", $allowedValues)
             );
-        }
-
-        if (!is_null($this->container['ref']) && (mb_strlen($this->container['ref']) > 100)) {
-            $invalidProperties[] = "invalid value for 'ref', the character length must be smaller than or equal to 100.";
-        }
-
-        if (!is_null($this->container['ref']) && (mb_strlen($this->container['ref']) < 5)) {
-            $invalidProperties[] = "invalid value for 'ref', the character length must be bigger than or equal to 5.";
         }
 
         if (!is_null($this->container['callForwardingDestination']) && (mb_strlen($this->container['callForwardingDestination']) > 45)) {
@@ -728,40 +713,6 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
             throw new \InvalidArgumentException('non-nullable destination cannot be null');
         }
         $this->container['destination'] = $destination;
-
-        return $this;
-    }
-
-    /**
-     * Gets ref
-     *
-     * @return string|null
-     */
-    public function getRef()
-    {
-        return $this->container['ref'];
-    }
-
-    /**
-     * Sets ref
-     *
-     * @param string|null $ref ref
-     *
-     * @return self
-     */
-    public function setRef($ref)
-    {
-        if (is_null($ref)) {
-            throw new \InvalidArgumentException('non-nullable ref cannot be null');
-        }
-        if ((mb_strlen($ref) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $ref when calling GetPhoneInboundRuleAction200Response., must be smaller than or equal to 100.');
-        }
-        if ((mb_strlen($ref) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $ref when calling GetPhoneInboundRuleAction200Response., must be bigger than or equal to 5.');
-        }
-
-        $this->container['ref'] = $ref;
 
         return $this;
     }

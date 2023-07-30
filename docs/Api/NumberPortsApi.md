@@ -7,7 +7,6 @@ All URIs are relative to https://cloud9.circuitid.com, except if the operation d
 | [**createNumberPort()**](NumberPortsApi.md#createNumberPort) | **POST** /numberports | Create a new object |
 | [**findNumberPorts()**](NumberPortsApi.md#findNumberPorts) | **GET** /numberports | Find multiple objects |
 | [**getNumberPort()**](NumberPortsApi.md#getNumberPort) | **GET** /numberports/{id} | Get object by id |
-| [**patchNumberPort()**](NumberPortsApi.md#patchNumberPort) | **PATCH** /numberports/{id} | Patch object&#39;s data |
 
 
 ## `createNumberPort()`
@@ -202,70 +201,6 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `patchNumberPort()`
-
-```php
-patchNumberPort($id, $numberportsCreateOrPatch): \OpenAPI\Client\CircuitID\GetNumberPort200Response
-```
-
-Patch object's data
-
-Make updates to specific fields within the record without replacing the entire dataset.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: jwt
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new OpenAPI\Client\Api\NumberPortsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-$numberportsCreateOrPatch = new \OpenAPI\Client\CircuitID\NumberportsCreateOrPatch(); // \OpenAPI\Client\CircuitID\NumberportsCreateOrPatch | The request data.
-
-try {
-    $result = $apiInstance->patchNumberPort($id, $numberportsCreateOrPatch);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling NumberPortsApi->patchNumberPort: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| The ObjectId (unique 12 bytes ID) of record you would like to GET. | |
-| **numberportsCreateOrPatch** | [**\OpenAPI\Client\CircuitID\NumberportsCreateOrPatch**](../Model/NumberportsCreateOrPatch.md)| The request data. | |
-
-### Return type
-
-[**\OpenAPI\Client\CircuitID\GetNumberPort200Response**](../Model/GetNumberPort200Response.md)
-
-### Authorization
-
-[jwt](../../README.md#jwt)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

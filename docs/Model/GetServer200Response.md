@@ -9,10 +9,6 @@ Name | Type | Description | Notes
 **port** | **int** |  | [default to 5060]
 **callerId** | **string** |  | [optional]
 **type** | **string** |  |
-**domesticOutboundCallLimit** | **int** |  | [default to 10]
-**domesticInboundCallLimit** | **int** |  | [default to 10]
-**internationalOutboundCallLimit** | **int** |  | [default to 10]
-**tollFreeChannelLimit** | **int** |  | [default to 10]
 **inboundSipTrunkingOrder** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **outboundSipTrunkingOrder** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **noInstantRingBack** | **int** |  | [optional]

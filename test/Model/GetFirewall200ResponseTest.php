@@ -153,27 +153,9 @@ class GetFirewall200ResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "ai"
-     */
-    public function testPropertyAi()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "notificationHits"
-     */
-    public function testPropertyNotificationHits()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

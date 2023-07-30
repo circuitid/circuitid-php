@@ -63,10 +63,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'port' => 'int',
         'callerId' => 'string',
         'type' => 'string',
-        'domesticOutboundCallLimit' => 'int',
-        'domesticInboundCallLimit' => 'int',
-        'internationalOutboundCallLimit' => 'int',
-        'tollFreeChannelLimit' => 'int',
         'inboundSipTrunkingOrder' => 'string',
         'outboundSipTrunkingOrder' => 'string',
         'noInstantRingBack' => 'int',
@@ -92,10 +88,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'port' => 'int32',
         'callerId' => null,
         'type' => null,
-        'domesticOutboundCallLimit' => 'int32',
-        'domesticInboundCallLimit' => 'int32',
-        'internationalOutboundCallLimit' => 'int32',
-        'tollFreeChannelLimit' => 'int32',
         'inboundSipTrunkingOrder' => null,
         'outboundSipTrunkingOrder' => null,
         'noInstantRingBack' => 'int32',
@@ -119,10 +111,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
 		'port' => false,
 		'callerId' => false,
 		'type' => false,
-		'domesticOutboundCallLimit' => false,
-		'domesticInboundCallLimit' => false,
-		'internationalOutboundCallLimit' => false,
-		'tollFreeChannelLimit' => false,
 		'inboundSipTrunkingOrder' => false,
 		'outboundSipTrunkingOrder' => false,
 		'noInstantRingBack' => false,
@@ -226,10 +214,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'port' => 'port',
         'callerId' => 'callerId',
         'type' => 'type',
-        'domesticOutboundCallLimit' => 'domesticOutboundCallLimit',
-        'domesticInboundCallLimit' => 'domesticInboundCallLimit',
-        'internationalOutboundCallLimit' => 'internationalOutboundCallLimit',
-        'tollFreeChannelLimit' => 'tollFreeChannelLimit',
         'inboundSipTrunkingOrder' => 'inboundSipTrunkingOrder',
         'outboundSipTrunkingOrder' => 'outboundSipTrunkingOrder',
         'noInstantRingBack' => 'noInstantRingBack',
@@ -253,10 +237,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'port' => 'setPort',
         'callerId' => 'setCallerId',
         'type' => 'setType',
-        'domesticOutboundCallLimit' => 'setDomesticOutboundCallLimit',
-        'domesticInboundCallLimit' => 'setDomesticInboundCallLimit',
-        'internationalOutboundCallLimit' => 'setInternationalOutboundCallLimit',
-        'tollFreeChannelLimit' => 'setTollFreeChannelLimit',
         'inboundSipTrunkingOrder' => 'setInboundSipTrunkingOrder',
         'outboundSipTrunkingOrder' => 'setOutboundSipTrunkingOrder',
         'noInstantRingBack' => 'setNoInstantRingBack',
@@ -280,10 +260,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'port' => 'getPort',
         'callerId' => 'getCallerId',
         'type' => 'getType',
-        'domesticOutboundCallLimit' => 'getDomesticOutboundCallLimit',
-        'domesticInboundCallLimit' => 'getDomesticInboundCallLimit',
-        'internationalOutboundCallLimit' => 'getInternationalOutboundCallLimit',
-        'tollFreeChannelLimit' => 'getTollFreeChannelLimit',
         'inboundSipTrunkingOrder' => 'getInboundSipTrunkingOrder',
         'outboundSipTrunkingOrder' => 'getOutboundSipTrunkingOrder',
         'noInstantRingBack' => 'getNoInstantRingBack',
@@ -418,10 +394,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('port', $data ?? [], 5060);
         $this->setIfExists('callerId', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('domesticOutboundCallLimit', $data ?? [], 10);
-        $this->setIfExists('domesticInboundCallLimit', $data ?? [], 10);
-        $this->setIfExists('internationalOutboundCallLimit', $data ?? [], 10);
-        $this->setIfExists('tollFreeChannelLimit', $data ?? [], 10);
         $this->setIfExists('inboundSipTrunkingOrder', $data ?? [], null);
         $this->setIfExists('outboundSipTrunkingOrder', $data ?? [], null);
         $this->setIfExists('noInstantRingBack', $data ?? [], null);
@@ -498,18 +470,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
             );
         }
 
-        if ($this->container['domesticOutboundCallLimit'] === null) {
-            $invalidProperties[] = "'domesticOutboundCallLimit' can't be null";
-        }
-        if ($this->container['domesticInboundCallLimit'] === null) {
-            $invalidProperties[] = "'domesticInboundCallLimit' can't be null";
-        }
-        if ($this->container['internationalOutboundCallLimit'] === null) {
-            $invalidProperties[] = "'internationalOutboundCallLimit' can't be null";
-        }
-        if ($this->container['tollFreeChannelLimit'] === null) {
-            $invalidProperties[] = "'tollFreeChannelLimit' can't be null";
-        }
         $allowedValues = $this->getNoInstantRingBackAllowableValues();
         if (!is_null($this->container['noInstantRingBack']) && !in_array($this->container['noInstantRingBack'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -708,114 +668,6 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
             );
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets domesticOutboundCallLimit
-     *
-     * @return int
-     */
-    public function getDomesticOutboundCallLimit()
-    {
-        return $this->container['domesticOutboundCallLimit'];
-    }
-
-    /**
-     * Sets domesticOutboundCallLimit
-     *
-     * @param int $domesticOutboundCallLimit domesticOutboundCallLimit
-     *
-     * @return self
-     */
-    public function setDomesticOutboundCallLimit($domesticOutboundCallLimit)
-    {
-        if (is_null($domesticOutboundCallLimit)) {
-            throw new \InvalidArgumentException('non-nullable domesticOutboundCallLimit cannot be null');
-        }
-        $this->container['domesticOutboundCallLimit'] = $domesticOutboundCallLimit;
-
-        return $this;
-    }
-
-    /**
-     * Gets domesticInboundCallLimit
-     *
-     * @return int
-     */
-    public function getDomesticInboundCallLimit()
-    {
-        return $this->container['domesticInboundCallLimit'];
-    }
-
-    /**
-     * Sets domesticInboundCallLimit
-     *
-     * @param int $domesticInboundCallLimit domesticInboundCallLimit
-     *
-     * @return self
-     */
-    public function setDomesticInboundCallLimit($domesticInboundCallLimit)
-    {
-        if (is_null($domesticInboundCallLimit)) {
-            throw new \InvalidArgumentException('non-nullable domesticInboundCallLimit cannot be null');
-        }
-        $this->container['domesticInboundCallLimit'] = $domesticInboundCallLimit;
-
-        return $this;
-    }
-
-    /**
-     * Gets internationalOutboundCallLimit
-     *
-     * @return int
-     */
-    public function getInternationalOutboundCallLimit()
-    {
-        return $this->container['internationalOutboundCallLimit'];
-    }
-
-    /**
-     * Sets internationalOutboundCallLimit
-     *
-     * @param int $internationalOutboundCallLimit internationalOutboundCallLimit
-     *
-     * @return self
-     */
-    public function setInternationalOutboundCallLimit($internationalOutboundCallLimit)
-    {
-        if (is_null($internationalOutboundCallLimit)) {
-            throw new \InvalidArgumentException('non-nullable internationalOutboundCallLimit cannot be null');
-        }
-        $this->container['internationalOutboundCallLimit'] = $internationalOutboundCallLimit;
-
-        return $this;
-    }
-
-    /**
-     * Gets tollFreeChannelLimit
-     *
-     * @return int
-     */
-    public function getTollFreeChannelLimit()
-    {
-        return $this->container['tollFreeChannelLimit'];
-    }
-
-    /**
-     * Sets tollFreeChannelLimit
-     *
-     * @param int $tollFreeChannelLimit tollFreeChannelLimit
-     *
-     * @return self
-     */
-    public function setTollFreeChannelLimit($tollFreeChannelLimit)
-    {
-        if (is_null($tollFreeChannelLimit)) {
-            throw new \InvalidArgumentException('non-nullable tollFreeChannelLimit cannot be null');
-        }
-        $this->container['tollFreeChannelLimit'] = $tollFreeChannelLimit;
 
         return $this;
     }

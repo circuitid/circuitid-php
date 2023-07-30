@@ -63,30 +63,17 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
         'countryCode' => 'string',
         'amount' => 'int',
         'perMinuteRate' => 'int',
-        'provider' => 'string',
-        'originalProvider' => 'string',
-        'providerOrderId' => 'string',
         'fax' => 'int',
         'voice' => 'int',
         'status' => 'int',
         'sms' => 'int',
         'mms' => 'int',
-        'changeRegionOrderId' => 'string',
-        'changeRegionOrderDate' => '\DateTime',
         'directoryListing' => 'string',
-        'directoryListingOrderId' => 'string',
-        'directoryListingOrderDate' => '\DateTime',
         'callerName' => 'string',
-        'callerNameOrderId' => 'string',
-        'callerNameOrderDate' => '\DateTime',
         'e911' => 'string',
-        'e911OrderId' => 'string',
-        'e911OrderDate' => '\DateTime',
         'messageCampaign' => 'string',
         'messageClass' => 'string',
         'messageType' => 'string',
-        'messageCampaignOrderId' => 'string',
-        'messageCampaignOrderDate' => '\DateTime',
         'e911Supported' => 'int',
         'callerNameSupported' => 'int',
         'directoryListingSupported' => 'int',
@@ -110,30 +97,17 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
         'countryCode' => null,
         'amount' => 'int32',
         'perMinuteRate' => 'int32',
-        'provider' => null,
-        'originalProvider' => null,
-        'providerOrderId' => null,
         'fax' => 'int32',
         'voice' => 'int32',
         'status' => 'int32',
         'sms' => 'int32',
         'mms' => 'int32',
-        'changeRegionOrderId' => null,
-        'changeRegionOrderDate' => 'date-time',
         'directoryListing' => null,
-        'directoryListingOrderId' => null,
-        'directoryListingOrderDate' => 'date-time',
         'callerName' => null,
-        'callerNameOrderId' => null,
-        'callerNameOrderDate' => 'date-time',
         'e911' => null,
-        'e911OrderId' => null,
-        'e911OrderDate' => 'date-time',
         'messageCampaign' => null,
         'messageClass' => null,
         'messageType' => null,
-        'messageCampaignOrderId' => null,
-        'messageCampaignOrderDate' => 'date-time',
         'e911Supported' => 'int32',
         'callerNameSupported' => 'int32',
         'directoryListingSupported' => 'int32',
@@ -155,30 +129,17 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
 		'countryCode' => false,
 		'amount' => false,
 		'perMinuteRate' => false,
-		'provider' => false,
-		'originalProvider' => false,
-		'providerOrderId' => false,
 		'fax' => false,
 		'voice' => false,
 		'status' => false,
 		'sms' => false,
 		'mms' => false,
-		'changeRegionOrderId' => false,
-		'changeRegionOrderDate' => false,
 		'directoryListing' => false,
-		'directoryListingOrderId' => false,
-		'directoryListingOrderDate' => false,
 		'callerName' => false,
-		'callerNameOrderId' => false,
-		'callerNameOrderDate' => false,
 		'e911' => false,
-		'e911OrderId' => false,
-		'e911OrderDate' => false,
 		'messageCampaign' => false,
 		'messageClass' => false,
 		'messageType' => false,
-		'messageCampaignOrderId' => false,
-		'messageCampaignOrderDate' => false,
 		'e911Supported' => false,
 		'callerNameSupported' => false,
 		'directoryListingSupported' => false,
@@ -280,30 +241,17 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
         'countryCode' => 'countryCode',
         'amount' => 'amount',
         'perMinuteRate' => 'perMinuteRate',
-        'provider' => 'provider',
-        'originalProvider' => 'originalProvider',
-        'providerOrderId' => 'providerOrderId',
         'fax' => 'fax',
         'voice' => 'voice',
         'status' => 'status',
         'sms' => 'sms',
         'mms' => 'mms',
-        'changeRegionOrderId' => 'changeRegionOrderId',
-        'changeRegionOrderDate' => 'changeRegionOrderDate',
         'directoryListing' => 'directoryListing',
-        'directoryListingOrderId' => 'directoryListingOrderId',
-        'directoryListingOrderDate' => 'directoryListingOrderDate',
         'callerName' => 'callerName',
-        'callerNameOrderId' => 'callerNameOrderId',
-        'callerNameOrderDate' => 'callerNameOrderDate',
         'e911' => 'e911',
-        'e911OrderId' => 'e911OrderId',
-        'e911OrderDate' => 'e911OrderDate',
         'messageCampaign' => 'messageCampaign',
         'messageClass' => 'messageClass',
         'messageType' => 'messageType',
-        'messageCampaignOrderId' => 'messageCampaignOrderId',
-        'messageCampaignOrderDate' => 'messageCampaignOrderDate',
         'e911Supported' => 'e911Supported',
         'callerNameSupported' => 'callerNameSupported',
         'directoryListingSupported' => 'directoryListingSupported',
@@ -325,30 +273,17 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
         'countryCode' => 'setCountryCode',
         'amount' => 'setAmount',
         'perMinuteRate' => 'setPerMinuteRate',
-        'provider' => 'setProvider',
-        'originalProvider' => 'setOriginalProvider',
-        'providerOrderId' => 'setProviderOrderId',
         'fax' => 'setFax',
         'voice' => 'setVoice',
         'status' => 'setStatus',
         'sms' => 'setSms',
         'mms' => 'setMms',
-        'changeRegionOrderId' => 'setChangeRegionOrderId',
-        'changeRegionOrderDate' => 'setChangeRegionOrderDate',
         'directoryListing' => 'setDirectoryListing',
-        'directoryListingOrderId' => 'setDirectoryListingOrderId',
-        'directoryListingOrderDate' => 'setDirectoryListingOrderDate',
         'callerName' => 'setCallerName',
-        'callerNameOrderId' => 'setCallerNameOrderId',
-        'callerNameOrderDate' => 'setCallerNameOrderDate',
         'e911' => 'setE911',
-        'e911OrderId' => 'setE911OrderId',
-        'e911OrderDate' => 'setE911OrderDate',
         'messageCampaign' => 'setMessageCampaign',
         'messageClass' => 'setMessageClass',
         'messageType' => 'setMessageType',
-        'messageCampaignOrderId' => 'setMessageCampaignOrderId',
-        'messageCampaignOrderDate' => 'setMessageCampaignOrderDate',
         'e911Supported' => 'setE911Supported',
         'callerNameSupported' => 'setCallerNameSupported',
         'directoryListingSupported' => 'setDirectoryListingSupported',
@@ -370,30 +305,17 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
         'countryCode' => 'getCountryCode',
         'amount' => 'getAmount',
         'perMinuteRate' => 'getPerMinuteRate',
-        'provider' => 'getProvider',
-        'originalProvider' => 'getOriginalProvider',
-        'providerOrderId' => 'getProviderOrderId',
         'fax' => 'getFax',
         'voice' => 'getVoice',
         'status' => 'getStatus',
         'sms' => 'getSms',
         'mms' => 'getMms',
-        'changeRegionOrderId' => 'getChangeRegionOrderId',
-        'changeRegionOrderDate' => 'getChangeRegionOrderDate',
         'directoryListing' => 'getDirectoryListing',
-        'directoryListingOrderId' => 'getDirectoryListingOrderId',
-        'directoryListingOrderDate' => 'getDirectoryListingOrderDate',
         'callerName' => 'getCallerName',
-        'callerNameOrderId' => 'getCallerNameOrderId',
-        'callerNameOrderDate' => 'getCallerNameOrderDate',
         'e911' => 'getE911',
-        'e911OrderId' => 'getE911OrderId',
-        'e911OrderDate' => 'getE911OrderDate',
         'messageCampaign' => 'getMessageCampaign',
         'messageClass' => 'getMessageClass',
         'messageType' => 'getMessageType',
-        'messageCampaignOrderId' => 'getMessageCampaignOrderId',
-        'messageCampaignOrderDate' => 'getMessageCampaignOrderDate',
         'e911Supported' => 'getE911Supported',
         'callerNameSupported' => 'getCallerNameSupported',
         'directoryListingSupported' => 'getDirectoryListingSupported',
@@ -695,30 +617,17 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('countryCode', $data ?? [], null);
         $this->setIfExists('amount', $data ?? [], null);
         $this->setIfExists('perMinuteRate', $data ?? [], null);
-        $this->setIfExists('provider', $data ?? [], null);
-        $this->setIfExists('originalProvider', $data ?? [], null);
-        $this->setIfExists('providerOrderId', $data ?? [], null);
         $this->setIfExists('fax', $data ?? [], self::FAX_0);
         $this->setIfExists('voice', $data ?? [], self::VOICE_0);
         $this->setIfExists('status', $data ?? [], self::STATUS_1);
         $this->setIfExists('sms', $data ?? [], self::SMS_0);
         $this->setIfExists('mms', $data ?? [], self::MMS_0);
-        $this->setIfExists('changeRegionOrderId', $data ?? [], null);
-        $this->setIfExists('changeRegionOrderDate', $data ?? [], null);
         $this->setIfExists('directoryListing', $data ?? [], null);
-        $this->setIfExists('directoryListingOrderId', $data ?? [], null);
-        $this->setIfExists('directoryListingOrderDate', $data ?? [], null);
         $this->setIfExists('callerName', $data ?? [], null);
-        $this->setIfExists('callerNameOrderId', $data ?? [], null);
-        $this->setIfExists('callerNameOrderDate', $data ?? [], null);
         $this->setIfExists('e911', $data ?? [], null);
-        $this->setIfExists('e911OrderId', $data ?? [], null);
-        $this->setIfExists('e911OrderDate', $data ?? [], null);
         $this->setIfExists('messageCampaign', $data ?? [], null);
         $this->setIfExists('messageClass', $data ?? [], null);
         $this->setIfExists('messageType', $data ?? [], null);
-        $this->setIfExists('messageCampaignOrderId', $data ?? [], null);
-        $this->setIfExists('messageCampaignOrderDate', $data ?? [], null);
         $this->setIfExists('e911Supported', $data ?? [], self::E911_SUPPORTED_0);
         $this->setIfExists('callerNameSupported', $data ?? [], self::CALLER_NAME_SUPPORTED_0);
         $this->setIfExists('directoryListingSupported', $data ?? [], self::DIRECTORY_LISTING_SUPPORTED_0);
@@ -787,13 +696,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'countryCode', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['provider'] === null) {
-            $invalidProperties[] = "'provider' can't be null";
-        }
-        if (!is_null($this->container['providerOrderId']) && (mb_strlen($this->container['providerOrderId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'providerOrderId', the character length must be smaller than or equal to 45.";
-        }
-
         $allowedValues = $this->getFaxAllowableValues();
         if (!is_null($this->container['fax']) && !in_array($this->container['fax'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -839,36 +741,8 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
 
-        if (!is_null($this->container['changeRegionOrderId']) && (mb_strlen($this->container['changeRegionOrderId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'changeRegionOrderId', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['changeRegionOrderId']) && (mb_strlen($this->container['changeRegionOrderId']) < 5)) {
-            $invalidProperties[] = "invalid value for 'changeRegionOrderId', the character length must be bigger than or equal to 5.";
-        }
-
-        if (!is_null($this->container['directoryListingOrderId']) && (mb_strlen($this->container['directoryListingOrderId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'directoryListingOrderId', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['directoryListingOrderId']) && (mb_strlen($this->container['directoryListingOrderId']) < 5)) {
-            $invalidProperties[] = "invalid value for 'directoryListingOrderId', the character length must be bigger than or equal to 5.";
-        }
-
         if (!is_null($this->container['callerName']) && (mb_strlen($this->container['callerName']) > 45)) {
             $invalidProperties[] = "invalid value for 'callerName', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['callerNameOrderId']) && (mb_strlen($this->container['callerNameOrderId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'callerNameOrderId', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['e911OrderId']) && (mb_strlen($this->container['e911OrderId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'e911OrderId', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['e911OrderId']) && (mb_strlen($this->container['e911OrderId']) < 5)) {
-            $invalidProperties[] = "invalid value for 'e911OrderId', the character length must be bigger than or equal to 5.";
         }
 
         if (!is_null($this->container['messageCampaign']) && (mb_strlen($this->container['messageCampaign']) > 45)) {
@@ -891,10 +765,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
                 $this->container['messageType'],
                 implode("', '", $allowedValues)
             );
-        }
-
-        if (!is_null($this->container['messageCampaignOrderId']) && (mb_strlen($this->container['messageCampaignOrderId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'messageCampaignOrderId', the character length must be smaller than or equal to 45.";
         }
 
         $allowedValues = $this->getE911SupportedAllowableValues();
@@ -1136,91 +1006,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets provider
-     *
-     * @return string
-     */
-    public function getProvider()
-    {
-        return $this->container['provider'];
-    }
-
-    /**
-     * Sets provider
-     *
-     * @param string $provider ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setProvider($provider)
-    {
-        if (is_null($provider)) {
-            throw new \InvalidArgumentException('non-nullable provider cannot be null');
-        }
-        $this->container['provider'] = $provider;
-
-        return $this;
-    }
-
-    /**
-     * Gets originalProvider
-     *
-     * @return string|null
-     */
-    public function getOriginalProvider()
-    {
-        return $this->container['originalProvider'];
-    }
-
-    /**
-     * Sets originalProvider
-     *
-     * @param string|null $originalProvider ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setOriginalProvider($originalProvider)
-    {
-        if (is_null($originalProvider)) {
-            throw new \InvalidArgumentException('non-nullable originalProvider cannot be null');
-        }
-        $this->container['originalProvider'] = $originalProvider;
-
-        return $this;
-    }
-
-    /**
-     * Gets providerOrderId
-     *
-     * @return string|null
-     */
-    public function getProviderOrderId()
-    {
-        return $this->container['providerOrderId'];
-    }
-
-    /**
-     * Sets providerOrderId
-     *
-     * @param string|null $providerOrderId providerOrderId
-     *
-     * @return self
-     */
-    public function setProviderOrderId($providerOrderId)
-    {
-        if (is_null($providerOrderId)) {
-            throw new \InvalidArgumentException('non-nullable providerOrderId cannot be null');
-        }
-        if ((mb_strlen($providerOrderId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $providerOrderId when calling Numbers., must be smaller than or equal to 45.');
-        }
-
-        $this->container['providerOrderId'] = $providerOrderId;
-
-        return $this;
-    }
-
-    /**
      * Gets fax
      *
      * @return int|null
@@ -1406,67 +1191,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets changeRegionOrderId
-     *
-     * @return string|null
-     */
-    public function getChangeRegionOrderId()
-    {
-        return $this->container['changeRegionOrderId'];
-    }
-
-    /**
-     * Sets changeRegionOrderId
-     *
-     * @param string|null $changeRegionOrderId changeRegionOrderId
-     *
-     * @return self
-     */
-    public function setChangeRegionOrderId($changeRegionOrderId)
-    {
-        if (is_null($changeRegionOrderId)) {
-            throw new \InvalidArgumentException('non-nullable changeRegionOrderId cannot be null');
-        }
-        if ((mb_strlen($changeRegionOrderId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $changeRegionOrderId when calling Numbers., must be smaller than or equal to 45.');
-        }
-        if ((mb_strlen($changeRegionOrderId) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $changeRegionOrderId when calling Numbers., must be bigger than or equal to 5.');
-        }
-
-        $this->container['changeRegionOrderId'] = $changeRegionOrderId;
-
-        return $this;
-    }
-
-    /**
-     * Gets changeRegionOrderDate
-     *
-     * @return \DateTime|null
-     */
-    public function getChangeRegionOrderDate()
-    {
-        return $this->container['changeRegionOrderDate'];
-    }
-
-    /**
-     * Sets changeRegionOrderDate
-     *
-     * @param \DateTime|null $changeRegionOrderDate changeRegionOrderDate
-     *
-     * @return self
-     */
-    public function setChangeRegionOrderDate($changeRegionOrderDate)
-    {
-        if (is_null($changeRegionOrderDate)) {
-            throw new \InvalidArgumentException('non-nullable changeRegionOrderDate cannot be null');
-        }
-        $this->container['changeRegionOrderDate'] = $changeRegionOrderDate;
-
-        return $this;
-    }
-
-    /**
      * Gets directoryListing
      *
      * @return string|null
@@ -1489,67 +1213,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable directoryListing cannot be null');
         }
         $this->container['directoryListing'] = $directoryListing;
-
-        return $this;
-    }
-
-    /**
-     * Gets directoryListingOrderId
-     *
-     * @return string|null
-     */
-    public function getDirectoryListingOrderId()
-    {
-        return $this->container['directoryListingOrderId'];
-    }
-
-    /**
-     * Sets directoryListingOrderId
-     *
-     * @param string|null $directoryListingOrderId directoryListingOrderId
-     *
-     * @return self
-     */
-    public function setDirectoryListingOrderId($directoryListingOrderId)
-    {
-        if (is_null($directoryListingOrderId)) {
-            throw new \InvalidArgumentException('non-nullable directoryListingOrderId cannot be null');
-        }
-        if ((mb_strlen($directoryListingOrderId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $directoryListingOrderId when calling Numbers., must be smaller than or equal to 45.');
-        }
-        if ((mb_strlen($directoryListingOrderId) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $directoryListingOrderId when calling Numbers., must be bigger than or equal to 5.');
-        }
-
-        $this->container['directoryListingOrderId'] = $directoryListingOrderId;
-
-        return $this;
-    }
-
-    /**
-     * Gets directoryListingOrderDate
-     *
-     * @return \DateTime|null
-     */
-    public function getDirectoryListingOrderDate()
-    {
-        return $this->container['directoryListingOrderDate'];
-    }
-
-    /**
-     * Sets directoryListingOrderDate
-     *
-     * @param \DateTime|null $directoryListingOrderDate directoryListingOrderDate
-     *
-     * @return self
-     */
-    public function setDirectoryListingOrderDate($directoryListingOrderDate)
-    {
-        if (is_null($directoryListingOrderDate)) {
-            throw new \InvalidArgumentException('non-nullable directoryListingOrderDate cannot be null');
-        }
-        $this->container['directoryListingOrderDate'] = $directoryListingOrderDate;
 
         return $this;
     }
@@ -1586,64 +1249,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets callerNameOrderId
-     *
-     * @return string|null
-     */
-    public function getCallerNameOrderId()
-    {
-        return $this->container['callerNameOrderId'];
-    }
-
-    /**
-     * Sets callerNameOrderId
-     *
-     * @param string|null $callerNameOrderId callerNameOrderId
-     *
-     * @return self
-     */
-    public function setCallerNameOrderId($callerNameOrderId)
-    {
-        if (is_null($callerNameOrderId)) {
-            throw new \InvalidArgumentException('non-nullable callerNameOrderId cannot be null');
-        }
-        if ((mb_strlen($callerNameOrderId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $callerNameOrderId when calling Numbers., must be smaller than or equal to 45.');
-        }
-
-        $this->container['callerNameOrderId'] = $callerNameOrderId;
-
-        return $this;
-    }
-
-    /**
-     * Gets callerNameOrderDate
-     *
-     * @return \DateTime|null
-     */
-    public function getCallerNameOrderDate()
-    {
-        return $this->container['callerNameOrderDate'];
-    }
-
-    /**
-     * Sets callerNameOrderDate
-     *
-     * @param \DateTime|null $callerNameOrderDate callerNameOrderDate
-     *
-     * @return self
-     */
-    public function setCallerNameOrderDate($callerNameOrderDate)
-    {
-        if (is_null($callerNameOrderDate)) {
-            throw new \InvalidArgumentException('non-nullable callerNameOrderDate cannot be null');
-        }
-        $this->container['callerNameOrderDate'] = $callerNameOrderDate;
-
-        return $this;
-    }
-
-    /**
      * Gets e911
      *
      * @return string|null
@@ -1666,67 +1271,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable e911 cannot be null');
         }
         $this->container['e911'] = $e911;
-
-        return $this;
-    }
-
-    /**
-     * Gets e911OrderId
-     *
-     * @return string|null
-     */
-    public function getE911OrderId()
-    {
-        return $this->container['e911OrderId'];
-    }
-
-    /**
-     * Sets e911OrderId
-     *
-     * @param string|null $e911OrderId e911OrderId
-     *
-     * @return self
-     */
-    public function setE911OrderId($e911OrderId)
-    {
-        if (is_null($e911OrderId)) {
-            throw new \InvalidArgumentException('non-nullable e911OrderId cannot be null');
-        }
-        if ((mb_strlen($e911OrderId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $e911OrderId when calling Numbers., must be smaller than or equal to 45.');
-        }
-        if ((mb_strlen($e911OrderId) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $e911OrderId when calling Numbers., must be bigger than or equal to 5.');
-        }
-
-        $this->container['e911OrderId'] = $e911OrderId;
-
-        return $this;
-    }
-
-    /**
-     * Gets e911OrderDate
-     *
-     * @return \DateTime|null
-     */
-    public function getE911OrderDate()
-    {
-        return $this->container['e911OrderDate'];
-    }
-
-    /**
-     * Sets e911OrderDate
-     *
-     * @param \DateTime|null $e911OrderDate e911OrderDate
-     *
-     * @return self
-     */
-    public function setE911OrderDate($e911OrderDate)
-    {
-        if (is_null($e911OrderDate)) {
-            throw new \InvalidArgumentException('non-nullable e911OrderDate cannot be null');
-        }
-        $this->container['e911OrderDate'] = $e911OrderDate;
 
         return $this;
     }
@@ -1832,64 +1376,6 @@ class Numbers implements ModelInterface, ArrayAccess, \JsonSerializable
             );
         }
         $this->container['messageType'] = $messageType;
-
-        return $this;
-    }
-
-    /**
-     * Gets messageCampaignOrderId
-     *
-     * @return string|null
-     */
-    public function getMessageCampaignOrderId()
-    {
-        return $this->container['messageCampaignOrderId'];
-    }
-
-    /**
-     * Sets messageCampaignOrderId
-     *
-     * @param string|null $messageCampaignOrderId messageCampaignOrderId
-     *
-     * @return self
-     */
-    public function setMessageCampaignOrderId($messageCampaignOrderId)
-    {
-        if (is_null($messageCampaignOrderId)) {
-            throw new \InvalidArgumentException('non-nullable messageCampaignOrderId cannot be null');
-        }
-        if ((mb_strlen($messageCampaignOrderId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $messageCampaignOrderId when calling Numbers., must be smaller than or equal to 45.');
-        }
-
-        $this->container['messageCampaignOrderId'] = $messageCampaignOrderId;
-
-        return $this;
-    }
-
-    /**
-     * Gets messageCampaignOrderDate
-     *
-     * @return \DateTime|null
-     */
-    public function getMessageCampaignOrderDate()
-    {
-        return $this->container['messageCampaignOrderDate'];
-    }
-
-    /**
-     * Sets messageCampaignOrderDate
-     *
-     * @param \DateTime|null $messageCampaignOrderDate messageCampaignOrderDate
-     *
-     * @return self
-     */
-    public function setMessageCampaignOrderDate($messageCampaignOrderDate)
-    {
-        if (is_null($messageCampaignOrderDate)) {
-            throw new \InvalidArgumentException('non-nullable messageCampaignOrderDate cannot be null');
-        }
-        $this->container['messageCampaignOrderDate'] = $messageCampaignOrderDate;
 
         return $this;
     }

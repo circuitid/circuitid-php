@@ -19,7 +19,6 @@ Name | Type | Description | Notes
 **termsOfServiceUrl** | **string** |  | [optional]
 **privacyPolicyUrl** | **string** |  | [optional]
 **permissions** | **object** |  | [optional]
-**status** | **string** |  | [default to 'pending']
 **webhookAuthType** | **string** |  | [optional]
 **webhookUsername** | **string** |  | [optional]
 **webhookPassword** | **string** |  | [optional]

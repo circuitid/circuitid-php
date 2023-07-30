@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**numbers** | **string[]** |  |
 **name** | **string** |  |
-**type** | **string** |  |
+**type** | **string** |  | [default to 'port in']
 **typeOfService** | **string** |  |
 **authorizedPerson** | **string** |  |
 **desiredDueDate** | **\DateTime** |  |

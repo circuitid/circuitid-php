@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**attachments** | **string[]** |  | [optional]
+**callerDestinations** | **string[]** |  |
 **callerIdNumber** | **string** |  |
 **callerDestination** | **string** |  |
 **pages** | **int** |  | [optional] [default to 0]

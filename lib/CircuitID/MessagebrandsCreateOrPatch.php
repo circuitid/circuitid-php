@@ -63,14 +63,12 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'ein' => 'string',
         'user' => 'string',
         'order' => 'string',
-        'status' => 'string',
         'brandRelationship' => 'string',
         'vertical' => 'string',
         'entityType' => 'string',
         'cspId' => 'string',
         'einIssuingCountry' => 'string',
-        'universalEin' => 'string',
-        'referenceId' => 'string'
+        'universalEin' => 'string'
     ];
 
     /**
@@ -86,14 +84,12 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'ein' => null,
         'user' => null,
         'order' => null,
-        'status' => null,
         'brandRelationship' => null,
         'vertical' => null,
         'entityType' => null,
         'cspId' => null,
         'einIssuingCountry' => null,
-        'universalEin' => null,
-        'referenceId' => null
+        'universalEin' => null
     ];
 
     /**
@@ -107,14 +103,12 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
 		'ein' => false,
 		'user' => false,
 		'order' => false,
-		'status' => false,
 		'brandRelationship' => false,
 		'vertical' => false,
 		'entityType' => false,
 		'cspId' => false,
 		'einIssuingCountry' => false,
-		'universalEin' => false,
-		'referenceId' => false
+		'universalEin' => false
     ];
 
     /**
@@ -208,14 +202,12 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'ein' => 'ein',
         'user' => 'user',
         'order' => 'order',
-        'status' => 'status',
         'brandRelationship' => 'brandRelationship',
         'vertical' => 'vertical',
         'entityType' => 'entityType',
         'cspId' => 'cspId',
         'einIssuingCountry' => 'einIssuingCountry',
-        'universalEin' => 'universalEin',
-        'referenceId' => 'referenceId'
+        'universalEin' => 'universalEin'
     ];
 
     /**
@@ -229,14 +221,12 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'ein' => 'setEin',
         'user' => 'setUser',
         'order' => 'setOrder',
-        'status' => 'setStatus',
         'brandRelationship' => 'setBrandRelationship',
         'vertical' => 'setVertical',
         'entityType' => 'setEntityType',
         'cspId' => 'setCspId',
         'einIssuingCountry' => 'setEinIssuingCountry',
-        'universalEin' => 'setUniversalEin',
-        'referenceId' => 'setReferenceId'
+        'universalEin' => 'setUniversalEin'
     ];
 
     /**
@@ -250,14 +240,12 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'ein' => 'getEin',
         'user' => 'getUser',
         'order' => 'getOrder',
-        'status' => 'getStatus',
         'brandRelationship' => 'getBrandRelationship',
         'vertical' => 'getVertical',
         'entityType' => 'getEntityType',
         'cspId' => 'getCspId',
         'einIssuingCountry' => 'getEinIssuingCountry',
-        'universalEin' => 'getUniversalEin',
-        'referenceId' => 'getReferenceId'
+        'universalEin' => 'getUniversalEin'
     ];
 
     /**
@@ -301,21 +289,6 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         return self::$openAPIModelName;
     }
 
-    public const STATUS_VERIFIED = 'verified';
-    public const STATUS_UNVERIFIED = 'unverified';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_VERIFIED,
-            self::STATUS_UNVERIFIED,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -337,14 +310,12 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('ein', $data ?? [], null);
         $this->setIfExists('user', $data ?? [], null);
         $this->setIfExists('order', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('brandRelationship', $data ?? [], null);
         $this->setIfExists('vertical', $data ?? [], null);
         $this->setIfExists('entityType', $data ?? [], null);
         $this->setIfExists('cspId', $data ?? [], null);
         $this->setIfExists('einIssuingCountry', $data ?? [], null);
         $this->setIfExists('universalEin', $data ?? [], null);
-        $this->setIfExists('referenceId', $data ?? [], null);
     }
 
     /**
@@ -398,15 +369,6 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         if ($this->container['order'] === null) {
             $invalidProperties[] = "'order' can't be null";
         }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if (!is_null($this->container['brandRelationship']) && (mb_strlen($this->container['brandRelationship']) > 45)) {
             $invalidProperties[] = "invalid value for 'brandRelationship', the character length must be smaller than or equal to 45.";
         }
@@ -429,10 +391,6 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
 
         if (!is_null($this->container['universalEin']) && (mb_strlen($this->container['universalEin']) > 45)) {
             $invalidProperties[] = "invalid value for 'universalEin', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['referenceId']) && (mb_strlen($this->container['referenceId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'referenceId', the character length must be smaller than or equal to 45.";
         }
 
         return $invalidProperties;
@@ -593,43 +551,6 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable order cannot be null');
         }
         $this->container['order'] = $order;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string|null $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
 
         return $this;
     }
@@ -816,37 +737,6 @@ class MessagebrandsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         }
 
         $this->container['universalEin'] = $universalEin;
-
-        return $this;
-    }
-
-    /**
-     * Gets referenceId
-     *
-     * @return string|null
-     */
-    public function getReferenceId()
-    {
-        return $this->container['referenceId'];
-    }
-
-    /**
-     * Sets referenceId
-     *
-     * @param string|null $referenceId referenceId
-     *
-     * @return self
-     */
-    public function setReferenceId($referenceId)
-    {
-        if (is_null($referenceId)) {
-            throw new \InvalidArgumentException('non-nullable referenceId cannot be null');
-        }
-        if ((mb_strlen($referenceId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $referenceId when calling MessagebrandsCreateOrPatch., must be smaller than or equal to 45.');
-        }
-
-        $this->container['referenceId'] = $referenceId;
 
         return $this;
     }

@@ -126,42 +126,6 @@ class ServersCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "domesticOutboundCallLimit"
-     */
-    public function testPropertyDomesticOutboundCallLimit()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "domesticInboundCallLimit"
-     */
-    public function testPropertyDomesticInboundCallLimit()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "internationalOutboundCallLimit"
-     */
-    public function testPropertyInternationalOutboundCallLimit()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "tollFreeChannelLimit"
-     */
-    public function testPropertyTollFreeChannelLimit()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "inboundSipTrunkingOrder"
      */
     public function testPropertyInboundSipTrunkingOrder()

@@ -58,6 +58,7 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
+        'numbers' => 'string[]',
         'name' => 'string',
         'type' => 'string',
         'typeOfService' => 'string',
@@ -88,6 +89,7 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'numbers' => null,
         'name' => null,
         'type' => null,
         'typeOfService' => null,
@@ -116,7 +118,8 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
+        'numbers' => false,
+		'name' => false,
 		'type' => false,
 		'typeOfService' => false,
 		'authorizedPerson' => false,
@@ -224,6 +227,7 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
+        'numbers' => 'numbers',
         'name' => 'name',
         'type' => 'type',
         'typeOfService' => 'typeOfService',
@@ -252,6 +256,7 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
+        'numbers' => 'setNumbers',
         'name' => 'setName',
         'type' => 'setType',
         'typeOfService' => 'setTypeOfService',
@@ -280,6 +285,7 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
+        'numbers' => 'getNumbers',
         'name' => 'getName',
         'type' => 'getType',
         'typeOfService' => 'getTypeOfService',
@@ -462,8 +468,9 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('numbers', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], 'port in');
         $this->setIfExists('typeOfService', $data ?? [], null);
         $this->setIfExists('authorizedPerson', $data ?? [], null);
         $this->setIfExists('desiredDueDate', $data ?? [], null);
@@ -511,6 +518,9 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
+        if ($this->container['numbers'] === null) {
+            $invalidProperties[] = "'numbers' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -639,6 +649,33 @@ class GetNumberPort200Response implements ModelInterface, ArrayAccess, \JsonSeri
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets numbers
+     *
+     * @return string[]
+     */
+    public function getNumbers()
+    {
+        return $this->container['numbers'];
+    }
+
+    /**
+     * Sets numbers
+     *
+     * @param string[] $numbers numbers
+     *
+     * @return self
+     */
+    public function setNumbers($numbers)
+    {
+        if (is_null($numbers)) {
+            throw new \InvalidArgumentException('non-nullable numbers cannot be null');
+        }
+        $this->container['numbers'] = $numbers;
+
+        return $this;
+    }
 
     /**
      * Gets name

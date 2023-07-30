@@ -60,9 +60,7 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     protected static $openAPITypes = [
         'conversation' => 'string',
         'text' => 'string',
-        'direction' => 'string',
-        'attachments' => 'mixed[]',
-        'referenceId' => 'string'
+        'attachments' => 'mixed[]'
     ];
 
     /**
@@ -75,9 +73,7 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     protected static $openAPIFormats = [
         'conversation' => null,
         'text' => null,
-        'direction' => null,
-        'attachments' => null,
-        'referenceId' => null
+        'attachments' => null
     ];
 
     /**
@@ -88,9 +84,7 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     protected static array $openAPINullables = [
         'conversation' => false,
 		'text' => false,
-		'direction' => false,
-		'attachments' => false,
-		'referenceId' => false
+		'attachments' => false
     ];
 
     /**
@@ -181,9 +175,7 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     protected static $attributeMap = [
         'conversation' => 'conversation',
         'text' => 'text',
-        'direction' => 'direction',
-        'attachments' => 'attachments',
-        'referenceId' => 'referenceId'
+        'attachments' => 'attachments'
     ];
 
     /**
@@ -194,9 +186,7 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     protected static $setters = [
         'conversation' => 'setConversation',
         'text' => 'setText',
-        'direction' => 'setDirection',
-        'attachments' => 'setAttachments',
-        'referenceId' => 'setReferenceId'
+        'attachments' => 'setAttachments'
     ];
 
     /**
@@ -207,9 +197,7 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     protected static $getters = [
         'conversation' => 'getConversation',
         'text' => 'getText',
-        'direction' => 'getDirection',
-        'attachments' => 'getAttachments',
-        'referenceId' => 'getReferenceId'
+        'attachments' => 'getAttachments'
     ];
 
     /**
@@ -253,21 +241,6 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
         return self::$openAPIModelName;
     }
 
-    public const DIRECTION_INBOUND = 'inbound';
-    public const DIRECTION_OUTBOUND = 'outbound';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getDirectionAllowableValues()
-    {
-        return [
-            self::DIRECTION_INBOUND,
-            self::DIRECTION_OUTBOUND,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -286,9 +259,7 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     {
         $this->setIfExists('conversation', $data ?? [], null);
         $this->setIfExists('text', $data ?? [], null);
-        $this->setIfExists('direction', $data ?? [], null);
         $this->setIfExists('attachments', $data ?? [], null);
-        $this->setIfExists('referenceId', $data ?? [], null);
     }
 
     /**
@@ -320,22 +291,6 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
 
         if (!is_null($this->container['text']) && (mb_strlen($this->container['text']) > 2048)) {
             $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 2048.";
-        }
-
-        if ($this->container['direction'] === null) {
-            $invalidProperties[] = "'direction' can't be null";
-        }
-        $allowedValues = $this->getDirectionAllowableValues();
-        if (!is_null($this->container['direction']) && !in_array($this->container['direction'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'direction', must be one of '%s'",
-                $this->container['direction'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if (!is_null($this->container['referenceId']) && (mb_strlen($this->container['referenceId']) > 255)) {
-            $invalidProperties[] = "invalid value for 'referenceId', the character length must be smaller than or equal to 255.";
         }
 
         return $invalidProperties;
@@ -412,43 +367,6 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
     }
 
     /**
-     * Gets direction
-     *
-     * @return string
-     */
-    public function getDirection()
-    {
-        return $this->container['direction'];
-    }
-
-    /**
-     * Sets direction
-     *
-     * @param string $direction direction
-     *
-     * @return self
-     */
-    public function setDirection($direction)
-    {
-        if (is_null($direction)) {
-            throw new \InvalidArgumentException('non-nullable direction cannot be null');
-        }
-        $allowedValues = $this->getDirectionAllowableValues();
-        if (!in_array($direction, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'direction', must be one of '%s'",
-                    $direction,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['direction'] = $direction;
-
-        return $this;
-    }
-
-    /**
      * Gets attachments
      *
      * @return mixed[]|null
@@ -471,37 +389,6 @@ class ConversationmessagesCreateOrPatch implements ModelInterface, ArrayAccess, 
             throw new \InvalidArgumentException('non-nullable attachments cannot be null');
         }
         $this->container['attachments'] = $attachments;
-
-        return $this;
-    }
-
-    /**
-     * Gets referenceId
-     *
-     * @return string|null
-     */
-    public function getReferenceId()
-    {
-        return $this->container['referenceId'];
-    }
-
-    /**
-     * Sets referenceId
-     *
-     * @param string|null $referenceId referenceId
-     *
-     * @return self
-     */
-    public function setReferenceId($referenceId)
-    {
-        if (is_null($referenceId)) {
-            throw new \InvalidArgumentException('non-nullable referenceId cannot be null');
-        }
-        if ((mb_strlen($referenceId) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $referenceId when calling ConversationmessagesCreateOrPatch., must be smaller than or equal to 255.');
-        }
-
-        $this->container['referenceId'] = $referenceId;
 
         return $this;
     }

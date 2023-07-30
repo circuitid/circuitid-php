@@ -153,15 +153,6 @@ class PhoneinboundruleactionsTest extends TestCase
     }
 
     /**
-     * Test attribute "ref"
-     */
-    public function testPropertyRef()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "callForwardingDestination"
      */
     public function testPropertyCallForwardingDestination()

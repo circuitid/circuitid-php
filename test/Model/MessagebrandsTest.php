@@ -187,13 +187,4 @@ class MessagebrandsTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "referenceId"
-     */
-    public function testPropertyReferenceId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

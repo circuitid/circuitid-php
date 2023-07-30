@@ -81,6 +81,24 @@ class FaxesTest extends TestCase
     }
 
     /**
+     * Test attribute "attachments"
+     */
+    public function testPropertyAttachments()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "callerDestinations"
+     */
+    public function testPropertyCallerDestinations()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "callerIdNumber"
      */
     public function testPropertyCallerIdNumber()

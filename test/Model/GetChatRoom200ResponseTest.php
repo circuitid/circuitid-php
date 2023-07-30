@@ -108,15 +108,6 @@ class GetChatRoom200ResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "direct"
-     */
-    public function testPropertyDirect()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "id"
      */
     public function testPropertyId()

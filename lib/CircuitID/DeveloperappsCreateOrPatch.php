@@ -73,7 +73,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'termsOfServiceUrl' => 'string',
         'privacyPolicyUrl' => 'string',
         'permissions' => 'object',
-        'status' => 'string',
         'webhookAuthType' => 'string',
         'webhookUsername' => 'string',
         'webhookPassword' => 'string',
@@ -104,7 +103,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'termsOfServiceUrl' => null,
         'privacyPolicyUrl' => null,
         'permissions' => null,
-        'status' => null,
         'webhookAuthType' => null,
         'webhookUsername' => null,
         'webhookPassword' => null,
@@ -133,7 +131,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
 		'termsOfServiceUrl' => false,
 		'privacyPolicyUrl' => false,
 		'permissions' => false,
-		'status' => false,
 		'webhookAuthType' => false,
 		'webhookUsername' => false,
 		'webhookPassword' => false,
@@ -242,7 +239,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'termsOfServiceUrl' => 'termsOfServiceUrl',
         'privacyPolicyUrl' => 'privacyPolicyUrl',
         'permissions' => 'permissions',
-        'status' => 'status',
         'webhookAuthType' => 'webhookAuthType',
         'webhookUsername' => 'webhookUsername',
         'webhookPassword' => 'webhookPassword',
@@ -271,7 +267,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'termsOfServiceUrl' => 'setTermsOfServiceUrl',
         'privacyPolicyUrl' => 'setPrivacyPolicyUrl',
         'permissions' => 'setPermissions',
-        'status' => 'setStatus',
         'webhookAuthType' => 'setWebhookAuthType',
         'webhookUsername' => 'setWebhookUsername',
         'webhookPassword' => 'setWebhookPassword',
@@ -300,7 +295,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         'termsOfServiceUrl' => 'getTermsOfServiceUrl',
         'privacyPolicyUrl' => 'getPrivacyPolicyUrl',
         'permissions' => 'getPermissions',
-        'status' => 'getStatus',
         'webhookAuthType' => 'getWebhookAuthType',
         'webhookUsername' => 'getWebhookUsername',
         'webhookPassword' => 'getWebhookPassword',
@@ -371,11 +365,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
     public const EVENTS_CREATE = 'create';
     public const EVENTS_PATCH = 'patch';
     public const EVENTS_REMOVED = 'removed';
-    public const STATUS_ACTIVE = 'active';
-    public const STATUS_DISABLED = 'disabled';
-    public const STATUS_SUSPENDED = 'suspended';
-    public const STATUS_ERROR = 'error';
-    public const STATUS_PENDING = 'pending';
     public const WEBHOOK_AUTH_TYPE_HEADER = 'header';
     public const WEBHOOK_AUTH_TYPE_USERNAME_AND_PASSWORD = 'usernameAndPassword';
 
@@ -483,22 +472,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ACTIVE,
-            self::STATUS_DISABLED,
-            self::STATUS_SUSPENDED,
-            self::STATUS_ERROR,
-            self::STATUS_PENDING,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
     public function getWebhookAuthTypeAllowableValues()
     {
         return [
@@ -537,7 +510,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('termsOfServiceUrl', $data ?? [], null);
         $this->setIfExists('privacyPolicyUrl', $data ?? [], null);
         $this->setIfExists('permissions', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], 'pending');
         $this->setIfExists('webhookAuthType', $data ?? [], null);
         $this->setIfExists('webhookUsername', $data ?? [], null);
         $this->setIfExists('webhookPassword', $data ?? [], null);
@@ -657,18 +629,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
 
         if (!is_null($this->container['privacyPolicyUrl']) && (mb_strlen($this->container['privacyPolicyUrl']) > 1024)) {
             $invalidProperties[] = "invalid value for 'privacyPolicyUrl', the character length must be smaller than or equal to 1024.";
-        }
-
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
-                implode("', '", $allowedValues)
-            );
         }
 
         $allowedValues = $this->getWebhookAuthTypeAllowableValues();
@@ -1204,43 +1164,6 @@ class DeveloperappsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable permissions cannot be null');
         }
         $this->container['permissions'] = $permissions;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
 
         return $this;
     }

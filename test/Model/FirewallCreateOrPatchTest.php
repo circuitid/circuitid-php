@@ -135,36 +135,9 @@ class FirewallCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "hits"
-     */
-    public function testPropertyHits()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ai"
-     */
-    public function testPropertyAi()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "notificationHits"
-     */
-    public function testPropertyNotificationHits()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

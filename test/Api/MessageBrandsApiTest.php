@@ -107,28 +107,4 @@ class MessageBrandsApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for patchMessageBrand
-     *
-     * Patch object's data.
-     *
-     */
-    public function testPatchMessageBrand()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for removeMessageBrand
-     *
-     * Delete object by id.
-     *
-     */
-    public function testRemoveMessageBrand()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

@@ -81,162 +81,9 @@ class NumbersCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "inUse"
-     */
-    public function testPropertyInUse()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "countryCode"
-     */
-    public function testPropertyCountryCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "amount"
-     */
-    public function testPropertyAmount()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "perMinuteRate"
-     */
-    public function testPropertyPerMinuteRate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "provider"
-     */
-    public function testPropertyProvider()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "originalProvider"
-     */
-    public function testPropertyOriginalProvider()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "providerOrderId"
-     */
-    public function testPropertyProviderOrderId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "fax"
-     */
-    public function testPropertyFax()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "voice"
-     */
-    public function testPropertyVoice()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sms"
-     */
-    public function testPropertySms()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "mms"
-     */
-    public function testPropertyMms()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "changeRegionOrderId"
-     */
-    public function testPropertyChangeRegionOrderId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "changeRegionOrderDate"
-     */
-    public function testPropertyChangeRegionOrderDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "directoryListing"
      */
     public function testPropertyDirectoryListing()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "directoryListingOrderId"
-     */
-    public function testPropertyDirectoryListingOrderId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "directoryListingOrderDate"
-     */
-    public function testPropertyDirectoryListingOrderDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -252,24 +99,6 @@ class NumbersCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "callerNameOrderId"
-     */
-    public function testPropertyCallerNameOrderId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "callerNameOrderDate"
-     */
-    public function testPropertyCallerNameOrderDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "e911"
      */
     public function testPropertyE911()
@@ -279,99 +108,9 @@ class NumbersCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "e911OrderId"
-     */
-    public function testPropertyE911OrderId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "e911OrderDate"
-     */
-    public function testPropertyE911OrderDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "messageCampaign"
      */
     public function testPropertyMessageCampaign()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "messageClass"
-     */
-    public function testPropertyMessageClass()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "messageType"
-     */
-    public function testPropertyMessageType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "messageCampaignOrderId"
-     */
-    public function testPropertyMessageCampaignOrderId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "messageCampaignOrderDate"
-     */
-    public function testPropertyMessageCampaignOrderDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "e911Supported"
-     */
-    public function testPropertyE911Supported()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "callerNameSupported"
-     */
-    public function testPropertyCallerNameSupported()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "directoryListingSupported"
-     */
-    public function testPropertyDirectoryListingSupported()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "messagingSupported"
-     */
-    public function testPropertyMessagingSupported()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -390,15 +129,6 @@ class NumbersCreateOrPatchTest extends TestCase
      * Test attribute "destination"
      */
     public function testPropertyDestination()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ref"
-     */
-    public function testPropertyRef()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

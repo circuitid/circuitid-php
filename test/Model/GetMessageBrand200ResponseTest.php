@@ -189,15 +189,6 @@ class GetMessageBrand200ResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "referenceId"
-     */
-    public function testPropertyReferenceId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "id"
      */
     public function testPropertyId()

@@ -61,7 +61,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'name' => 'string',
         'users' => 'object',
         'avatar' => 'string',
-        'direct' => 'bool',
         'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
@@ -79,8 +78,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
     protected static $openAPIFormats = [
         'name' => null,
         'users' => null,
-        'avatar' => null,
-        'direct' => null,
+        'avatar' => 'url',
         'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
@@ -97,7 +95,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'name' => false,
 		'users' => false,
 		'avatar' => false,
-		'direct' => false,
 		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
@@ -194,7 +191,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'name' => 'name',
         'users' => 'users',
         'avatar' => 'avatar',
-        'direct' => 'direct',
         'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
@@ -211,7 +207,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'name' => 'setName',
         'users' => 'setUsers',
         'avatar' => 'setAvatar',
-        'direct' => 'setDirect',
         'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
@@ -228,7 +223,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'name' => 'getName',
         'users' => 'getUsers',
         'avatar' => 'getAvatar',
-        'direct' => 'getDirect',
         'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
@@ -296,7 +290,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('users', $data ?? [], null);
         $this->setIfExists('avatar', $data ?? [], null);
-        $this->setIfExists('direct', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
@@ -442,33 +435,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         $this->container['avatar'] = $avatar;
-
-        return $this;
-    }
-
-    /**
-     * Gets direct
-     *
-     * @return bool|null
-     */
-    public function getDirect()
-    {
-        return $this->container['direct'];
-    }
-
-    /**
-     * Sets direct
-     *
-     * @param bool|null $direct direct
-     *
-     * @return self
-     */
-    public function setDirect($direct)
-    {
-        if (is_null($direct)) {
-            throw new \InvalidArgumentException('non-nullable direct cannot be null');
-        }
-        $this->container['direct'] = $direct;
 
         return $this;
     }

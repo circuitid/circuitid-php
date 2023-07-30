@@ -99,27 +99,9 @@ class ConversationmessagesCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "direction"
-     */
-    public function testPropertyDirection()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "attachments"
      */
     public function testPropertyAttachments()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "referenceId"
-     */
-    public function testPropertyReferenceId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -60,8 +60,7 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'name' => 'string',
         'users' => 'object',
-        'avatar' => 'string',
-        'direct' => 'bool'
+        'avatar' => 'string'
     ];
 
     /**
@@ -74,8 +73,7 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'name' => null,
         'users' => null,
-        'avatar' => null,
-        'direct' => null
+        'avatar' => 'url'
     ];
 
     /**
@@ -86,8 +84,7 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'name' => false,
 		'users' => false,
-		'avatar' => false,
-		'direct' => false
+		'avatar' => false
     ];
 
     /**
@@ -178,8 +175,7 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'name' => 'name',
         'users' => 'users',
-        'avatar' => 'avatar',
-        'direct' => 'direct'
+        'avatar' => 'avatar'
     ];
 
     /**
@@ -190,8 +186,7 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'name' => 'setName',
         'users' => 'setUsers',
-        'avatar' => 'setAvatar',
-        'direct' => 'setDirect'
+        'avatar' => 'setAvatar'
     ];
 
     /**
@@ -202,8 +197,7 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'name' => 'getName',
         'users' => 'getUsers',
-        'avatar' => 'getAvatar',
-        'direct' => 'getDirect'
+        'avatar' => 'getAvatar'
     ];
 
     /**
@@ -266,7 +260,6 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('users', $data ?? [], null);
         $this->setIfExists('avatar', $data ?? [], null);
-        $this->setIfExists('direct', $data ?? [], null);
     }
 
     /**
@@ -407,33 +400,6 @@ class Chatrooms implements ModelInterface, ArrayAccess, \JsonSerializable
         }
 
         $this->container['avatar'] = $avatar;
-
-        return $this;
-    }
-
-    /**
-     * Gets direct
-     *
-     * @return bool|null
-     */
-    public function getDirect()
-    {
-        return $this->container['direct'];
-    }
-
-    /**
-     * Sets direct
-     *
-     * @param bool|null $direct direct
-     *
-     * @return self
-     */
-    public function setDirect($direct)
-    {
-        if (is_null($direct)) {
-            throw new \InvalidArgumentException('non-nullable direct cannot be null');
-        }
-        $this->container['direct'] = $direct;
 
         return $this;
     }

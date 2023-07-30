@@ -81,81 +81,18 @@ class FaxesCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "pages"
+     * Test attribute "attachments"
      */
-    public function testPropertyPages()
+    public function testPropertyAttachments()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "statusCode"
+     * Test attribute "callerDestinations"
      */
-    public function testPropertyStatusCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "transferedPages"
-     */
-    public function testPropertyTransferedPages()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "error"
-     */
-    public function testPropertyError()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "order"
-     */
-    public function testPropertyOrder()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "file"
-     */
-    public function testPropertyFile()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "contact"
-     */
-    public function testPropertyContact()
+    public function testPropertyCallerDestinations()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -174,42 +111,6 @@ class FaxesCreateOrPatchTest extends TestCase
      * Test attribute "faxAccount"
      */
     public function testPropertyFaxAccount()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "retries"
-     */
-    public function testPropertyRetries()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "invoice"
-     */
-    public function testPropertyInvoice()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "senderEmail"
-     */
-    public function testPropertySenderEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "senderName"
-     */
-    public function testPropertySenderName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

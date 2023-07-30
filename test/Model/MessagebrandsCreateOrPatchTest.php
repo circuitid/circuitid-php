@@ -126,15 +126,6 @@ class MessagebrandsCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "brandRelationship"
      */
     public function testPropertyBrandRelationship()
@@ -183,15 +174,6 @@ class MessagebrandsCreateOrPatchTest extends TestCase
      * Test attribute "universalEin"
      */
     public function testPropertyUniversalEin()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "referenceId"
-     */
-    public function testPropertyReferenceId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

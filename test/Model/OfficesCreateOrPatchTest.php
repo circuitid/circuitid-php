@@ -126,15 +126,6 @@ class OfficesCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "zip"
-     */
-    public function testPropertyZip()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "zipCode"
      */
     public function testPropertyZipCode()
@@ -156,15 +147,6 @@ class OfficesCreateOrPatchTest extends TestCase
      * Test attribute "country"
      */
     public function testPropertyCountry()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "providers"
-     */
-    public function testPropertyProviders()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

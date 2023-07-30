@@ -64,10 +64,7 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         'target' => 'string',
         'direction' => 'string',
         'param' => 'string',
-        'hits' => 'int',
-        'ai' => 'int',
-        'status' => 'int',
-        'notificationHits' => 'int'
+        'status' => 'int'
     ];
 
     /**
@@ -84,10 +81,7 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         'target' => null,
         'direction' => null,
         'param' => null,
-        'hits' => 'int32',
-        'ai' => 'int32',
-        'status' => 'int32',
-        'notificationHits' => 'int32'
+        'status' => 'int32'
     ];
 
     /**
@@ -102,10 +96,7 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
 		'target' => false,
 		'direction' => false,
 		'param' => false,
-		'hits' => false,
-		'ai' => false,
-		'status' => false,
-		'notificationHits' => false
+		'status' => false
     ];
 
     /**
@@ -200,10 +191,7 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         'target' => 'target',
         'direction' => 'direction',
         'param' => 'param',
-        'hits' => 'hits',
-        'ai' => 'ai',
-        'status' => 'status',
-        'notificationHits' => 'notificationHits'
+        'status' => 'status'
     ];
 
     /**
@@ -218,10 +206,7 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         'target' => 'setTarget',
         'direction' => 'setDirection',
         'param' => 'setParam',
-        'hits' => 'setHits',
-        'ai' => 'setAi',
-        'status' => 'setStatus',
-        'notificationHits' => 'setNotificationHits'
+        'status' => 'setStatus'
     ];
 
     /**
@@ -236,10 +221,7 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         'target' => 'getTarget',
         'direction' => 'getDirection',
         'param' => 'getParam',
-        'hits' => 'getHits',
-        'ai' => 'getAi',
-        'status' => 'getStatus',
-        'notificationHits' => 'getNotificationHits'
+        'status' => 'getStatus'
     ];
 
     /**
@@ -291,8 +273,6 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
     public const DIRECTION_INBOUND = 'inbound';
     public const DIRECTION_OUTBOUND = 'outbound';
     public const DIRECTION_BOTH = 'both';
-    public const AI_0 = 0;
-    public const AI_1 = 1;
     public const STATUS_0 = 0;
     public const STATUS_1 = 1;
 
@@ -342,19 +322,6 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
      *
      * @return string[]
      */
-    public function getAiAllowableValues()
-    {
-        return [
-            self::AI_0,
-            self::AI_1,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
     public function getStatusAllowableValues()
     {
         return [
@@ -384,10 +351,7 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('target', $data ?? [], null);
         $this->setIfExists('direction', $data ?? [], null);
         $this->setIfExists('param', $data ?? [], null);
-        $this->setIfExists('hits', $data ?? [], null);
-        $this->setIfExists('ai', $data ?? [], self::AI_0);
         $this->setIfExists('status', $data ?? [], self::STATUS_1);
-        $this->setIfExists('notificationHits', $data ?? [], 1);
     }
 
     /**
@@ -470,15 +434,6 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
 
         if ((mb_strlen($this->container['param']) < 1)) {
             $invalidProperties[] = "invalid value for 'param', the character length must be bigger than or equal to 1.";
-        }
-
-        $allowedValues = $this->getAiAllowableValues();
-        if (!is_null($this->container['ai']) && !in_array($this->container['ai'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'ai', must be one of '%s'",
-                $this->container['ai'],
-                implode("', '", $allowedValues)
-            );
         }
 
         $allowedValues = $this->getStatusAllowableValues();
@@ -713,70 +668,6 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets hits
-     *
-     * @return int|null
-     */
-    public function getHits()
-    {
-        return $this->container['hits'];
-    }
-
-    /**
-     * Sets hits
-     *
-     * @param int|null $hits hits
-     *
-     * @return self
-     */
-    public function setHits($hits)
-    {
-        if (is_null($hits)) {
-            throw new \InvalidArgumentException('non-nullable hits cannot be null');
-        }
-        $this->container['hits'] = $hits;
-
-        return $this;
-    }
-
-    /**
-     * Gets ai
-     *
-     * @return int|null
-     */
-    public function getAi()
-    {
-        return $this->container['ai'];
-    }
-
-    /**
-     * Sets ai
-     *
-     * @param int|null $ai ai
-     *
-     * @return self
-     */
-    public function setAi($ai)
-    {
-        if (is_null($ai)) {
-            throw new \InvalidArgumentException('non-nullable ai cannot be null');
-        }
-        $allowedValues = $this->getAiAllowableValues();
-        if (!in_array($ai, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'ai', must be one of '%s'",
-                    $ai,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['ai'] = $ai;
-
-        return $this;
-    }
-
-    /**
      * Gets status
      *
      * @return int|null
@@ -809,33 +700,6 @@ class FirewallCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
             );
         }
         $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets notificationHits
-     *
-     * @return int|null
-     */
-    public function getNotificationHits()
-    {
-        return $this->container['notificationHits'];
-    }
-
-    /**
-     * Sets notificationHits
-     *
-     * @param int|null $notificationHits notificationHits
-     *
-     * @return self
-     */
-    public function setNotificationHits($notificationHits)
-    {
-        if (is_null($notificationHits)) {
-            throw new \InvalidArgumentException('non-nullable notificationHits cannot be null');
-        }
-        $this->container['notificationHits'] = $notificationHits;
 
         return $this;
     }

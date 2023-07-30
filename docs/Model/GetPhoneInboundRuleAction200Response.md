@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **priority** | **int** |  | [default to 1]
 **destinationType** | **string** |  |
 **destination** | **string** | ObjectId (unique 12 bytes ID) | [optional]
-**ref** | **string** |  | [optional]
 **callForwardingDestination** | **string** |  | [optional]
 **id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]

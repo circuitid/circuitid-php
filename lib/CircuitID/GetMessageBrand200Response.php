@@ -70,7 +70,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'cspId' => 'string',
         'einIssuingCountry' => 'string',
         'universalEin' => 'string',
-        'referenceId' => 'string',
         'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
@@ -98,7 +97,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'cspId' => null,
         'einIssuingCountry' => null,
         'universalEin' => null,
-        'referenceId' => null,
         'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
@@ -124,7 +122,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
 		'cspId' => false,
 		'einIssuingCountry' => false,
 		'universalEin' => false,
-		'referenceId' => false,
 		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
@@ -230,7 +227,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'cspId' => 'cspId',
         'einIssuingCountry' => 'einIssuingCountry',
         'universalEin' => 'universalEin',
-        'referenceId' => 'referenceId',
         'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
@@ -256,7 +252,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'cspId' => 'setCspId',
         'einIssuingCountry' => 'setEinIssuingCountry',
         'universalEin' => 'setUniversalEin',
-        'referenceId' => 'setReferenceId',
         'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
@@ -282,7 +277,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'cspId' => 'getCspId',
         'einIssuingCountry' => 'getEinIssuingCountry',
         'universalEin' => 'getUniversalEin',
-        'referenceId' => 'getReferenceId',
         'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
@@ -374,7 +368,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('cspId', $data ?? [], null);
         $this->setIfExists('einIssuingCountry', $data ?? [], null);
         $this->setIfExists('universalEin', $data ?? [], null);
-        $this->setIfExists('referenceId', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
@@ -464,10 +457,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
 
         if (!is_null($this->container['universalEin']) && (mb_strlen($this->container['universalEin']) > 45)) {
             $invalidProperties[] = "invalid value for 'universalEin', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['referenceId']) && (mb_strlen($this->container['referenceId']) > 45)) {
-            $invalidProperties[] = "invalid value for 'referenceId', the character length must be smaller than or equal to 45.";
         }
 
         return $invalidProperties;
@@ -851,37 +840,6 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         }
 
         $this->container['universalEin'] = $universalEin;
-
-        return $this;
-    }
-
-    /**
-     * Gets referenceId
-     *
-     * @return string|null
-     */
-    public function getReferenceId()
-    {
-        return $this->container['referenceId'];
-    }
-
-    /**
-     * Sets referenceId
-     *
-     * @param string|null $referenceId referenceId
-     *
-     * @return self
-     */
-    public function setReferenceId($referenceId)
-    {
-        if (is_null($referenceId)) {
-            throw new \InvalidArgumentException('non-nullable referenceId cannot be null');
-        }
-        if ((mb_strlen($referenceId) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $referenceId when calling GetMessageBrand200Response., must be smaller than or equal to 45.');
-        }
-
-        $this->container['referenceId'] = $referenceId;
 
         return $this;
     }

@@ -107,16 +107,4 @@ class NumberPortsApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for patchNumberPort
-     *
-     * Patch object's data.
-     *
-     */
-    public function testPatchNumberPort()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

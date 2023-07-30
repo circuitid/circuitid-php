@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional]
 **users** | **object** |  |
 **avatar** | **string** |  | [optional]
-**direct** | **bool** |  | [optional]
 **id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]

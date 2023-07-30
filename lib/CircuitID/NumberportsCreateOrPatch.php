@@ -58,8 +58,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
+        'numbers' => 'string[]',
         'name' => 'string',
-        'type' => 'string',
         'typeOfService' => 'string',
         'authorizedPerson' => 'string',
         'desiredDueDate' => '\DateTime',
@@ -67,11 +67,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         'accountPhoneNumber' => 'string',
         'office' => 'string',
         'e911' => 'int',
-        'invoice' => 'string',
-        'status' => 'string',
         'destinationType' => 'string',
         'destination' => 'string',
-        'ref' => 'string',
         'callForwardingDestination' => 'string'
     ];
 
@@ -83,8 +80,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'numbers' => null,
         'name' => null,
-        'type' => null,
         'typeOfService' => null,
         'authorizedPerson' => null,
         'desiredDueDate' => 'date-time',
@@ -92,11 +89,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         'accountPhoneNumber' => null,
         'office' => null,
         'e911' => 'int32',
-        'invoice' => null,
-        'status' => null,
         'destinationType' => null,
         'destination' => null,
-        'ref' => null,
         'callForwardingDestination' => null
     ];
 
@@ -106,8 +100,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
-		'type' => false,
+        'numbers' => false,
+		'name' => false,
 		'typeOfService' => false,
 		'authorizedPerson' => false,
 		'desiredDueDate' => false,
@@ -115,11 +109,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
 		'accountPhoneNumber' => false,
 		'office' => false,
 		'e911' => false,
-		'invoice' => false,
-		'status' => false,
 		'destinationType' => false,
 		'destination' => false,
-		'ref' => false,
 		'callForwardingDestination' => false
     ];
 
@@ -209,8 +200,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
+        'numbers' => 'numbers',
         'name' => 'name',
-        'type' => 'type',
         'typeOfService' => 'typeOfService',
         'authorizedPerson' => 'authorizedPerson',
         'desiredDueDate' => 'desiredDueDate',
@@ -218,11 +209,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         'accountPhoneNumber' => 'accountPhoneNumber',
         'office' => 'office',
         'e911' => 'e911',
-        'invoice' => 'invoice',
-        'status' => 'status',
         'destinationType' => 'destinationType',
         'destination' => 'destination',
-        'ref' => 'ref',
         'callForwardingDestination' => 'callForwardingDestination'
     ];
 
@@ -232,8 +220,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
+        'numbers' => 'setNumbers',
         'name' => 'setName',
-        'type' => 'setType',
         'typeOfService' => 'setTypeOfService',
         'authorizedPerson' => 'setAuthorizedPerson',
         'desiredDueDate' => 'setDesiredDueDate',
@@ -241,11 +229,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         'accountPhoneNumber' => 'setAccountPhoneNumber',
         'office' => 'setOffice',
         'e911' => 'setE911',
-        'invoice' => 'setInvoice',
-        'status' => 'setStatus',
         'destinationType' => 'setDestinationType',
         'destination' => 'setDestination',
-        'ref' => 'setRef',
         'callForwardingDestination' => 'setCallForwardingDestination'
     ];
 
@@ -255,8 +240,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
+        'numbers' => 'getNumbers',
         'name' => 'getName',
-        'type' => 'getType',
         'typeOfService' => 'getTypeOfService',
         'authorizedPerson' => 'getAuthorizedPerson',
         'desiredDueDate' => 'getDesiredDueDate',
@@ -264,11 +249,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         'accountPhoneNumber' => 'getAccountPhoneNumber',
         'office' => 'getOffice',
         'e911' => 'getE911',
-        'invoice' => 'getInvoice',
-        'status' => 'getStatus',
         'destinationType' => 'getDestinationType',
         'destination' => 'getDestination',
-        'ref' => 'getRef',
         'callForwardingDestination' => 'getCallForwardingDestination'
     ];
 
@@ -313,16 +295,10 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         return self::$openAPIModelName;
     }
 
-    public const TYPE_IN = 'port in';
-    public const TYPE_OUT = 'port out';
     public const TYPE_OF_SERVICE_BUSINESS = 'business';
     public const TYPE_OF_SERVICE_RESIDENCE = 'residence';
     public const E911_1 = 1;
     public const E911_0 = 0;
-    public const STATUS_PROCESSING = 'processing';
-    public const STATUS_FAILED = 'failed';
-    public const STATUS_ERROR = 'error';
-    public const STATUS_COMPLETED = 'completed';
     public const DESTINATION_TYPE_ANNOUNCEMENTS = 'announcements';
     public const DESTINATION_TYPE_DIRECTORIES = 'directories';
     public const DESTINATION_TYPE_PARK = 'park';
@@ -337,19 +313,6 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
     public const DESTINATION_TYPE_HANGUP = 'hangup';
     public const DESTINATION_TYPE_PHONEINBOUNDRULES = 'phoneinboundrules';
     public const DESTINATION_TYPE_VOICEMAILACCOUNTS = 'voicemailaccounts';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_IN,
-            self::TYPE_OUT,
-        ];
-    }
 
     /**
      * Gets allowable values of the enum
@@ -374,21 +337,6 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         return [
             self::E911_1,
             self::E911_0,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_PROCESSING,
-            self::STATUS_FAILED,
-            self::STATUS_ERROR,
-            self::STATUS_COMPLETED,
         ];
     }
 
@@ -432,8 +380,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('numbers', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('typeOfService', $data ?? [], null);
         $this->setIfExists('authorizedPerson', $data ?? [], null);
         $this->setIfExists('desiredDueDate', $data ?? [], null);
@@ -441,11 +389,8 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('accountPhoneNumber', $data ?? [], null);
         $this->setIfExists('office', $data ?? [], null);
         $this->setIfExists('e911', $data ?? [], self::E911_0);
-        $this->setIfExists('invoice', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], 'processing');
         $this->setIfExists('destinationType', $data ?? [], null);
         $this->setIfExists('destination', $data ?? [], null);
-        $this->setIfExists('ref', $data ?? [], null);
         $this->setIfExists('callForwardingDestination', $data ?? [], null);
     }
 
@@ -476,23 +421,14 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
+        if ($this->container['numbers'] === null) {
+            $invalidProperties[] = "'numbers' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
         if ((mb_strlen($this->container['name']) > 45)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 45.";
-        }
-
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
         }
 
         if ($this->container['typeOfService'] === null) {
@@ -547,21 +483,6 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
             );
         }
 
-        if ($this->container['invoice'] === null) {
-            $invalidProperties[] = "'invoice' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['destinationType'] === null) {
             $invalidProperties[] = "'destinationType' can't be null";
         }
@@ -572,14 +493,6 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
                 $this->container['destinationType'],
                 implode("', '", $allowedValues)
             );
-        }
-
-        if (!is_null($this->container['ref']) && (mb_strlen($this->container['ref']) > 100)) {
-            $invalidProperties[] = "invalid value for 'ref', the character length must be smaller than or equal to 100.";
-        }
-
-        if (!is_null($this->container['ref']) && (mb_strlen($this->container['ref']) < 5)) {
-            $invalidProperties[] = "invalid value for 'ref', the character length must be bigger than or equal to 5.";
         }
 
         if (!is_null($this->container['callForwardingDestination']) && (mb_strlen($this->container['callForwardingDestination']) > 45)) {
@@ -604,6 +517,33 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets numbers
+     *
+     * @return string[]
+     */
+    public function getNumbers()
+    {
+        return $this->container['numbers'];
+    }
+
+    /**
+     * Sets numbers
+     *
+     * @param string[] $numbers numbers
+     *
+     * @return self
+     */
+    public function setNumbers($numbers)
+    {
+        if (is_null($numbers)) {
+            throw new \InvalidArgumentException('non-nullable numbers cannot be null');
+        }
+        $this->container['numbers'] = $numbers;
+
+        return $this;
+    }
 
     /**
      * Gets name
@@ -632,43 +572,6 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }
@@ -898,70 +801,6 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
-     * Gets invoice
-     *
-     * @return string
-     */
-    public function getInvoice()
-    {
-        return $this->container['invoice'];
-    }
-
-    /**
-     * Sets invoice
-     *
-     * @param string $invoice ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setInvoice($invoice)
-    {
-        if (is_null($invoice)) {
-            throw new \InvalidArgumentException('non-nullable invoice cannot be null');
-        }
-        $this->container['invoice'] = $invoice;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
      * Gets destinationType
      *
      * @return string
@@ -1021,40 +860,6 @@ class NumberportsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable destination cannot be null');
         }
         $this->container['destination'] = $destination;
-
-        return $this;
-    }
-
-    /**
-     * Gets ref
-     *
-     * @return string|null
-     */
-    public function getRef()
-    {
-        return $this->container['ref'];
-    }
-
-    /**
-     * Sets ref
-     *
-     * @param string|null $ref ref
-     *
-     * @return self
-     */
-    public function setRef($ref)
-    {
-        if (is_null($ref)) {
-            throw new \InvalidArgumentException('non-nullable ref cannot be null');
-        }
-        if ((mb_strlen($ref) > 100)) {
-            throw new \InvalidArgumentException('invalid length for $ref when calling NumberportsCreateOrPatch., must be smaller than or equal to 100.');
-        }
-        if ((mb_strlen($ref) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $ref when calling NumberportsCreateOrPatch., must be bigger than or equal to 5.');
-        }
-
-        $this->container['ref'] = $ref;
 
         return $this;
     }

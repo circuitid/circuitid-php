@@ -59,23 +59,17 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'status' => 'string',
         'websiteUrl' => 'string',
         'logo' => 'string',
         'credit' => 'int',
         'adminUserId' => 'string',
         'billingUserId' => 'string',
         'callRecordingUserId' => 'string',
-        'callForwardingCallLimit' => 'int',
         'supportUserId' => 'string',
         'automaticRefillAmount' => 'int',
         'lowBalanceAlertAmount' => 'int',
-        'lowBalanceAlertAt' => '\DateTime',
-        'lowBalanceAlertCount' => 'int',
-        'lastAutomaticRefillInvoice' => 'string',
         'internationalCalling' => 'int',
         'createdByIP' => 'string',
-        'callDebug' => 'int',
         'mediaBypass' => 'int',
         'accountLock' => 'int',
         'callRecording' => 'int',
@@ -96,23 +90,17 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'status' => null,
         'websiteUrl' => null,
         'logo' => null,
         'credit' => 'int32',
         'adminUserId' => null,
         'billingUserId' => null,
         'callRecordingUserId' => null,
-        'callForwardingCallLimit' => 'int32',
         'supportUserId' => null,
         'automaticRefillAmount' => 'int32',
         'lowBalanceAlertAmount' => 'int32',
-        'lowBalanceAlertAt' => 'date-time',
-        'lowBalanceAlertCount' => 'int32',
-        'lastAutomaticRefillInvoice' => null,
         'internationalCalling' => 'int32',
         'createdByIP' => null,
-        'callDebug' => 'int32',
         'mediaBypass' => 'int32',
         'accountLock' => 'int32',
         'callRecording' => 'int32',
@@ -131,23 +119,17 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static array $openAPINullables = [
         'name' => false,
-		'status' => false,
 		'websiteUrl' => false,
 		'logo' => false,
 		'credit' => false,
 		'adminUserId' => false,
 		'billingUserId' => false,
 		'callRecordingUserId' => false,
-		'callForwardingCallLimit' => false,
 		'supportUserId' => false,
 		'automaticRefillAmount' => false,
 		'lowBalanceAlertAmount' => false,
-		'lowBalanceAlertAt' => false,
-		'lowBalanceAlertCount' => false,
-		'lastAutomaticRefillInvoice' => false,
 		'internationalCalling' => false,
 		'createdByIP' => false,
-		'callDebug' => false,
 		'mediaBypass' => false,
 		'accountLock' => false,
 		'callRecording' => false,
@@ -246,23 +228,17 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'status' => 'status',
         'websiteUrl' => 'websiteUrl',
         'logo' => 'logo',
         'credit' => 'credit',
         'adminUserId' => 'adminUserId',
         'billingUserId' => 'billingUserId',
         'callRecordingUserId' => 'callRecordingUserId',
-        'callForwardingCallLimit' => 'callForwardingCallLimit',
         'supportUserId' => 'supportUserId',
         'automaticRefillAmount' => 'automaticRefillAmount',
         'lowBalanceAlertAmount' => 'lowBalanceAlertAmount',
-        'lowBalanceAlertAt' => 'lowBalanceAlertAt',
-        'lowBalanceAlertCount' => 'lowBalanceAlertCount',
-        'lastAutomaticRefillInvoice' => 'lastAutomaticRefillInvoice',
         'internationalCalling' => 'internationalCalling',
         'createdByIP' => 'createdByIP',
-        'callDebug' => 'callDebug',
         'mediaBypass' => 'mediaBypass',
         'accountLock' => 'accountLock',
         'callRecording' => 'callRecording',
@@ -281,23 +257,17 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'name' => 'setName',
-        'status' => 'setStatus',
         'websiteUrl' => 'setWebsiteUrl',
         'logo' => 'setLogo',
         'credit' => 'setCredit',
         'adminUserId' => 'setAdminUserId',
         'billingUserId' => 'setBillingUserId',
         'callRecordingUserId' => 'setCallRecordingUserId',
-        'callForwardingCallLimit' => 'setCallForwardingCallLimit',
         'supportUserId' => 'setSupportUserId',
         'automaticRefillAmount' => 'setAutomaticRefillAmount',
         'lowBalanceAlertAmount' => 'setLowBalanceAlertAmount',
-        'lowBalanceAlertAt' => 'setLowBalanceAlertAt',
-        'lowBalanceAlertCount' => 'setLowBalanceAlertCount',
-        'lastAutomaticRefillInvoice' => 'setLastAutomaticRefillInvoice',
         'internationalCalling' => 'setInternationalCalling',
         'createdByIP' => 'setCreatedByIP',
-        'callDebug' => 'setCallDebug',
         'mediaBypass' => 'setMediaBypass',
         'accountLock' => 'setAccountLock',
         'callRecording' => 'setCallRecording',
@@ -316,23 +286,17 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'name' => 'getName',
-        'status' => 'getStatus',
         'websiteUrl' => 'getWebsiteUrl',
         'logo' => 'getLogo',
         'credit' => 'getCredit',
         'adminUserId' => 'getAdminUserId',
         'billingUserId' => 'getBillingUserId',
         'callRecordingUserId' => 'getCallRecordingUserId',
-        'callForwardingCallLimit' => 'getCallForwardingCallLimit',
         'supportUserId' => 'getSupportUserId',
         'automaticRefillAmount' => 'getAutomaticRefillAmount',
         'lowBalanceAlertAmount' => 'getLowBalanceAlertAmount',
-        'lowBalanceAlertAt' => 'getLowBalanceAlertAt',
-        'lowBalanceAlertCount' => 'getLowBalanceAlertCount',
-        'lastAutomaticRefillInvoice' => 'getLastAutomaticRefillInvoice',
         'internationalCalling' => 'getInternationalCalling',
         'createdByIP' => 'getCreatedByIP',
-        'callDebug' => 'getCallDebug',
         'mediaBypass' => 'getMediaBypass',
         'accountLock' => 'getAccountLock',
         'callRecording' => 'getCallRecording',
@@ -385,14 +349,8 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
         return self::$openAPIModelName;
     }
 
-    public const STATUS_ACTIVE = 'active';
-    public const STATUS_SUSPENDED = 'suspended';
-    public const STATUS_TERMINATED = 'terminated';
-    public const STATUS_FRAUD = 'fraud';
     public const INTERNATIONAL_CALLING_1 = 1;
     public const INTERNATIONAL_CALLING_0 = 0;
-    public const CALL_DEBUG_1 = 1;
-    public const CALL_DEBUG_0 = 0;
     public const MEDIA_BYPASS_1 = 1;
     public const MEDIA_BYPASS_0 = 0;
     public const ACCOUNT_LOCK_1 = 1;
@@ -413,39 +371,11 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ACTIVE,
-            self::STATUS_SUSPENDED,
-            self::STATUS_TERMINATED,
-            self::STATUS_FRAUD,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
     public function getInternationalCallingAllowableValues()
     {
         return [
             self::INTERNATIONAL_CALLING_1,
             self::INTERNATIONAL_CALLING_0,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCallDebugAllowableValues()
-    {
-        return [
-            self::CALL_DEBUG_1,
-            self::CALL_DEBUG_0,
         ];
     }
 
@@ -556,23 +486,17 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], 'active');
         $this->setIfExists('websiteUrl', $data ?? [], null);
         $this->setIfExists('logo', $data ?? [], null);
         $this->setIfExists('credit', $data ?? [], 0);
         $this->setIfExists('adminUserId', $data ?? [], null);
         $this->setIfExists('billingUserId', $data ?? [], null);
         $this->setIfExists('callRecordingUserId', $data ?? [], null);
-        $this->setIfExists('callForwardingCallLimit', $data ?? [], 10);
         $this->setIfExists('supportUserId', $data ?? [], null);
         $this->setIfExists('automaticRefillAmount', $data ?? [], 0);
         $this->setIfExists('lowBalanceAlertAmount', $data ?? [], 0);
-        $this->setIfExists('lowBalanceAlertAt', $data ?? [], null);
-        $this->setIfExists('lowBalanceAlertCount', $data ?? [], 0);
-        $this->setIfExists('lastAutomaticRefillInvoice', $data ?? [], null);
         $this->setIfExists('internationalCalling', $data ?? [], self::INTERNATIONAL_CALLING_0);
         $this->setIfExists('createdByIP', $data ?? [], null);
-        $this->setIfExists('callDebug', $data ?? [], self::CALL_DEBUG_0);
         $this->setIfExists('mediaBypass', $data ?? [], self::MEDIA_BYPASS_0);
         $this->setIfExists('accountLock', $data ?? [], self::ACCOUNT_LOCK_1);
         $this->setIfExists('callRecording', $data ?? [], self::CALL_RECORDING_0);
@@ -618,15 +542,6 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
             $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 45.";
         }
 
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if (!is_null($this->container['websiteUrl']) && (mb_strlen($this->container['websiteUrl']) > 255)) {
             $invalidProperties[] = "invalid value for 'websiteUrl', the character length must be smaller than or equal to 255.";
         }
@@ -650,15 +565,6 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
 
         if (!is_null($this->container['createdByIP']) && (mb_strlen($this->container['createdByIP']) < 8)) {
             $invalidProperties[] = "invalid value for 'createdByIP', the character length must be bigger than or equal to 8.";
-        }
-
-        $allowedValues = $this->getCallDebugAllowableValues();
-        if (!is_null($this->container['callDebug']) && !in_array($this->container['callDebug'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'callDebug', must be one of '%s'",
-                $this->container['callDebug'],
-                implode("', '", $allowedValues)
-            );
         }
 
         $allowedValues = $this->getMediaBypassAllowableValues();
@@ -769,43 +675,6 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string|null $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
 
         return $this;
     }
@@ -981,33 +850,6 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets callForwardingCallLimit
-     *
-     * @return int|null
-     */
-    public function getCallForwardingCallLimit()
-    {
-        return $this->container['callForwardingCallLimit'];
-    }
-
-    /**
-     * Sets callForwardingCallLimit
-     *
-     * @param int|null $callForwardingCallLimit callForwardingCallLimit
-     *
-     * @return self
-     */
-    public function setCallForwardingCallLimit($callForwardingCallLimit)
-    {
-        if (is_null($callForwardingCallLimit)) {
-            throw new \InvalidArgumentException('non-nullable callForwardingCallLimit cannot be null');
-        }
-        $this->container['callForwardingCallLimit'] = $callForwardingCallLimit;
-
-        return $this;
-    }
-
-    /**
      * Gets supportUserId
      *
      * @return string|null
@@ -1089,87 +931,6 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets lowBalanceAlertAt
-     *
-     * @return \DateTime|null
-     */
-    public function getLowBalanceAlertAt()
-    {
-        return $this->container['lowBalanceAlertAt'];
-    }
-
-    /**
-     * Sets lowBalanceAlertAt
-     *
-     * @param \DateTime|null $lowBalanceAlertAt lowBalanceAlertAt
-     *
-     * @return self
-     */
-    public function setLowBalanceAlertAt($lowBalanceAlertAt)
-    {
-        if (is_null($lowBalanceAlertAt)) {
-            throw new \InvalidArgumentException('non-nullable lowBalanceAlertAt cannot be null');
-        }
-        $this->container['lowBalanceAlertAt'] = $lowBalanceAlertAt;
-
-        return $this;
-    }
-
-    /**
-     * Gets lowBalanceAlertCount
-     *
-     * @return int|null
-     */
-    public function getLowBalanceAlertCount()
-    {
-        return $this->container['lowBalanceAlertCount'];
-    }
-
-    /**
-     * Sets lowBalanceAlertCount
-     *
-     * @param int|null $lowBalanceAlertCount lowBalanceAlertCount
-     *
-     * @return self
-     */
-    public function setLowBalanceAlertCount($lowBalanceAlertCount)
-    {
-        if (is_null($lowBalanceAlertCount)) {
-            throw new \InvalidArgumentException('non-nullable lowBalanceAlertCount cannot be null');
-        }
-        $this->container['lowBalanceAlertCount'] = $lowBalanceAlertCount;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastAutomaticRefillInvoice
-     *
-     * @return string|null
-     */
-    public function getLastAutomaticRefillInvoice()
-    {
-        return $this->container['lastAutomaticRefillInvoice'];
-    }
-
-    /**
-     * Sets lastAutomaticRefillInvoice
-     *
-     * @param string|null $lastAutomaticRefillInvoice ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setLastAutomaticRefillInvoice($lastAutomaticRefillInvoice)
-    {
-        if (is_null($lastAutomaticRefillInvoice)) {
-            throw new \InvalidArgumentException('non-nullable lastAutomaticRefillInvoice cannot be null');
-        }
-        $this->container['lastAutomaticRefillInvoice'] = $lastAutomaticRefillInvoice;
-
-        return $this;
-    }
-
-    /**
      * Gets internationalCalling
      *
      * @return int|null
@@ -1236,43 +997,6 @@ class CustomersCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerial
         }
 
         $this->container['createdByIP'] = $createdByIP;
-
-        return $this;
-    }
-
-    /**
-     * Gets callDebug
-     *
-     * @return int|null
-     */
-    public function getCallDebug()
-    {
-        return $this->container['callDebug'];
-    }
-
-    /**
-     * Sets callDebug
-     *
-     * @param int|null $callDebug callDebug
-     *
-     * @return self
-     */
-    public function setCallDebug($callDebug)
-    {
-        if (is_null($callDebug)) {
-            throw new \InvalidArgumentException('non-nullable callDebug cannot be null');
-        }
-        $allowedValues = $this->getCallDebugAllowableValues();
-        if (!in_array($callDebug, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'callDebug', must be one of '%s'",
-                    $callDebug,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['callDebug'] = $callDebug;
 
         return $this;
     }

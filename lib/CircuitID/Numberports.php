@@ -58,6 +58,7 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'numbers' => 'string[]',
         'name' => 'string',
         'type' => 'string',
         'typeOfService' => 'string',
@@ -83,6 +84,7 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'numbers' => null,
         'name' => null,
         'type' => null,
         'typeOfService' => null,
@@ -106,7 +108,8 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
+        'numbers' => false,
+		'name' => false,
 		'type' => false,
 		'typeOfService' => false,
 		'authorizedPerson' => false,
@@ -209,6 +212,7 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'numbers' => 'numbers',
         'name' => 'name',
         'type' => 'type',
         'typeOfService' => 'typeOfService',
@@ -232,6 +236,7 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'numbers' => 'setNumbers',
         'name' => 'setName',
         'type' => 'setType',
         'typeOfService' => 'setTypeOfService',
@@ -255,6 +260,7 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'numbers' => 'getNumbers',
         'name' => 'getName',
         'type' => 'getType',
         'typeOfService' => 'getTypeOfService',
@@ -432,8 +438,9 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('numbers', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], 'port in');
         $this->setIfExists('typeOfService', $data ?? [], null);
         $this->setIfExists('authorizedPerson', $data ?? [], null);
         $this->setIfExists('desiredDueDate', $data ?? [], null);
@@ -476,6 +483,9 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['numbers'] === null) {
+            $invalidProperties[] = "'numbers' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -604,6 +614,33 @@ class Numberports implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets numbers
+     *
+     * @return string[]
+     */
+    public function getNumbers()
+    {
+        return $this->container['numbers'];
+    }
+
+    /**
+     * Sets numbers
+     *
+     * @param string[] $numbers numbers
+     *
+     * @return self
+     */
+    public function setNumbers($numbers)
+    {
+        if (is_null($numbers)) {
+            throw new \InvalidArgumentException('non-nullable numbers cannot be null');
+        }
+        $this->container['numbers'] = $numbers;
+
+        return $this;
+    }
 
     /**
      * Gets name

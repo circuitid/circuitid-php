@@ -81,6 +81,15 @@ class NumberportsTest extends TestCase
     }
 
     /**
+     * Test attribute "numbers"
+     */
+    public function testPropertyNumbers()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

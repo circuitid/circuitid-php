@@ -81,18 +81,18 @@ class NumberportsCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "numbers"
      */
-    public function testPropertyName()
+    public function testPropertyNumbers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "name"
      */
-    public function testPropertyType()
+    public function testPropertyName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -162,24 +162,6 @@ class NumberportsCreateOrPatchTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice"
-     */
-    public function testPropertyInvoice()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "destinationType"
      */
     public function testPropertyDestinationType()
@@ -192,15 +174,6 @@ class NumberportsCreateOrPatchTest extends TestCase
      * Test attribute "destination"
      */
     public function testPropertyDestination()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ref"
-     */
-    public function testPropertyRef()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

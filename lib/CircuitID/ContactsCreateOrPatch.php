@@ -87,7 +87,7 @@ class ContactsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         'extension' => 'int32',
         'jobTitle' => null,
         'department' => null,
-        'avatar' => null
+        'avatar' => 'url'
     ];
 
     /**
@@ -373,8 +373,8 @@ class ContactsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
             $invalidProperties[] = "invalid value for 'department', the character length must be smaller than or equal to 45.";
         }
 
-        if (!is_null($this->container['avatar']) && (mb_strlen($this->container['avatar']) > 255)) {
-            $invalidProperties[] = "invalid value for 'avatar', the character length must be smaller than or equal to 255.";
+        if (!is_null($this->container['avatar']) && (mb_strlen($this->container['avatar']) > 512)) {
+            $invalidProperties[] = "invalid value for 'avatar', the character length must be smaller than or equal to 512.";
         }
 
         return $invalidProperties;
@@ -689,8 +689,8 @@ class ContactsCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSeriali
         if (is_null($avatar)) {
             throw new \InvalidArgumentException('non-nullable avatar cannot be null');
         }
-        if ((mb_strlen($avatar) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $avatar when calling ContactsCreateOrPatch., must be smaller than or equal to 255.');
+        if ((mb_strlen($avatar) > 512)) {
+            throw new \InvalidArgumentException('invalid length for $avatar when calling ContactsCreateOrPatch., must be smaller than or equal to 512.');
         }
 
         $this->container['avatar'] = $avatar;

@@ -90,15 +90,6 @@ class CustomersTest extends TestCase
     }
 
     /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "websiteUrl"
      */
     public function testPropertyWebsiteUrl()
@@ -153,15 +144,6 @@ class CustomersTest extends TestCase
     }
 
     /**
-     * Test attribute "callForwardingCallLimit"
-     */
-    public function testPropertyCallForwardingCallLimit()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "supportUserId"
      */
     public function testPropertySupportUserId()
@@ -189,33 +171,6 @@ class CustomersTest extends TestCase
     }
 
     /**
-     * Test attribute "lowBalanceAlertAt"
-     */
-    public function testPropertyLowBalanceAlertAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "lowBalanceAlertCount"
-     */
-    public function testPropertyLowBalanceAlertCount()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "lastAutomaticRefillInvoice"
-     */
-    public function testPropertyLastAutomaticRefillInvoice()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "internationalCalling"
      */
     public function testPropertyInternationalCalling()
@@ -228,15 +183,6 @@ class CustomersTest extends TestCase
      * Test attribute "createdByIP"
      */
     public function testPropertyCreatedByIP()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "callDebug"
-     */
-    public function testPropertyCallDebug()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

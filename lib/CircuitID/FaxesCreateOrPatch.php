@@ -58,21 +58,10 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'pages' => 'int',
-        'statusCode' => 'int',
-        'transferedPages' => 'int',
-        'status' => 'string',
-        'error' => 'string',
-        'type' => 'string',
-        'order' => 'string',
-        'file' => 'string',
-        'contact' => 'string',
+        'attachments' => 'string[]',
+        'callerDestinations' => 'string[]',
         'number' => 'string',
-        'faxAccount' => 'string',
-        'retries' => 'int',
-        'invoice' => 'string',
-        'senderEmail' => 'string',
-        'senderName' => 'string'
+        'faxAccount' => 'string'
     ];
 
     /**
@@ -83,21 +72,10 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'pages' => 'int32',
-        'statusCode' => 'int32',
-        'transferedPages' => 'int32',
-        'status' => null,
-        'error' => null,
-        'type' => null,
-        'order' => null,
-        'file' => null,
-        'contact' => null,
+        'attachments' => 'url',
+        'callerDestinations' => null,
         'number' => null,
-        'faxAccount' => null,
-        'retries' => 'int32',
-        'invoice' => null,
-        'senderEmail' => null,
-        'senderName' => null
+        'faxAccount' => null
     ];
 
     /**
@@ -106,21 +84,10 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'pages' => false,
-		'statusCode' => false,
-		'transferedPages' => false,
-		'status' => false,
-		'error' => false,
-		'type' => false,
-		'order' => false,
-		'file' => false,
-		'contact' => false,
+        'attachments' => false,
+		'callerDestinations' => false,
 		'number' => false,
-		'faxAccount' => false,
-		'retries' => false,
-		'invoice' => false,
-		'senderEmail' => false,
-		'senderName' => false
+		'faxAccount' => false
     ];
 
     /**
@@ -209,21 +176,10 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'pages' => 'pages',
-        'statusCode' => 'statusCode',
-        'transferedPages' => 'transferedPages',
-        'status' => 'status',
-        'error' => 'error',
-        'type' => 'type',
-        'order' => 'order',
-        'file' => 'file',
-        'contact' => 'contact',
+        'attachments' => 'attachments',
+        'callerDestinations' => 'callerDestinations',
         'number' => 'number',
-        'faxAccount' => 'faxAccount',
-        'retries' => 'retries',
-        'invoice' => 'invoice',
-        'senderEmail' => 'senderEmail',
-        'senderName' => 'senderName'
+        'faxAccount' => 'faxAccount'
     ];
 
     /**
@@ -232,21 +188,10 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'pages' => 'setPages',
-        'statusCode' => 'setStatusCode',
-        'transferedPages' => 'setTransferedPages',
-        'status' => 'setStatus',
-        'error' => 'setError',
-        'type' => 'setType',
-        'order' => 'setOrder',
-        'file' => 'setFile',
-        'contact' => 'setContact',
+        'attachments' => 'setAttachments',
+        'callerDestinations' => 'setCallerDestinations',
         'number' => 'setNumber',
-        'faxAccount' => 'setFaxAccount',
-        'retries' => 'setRetries',
-        'invoice' => 'setInvoice',
-        'senderEmail' => 'setSenderEmail',
-        'senderName' => 'setSenderName'
+        'faxAccount' => 'setFaxAccount'
     ];
 
     /**
@@ -255,21 +200,10 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'pages' => 'getPages',
-        'statusCode' => 'getStatusCode',
-        'transferedPages' => 'getTransferedPages',
-        'status' => 'getStatus',
-        'error' => 'getError',
-        'type' => 'getType',
-        'order' => 'getOrder',
-        'file' => 'getFile',
-        'contact' => 'getContact',
+        'attachments' => 'getAttachments',
+        'callerDestinations' => 'getCallerDestinations',
         'number' => 'getNumber',
-        'faxAccount' => 'getFaxAccount',
-        'retries' => 'getRetries',
-        'invoice' => 'getInvoice',
-        'senderEmail' => 'getSenderEmail',
-        'senderName' => 'getSenderName'
+        'faxAccount' => 'getFaxAccount'
     ];
 
     /**
@@ -313,38 +247,6 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
         return self::$openAPIModelName;
     }
 
-    public const STATUS_FAILED = 'failed';
-    public const STATUS_SUCCESS = 'success';
-    public const STATUS_PROCESSING = 'processing';
-    public const TYPE_SEND = 'send';
-    public const TYPE_RECEIVE = 'receive';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_FAILED,
-            self::STATUS_SUCCESS,
-            self::STATUS_PROCESSING,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_SEND,
-            self::TYPE_RECEIVE,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -361,21 +263,10 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('pages', $data ?? [], 0);
-        $this->setIfExists('statusCode', $data ?? [], null);
-        $this->setIfExists('transferedPages', $data ?? [], 0);
-        $this->setIfExists('status', $data ?? [], 'processing');
-        $this->setIfExists('error', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('order', $data ?? [], null);
-        $this->setIfExists('file', $data ?? [], null);
-        $this->setIfExists('contact', $data ?? [], null);
+        $this->setIfExists('attachments', $data ?? [], null);
+        $this->setIfExists('callerDestinations', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
         $this->setIfExists('faxAccount', $data ?? [], null);
-        $this->setIfExists('retries', $data ?? [], 0);
-        $this->setIfExists('invoice', $data ?? [], null);
-        $this->setIfExists('senderEmail', $data ?? [], null);
-        $this->setIfExists('senderName', $data ?? [], null);
     }
 
     /**
@@ -405,48 +296,15 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+        if ($this->container['callerDestinations'] === null) {
+            $invalidProperties[] = "'callerDestinations' can't be null";
         }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'status', must be one of '%s'",
-                $this->container['status'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if (!is_null($this->container['error']) && (mb_strlen($this->container['error']) > 255)) {
-            $invalidProperties[] = "invalid value for 'error', the character length must be smaller than or equal to 255.";
-        }
-
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         if ($this->container['number'] === null) {
             $invalidProperties[] = "'number' can't be null";
         }
         if ($this->container['faxAccount'] === null) {
             $invalidProperties[] = "'faxAccount' can't be null";
         }
-        if (!is_null($this->container['senderEmail']) && (mb_strlen($this->container['senderEmail']) > 45)) {
-            $invalidProperties[] = "invalid value for 'senderEmail', the character length must be smaller than or equal to 45.";
-        }
-
-        if (!is_null($this->container['senderName']) && (mb_strlen($this->container['senderName']) > 45)) {
-            $invalidProperties[] = "invalid value for 'senderName', the character length must be smaller than or equal to 45.";
-        }
-
         return $invalidProperties;
     }
 
@@ -463,268 +321,55 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets pages
+     * Gets attachments
      *
-     * @return int|null
+     * @return string[]|null
      */
-    public function getPages()
+    public function getAttachments()
     {
-        return $this->container['pages'];
+        return $this->container['attachments'];
     }
 
     /**
-     * Sets pages
+     * Sets attachments
      *
-     * @param int|null $pages pages
+     * @param string[]|null $attachments attachments
      *
      * @return self
      */
-    public function setPages($pages)
+    public function setAttachments($attachments)
     {
-        if (is_null($pages)) {
-            throw new \InvalidArgumentException('non-nullable pages cannot be null');
+        if (is_null($attachments)) {
+            throw new \InvalidArgumentException('non-nullable attachments cannot be null');
         }
-        $this->container['pages'] = $pages;
+        $this->container['attachments'] = $attachments;
 
         return $this;
     }
 
     /**
-     * Gets statusCode
+     * Gets callerDestinations
      *
-     * @return int|null
+     * @return string[]
      */
-    public function getStatusCode()
+    public function getCallerDestinations()
     {
-        return $this->container['statusCode'];
+        return $this->container['callerDestinations'];
     }
 
     /**
-     * Sets statusCode
+     * Sets callerDestinations
      *
-     * @param int|null $statusCode statusCode
+     * @param string[] $callerDestinations callerDestinations
      *
      * @return self
      */
-    public function setStatusCode($statusCode)
+    public function setCallerDestinations($callerDestinations)
     {
-        if (is_null($statusCode)) {
-            throw new \InvalidArgumentException('non-nullable statusCode cannot be null');
+        if (is_null($callerDestinations)) {
+            throw new \InvalidArgumentException('non-nullable callerDestinations cannot be null');
         }
-        $this->container['statusCode'] = $statusCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets transferedPages
-     *
-     * @return int|null
-     */
-    public function getTransferedPages()
-    {
-        return $this->container['transferedPages'];
-    }
-
-    /**
-     * Sets transferedPages
-     *
-     * @param int|null $transferedPages transferedPages
-     *
-     * @return self
-     */
-    public function setTransferedPages($transferedPages)
-    {
-        if (is_null($transferedPages)) {
-            throw new \InvalidArgumentException('non-nullable transferedPages cannot be null');
-        }
-        $this->container['transferedPages'] = $transferedPages;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'status', must be one of '%s'",
-                    $status,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets error
-     *
-     * @return string|null
-     */
-    public function getError()
-    {
-        return $this->container['error'];
-    }
-
-    /**
-     * Sets error
-     *
-     * @param string|null $error error
-     *
-     * @return self
-     */
-    public function setError($error)
-    {
-        if (is_null($error)) {
-            throw new \InvalidArgumentException('non-nullable error cannot be null');
-        }
-        if ((mb_strlen($error) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $error when calling FaxesCreateOrPatch., must be smaller than or equal to 255.');
-        }
-
-        $this->container['error'] = $error;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets order
-     *
-     * @return string|null
-     */
-    public function getOrder()
-    {
-        return $this->container['order'];
-    }
-
-    /**
-     * Sets order
-     *
-     * @param string|null $order ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setOrder($order)
-    {
-        if (is_null($order)) {
-            throw new \InvalidArgumentException('non-nullable order cannot be null');
-        }
-        $this->container['order'] = $order;
-
-        return $this;
-    }
-
-    /**
-     * Gets file
-     *
-     * @return string|null
-     */
-    public function getFile()
-    {
-        return $this->container['file'];
-    }
-
-    /**
-     * Sets file
-     *
-     * @param string|null $file ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setFile($file)
-    {
-        if (is_null($file)) {
-            throw new \InvalidArgumentException('non-nullable file cannot be null');
-        }
-        $this->container['file'] = $file;
-
-        return $this;
-    }
-
-    /**
-     * Gets contact
-     *
-     * @return string|null
-     */
-    public function getContact()
-    {
-        return $this->container['contact'];
-    }
-
-    /**
-     * Sets contact
-     *
-     * @param string|null $contact ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setContact($contact)
-    {
-        if (is_null($contact)) {
-            throw new \InvalidArgumentException('non-nullable contact cannot be null');
-        }
-        $this->container['contact'] = $contact;
+        $this->container['callerDestinations'] = $callerDestinations;
 
         return $this;
     }
@@ -779,122 +424,6 @@ class FaxesCreateOrPatch implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable faxAccount cannot be null');
         }
         $this->container['faxAccount'] = $faxAccount;
-
-        return $this;
-    }
-
-    /**
-     * Gets retries
-     *
-     * @return int|null
-     */
-    public function getRetries()
-    {
-        return $this->container['retries'];
-    }
-
-    /**
-     * Sets retries
-     *
-     * @param int|null $retries retries
-     *
-     * @return self
-     */
-    public function setRetries($retries)
-    {
-        if (is_null($retries)) {
-            throw new \InvalidArgumentException('non-nullable retries cannot be null');
-        }
-        $this->container['retries'] = $retries;
-
-        return $this;
-    }
-
-    /**
-     * Gets invoice
-     *
-     * @return string|null
-     */
-    public function getInvoice()
-    {
-        return $this->container['invoice'];
-    }
-
-    /**
-     * Sets invoice
-     *
-     * @param string|null $invoice ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setInvoice($invoice)
-    {
-        if (is_null($invoice)) {
-            throw new \InvalidArgumentException('non-nullable invoice cannot be null');
-        }
-        $this->container['invoice'] = $invoice;
-
-        return $this;
-    }
-
-    /**
-     * Gets senderEmail
-     *
-     * @return string|null
-     */
-    public function getSenderEmail()
-    {
-        return $this->container['senderEmail'];
-    }
-
-    /**
-     * Sets senderEmail
-     *
-     * @param string|null $senderEmail senderEmail
-     *
-     * @return self
-     */
-    public function setSenderEmail($senderEmail)
-    {
-        if (is_null($senderEmail)) {
-            throw new \InvalidArgumentException('non-nullable senderEmail cannot be null');
-        }
-        if ((mb_strlen($senderEmail) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $senderEmail when calling FaxesCreateOrPatch., must be smaller than or equal to 45.');
-        }
-
-        $this->container['senderEmail'] = $senderEmail;
-
-        return $this;
-    }
-
-    /**
-     * Gets senderName
-     *
-     * @return string|null
-     */
-    public function getSenderName()
-    {
-        return $this->container['senderName'];
-    }
-
-    /**
-     * Sets senderName
-     *
-     * @param string|null $senderName senderName
-     *
-     * @return self
-     */
-    public function setSenderName($senderName)
-    {
-        if (is_null($senderName)) {
-            throw new \InvalidArgumentException('non-nullable senderName cannot be null');
-        }
-        if ((mb_strlen($senderName) > 45)) {
-            throw new \InvalidArgumentException('invalid length for $senderName when calling FaxesCreateOrPatch., must be smaller than or equal to 45.');
-        }
-
-        $this->container['senderName'] = $senderName;
 
         return $this;
     }
