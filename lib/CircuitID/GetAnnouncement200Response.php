@@ -199,7 +199,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'type',
         'voice' => 'voice',
         'text' => 'text',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

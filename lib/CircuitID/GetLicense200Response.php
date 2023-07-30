@@ -195,7 +195,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'object' => 'object',
         'ref' => 'ref',
         'field' => 'field',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

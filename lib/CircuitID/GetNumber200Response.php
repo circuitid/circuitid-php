@@ -327,7 +327,7 @@ class GetNumber200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'destination' => 'destination',
         'ref' => 'ref',
         'callForwardingDestination' => 'callForwardingDestination',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

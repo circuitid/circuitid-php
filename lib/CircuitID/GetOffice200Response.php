@@ -231,7 +231,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'country' => 'country',
         'providers' => 'providers',
         'region' => 'region',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

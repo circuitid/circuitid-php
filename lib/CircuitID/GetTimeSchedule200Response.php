@@ -215,7 +215,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
         'thursday' => 'thursday',
         'friday' => 'friday',
         'saturday' => 'saturday',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

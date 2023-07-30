@@ -287,7 +287,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'transcribeCalls' => 'transcribeCalls',
         'maxOutboundCallRate' => 'maxOutboundCallRate',
         'defaultBillMethod' => 'defaultBillMethod',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

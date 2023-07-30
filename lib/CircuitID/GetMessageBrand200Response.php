@@ -231,7 +231,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'einIssuingCountry' => 'einIssuingCountry',
         'universalEin' => 'universalEin',
         'referenceId' => 'referenceId',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

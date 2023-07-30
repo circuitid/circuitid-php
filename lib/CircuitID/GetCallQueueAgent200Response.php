@@ -195,7 +195,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
         'user' => 'user',
         'priority' => 'priority',
         'tier' => 'tier',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

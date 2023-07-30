@@ -203,7 +203,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'httpUserAgent' => 'httpUserAgent',
         'manufacture' => 'manufacture',
         'status' => 'status',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

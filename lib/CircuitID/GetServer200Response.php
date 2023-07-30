@@ -235,7 +235,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'noInstantRingBack' => 'noInstantRingBack',
         'bypassMedia' => 'bypassMedia',
         'disableRTPAutoAdjust' => 'disableRTPAutoAdjust',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

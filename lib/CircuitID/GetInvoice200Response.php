@@ -215,7 +215,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'dueAt' => 'dueAt',
         'status' => 'status',
         'error' => 'error',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

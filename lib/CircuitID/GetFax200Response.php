@@ -247,7 +247,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         'invoice' => 'invoice',
         'senderEmail' => 'senderEmail',
         'senderName' => 'senderName',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

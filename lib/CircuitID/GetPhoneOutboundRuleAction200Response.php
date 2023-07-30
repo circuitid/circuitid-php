@@ -247,7 +247,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
         'removeEndingChars' => 'removeEndingChars',
         'route' => 'route',
         'routingType' => 'routingType',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

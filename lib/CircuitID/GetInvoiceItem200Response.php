@@ -211,7 +211,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
         'invoice' => 'invoice',
         'ref' => 'ref',
         'object' => 'object',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

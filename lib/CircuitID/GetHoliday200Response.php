@@ -215,7 +215,7 @@ class GetHoliday200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'destination' => 'destination',
         'ref' => 'ref',
         'callForwardingDestination' => 'callForwardingDestination',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

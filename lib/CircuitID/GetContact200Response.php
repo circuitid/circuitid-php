@@ -219,7 +219,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'jobTitle' => 'jobTitle',
         'department' => 'department',
         'avatar' => 'avatar',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

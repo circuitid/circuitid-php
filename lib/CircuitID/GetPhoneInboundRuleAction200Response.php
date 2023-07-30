@@ -219,7 +219,7 @@ class GetPhoneInboundRuleAction200Response implements ModelInterface, ArrayAcces
         'destination' => 'destination',
         'ref' => 'ref',
         'callForwardingDestination' => 'callForwardingDestination',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',

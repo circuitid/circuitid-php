@@ -191,7 +191,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'name',
         'extension' => 'extension',
         'phoneinboundrule' => 'phoneinboundrule',
-        'id' => '__id',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
