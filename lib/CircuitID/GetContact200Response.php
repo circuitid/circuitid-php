@@ -68,6 +68,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'jobTitle' => 'string',
         'department' => 'string',
         'avatar' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -92,6 +93,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'jobTitle' => null,
         'department' => null,
         'avatar' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -114,6 +116,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
 		'jobTitle' => false,
 		'department' => false,
 		'avatar' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -216,6 +219,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'jobTitle' => 'jobTitle',
         'department' => 'department',
         'avatar' => 'avatar',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -238,6 +242,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'jobTitle' => 'setJobTitle',
         'department' => 'setDepartment',
         'avatar' => 'setAvatar',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -260,6 +265,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'jobTitle' => 'getJobTitle',
         'department' => 'getDepartment',
         'avatar' => 'getAvatar',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -333,6 +339,7 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('jobTitle', $data ?? [], null);
         $this->setIfExists('department', $data ?? [], null);
         $this->setIfExists('avatar', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -722,6 +729,33 @@ class GetContact200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         }
 
         $this->container['avatar'] = $avatar;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

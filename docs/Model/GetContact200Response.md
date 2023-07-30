@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **jobTitle** | **string** |  | [optional]
 **department** | **string** |  | [optional]
 **avatar** | **string** |  | [optional]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

@@ -85,6 +85,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'transcribeCalls' => 'int',
         'maxOutboundCallRate' => 'int',
         'defaultBillMethod' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -126,6 +127,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'transcribeCalls' => 'int32',
         'maxOutboundCallRate' => 'int32',
         'defaultBillMethod' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -165,6 +167,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
 		'transcribeCalls' => false,
 		'maxOutboundCallRate' => false,
 		'defaultBillMethod' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -284,6 +287,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'transcribeCalls' => 'transcribeCalls',
         'maxOutboundCallRate' => 'maxOutboundCallRate',
         'defaultBillMethod' => 'defaultBillMethod',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -323,6 +327,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'transcribeCalls' => 'setTranscribeCalls',
         'maxOutboundCallRate' => 'setMaxOutboundCallRate',
         'defaultBillMethod' => 'setDefaultBillMethod',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -362,6 +367,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'transcribeCalls' => 'getTranscribeCalls',
         'maxOutboundCallRate' => 'getMaxOutboundCallRate',
         'defaultBillMethod' => 'getDefaultBillMethod',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -606,6 +612,7 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
         $this->setIfExists('transcribeCalls', $data ?? [], null);
         $this->setIfExists('maxOutboundCallRate', $data ?? [], 1);
         $this->setIfExists('defaultBillMethod', $data ?? [], 'credit');
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1614,6 +1621,33 @@ class GetCustomer200Response implements ModelInterface, ArrayAccess, \JsonSerial
             );
         }
         $this->container['defaultBillMethod'] = $defaultBillMethod;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

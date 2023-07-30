@@ -78,6 +78,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'abandonedResumeAllowed' => 'bool',
         'discardAbandonedAfter' => 'int',
         'maxWaitTimeNoAgentTimeReached' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -112,6 +113,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'abandonedResumeAllowed' => null,
         'discardAbandonedAfter' => 'int32',
         'maxWaitTimeNoAgentTimeReached' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -144,6 +146,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
 		'abandonedResumeAllowed' => false,
 		'discardAbandonedAfter' => false,
 		'maxWaitTimeNoAgentTimeReached' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -256,6 +259,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'abandonedResumeAllowed' => 'abandonedResumeAllowed',
         'discardAbandonedAfter' => 'discardAbandonedAfter',
         'maxWaitTimeNoAgentTimeReached' => 'maxWaitTimeNoAgentTimeReached',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -288,6 +292,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'abandonedResumeAllowed' => 'setAbandonedResumeAllowed',
         'discardAbandonedAfter' => 'setDiscardAbandonedAfter',
         'maxWaitTimeNoAgentTimeReached' => 'setMaxWaitTimeNoAgentTimeReached',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -320,6 +325,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'abandonedResumeAllowed' => 'getAbandonedResumeAllowed',
         'discardAbandonedAfter' => 'getDiscardAbandonedAfter',
         'maxWaitTimeNoAgentTimeReached' => 'getMaxWaitTimeNoAgentTimeReached',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -445,6 +451,7 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('abandonedResumeAllowed', $data ?? [], true);
         $this->setIfExists('discardAbandonedAfter', $data ?? [], 14400);
         $this->setIfExists('maxWaitTimeNoAgentTimeReached', $data ?? [], 5);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1122,6 +1129,33 @@ class GetCallQueue200Response implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable maxWaitTimeNoAgentTimeReached cannot be null');
         }
         $this->container['maxWaitTimeNoAgentTimeReached'] = $maxWaitTimeNoAgentTimeReached;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

@@ -71,6 +71,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'country' => 'string',
         'providers' => 'object',
         'region' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -98,6 +99,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'country' => null,
         'providers' => null,
         'region' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -123,6 +125,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
 		'country' => false,
 		'providers' => false,
 		'region' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -228,6 +231,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'country' => 'country',
         'providers' => 'providers',
         'region' => 'region',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -253,6 +257,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'country' => 'setCountry',
         'providers' => 'setProviders',
         'region' => 'setRegion',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -278,6 +283,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'country' => 'getCountry',
         'providers' => 'getProviders',
         'region' => 'getRegion',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -354,6 +360,7 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('providers', $data ?? [], null);
         $this->setIfExists('region', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -861,6 +868,33 @@ class GetOffice200Response implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable region cannot be null');
         }
         $this->container['region'] = $region;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

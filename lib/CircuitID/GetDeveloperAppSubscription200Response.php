@@ -65,6 +65,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
         'requireId' => 'int',
         'services' => 'string[]',
         'events' => 'string[]',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -86,6 +87,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
         'requireId' => 'int32',
         'services' => null,
         'events' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -105,6 +107,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
 		'requireId' => false,
 		'services' => false,
 		'events' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -204,6 +207,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
         'requireId' => 'requireId',
         'services' => 'services',
         'events' => 'events',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -223,6 +227,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
         'requireId' => 'setRequireId',
         'services' => 'setServices',
         'events' => 'setEvents',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -242,6 +247,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
         'requireId' => 'getRequireId',
         'services' => 'getServices',
         'events' => 'getEvents',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -375,6 +381,7 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
         $this->setIfExists('requireId', $data ?? [], self::REQUIRE_ID_0);
         $this->setIfExists('services', $data ?? [], null);
         $this->setIfExists('events', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -659,6 +666,33 @@ class GetDeveloperAppSubscription200Response implements ModelInterface, ArrayAcc
             );
         }
         $this->container['events'] = $events;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

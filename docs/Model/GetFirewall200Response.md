@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **ai** | **int** |  | [optional] [default to self::AI_0]
 **status** | **int** |  | [optional] [default to self::STATUS_1]
 **notificationHits** | **int** |  | [optional] [default to 1]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **transcribeCalls** | **int** |  | [optional]
 **maxOutboundCallRate** | **int** |  | [optional] [default to 1]
 **defaultBillMethod** | **string** |  | [default to 'credit']
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

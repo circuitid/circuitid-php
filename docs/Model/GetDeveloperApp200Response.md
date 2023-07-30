@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **webhookPassword** | **string** |  | [optional]
 **webhookTokenName** | **string** |  | [optional]
 **webhookToken** | **string** |  | [optional]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

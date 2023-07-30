@@ -75,6 +75,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
         'removeEndingChars' => 'int',
         'route' => 'string',
         'routingType' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -106,6 +107,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
         'removeEndingChars' => 'int32',
         'route' => null,
         'routingType' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -135,6 +137,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
 		'removeEndingChars' => false,
 		'route' => false,
 		'routingType' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -244,6 +247,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
         'removeEndingChars' => 'removeEndingChars',
         'route' => 'route',
         'routingType' => 'routingType',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -273,6 +277,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
         'removeEndingChars' => 'setRemoveEndingChars',
         'route' => 'setRoute',
         'routingType' => 'setRoutingType',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -302,6 +307,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
         'removeEndingChars' => 'getRemoveEndingChars',
         'route' => 'getRoute',
         'routingType' => 'getRoutingType',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -450,6 +456,7 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
         $this->setIfExists('removeEndingChars', $data ?? [], null);
         $this->setIfExists('route', $data ?? [], 'default');
         $this->setIfExists('routingType', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1088,6 +1095,33 @@ class GetPhoneOutboundRuleAction200Response implements ModelInterface, ArrayAcce
             );
         }
         $this->container['routingType'] = $routingType;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

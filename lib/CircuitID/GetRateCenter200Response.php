@@ -63,6 +63,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'lata' => 'string',
         'locState' => 'string',
         'rcAbbre' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -82,6 +83,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'lata' => null,
         'locState' => null,
         'rcAbbre' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -99,6 +101,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
 		'lata' => false,
 		'locState' => false,
 		'rcAbbre' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -196,6 +199,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'lata' => 'lata',
         'locState' => 'locState',
         'rcAbbre' => 'rcAbbre',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -213,6 +217,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'lata' => 'setLata',
         'locState' => 'setLocState',
         'rcAbbre' => 'setRcAbbre',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -230,6 +235,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'lata' => 'getLata',
         'locState' => 'getLocState',
         'rcAbbre' => 'getRcAbbre',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -298,6 +304,7 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('lata', $data ?? [], null);
         $this->setIfExists('locState', $data ?? [], null);
         $this->setIfExists('rcAbbre', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -560,6 +567,33 @@ class GetRateCenter200Response implements ModelInterface, ArrayAccess, \JsonSeri
         }
 
         $this->container['rcAbbre'] = $rcAbbre;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

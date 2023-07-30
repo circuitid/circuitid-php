@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **sample3** | **string** |  | [optional]
 **sample4** | **string** |  | [optional]
 **sample5** | **string** |  | [optional]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

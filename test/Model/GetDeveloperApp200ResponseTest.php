@@ -270,6 +270,15 @@ class GetDeveloperApp200ResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "createdByUserId"
      */
     public function testPropertyCreatedByUserId()

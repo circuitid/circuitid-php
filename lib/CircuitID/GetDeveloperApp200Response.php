@@ -79,6 +79,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         'webhookPassword' => 'string',
         'webhookTokenName' => 'string',
         'webhookToken' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -114,6 +115,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         'webhookPassword' => null,
         'webhookTokenName' => null,
         'webhookToken' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -147,6 +149,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
 		'webhookPassword' => false,
 		'webhookTokenName' => false,
 		'webhookToken' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -260,6 +263,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         'webhookPassword' => 'webhookPassword',
         'webhookTokenName' => 'webhookTokenName',
         'webhookToken' => 'webhookToken',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -293,6 +297,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         'webhookPassword' => 'setWebhookPassword',
         'webhookTokenName' => 'setWebhookTokenName',
         'webhookToken' => 'setWebhookToken',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -326,6 +331,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         'webhookPassword' => 'getWebhookPassword',
         'webhookTokenName' => 'getWebhookTokenName',
         'webhookToken' => 'getWebhookToken',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -567,6 +573,7 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('webhookPassword', $data ?? [], null);
         $this->setIfExists('webhookTokenName', $data ?? [], null);
         $this->setIfExists('webhookToken', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1430,6 +1437,33 @@ class GetDeveloperApp200Response implements ModelInterface, ArrayAccess, \JsonSe
         }
 
         $this->container['webhookToken'] = $webhookToken;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

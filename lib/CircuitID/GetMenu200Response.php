@@ -76,6 +76,7 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'destination' => 'string',
         'ref' => 'string',
         'callForwardingDestination' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -108,6 +109,7 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'destination' => null,
         'ref' => null,
         'callForwardingDestination' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -138,6 +140,7 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
 		'destination' => false,
 		'ref' => false,
 		'callForwardingDestination' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -248,6 +251,7 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'destination' => 'destination',
         'ref' => 'ref',
         'callForwardingDestination' => 'callForwardingDestination',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -278,6 +282,7 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'destination' => 'setDestination',
         'ref' => 'setRef',
         'callForwardingDestination' => 'setCallForwardingDestination',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -308,6 +313,7 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'destination' => 'getDestination',
         'ref' => 'getRef',
         'callForwardingDestination' => 'getCallForwardingDestination',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -505,6 +511,7 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('destination', $data ?? [], null);
         $this->setIfExists('ref', $data ?? [], null);
         $this->setIfExists('callForwardingDestination', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1196,6 +1203,33 @@ class GetMenu200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         }
 
         $this->container['callForwardingDestination'] = $callForwardingDestination;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

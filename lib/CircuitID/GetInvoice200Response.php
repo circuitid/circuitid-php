@@ -67,6 +67,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'dueAt' => '\DateTime',
         'status' => 'string',
         'error' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -90,6 +91,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'dueAt' => 'date-time',
         'status' => null,
         'error' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -111,6 +113,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
 		'dueAt' => false,
 		'status' => false,
 		'error' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -212,6 +215,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'dueAt' => 'dueAt',
         'status' => 'status',
         'error' => 'error',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -233,6 +237,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'dueAt' => 'setDueAt',
         'status' => 'setStatus',
         'error' => 'setError',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -254,6 +259,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'dueAt' => 'getDueAt',
         'status' => 'getStatus',
         'error' => 'getError',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -347,6 +353,7 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('dueAt', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], 'open');
         $this->setIfExists('error', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -665,6 +672,33 @@ class GetInvoice200Response implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable error cannot be null');
         }
         $this->container['error'] = $error;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

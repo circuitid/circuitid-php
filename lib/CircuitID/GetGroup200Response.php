@@ -61,6 +61,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'string',
         'description' => 'string',
         'status' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -78,6 +79,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => null,
         'description' => null,
         'status' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -93,6 +95,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => false,
 		'description' => false,
 		'status' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -188,6 +191,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'name',
         'description' => 'description',
         'status' => 'status',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -203,6 +207,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'setName',
         'description' => 'setDescription',
         'status' => 'setStatus',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -218,6 +223,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         'name' => 'getName',
         'description' => 'getDescription',
         'status' => 'getStatus',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -299,6 +305,7 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], self::STATUS_1);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -462,6 +469,33 @@ class GetGroup200Response implements ModelInterface, ArrayAccess, \JsonSerializa
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

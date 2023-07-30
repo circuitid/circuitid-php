@@ -1,6 +1,6 @@
 <?php
 /**
- * GetFaxAccount200ResponseTest
+ * IdTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GetFaxAccount200ResponseTest Class Doc Comment
+ * IdTest Class Doc Comment
  *
  * @category    Class
- * @description GetFaxAccount200Response
+ * @description Id
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GetFaxAccount200ResponseTest extends TestCase
+class IdTest extends TestCase
 {
 
     /**
@@ -72,54 +72,9 @@ class GetFaxAccount200ResponseTest extends TestCase
     }
 
     /**
-     * Test "GetFaxAccount200Response"
+     * Test "Id"
      */
-    public function testGetFaxAccount200Response()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "order"
-     */
-    public function testPropertyOrder()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "inboundNotification"
-     */
-    public function testPropertyInboundNotification()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "outboundNotification"
-     */
-    public function testPropertyOutboundNotification()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "number"
-     */
-    public function testPropertyNumber()
+    public function testId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -129,42 +84,6 @@ class GetFaxAccount200ResponseTest extends TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "createdByUserId"
-     */
-    public function testPropertyCreatedByUserId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updatedByUserId"
-     */
-    public function testPropertyUpdatedByUserId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "createdAt"
-     */
-    public function testPropertyCreatedAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updatedAt"
-     */
-    public function testPropertyUpdatedAt()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

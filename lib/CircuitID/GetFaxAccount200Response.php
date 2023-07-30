@@ -63,6 +63,7 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'inboundNotification' => 'string',
         'outboundNotification' => 'string',
         'number' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -82,6 +83,7 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'inboundNotification' => null,
         'outboundNotification' => null,
         'number' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -99,6 +101,7 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
 		'inboundNotification' => false,
 		'outboundNotification' => false,
 		'number' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -196,6 +199,7 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'inboundNotification' => 'inboundNotification',
         'outboundNotification' => 'outboundNotification',
         'number' => 'number',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -213,6 +217,7 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'inboundNotification' => 'setInboundNotification',
         'outboundNotification' => 'setOutboundNotification',
         'number' => 'setNumber',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -230,6 +235,7 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
         'inboundNotification' => 'getInboundNotification',
         'outboundNotification' => 'getOutboundNotification',
         'number' => 'getNumber',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -298,6 +304,7 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('inboundNotification', $data ?? [], null);
         $this->setIfExists('outboundNotification', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -488,6 +495,33 @@ class GetFaxAccount200Response implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
         $this->container['number'] = $number;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** |  |
 **description** | **string** |  | [optional]
 **status** | **int** |  | [optional] [default to self::STATUS_1]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

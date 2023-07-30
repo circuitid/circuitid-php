@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **requirePasscode** | **int** |  | [optional] [default to self::REQUIRE_PASSCODE_0]
 **share** | **string** |  | [optional]
 **chatroom** | **string** | ObjectId (unique 12 bytes ID) | [optional]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

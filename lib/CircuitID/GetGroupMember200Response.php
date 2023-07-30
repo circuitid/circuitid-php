@@ -62,6 +62,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
         'object' => 'string',
         'priority' => 'int',
         'ref' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -80,6 +81,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
         'object' => null,
         'priority' => 'int32',
         'ref' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -96,6 +98,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
 		'object' => false,
 		'priority' => false,
 		'ref' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -192,6 +195,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
         'object' => 'object',
         'priority' => 'priority',
         'ref' => 'ref',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -208,6 +212,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
         'object' => 'setObject',
         'priority' => 'setPriority',
         'ref' => 'setRef',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -224,6 +229,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
         'object' => 'getObject',
         'priority' => 'getPriority',
         'ref' => 'getRef',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -308,6 +314,7 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('object', $data ?? [], null);
         $this->setIfExists('priority', $data ?? [], null);
         $this->setIfExists('ref', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -488,6 +495,33 @@ class GetGroupMember200Response implements ModelInterface, ArrayAccess, \JsonSer
             );
         }
         $this->container['ref'] = $ref;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

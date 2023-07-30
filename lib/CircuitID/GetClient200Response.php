@@ -64,6 +64,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'httpUserAgent' => 'string',
         'manufacture' => 'string',
         'status' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -84,6 +85,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'httpUserAgent' => null,
         'manufacture' => null,
         'status' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -102,6 +104,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
 		'httpUserAgent' => false,
 		'manufacture' => false,
 		'status' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -200,6 +203,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'httpUserAgent' => 'httpUserAgent',
         'manufacture' => 'manufacture',
         'status' => 'status',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -218,6 +222,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'httpUserAgent' => 'setHttpUserAgent',
         'manufacture' => 'setManufacture',
         'status' => 'setStatus',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -236,6 +241,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'httpUserAgent' => 'getHttpUserAgent',
         'manufacture' => 'getManufacture',
         'status' => 'getStatus',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -337,6 +343,7 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('httpUserAgent', $data ?? [], null);
         $this->setIfExists('manufacture', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], self::STATUS_1);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -643,6 +650,33 @@ class GetClient200Response implements ModelInterface, ArrayAccess, \JsonSerializ
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

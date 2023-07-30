@@ -71,6 +71,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'einIssuingCountry' => 'string',
         'universalEin' => 'string',
         'referenceId' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -98,6 +99,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'einIssuingCountry' => null,
         'universalEin' => null,
         'referenceId' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -123,6 +125,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
 		'einIssuingCountry' => false,
 		'universalEin' => false,
 		'referenceId' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -228,6 +231,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'einIssuingCountry' => 'einIssuingCountry',
         'universalEin' => 'universalEin',
         'referenceId' => 'referenceId',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -253,6 +257,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'einIssuingCountry' => 'setEinIssuingCountry',
         'universalEin' => 'setUniversalEin',
         'referenceId' => 'setReferenceId',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -278,6 +283,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         'einIssuingCountry' => 'getEinIssuingCountry',
         'universalEin' => 'getUniversalEin',
         'referenceId' => 'getReferenceId',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -369,6 +375,7 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('einIssuingCountry', $data ?? [], null);
         $this->setIfExists('universalEin', $data ?? [], null);
         $this->setIfExists('referenceId', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -875,6 +882,33 @@ class GetMessageBrand200Response implements ModelInterface, ArrayAccess, \JsonSe
         }
 
         $this->container['referenceId'] = $referenceId;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

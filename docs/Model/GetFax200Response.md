@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **invoice** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **senderEmail** | **string** |  | [optional]
 **senderName** | **string** |  | [optional]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

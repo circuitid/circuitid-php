@@ -61,6 +61,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'string',
         'description' => 'string',
         'outboundCallerId' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -78,6 +79,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         'name' => null,
         'description' => null,
         'outboundCallerId' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -93,6 +95,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         'name' => false,
 		'description' => false,
 		'outboundCallerId' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -188,6 +191,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'name',
         'description' => 'description',
         'outboundCallerId' => 'outboundCallerId',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -203,6 +207,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'setName',
         'description' => 'setDescription',
         'outboundCallerId' => 'setOutboundCallerId',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -218,6 +223,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'getName',
         'description' => 'getDescription',
         'outboundCallerId' => 'getOutboundCallerId',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -284,6 +290,7 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('outboundCallerId', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -443,6 +450,33 @@ class GetPhoneInboundRule200Response implements ModelInterface, ArrayAccess, \Js
         }
 
         $this->container['outboundCallerId'] = $outboundCallerId;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

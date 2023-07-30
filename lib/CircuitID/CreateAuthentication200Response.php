@@ -61,6 +61,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         'username' => 'string',
         'password' => 'string',
         'strategy' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -78,6 +79,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         'username' => null,
         'password' => null,
         'strategy' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -93,6 +95,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         'username' => false,
 		'password' => false,
 		'strategy' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -188,6 +191,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         'username' => 'username',
         'password' => 'password',
         'strategy' => 'strategy',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -203,6 +207,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         'username' => 'setUsername',
         'password' => 'setPassword',
         'strategy' => 'setStrategy',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -218,6 +223,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         'username' => 'getUsername',
         'password' => 'getPassword',
         'strategy' => 'getStrategy',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -297,6 +303,7 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
         $this->setIfExists('username', $data ?? [], null);
         $this->setIfExists('password', $data ?? [], null);
         $this->setIfExists('strategy', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -450,6 +457,33 @@ class CreateAuthentication200Response implements ModelInterface, ArrayAccess, \J
             );
         }
         $this->container['strategy'] = $strategy;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

@@ -396,6 +396,7 @@ Class | Method | HTTP request | Description
 - [Groupmembers](docs/Model/Groupmembers.md)
 - [Groups](docs/Model/Groups.md)
 - [Holidays](docs/Model/Holidays.md)
+- [Id](docs/Model/Id.md)
 - [Invoiceitems](docs/Model/Invoiceitems.md)
 - [Invoices](docs/Model/Invoices.md)
 - [Licenses](docs/Model/Licenses.md)

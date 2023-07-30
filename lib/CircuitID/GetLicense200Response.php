@@ -62,6 +62,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'object' => 'string',
         'ref' => 'string',
         'field' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -80,6 +81,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'object' => null,
         'ref' => null,
         'field' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -96,6 +98,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
 		'object' => false,
 		'ref' => false,
 		'field' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -192,6 +195,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'object' => 'object',
         'ref' => 'ref',
         'field' => 'field',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -208,6 +212,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'object' => 'setObject',
         'ref' => 'setRef',
         'field' => 'setField',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -224,6 +229,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         'object' => 'getObject',
         'ref' => 'getRef',
         'field' => 'getField',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -291,6 +297,7 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('object', $data ?? [], null);
         $this->setIfExists('ref', $data ?? [], null);
         $this->setIfExists('field', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -468,6 +475,33 @@ class GetLicense200Response implements ModelInterface, ArrayAccess, \JsonSeriali
         }
 
         $this->container['field'] = $field;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

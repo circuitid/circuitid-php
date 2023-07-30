@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **noInstantRingBack** | **int** |  | [optional]
 **bypassMedia** | **int** |  | [optional] [default to self::BYPASS_MEDIA_0]
 **disableRTPAutoAdjust** | **int** |  | [optional] [default to self::DISABLE_RTP_AUTO_ADJUST_0]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

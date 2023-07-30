@@ -159,6 +159,7 @@ docs/Model/Getdirectory200Response.md
 docs/Model/Groupmembers.md
 docs/Model/Groups.md
 docs/Model/Holidays.md
+docs/Model/Id.md
 docs/Model/Invoiceitems.md
 docs/Model/Invoices.md
 docs/Model/Licenses.md
@@ -317,6 +318,7 @@ lib/CircuitID/Groups.php
 lib/CircuitID/GroupsApi.php
 lib/CircuitID/Holidays.php
 lib/CircuitID/HolidaysApi.php
+lib/CircuitID/Id.php
 lib/CircuitID/InfoApi.php
 lib/CircuitID/InvoiceItemsApi.php
 lib/CircuitID/Invoiceitems.php
@@ -522,6 +524,7 @@ test/Model/Getdirectory200ResponseTest.php
 test/Model/GroupmembersTest.php
 test/Model/GroupsTest.php
 test/Model/HolidaysTest.php
+test/Model/IdTest.php
 test/Model/InvoiceitemsTest.php
 test/Model/InvoicesTest.php
 test/Model/LicensesTest.php

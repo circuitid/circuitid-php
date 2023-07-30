@@ -62,6 +62,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
         'user' => 'string',
         'priority' => 'int',
         'tier' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -80,6 +81,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
         'user' => null,
         'priority' => 'int32',
         'tier' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -96,6 +98,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
 		'user' => false,
 		'priority' => false,
 		'tier' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -192,6 +195,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
         'user' => 'user',
         'priority' => 'priority',
         'tier' => 'tier',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -208,6 +212,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
         'user' => 'setUser',
         'priority' => 'setPriority',
         'tier' => 'setTier',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -224,6 +229,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
         'user' => 'getUser',
         'priority' => 'getPriority',
         'tier' => 'getTier',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -291,6 +297,7 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('user', $data ?? [], null);
         $this->setIfExists('priority', $data ?? [], 1);
         $this->setIfExists('tier', $data ?? [], 1);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -455,6 +462,33 @@ class GetCallQueueAgent200Response implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable tier cannot be null');
         }
         $this->container['tier'] = $tier;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

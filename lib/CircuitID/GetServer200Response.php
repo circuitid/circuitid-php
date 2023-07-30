@@ -72,6 +72,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'noInstantRingBack' => 'int',
         'bypassMedia' => 'int',
         'disableRTPAutoAdjust' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -100,6 +101,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'noInstantRingBack' => 'int32',
         'bypassMedia' => 'int32',
         'disableRTPAutoAdjust' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -126,6 +128,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
 		'noInstantRingBack' => false,
 		'bypassMedia' => false,
 		'disableRTPAutoAdjust' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -232,6 +235,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'noInstantRingBack' => 'noInstantRingBack',
         'bypassMedia' => 'bypassMedia',
         'disableRTPAutoAdjust' => 'disableRTPAutoAdjust',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -258,6 +262,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'noInstantRingBack' => 'setNoInstantRingBack',
         'bypassMedia' => 'setBypassMedia',
         'disableRTPAutoAdjust' => 'setDisableRTPAutoAdjust',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -284,6 +289,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         'noInstantRingBack' => 'getNoInstantRingBack',
         'bypassMedia' => 'getBypassMedia',
         'disableRTPAutoAdjust' => 'getDisableRTPAutoAdjust',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -421,6 +427,7 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
         $this->setIfExists('noInstantRingBack', $data ?? [], null);
         $this->setIfExists('bypassMedia', $data ?? [], self::BYPASS_MEDIA_0);
         $this->setIfExists('disableRTPAutoAdjust', $data ?? [], self::DISABLE_RTP_AUTO_ADJUST_0);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -974,6 +981,33 @@ class GetServer200Response implements ModelInterface, ArrayAccess, \JsonSerializ
             );
         }
         $this->container['disableRTPAutoAdjust'] = $disableRTPAutoAdjust;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

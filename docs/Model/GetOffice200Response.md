@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **country** | **string** |  |
 **providers** | **object** |  | [optional]
 **region** | **string** | ObjectId (unique 12 bytes ID) | [optional]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

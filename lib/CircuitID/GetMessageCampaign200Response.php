@@ -80,6 +80,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         'sample3' => 'string',
         'sample4' => 'string',
         'sample5' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -116,6 +117,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         'sample3' => null,
         'sample4' => null,
         'sample5' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -150,6 +152,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
 		'sample3' => false,
 		'sample4' => false,
 		'sample5' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -264,6 +267,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         'sample3' => 'sample3',
         'sample4' => 'sample4',
         'sample5' => 'sample5',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -298,6 +302,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         'sample3' => 'setSample3',
         'sample4' => 'setSample4',
         'sample5' => 'setSample5',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -332,6 +337,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         'sample3' => 'getSample3',
         'sample4' => 'getSample4',
         'sample5' => 'getSample5',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -552,6 +558,7 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('sample3', $data ?? [], null);
         $this->setIfExists('sample4', $data ?? [], null);
         $this->setIfExists('sample5', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1450,6 +1457,33 @@ class GetMessageCampaign200Response implements ModelInterface, ArrayAccess, \Jso
         }
 
         $this->container['sample5'] = $sample5;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

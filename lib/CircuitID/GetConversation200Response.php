@@ -64,6 +64,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
         'ref' => 'string',
         'object' => 'string',
         'status' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -84,6 +85,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
         'ref' => null,
         'object' => null,
         'status' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -102,6 +104,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
 		'ref' => false,
 		'object' => false,
 		'status' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -200,6 +203,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
         'ref' => 'ref',
         'object' => 'object',
         'status' => 'status',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -218,6 +222,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
         'ref' => 'setRef',
         'object' => 'setObject',
         'status' => 'setStatus',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -236,6 +241,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
         'ref' => 'getRef',
         'object' => 'getObject',
         'status' => 'getStatus',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -352,6 +358,7 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('ref', $data ?? [], null);
         $this->setIfExists('object', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], 'open');
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -627,6 +634,33 @@ class GetConversation200Response implements ModelInterface, ArrayAccess, \JsonSe
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

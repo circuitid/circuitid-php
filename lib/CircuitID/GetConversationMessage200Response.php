@@ -66,6 +66,7 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
         'direction' => 'string',
         'attachments' => 'mixed[]',
         'referenceId' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -88,6 +89,7 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
         'direction' => null,
         'attachments' => null,
         'referenceId' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -108,6 +110,7 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
 		'direction' => false,
 		'attachments' => false,
 		'referenceId' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -208,6 +211,7 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
         'direction' => 'direction',
         'attachments' => 'attachments',
         'referenceId' => 'referenceId',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -228,6 +232,7 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
         'direction' => 'setDirection',
         'attachments' => 'setAttachments',
         'referenceId' => 'setReferenceId',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -248,6 +253,7 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
         'direction' => 'getDirection',
         'attachments' => 'getAttachments',
         'referenceId' => 'getReferenceId',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -334,6 +340,7 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
         $this->setIfExists('direction', $data ?? [], null);
         $this->setIfExists('attachments', $data ?? [], null);
         $this->setIfExists('referenceId', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -649,6 +656,33 @@ class GetConversationMessage200Response implements ModelInterface, ArrayAccess, 
         }
 
         $this->container['referenceId'] = $referenceId;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

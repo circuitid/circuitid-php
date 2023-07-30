@@ -1,6 +1,6 @@
 <?php
 /**
- * GetChatRoom200Response
+ * Id
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * GetChatRoom200Response Class Doc Comment
+ * Id Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -41,7 +41,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerializable
+class Id implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'getChatRoom_200_response';
+    protected static $openAPIModelName = '_id';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,15 +58,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string',
-        'users' => 'object',
-        'avatar' => 'string',
-        'direct' => 'bool',
-        'id' => 'string',
-        'createdByUserId' => 'string',
-        'updatedByUserId' => 'string',
-        'createdAt' => '\DateTime',
-        'updatedAt' => '\DateTime'
+        'id' => 'string'
     ];
 
     /**
@@ -77,15 +69,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'name' => null,
-        'users' => null,
-        'avatar' => null,
-        'direct' => null,
-        'id' => null,
-        'createdByUserId' => null,
-        'updatedByUserId' => null,
-        'createdAt' => 'date-time',
-        'updatedAt' => 'date-time'
+        'id' => null
     ];
 
     /**
@@ -94,15 +78,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'name' => false,
-		'users' => false,
-		'avatar' => false,
-		'direct' => false,
-		'id' => false,
-		'createdByUserId' => false,
-		'updatedByUserId' => false,
-		'createdAt' => false,
-		'updatedAt' => false
+        'id' => false
     ];
 
     /**
@@ -191,15 +167,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-        'users' => 'users',
-        'avatar' => 'avatar',
-        'direct' => 'direct',
-        'id' => '_id',
-        'createdByUserId' => 'createdByUserId',
-        'updatedByUserId' => 'updatedByUserId',
-        'createdAt' => 'createdAt',
-        'updatedAt' => 'updatedAt'
+        'id' => '_id'
     ];
 
     /**
@@ -208,15 +176,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'users' => 'setUsers',
-        'avatar' => 'setAvatar',
-        'direct' => 'setDirect',
-        'id' => 'setId',
-        'createdByUserId' => 'setCreatedByUserId',
-        'updatedByUserId' => 'setUpdatedByUserId',
-        'createdAt' => 'setCreatedAt',
-        'updatedAt' => 'setUpdatedAt'
+        'id' => 'setId'
     ];
 
     /**
@@ -225,15 +185,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'users' => 'getUsers',
-        'avatar' => 'getAvatar',
-        'direct' => 'getDirect',
-        'id' => 'getId',
-        'createdByUserId' => 'getCreatedByUserId',
-        'updatedByUserId' => 'getUpdatedByUserId',
-        'createdAt' => 'getCreatedAt',
-        'updatedAt' => 'getUpdatedAt'
+        'id' => 'getId'
     ];
 
     /**
@@ -293,15 +245,7 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('users', $data ?? [], null);
-        $this->setIfExists('avatar', $data ?? [], null);
-        $this->setIfExists('direct', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('createdByUserId', $data ?? [], null);
-        $this->setIfExists('updatedByUserId', $data ?? [], null);
-        $this->setIfExists('createdAt', $data ?? [], null);
-        $this->setIfExists('updatedAt', $data ?? [], null);
     }
 
     /**
@@ -331,17 +275,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
-        }
-
-        if ($this->container['users'] === null) {
-            $invalidProperties[] = "'users' can't be null";
-        }
-        if (!is_null($this->container['avatar']) && (mb_strlen($this->container['avatar']) > 512)) {
-            $invalidProperties[] = "invalid value for 'avatar', the character length must be smaller than or equal to 512.";
-        }
-
         return $invalidProperties;
     }
 
@@ -356,122 +289,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        if ((mb_strlen($name) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling GetChatRoom200Response., must be smaller than or equal to 255.');
-        }
-
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return object
-     */
-    public function getUsers()
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param object $users users
-     *
-     * @return self
-     */
-    public function setUsers($users)
-    {
-        if (is_null($users)) {
-            throw new \InvalidArgumentException('non-nullable users cannot be null');
-        }
-        $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets avatar
-     *
-     * @return string|null
-     */
-    public function getAvatar()
-    {
-        return $this->container['avatar'];
-    }
-
-    /**
-     * Sets avatar
-     *
-     * @param string|null $avatar avatar
-     *
-     * @return self
-     */
-    public function setAvatar($avatar)
-    {
-        if (is_null($avatar)) {
-            throw new \InvalidArgumentException('non-nullable avatar cannot be null');
-        }
-        if ((mb_strlen($avatar) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $avatar when calling GetChatRoom200Response., must be smaller than or equal to 512.');
-        }
-
-        $this->container['avatar'] = $avatar;
-
-        return $this;
-    }
-
-    /**
-     * Gets direct
-     *
-     * @return bool|null
-     */
-    public function getDirect()
-    {
-        return $this->container['direct'];
-    }
-
-    /**
-     * Sets direct
-     *
-     * @param bool|null $direct direct
-     *
-     * @return self
-     */
-    public function setDirect($direct)
-    {
-        if (is_null($direct)) {
-            throw new \InvalidArgumentException('non-nullable direct cannot be null');
-        }
-        $this->container['direct'] = $direct;
-
-        return $this;
-    }
 
     /**
      * Gets id
@@ -496,114 +313,6 @@ class GetChatRoom200Response implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets createdByUserId
-     *
-     * @return string|null
-     */
-    public function getCreatedByUserId()
-    {
-        return $this->container['createdByUserId'];
-    }
-
-    /**
-     * Sets createdByUserId
-     *
-     * @param string|null $createdByUserId ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setCreatedByUserId($createdByUserId)
-    {
-        if (is_null($createdByUserId)) {
-            throw new \InvalidArgumentException('non-nullable createdByUserId cannot be null');
-        }
-        $this->container['createdByUserId'] = $createdByUserId;
-
-        return $this;
-    }
-
-    /**
-     * Gets updatedByUserId
-     *
-     * @return string|null
-     */
-    public function getUpdatedByUserId()
-    {
-        return $this->container['updatedByUserId'];
-    }
-
-    /**
-     * Sets updatedByUserId
-     *
-     * @param string|null $updatedByUserId ObjectId (unique 12 bytes ID)
-     *
-     * @return self
-     */
-    public function setUpdatedByUserId($updatedByUserId)
-    {
-        if (is_null($updatedByUserId)) {
-            throw new \InvalidArgumentException('non-nullable updatedByUserId cannot be null');
-        }
-        $this->container['updatedByUserId'] = $updatedByUserId;
-
-        return $this;
-    }
-
-    /**
-     * Gets createdAt
-     *
-     * @return \DateTime|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['createdAt'];
-    }
-
-    /**
-     * Sets createdAt
-     *
-     * @param \DateTime|null $createdAt createdAt
-     *
-     * @return self
-     */
-    public function setCreatedAt($createdAt)
-    {
-        if (is_null($createdAt)) {
-            throw new \InvalidArgumentException('non-nullable createdAt cannot be null');
-        }
-        $this->container['createdAt'] = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Gets updatedAt
-     *
-     * @return \DateTime|null
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updatedAt'];
-    }
-
-    /**
-     * Sets updatedAt
-     *
-     * @param \DateTime|null $updatedAt updatedAt
-     *
-     * @return self
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        if (is_null($updatedAt)) {
-            throw new \InvalidArgumentException('non-nullable updatedAt cannot be null');
-        }
-        $this->container['updatedAt'] = $updatedAt;
 
         return $this;
     }

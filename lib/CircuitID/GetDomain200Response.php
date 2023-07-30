@@ -60,6 +60,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $openAPITypes = [
         'name' => 'string',
         'status' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -76,6 +77,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $openAPIFormats = [
         'name' => null,
         'status' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -90,6 +92,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static array $openAPINullables = [
         'name' => false,
 		'status' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -184,6 +187,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $attributeMap = [
         'name' => 'name',
         'status' => 'status',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -198,6 +202,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $setters = [
         'name' => 'setName',
         'status' => 'setStatus',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -212,6 +217,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     protected static $getters = [
         'name' => 'getName',
         'status' => 'getStatus',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -292,6 +298,7 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], self::STATUS_0);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -427,6 +434,33 @@ class GetDomain200Response implements ModelInterface, ArrayAccess, \JsonSerializ
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

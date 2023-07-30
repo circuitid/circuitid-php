@@ -94,6 +94,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'timezone' => 'string',
         'vmTranscription' => 'int',
         'communication' => 'object',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -144,6 +145,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'timezone' => null,
         'vmTranscription' => 'int32',
         'communication' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -192,6 +194,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
 		'timezone' => false,
 		'vmTranscription' => false,
 		'communication' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -320,6 +323,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'timezone' => 'timezone',
         'vmTranscription' => 'vmTranscription',
         'communication' => 'communication',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -368,6 +372,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'timezone' => 'setTimezone',
         'vmTranscription' => 'setVmTranscription',
         'communication' => 'setCommunication',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -416,6 +421,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'timezone' => 'getTimezone',
         'vmTranscription' => 'getVmTranscription',
         'communication' => 'getCommunication',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -1427,6 +1433,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('timezone', $data ?? [], 'America/New_York');
         $this->setIfExists('vmTranscription', $data ?? [], self::VM_TRANSCRIPTION_0);
         $this->setIfExists('communication', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -2938,6 +2945,33 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable communication cannot be null');
         }
         $this->container['communication'] = $communication;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

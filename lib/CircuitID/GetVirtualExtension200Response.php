@@ -61,6 +61,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'string',
         'extension' => 'int',
         'phoneinboundrule' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -78,6 +79,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         'name' => null,
         'extension' => 'int32',
         'phoneinboundrule' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -93,6 +95,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         'name' => false,
 		'extension' => false,
 		'phoneinboundrule' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -188,6 +191,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'name',
         'extension' => 'extension',
         'phoneinboundrule' => 'phoneinboundrule',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -203,6 +207,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'setName',
         'extension' => 'setExtension',
         'phoneinboundrule' => 'setPhoneinboundrule',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -218,6 +223,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         'name' => 'getName',
         'extension' => 'getExtension',
         'phoneinboundrule' => 'getPhoneinboundrule',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -284,6 +290,7 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('extension', $data ?? [], null);
         $this->setIfExists('phoneinboundrule', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -423,6 +430,33 @@ class GetVirtualExtension200Response implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable phoneinboundrule cannot be null');
         }
         $this->container['phoneinboundrule'] = $phoneinboundrule;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

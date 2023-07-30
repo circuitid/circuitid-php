@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **abandonedResumeAllowed** | **bool** |  | [default to true]
 **discardAbandonedAfter** | **int** |  | [optional] [default to 14400]
 **maxWaitTimeNoAgentTimeReached** | **int** |  | [default to 5]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

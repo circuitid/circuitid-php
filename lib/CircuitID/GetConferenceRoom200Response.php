@@ -67,6 +67,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         'requirePasscode' => 'int',
         'share' => 'string',
         'chatroom' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -90,6 +91,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         'requirePasscode' => 'int32',
         'share' => null,
         'chatroom' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -111,6 +113,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
 		'requirePasscode' => false,
 		'share' => false,
 		'chatroom' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -212,6 +215,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         'requirePasscode' => 'requirePasscode',
         'share' => 'share',
         'chatroom' => 'chatroom',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -233,6 +237,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         'requirePasscode' => 'setRequirePasscode',
         'share' => 'setShare',
         'chatroom' => 'setChatroom',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -254,6 +259,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         'requirePasscode' => 'getRequirePasscode',
         'share' => 'getShare',
         'chatroom' => 'getChatroom',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -371,6 +377,7 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('requirePasscode', $data ?? [], self::REQUIRE_PASSCODE_0);
         $this->setIfExists('share', $data ?? [], null);
         $this->setIfExists('chatroom', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -741,6 +748,33 @@ class GetConferenceRoom200Response implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable chatroom cannot be null');
         }
         $this->container['chatroom'] = $chatroom;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

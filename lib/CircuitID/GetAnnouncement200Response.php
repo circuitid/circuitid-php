@@ -63,6 +63,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'string',
         'voice' => 'string',
         'text' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -82,6 +83,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         'type' => null,
         'voice' => null,
         'text' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -99,6 +101,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
 		'type' => false,
 		'voice' => false,
 		'text' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -196,6 +199,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'type',
         'voice' => 'voice',
         'text' => 'text',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -213,6 +217,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'setType',
         'voice' => 'setVoice',
         'text' => 'setText',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -230,6 +235,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         'type' => 'getType',
         'voice' => 'getVoice',
         'text' => 'getText',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -313,6 +319,7 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('voice', $data ?? [], null);
         $this->setIfExists('text', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -540,6 +547,33 @@ class GetAnnouncement200Response implements ModelInterface, ArrayAccess, \JsonSe
         }
 
         $this->container['text'] = $text;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

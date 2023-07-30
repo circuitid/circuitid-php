@@ -67,6 +67,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
         'thursday' => 'object',
         'friday' => 'object',
         'saturday' => 'object',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -90,6 +91,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
         'thursday' => null,
         'friday' => null,
         'saturday' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -111,6 +113,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
 		'thursday' => false,
 		'friday' => false,
 		'saturday' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -212,6 +215,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
         'thursday' => 'thursday',
         'friday' => 'friday',
         'saturday' => 'saturday',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -233,6 +237,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
         'thursday' => 'setThursday',
         'friday' => 'setFriday',
         'saturday' => 'setSaturday',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -254,6 +259,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
         'thursday' => 'getThursday',
         'friday' => 'getFriday',
         'saturday' => 'getSaturday',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -1033,6 +1039,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
         $this->setIfExists('thursday', $data ?? [], null);
         $this->setIfExists('friday', $data ?? [], null);
         $this->setIfExists('saturday', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1382,6 +1389,33 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable saturday cannot be null');
         }
         $this->container['saturday'] = $saturday;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

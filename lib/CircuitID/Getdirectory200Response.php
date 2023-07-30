@@ -62,6 +62,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'string',
         'groups' => 'string[]',
         'announcement' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -80,6 +81,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => null,
         'groups' => null,
         'announcement' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -96,6 +98,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
 		'type' => false,
 		'groups' => false,
 		'announcement' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -192,6 +195,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'type',
         'groups' => 'groups',
         'announcement' => 'announcement',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -208,6 +212,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'setType',
         'groups' => 'setGroups',
         'announcement' => 'setAnnouncement',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -224,6 +229,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'type' => 'getType',
         'groups' => 'getGroups',
         'announcement' => 'getAnnouncement',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -306,6 +312,7 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('groups', $data ?? [], null);
         $this->setIfExists('announcement', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -491,6 +498,33 @@ class Getdirectory200Response implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable announcement cannot be null');
         }
         $this->container['announcement'] = $announcement;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

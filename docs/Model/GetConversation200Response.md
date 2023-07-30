@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **ref** | **string** |  |
 **object** | **string** | ObjectId (unique 12 bytes ID) |
 **status** | **string** |  | [default to 'open']
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

@@ -75,6 +75,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         'invoice' => 'string',
         'senderEmail' => 'string',
         'senderName' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -106,6 +107,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         'invoice' => null,
         'senderEmail' => null,
         'senderName' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -135,6 +137,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
 		'invoice' => false,
 		'senderEmail' => false,
 		'senderName' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -244,6 +247,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         'invoice' => 'invoice',
         'senderEmail' => 'senderEmail',
         'senderName' => 'senderName',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -273,6 +277,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         'invoice' => 'setInvoice',
         'senderEmail' => 'setSenderEmail',
         'senderName' => 'setSenderName',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -302,6 +307,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         'invoice' => 'getInvoice',
         'senderEmail' => 'getSenderEmail',
         'senderName' => 'getSenderName',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -414,6 +420,7 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('invoice', $data ?? [], null);
         $this->setIfExists('senderEmail', $data ?? [], null);
         $this->setIfExists('senderName', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -1013,6 +1020,33 @@ class GetFax200Response implements ModelInterface, ArrayAccess, \JsonSerializabl
         }
 
         $this->container['senderName'] = $senderName;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

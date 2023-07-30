@@ -69,6 +69,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'ai' => 'int',
         'status' => 'int',
         'notificationHits' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -94,6 +95,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'ai' => 'int32',
         'status' => 'int32',
         'notificationHits' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -117,6 +119,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
 		'ai' => false,
 		'status' => false,
 		'notificationHits' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -220,6 +223,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'ai' => 'ai',
         'status' => 'status',
         'notificationHits' => 'notificationHits',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -243,6 +247,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'ai' => 'setAi',
         'status' => 'setStatus',
         'notificationHits' => 'setNotificationHits',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -266,6 +271,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
         'ai' => 'getAi',
         'status' => 'getStatus',
         'notificationHits' => 'getNotificationHits',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -419,6 +425,7 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
         $this->setIfExists('ai', $data ?? [], self::AI_0);
         $this->setIfExists('status', $data ?? [], self::STATUS_1);
         $this->setIfExists('notificationHits', $data ?? [], 1);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -901,6 +908,33 @@ class GetFirewall200Response implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable notificationHits cannot be null');
         }
         $this->container['notificationHits'] = $notificationHits;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

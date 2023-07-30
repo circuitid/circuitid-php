@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **requireId** | **int** |  | [optional] [default to self::REQUIRE_ID_0]
 **services** | **string[]** |  |
 **events** | **string[]** |  | [optional]
+**id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdAt** | **\DateTime** |  | [optional]

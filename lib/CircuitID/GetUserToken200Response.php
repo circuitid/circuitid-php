@@ -63,6 +63,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'token' => 'string',
         'expiresInYears' => 'int',
         'status' => 'int',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -82,6 +83,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'token' => null,
         'expiresInYears' => 'int32',
         'status' => 'int32',
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -99,6 +101,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
 		'token' => false,
 		'expiresInYears' => false,
 		'status' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -196,6 +199,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'token' => 'token',
         'expiresInYears' => 'expiresInYears',
         'status' => 'status',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -213,6 +217,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'token' => 'setToken',
         'expiresInYears' => 'setExpiresInYears',
         'status' => 'setStatus',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -230,6 +235,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
         'token' => 'getToken',
         'expiresInYears' => 'getExpiresInYears',
         'status' => 'getStatus',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -313,6 +319,7 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('token', $data ?? [], null);
         $this->setIfExists('expiresInYears', $data ?? [], 1);
         $this->setIfExists('status', $data ?? [], self::STATUS_1);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -539,6 +546,33 @@ class GetUserToken200Response implements ModelInterface, ArrayAccess, \JsonSeria
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

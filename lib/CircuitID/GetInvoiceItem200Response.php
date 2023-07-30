@@ -66,6 +66,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
         'invoice' => 'string',
         'ref' => 'string',
         'object' => 'string',
+        'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
         'createdAt' => '\DateTime',
@@ -88,6 +89,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
         'invoice' => null,
         'ref' => null,
         'object' => null,
+        'id' => null,
         'createdByUserId' => null,
         'updatedByUserId' => null,
         'createdAt' => 'date-time',
@@ -108,6 +110,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
 		'invoice' => false,
 		'ref' => false,
 		'object' => false,
+		'id' => false,
 		'createdByUserId' => false,
 		'updatedByUserId' => false,
 		'createdAt' => false,
@@ -208,6 +211,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
         'invoice' => 'invoice',
         'ref' => 'ref',
         'object' => 'object',
+        'id' => '_id',
         'createdByUserId' => 'createdByUserId',
         'updatedByUserId' => 'updatedByUserId',
         'createdAt' => 'createdAt',
@@ -228,6 +232,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
         'invoice' => 'setInvoice',
         'ref' => 'setRef',
         'object' => 'setObject',
+        'id' => 'setId',
         'createdByUserId' => 'setCreatedByUserId',
         'updatedByUserId' => 'setUpdatedByUserId',
         'createdAt' => 'setCreatedAt',
@@ -248,6 +253,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
         'invoice' => 'getInvoice',
         'ref' => 'getRef',
         'object' => 'getObject',
+        'id' => 'getId',
         'createdByUserId' => 'getCreatedByUserId',
         'updatedByUserId' => 'getUpdatedByUserId',
         'createdAt' => 'getCreatedAt',
@@ -319,6 +325,7 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('invoice', $data ?? [], null);
         $this->setIfExists('ref', $data ?? [], null);
         $this->setIfExists('object', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('createdByUserId', $data ?? [], null);
         $this->setIfExists('updatedByUserId', $data ?? [], null);
         $this->setIfExists('createdAt', $data ?? [], null);
@@ -614,6 +621,33 @@ class GetInvoiceItem200Response implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable object cannot be null');
         }
         $this->container['object'] = $object;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id ObjectId (unique 12 bytes ID)
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }
