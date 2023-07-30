@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **total** | **int** |  |
 **limit** | **int** |  |
 **skip** | **int** |  |
-**data** | [**\OpenAPI\Client\CircuitID\Holidays[]**](Holidays.md) |  |
+**data** | [**\OpenAPI\Client\CircuitID\GetHoliday200Response[]**](GetHoliday200Response.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

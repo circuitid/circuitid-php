@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **total** | **int** |  |
 **limit** | **int** |  |
 **skip** | **int** |  |
-**data** | [**\OpenAPI\Client\CircuitID\Contacts[]**](Contacts.md) |  |
+**data** | [**\OpenAPI\Client\CircuitID\GetContact200Response[]**](GetContact200Response.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

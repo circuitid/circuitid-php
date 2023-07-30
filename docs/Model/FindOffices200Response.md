@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **total** | **int** |  |
 **limit** | **int** |  |
 **skip** | **int** |  |
-**data** | [**\OpenAPI\Client\CircuitID\Offices[]**](Offices.md) |  |
+**data** | [**\OpenAPI\Client\CircuitID\GetOffice200Response[]**](GetOffice200Response.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
