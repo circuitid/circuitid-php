@@ -60,13 +60,13 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'name' => 'string',
         'timezone' => 'string',
-        'sunday' => 'object',
-        'monday' => 'object',
-        'tuesday' => 'object',
-        'wednesday' => 'object',
-        'thursday' => 'object',
-        'friday' => 'object',
-        'saturday' => 'object'
+        'sunday' => 'array<string,object[]>',
+        'monday' => 'array<string,object[]>',
+        'tuesday' => 'array<string,object[]>',
+        'wednesday' => 'array<string,object[]>',
+        'thursday' => 'array<string,object[]>',
+        'friday' => 'array<string,object[]>',
+        'saturday' => 'array<string,object[]>'
     ];
 
     /**
@@ -1172,7 +1172,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets sunday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getSunday()
     {
@@ -1182,7 +1182,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sunday
      *
-     * @param object $sunday sunday
+     * @param array<string,object[]> $sunday sunday
      *
      * @return self
      */
@@ -1199,7 +1199,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets monday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getMonday()
     {
@@ -1209,7 +1209,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets monday
      *
-     * @param object $monday monday
+     * @param array<string,object[]> $monday monday
      *
      * @return self
      */
@@ -1226,7 +1226,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tuesday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getTuesday()
     {
@@ -1236,7 +1236,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tuesday
      *
-     * @param object $tuesday tuesday
+     * @param array<string,object[]> $tuesday tuesday
      *
      * @return self
      */
@@ -1253,7 +1253,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets wednesday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getWednesday()
     {
@@ -1263,7 +1263,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets wednesday
      *
-     * @param object $wednesday wednesday
+     * @param array<string,object[]> $wednesday wednesday
      *
      * @return self
      */
@@ -1280,7 +1280,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets thursday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getThursday()
     {
@@ -1290,7 +1290,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets thursday
      *
-     * @param object $thursday thursday
+     * @param array<string,object[]> $thursday thursday
      *
      * @return self
      */
@@ -1307,7 +1307,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets friday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getFriday()
     {
@@ -1317,7 +1317,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets friday
      *
-     * @param object $friday friday
+     * @param array<string,object[]> $friday friday
      *
      * @return self
      */
@@ -1334,7 +1334,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets saturday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getSaturday()
     {
@@ -1344,7 +1344,7 @@ class Timeschedules implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets saturday
      *
-     * @param object $saturday saturday
+     * @param array<string,object[]> $saturday saturday
      *
      * @return self
      */

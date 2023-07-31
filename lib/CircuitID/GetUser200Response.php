@@ -87,7 +87,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
         'phonePermission' => 'string',
         'timezone' => 'string',
         'vmTranscription' => 'int',
-        'communication' => 'object',
+        'communication' => 'array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>',
         'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
@@ -2480,7 +2480,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets communication
      *
-     * @return object|null
+     * @return array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>|null
      */
     public function getCommunication()
     {
@@ -2490,7 +2490,7 @@ class GetUser200Response implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets communication
      *
-     * @param object|null $communication communication
+     * @param array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>|null $communication communication
      *
      * @return self
      */

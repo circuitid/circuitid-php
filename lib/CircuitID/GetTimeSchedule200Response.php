@@ -60,13 +60,13 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPITypes = [
         'name' => 'string',
         'timezone' => 'string',
-        'sunday' => 'object',
-        'monday' => 'object',
-        'tuesday' => 'object',
-        'wednesday' => 'object',
-        'thursday' => 'object',
-        'friday' => 'object',
-        'saturday' => 'object',
+        'sunday' => 'array<string,object[]>',
+        'monday' => 'array<string,object[]>',
+        'tuesday' => 'array<string,object[]>',
+        'wednesday' => 'array<string,object[]>',
+        'thursday' => 'array<string,object[]>',
+        'friday' => 'array<string,object[]>',
+        'saturday' => 'array<string,object[]>',
         'id' => 'string',
         'createdByUserId' => 'string',
         'updatedByUserId' => 'string',
@@ -1207,7 +1207,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets sunday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getSunday()
     {
@@ -1217,7 +1217,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets sunday
      *
-     * @param object $sunday sunday
+     * @param array<string,object[]> $sunday sunday
      *
      * @return self
      */
@@ -1234,7 +1234,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets monday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getMonday()
     {
@@ -1244,7 +1244,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets monday
      *
-     * @param object $monday monday
+     * @param array<string,object[]> $monday monday
      *
      * @return self
      */
@@ -1261,7 +1261,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets tuesday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getTuesday()
     {
@@ -1271,7 +1271,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets tuesday
      *
-     * @param object $tuesday tuesday
+     * @param array<string,object[]> $tuesday tuesday
      *
      * @return self
      */
@@ -1288,7 +1288,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets wednesday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getWednesday()
     {
@@ -1298,7 +1298,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets wednesday
      *
-     * @param object $wednesday wednesday
+     * @param array<string,object[]> $wednesday wednesday
      *
      * @return self
      */
@@ -1315,7 +1315,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets thursday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getThursday()
     {
@@ -1325,7 +1325,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets thursday
      *
-     * @param object $thursday thursday
+     * @param array<string,object[]> $thursday thursday
      *
      * @return self
      */
@@ -1342,7 +1342,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets friday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getFriday()
     {
@@ -1352,7 +1352,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets friday
      *
-     * @param object $friday friday
+     * @param array<string,object[]> $friday friday
      *
      * @return self
      */
@@ -1369,7 +1369,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets saturday
      *
-     * @return object
+     * @return array<string,object[]>
      */
     public function getSaturday()
     {
@@ -1379,7 +1379,7 @@ class GetTimeSchedule200Response implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets saturday
      *
-     * @param object $saturday saturday
+     * @param array<string,object[]> $saturday saturday
      *
      * @return self
      */

@@ -220,6 +220,8 @@ docs/Model/ServersCreateOrPatch.md
 docs/Model/Timeschedules.md
 docs/Model/TimeschedulesCreateOrPatch.md
 docs/Model/Users.md
+docs/Model/UsersCommunicationValue.md
+docs/Model/UsersCommunicationValueNotifications.md
 docs/Model/UsersCreateOrPatch.md
 docs/Model/Usertokens.md
 docs/Model/UsertokensCreateOrPatch.md
@@ -442,6 +444,8 @@ lib/CircuitID/TimeschedulesCreateOrPatch.php
 lib/CircuitID/UserTokensApi.php
 lib/CircuitID/Users.php
 lib/CircuitID/UsersApi.php
+lib/CircuitID/UsersCommunicationValue.php
+lib/CircuitID/UsersCommunicationValueNotifications.php
 lib/CircuitID/UsersCreateOrPatch.php
 lib/CircuitID/Usertokens.php
 lib/CircuitID/UsertokensCreateOrPatch.php
@@ -668,6 +672,8 @@ test/Model/ServersCreateOrPatchTest.php
 test/Model/ServersTest.php
 test/Model/TimeschedulesCreateOrPatchTest.php
 test/Model/TimeschedulesTest.php
+test/Model/UsersCommunicationValueNotificationsTest.php
+test/Model/UsersCommunicationValueTest.php
 test/Model/UsersCreateOrPatchTest.php
 test/Model/UsersTest.php
 test/Model/UsertokensCreateOrPatchTest.php

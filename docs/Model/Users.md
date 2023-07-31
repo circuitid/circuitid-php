@@ -33,6 +33,6 @@ Name | Type | Description | Notes
 **phonePermission** | **string** |  | [optional]
 **timezone** | **string** |  | [default to 'America/New_York']
 **vmTranscription** | **int** |  | [optional] [default to self::VM_TRANSCRIPTION_0]
-**communication** | **object** |  | [optional]
+**communication** | [**array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>**](UsersCommunicationValue.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

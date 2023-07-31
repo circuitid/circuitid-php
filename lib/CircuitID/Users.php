@@ -87,7 +87,7 @@ class Users implements ModelInterface, ArrayAccess, \JsonSerializable
         'phonePermission' => 'string',
         'timezone' => 'string',
         'vmTranscription' => 'int',
-        'communication' => 'object'
+        'communication' => 'array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>'
     ];
 
     /**
@@ -2445,7 +2445,7 @@ class Users implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets communication
      *
-     * @return object|null
+     * @return array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>|null
      */
     public function getCommunication()
     {
@@ -2455,7 +2455,7 @@ class Users implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets communication
      *
-     * @param object|null $communication communication
+     * @param array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>|null $communication communication
      *
      * @return self
      */
