@@ -183,9 +183,7 @@ docs/Model/Holidays.md
 docs/Model/HolidaysCreateOrPatch.md
 docs/Model/Id.md
 docs/Model/Invoiceitems.md
-docs/Model/InvoiceitemsCreateOrPatch.md
 docs/Model/Invoices.md
-docs/Model/InvoicesCreateOrPatch.md
 docs/Model/Licenses.md
 docs/Model/LicensesCreateOrPatch.md
 docs/Model/Menuoptions.md
@@ -211,7 +209,6 @@ docs/Model/PhoneoutboundruleactionsCreateOrPatch.md
 docs/Model/Phoneoutboundrules.md
 docs/Model/PhoneoutboundrulesCreateOrPatch.md
 docs/Model/Ratecenters.md
-docs/Model/RatecentersCreateOrPatch.md
 docs/Model/ResponseDate.md
 docs/Model/ResponseError.md
 docs/Model/ResponseUsers.md
@@ -388,10 +385,8 @@ lib/CircuitID/Id.php
 lib/CircuitID/InfoApi.php
 lib/CircuitID/InvoiceItemsApi.php
 lib/CircuitID/Invoiceitems.php
-lib/CircuitID/InvoiceitemsCreateOrPatch.php
 lib/CircuitID/Invoices.php
 lib/CircuitID/InvoicesApi.php
-lib/CircuitID/InvoicesCreateOrPatch.php
 lib/CircuitID/Licenses.php
 lib/CircuitID/LicensesApi.php
 lib/CircuitID/LicensesCreateOrPatch.php
@@ -431,7 +426,6 @@ lib/CircuitID/Phoneoutboundrules.php
 lib/CircuitID/PhoneoutboundrulesCreateOrPatch.php
 lib/CircuitID/RateCentersApi.php
 lib/CircuitID/Ratecenters.php
-lib/CircuitID/RatecentersCreateOrPatch.php
 lib/CircuitID/ResponseDate.php
 lib/CircuitID/ResponseError.php
 lib/CircuitID/ResponseUsers.php
@@ -635,9 +629,7 @@ test/Model/GroupsTest.php
 test/Model/HolidaysCreateOrPatchTest.php
 test/Model/HolidaysTest.php
 test/Model/IdTest.php
-test/Model/InvoiceitemsCreateOrPatchTest.php
 test/Model/InvoiceitemsTest.php
-test/Model/InvoicesCreateOrPatchTest.php
 test/Model/InvoicesTest.php
 test/Model/LicensesCreateOrPatchTest.php
 test/Model/LicensesTest.php
@@ -663,7 +655,6 @@ test/Model/PhoneoutboundruleactionsCreateOrPatchTest.php
 test/Model/PhoneoutboundruleactionsTest.php
 test/Model/PhoneoutboundrulesCreateOrPatchTest.php
 test/Model/PhoneoutboundrulesTest.php
-test/Model/RatecentersCreateOrPatchTest.php
 test/Model/RatecentersTest.php
 test/Model/ResponseDateTest.php
 test/Model/ResponseErrorTest.php
