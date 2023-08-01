@@ -82,7 +82,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://rest.circuitid.com*
+All URIs are relative to *https://cloud9.circuitid.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -450,9 +450,12 @@ Class | Method | HTTP request | Description
 - [ServersCreateOrPatch](docs/Model/ServersCreateOrPatch.md)
 - [Timeschedules](docs/Model/Timeschedules.md)
 - [TimeschedulesCreateOrPatch](docs/Model/TimeschedulesCreateOrPatch.md)
+- [TimeschedulesSunday](docs/Model/TimeschedulesSunday.md)
+- [TimeschedulesSundaySchedulesInner](docs/Model/TimeschedulesSundaySchedulesInner.md)
 - [Users](docs/Model/Users.md)
-- [UsersCommunicationValue](docs/Model/UsersCommunicationValue.md)
-- [UsersCommunicationValueNotifications](docs/Model/UsersCommunicationValueNotifications.md)
+- [UsersCommunication](docs/Model/UsersCommunication.md)
+- [UsersCommunicationNotifications](docs/Model/UsersCommunicationNotifications.md)
+- [UsersCommunicationWeb](docs/Model/UsersCommunicationWeb.md)
 - [UsersCreateOrPatch](docs/Model/UsersCreateOrPatch.md)
 - [Usertokens](docs/Model/Usertokens.md)
 - [UsertokensCreateOrPatch](docs/Model/UsertokensCreateOrPatch.md)

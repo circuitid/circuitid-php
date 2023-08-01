@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 **phonePermission** | **string** |  | [optional]
 **timezone** | **string** |  | [default to 'America/New_York']
 **vmTranscription** | **int** |  | [optional] [default to self::VM_TRANSCRIPTION_0]
-**communication** | [**array<string,\OpenAPI\Client\CircuitID\UsersCommunicationValue>**](UsersCommunicationValue.md) |  | [optional]
+**communication** | [**\OpenAPI\Client\CircuitID\UsersCommunication**](UsersCommunication.md) |  | [optional]
 **id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]

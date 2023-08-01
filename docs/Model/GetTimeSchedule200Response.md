@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  |
 **timezone** | **string** |  | [default to 'America/New_York']
-**sunday** | **array<string,object[]>** |  |
-**monday** | **array<string,object[]>** |  |
-**tuesday** | **array<string,object[]>** |  |
-**wednesday** | **array<string,object[]>** |  |
-**thursday** | **array<string,object[]>** |  |
-**friday** | **array<string,object[]>** |  |
-**saturday** | **array<string,object[]>** |  |
+**sunday** | [**\OpenAPI\Client\CircuitID\TimeschedulesSunday**](TimeschedulesSunday.md) |  |
+**monday** | [**\OpenAPI\Client\CircuitID\TimeschedulesSunday**](TimeschedulesSunday.md) |  |
+**tuesday** | [**\OpenAPI\Client\CircuitID\TimeschedulesSunday**](TimeschedulesSunday.md) |  |
+**wednesday** | [**\OpenAPI\Client\CircuitID\TimeschedulesSunday**](TimeschedulesSunday.md) |  |
+**thursday** | [**\OpenAPI\Client\CircuitID\TimeschedulesSunday**](TimeschedulesSunday.md) |  |
+**friday** | [**\OpenAPI\Client\CircuitID\TimeschedulesSunday**](TimeschedulesSunday.md) |  |
+**saturday** | [**\OpenAPI\Client\CircuitID\TimeschedulesSunday**](TimeschedulesSunday.md) |  |
 **id** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **createdByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
 **updatedByUserId** | **string** | ObjectId (unique 12 bytes ID) | [optional]
