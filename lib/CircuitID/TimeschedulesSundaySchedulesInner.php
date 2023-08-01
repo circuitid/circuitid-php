@@ -58,8 +58,8 @@ class TimeschedulesSundaySchedulesInner implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'start' => 'string',
-        'end' => 'string'
+        'start' => '\DateTime',
+        'end' => '\DateTime'
     ];
 
     /**
@@ -70,8 +70,8 @@ class TimeschedulesSundaySchedulesInner implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'start' => null,
-        'end' => null
+        'start' => 'date-time',
+        'end' => 'date-time'
     ];
 
     /**
@@ -300,7 +300,7 @@ class TimeschedulesSundaySchedulesInner implements ModelInterface, ArrayAccess, 
     /**
      * Gets start
      *
-     * @return string|null
+     * @return \DateTime|null
      */
     public function getStart()
     {
@@ -310,7 +310,7 @@ class TimeschedulesSundaySchedulesInner implements ModelInterface, ArrayAccess, 
     /**
      * Sets start
      *
-     * @param string|null $start start
+     * @param \DateTime|null $start start
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class TimeschedulesSundaySchedulesInner implements ModelInterface, ArrayAccess, 
     /**
      * Gets end
      *
-     * @return string|null
+     * @return \DateTime|null
      */
     public function getEnd()
     {
@@ -337,7 +337,7 @@ class TimeschedulesSundaySchedulesInner implements ModelInterface, ArrayAccess, 
     /**
      * Sets end
      *
-     * @param string|null $end end
+     * @param \DateTime|null $end end
      *
      * @return self
      */
